@@ -1,0 +1,12 @@
+<h5>Catgories</h5>
+
+{% for category in site.categories %}
+	<ul>
+		<li>
+    		<a href="/{{ category | first | slugize }}/">
+       			 {{ category | first }}
+    		</a>
+    			{{ category | last | size }}
+    	</li>
+    </ul>
+{% endfor %}

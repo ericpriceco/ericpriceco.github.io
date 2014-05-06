@@ -1,0 +1,71 @@
+<section class="project">
+        <div class="container">
+            <div class="sixteen columns text-center">
+                <h3>START YOUR PROJECT TODAY</h3>
+                <p>Contact me to discuss your next project</p>
+                <div class="top-2">
+                    <a href="/contact/index.html" class="button">LET'S TALK</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer">
+        <div class="container">
+            <div class="eight columns">
+                <h4>Latest Blog Posts</h4>
+                    {% for post in site.posts limit: 3 %}
+                        <ul>
+                            <li>
+                                <a href="{{ post.url }}">{{ post.title }} {{ post.date | date: '%B %d, %Y'}}</a>
+                        </li>
+                        </ul>
+                    {% endfor %}
+            </div>
+            <div class="four columns">
+                <h4>Contact</h4>
+                <ul>
+                    <li>eric.price.co@gmail.com</li>
+                    <li>(919) 749-1678</li>
+                </ul>
+            </div>
+            <div class="four columns">
+                <h4>Find Me</h4>
+                    <a href="https://plus.google.com/u/2/105475388741669903128"><i class="fa fa-google-plus"></i></a>
+                    <a href="https://www.facebook.com/eric.price.125760"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/EricPrice2"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="sixteen columns text-center top-2">
+                <p>Copyright 2014 - Eric Price. Powered by Jekyll and Skeleton.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+    
+<!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53653e364b324f54"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }, 
+    'follow' : {
+      'services' : [
+        {'service': 'facebook', 'id': 'eric.price.125760'},
+        {'service': 'twitter', 'id': 'EricPrice2'},
+        {'service': 'google_follow', 'id': '105475388741669903128'}
+      ]
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+    
+
+</body>
+</html>

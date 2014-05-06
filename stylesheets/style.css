@@ -13,16 +13,16 @@ a:link,a:hover,a:visited;a:active {
 }
 
 a.button,a.button:hover,button { 
-	background: #383838;
-	font-size: 15px;
+    background: #383838;
+    font-size: 15px;
     font-weight:normal;
-	text-align: center;
-	padding: .6em 1.1em;
-	color: #f7f7f7;
-	text-decoration: none; 
-	-webkit-border-radius: 5px; 
-	-moz-border-radius: 5px; 
-	border-radius: 5px;
+    text-align: center;
+    padding: .6em 1.1em;
+    color: #f7f7f7;
+    text-decoration: none; 
+    -webkit-border-radius: 5px; 
+    -moz-border-radius: 5px; 
+    border-radius: 5px;
     border: 0;
 }
 
@@ -125,35 +125,56 @@ img {
 
 .nav { 
     display: block;
-    background-color: #383838; 
+    background-color: #222;
     text-align: center; 
-    width: 100%; 
-    padding: 15px 8px 5px 8px; 
+    width: 100%;
+    padding: 14px 0; 
     z-index: 101; 
 }
 
 .nav select { 
-    display: none;
+    display: none; 
 }
 
 .nav ul { 
-    display: inline-block; 
+    display: block; 
     margin: 0 auto; 
     text-align: center; 
     list-style: none 
 }
+
 .nav ul li { 
-    display: inline-block; 
-    padding: 0 15px 0; 
+    display: inline; 
+    padding: 0 10px 0; 
 }
 
-.nav ul li a, nav ul li a:visited, nav ul li a:active { 
+.nav ul li a, nav ul li a:visited, nav ul li a:active {
     color: #fff; 
     font-size: 14px; 
     position: relative; 
     text-decoration: none; 
     text-transform: uppercase; 
-    font-weight: normal; 
+}
+
+.nav ul li.first {
+    padding-left: 0; 
+}
+
+.nav ul li.last { 
+    border-right: none;
+    padding-right: 0; 
+}
+
+.nav ul li a:hover, nav ul li a:focus { 
+    color: #E38812; 
+}
+
+.nav ul li.current_page_item a { 
+    color: #E38812; 
+}
+
+.nav ul li.current_page_ancestor a { 
+    color: #E38812; 
 }
 
 /*---- About ----*/

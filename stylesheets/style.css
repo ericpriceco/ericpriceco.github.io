@@ -296,6 +296,15 @@ img {
     color: #f2f2f2;
 }
 
+a:link,a:visited;a:active {
+    text-decoration: none !important;
+    color: #f2f2f2;
+}
+
+a:hover {
+	color: #E38812 ;
+}
+
 /*---- Process Page ----*/
 
 .process-group {

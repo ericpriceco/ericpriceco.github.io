@@ -4,7 +4,7 @@
     <div class="container">
         <div class="twelve columns">
         	<h3> {{ page.title }} </h3>
-        	<p> {{ page.date }} </p>
+        	<p> {{ page.date | date_to_long_string }} </p>
            {{ content }}
         </div>
         <div class="four columns">

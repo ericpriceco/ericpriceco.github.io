@@ -10,11 +10,11 @@
         </div>
     </section>
     
-    <section class="footer">
+    <section class="footer text-center">
         <div class="container">
-            <div class="eight columns">
+            <div class="six columns">
                 <h4>Latest Blog Posts</h4>
-                    {% for post in site.posts limit: 3 %}
+                     {% for post in site.posts limit: 3 %}
                         <ul>
                             <li>
                                 <a href="{{ post.url }}">{{ post.title }} {{ post.date | date: '%B %d, %Y'}}</a>
@@ -22,28 +22,28 @@
                         </ul>
                     {% endfor %}
             </div>
-            <div class="four columns">
+            <div class="five columns">
                 <h4>Contact</h4>
                 <ul>
-                    <li>eric.price.co@gmail.com</li>
-                    <li>(919) 749-1678</li>
+                    <li><a href="mailto:eric.price.co@gmail.com">eric.price.co@gmail.com</a></li>
+                    <li><a href="tel:+19197491678">(919) 749-1678</a></li>
                 </ul>
             </div>
-            <div class="four columns">
+            <div class="five columns">
                 <h4>Find Me</h4>
                     <a href="https://plus.google.com/u/2/105475388741669903128"><i class="fa fa-google-plus"></i></a>
                     <a href="https://www.facebook.com/eric.price.125760"><i class="fa fa-facebook"></i></a>
                     <a href="https://twitter.com/EricPrice2"><i class="fa fa-twitter"></i></a>
             </div>
             <div class="sixteen columns text-center top-2">
-                <p>Copyright 2014 - Eric Price. Powered by Jekyll and Skeleton.</p>
+                <p>Copyright 2014 - Eric Price. Powered by <a href="http://jekyllrb.com">Jekyll</a> and <a href="http://www.getskeleton.com">Skeleton.</a></p>
             </div>
         </div>
     </section>
     
     
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/scripts.js"></script>
+<script src="/js/scripts.js"></script>
     
 <!-- AddThis Smart Layers BEGIN -->
 <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
@@ -65,6 +65,7 @@
   });
 </script>
 <!-- AddThis Smart Layers END -->
+    
 
 </body>
 </html>

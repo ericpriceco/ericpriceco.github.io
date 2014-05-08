@@ -377,6 +377,10 @@ img {
     padding-bottom: 2%;
 }
 
+.sidebar ul li {
+    margin-bottom: 5px;
+}
+
 /*---- Single Blog Post Page ----*/
 
 .blog-post {

@@ -377,8 +377,8 @@ img {
     padding-bottom: 2%;
 }
 
-.sidebar ul li {
-    margin-bottom: 5px;
+.sidebar li {
+    margin-bottom: 0.2em;
 }
 
 /*---- Single Blog Post Page ----*/

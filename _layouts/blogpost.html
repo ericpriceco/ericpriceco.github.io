@@ -3,11 +3,9 @@
 <section class="blog-post">
     <div class="container">
         <div class="twelve columns">
-        	<h3> {{ post.title }} </h3>
         	<h3> {{ page.title }} </h3>
-        	<p> {{ post.date }} </p>
+        	<p> {{ page.date }} </p>
            {{ content }}
-           {{ post.title }}
         </div>
         <div class="four columns">
             {% include sidebar.html %}

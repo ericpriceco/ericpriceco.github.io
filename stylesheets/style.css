@@ -281,7 +281,7 @@ img {
 }
 
 .footer i:hover {
-    color: #4485A6;
+    color: #E38812;
 }
 
 .footer a {
@@ -294,6 +294,15 @@ img {
 
 .footer h4 {
     color: #f2f2f2;
+}
+
+a:link,a:visited;a:active {
+    text-decoration: none !important;
+    color: #f2f2f2;
+}
+
+a:hover {
+	color: #E38812 ;
 }
 
 /*---- Process Page ----*/
@@ -364,7 +373,6 @@ img {
 /*---- Blog Page ----*/
 
 .blog {
-    padding-top: 5%;
     padding-bottom: 5%;
     background: #F5F4F0;
 }
@@ -378,10 +386,13 @@ img {
     padding-bottom: 2%;
 }
 
+.sidebar li {
+    margin-bottom: 0.2em;
+}
+
 /*---- Single Blog Post Page ----*/
 
 .blog-post {
-    padding-top: 5%;
     padding-bottom: 5%;
     background: #F5F4F0;
 }

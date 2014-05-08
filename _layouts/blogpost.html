@@ -1,14 +1,23 @@
 {% include subheader.html %}
 
+<section class="sub-cta">
+        <div class="container">
+            <div class="sixteen columns text-center">
+                <h2>MY BLOG</h2>
+                <h4>News, guides and resources</h4>
+                <div class="divider"></div>
+            </div>
+        </div>
+</section>
+
 <section class="blog-post">
     <div class="container">
         <div class="twelve columns">
-        	<h3> {{ post.title }} </h3>
-        	<p> {{ post.date }} </p>
+            <h3> {{ page.title }} </h3>
+            <p> {{ page.date | date_to_long_string }} </p>
            {{ content }}
-           {{ post.title }}
         </div>
-        <div class="four columns">
+        <div class="three columns offset-by-one">
             {% include sidebar.html %}
         </div>
     </div>

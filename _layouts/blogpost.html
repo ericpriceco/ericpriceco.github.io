@@ -13,6 +13,7 @@
 <section class="blog-post">
     <div class="container">
         <div class="twelve columns">
+                {{ page.cover }}
             <h3> {{ page.title }} </h3>
             <p> {{ page.date | date_to_long_string }} </p>
            {{ content }}

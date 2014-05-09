@@ -12,7 +12,7 @@ a:link,a:hover,a:visited;a:active {
     text-decoration: none !important;
 }
 
-a:hover {
+a:hover,a:active {
     color: #E38812 !important;
 }
 
@@ -288,7 +288,7 @@ img {
     color: #E38812;
 }
 
-.footer a,a:visited {
+.footer a,.footer a:visited,.footer a:active {
     color: #f2f2f2 !important;
 }
 

@@ -2,6 +2,7 @@
 published: false
 ---
 
+![](/_drafts/foundation-sass.png)
 
 In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS can come into play with its partial system that will compile your custom style sheet with Foundations into one file. I will talk more about partials and variables in my next post. Visit SASS's basic page for more information. (http://sass-lang.com/guide)
 
@@ -74,12 +75,16 @@ Bower is the tool Foundation uses to install or update a Foundation project.
 Compass is CSS authoring framework that uses SASS to generate your stylesheets manually or in real-time during editing.
 > sudo gem install compass
 
-     Next we are going to create a Foundation project. Change to the directory you want to store your project and run:
-     foundation new new-project
+## Create Foundation Project
 
-     We now need to do the first SASS compile using compass to generate the CSS files.
-     cd new-project
-     compass compile
+Next we are going to create a Foundation project. Change to the directory you want to store your project and run:
 
-Congratulations for using the command line to start your next Foundation project. Happy coding!
+> foundation new test-project
+
+If you were to open index.html in your new project, you will see no styling at all. That's because the scss file needs to be compiled into a stylesheet. Change to your project folder and compile:
+     
+> cd new-project
+> compass compile
+
+Congratulations for taking the first steps in what should make your development life easier.
 

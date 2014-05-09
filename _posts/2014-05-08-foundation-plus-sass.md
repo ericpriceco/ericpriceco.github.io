@@ -1,14 +1,14 @@
 ---
 layout: blogpost
 title: Getting Started with SASS and Foundation
-date: 2014-05-08
+date: {}
 categories: sass foundation
 published: true
 ---
 
 ![](/images/blog/foundation-sass.png)
 
-In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS can come into play with its partial system that will compile your custom style sheet with Foundations into one file. I will talk more about partials and variables in my next post. Visit SASS's basic page for more information. (http://sass-lang.com/guide)
+In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS can come into play with its partial system that will compile your custom style sheet with Foundations into one file. I will talk more about partials and variables in my next post. Visit SASS's basic page for more information. ([http://sass-lang.com/guide](http://sass-lang.com/guide))
 
 Note: This guide is tailored to Mac users. Sorry PC and Linux users. I will work on a guide for you too.
 
@@ -37,7 +37,7 @@ Brew doctor scans your homebrew environment for any possible issues before insta
 
 If you get a warning after running brew doctor saying your Xcode-select CLI tools are out of date, you can grab the latest version outside the app store from the link below:
 
-https://developer.apple.com/downloads/index.action
+[https://developer.apple.com/downloads/index.action](https://developer.apple.com/downloads/index.action)
 
 Update Xcode-select and re-run brew doctor until you get: “Your system is ready to brew"
 

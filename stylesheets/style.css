@@ -2,17 +2,12 @@
 
 body {
     font-family: 'Lato', sans-serif !important;
-    color: #383838;
+    color: #212121 !important;
 }
 
-a {
+a,a:link,a:hover,a:visited,a:active {
     text-decoration: none;
-    color: #383838;
-}
-
-a:link,a:hover,a:visited,a:active {
-    text-decoration: none;
-    color: #383838;
+    color: #212121;
 }
 
 a:hover,a:active {

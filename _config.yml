@@ -1,3 +1,5 @@
 name: Eric Price
 markdown: redcarpet
 pygments: true
+gems:
+  - jekyll-sitemap

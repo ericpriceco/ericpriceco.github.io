@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 gems:
   - jekyll-sitemap
+permalink: /blog/:title

@@ -4,7 +4,6 @@ title: Getting Started with SASS and Foundation
 date: 2014-05-08
 categories: sass foundation
 headerimg: /images/blog/foundation-sass.png
-permalink: blog/:title/
 published: true
 ---
 

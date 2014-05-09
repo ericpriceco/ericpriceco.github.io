@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Lato', sans-serif !important;
+    color: #383838;
 }
 
 a {
@@ -10,6 +11,7 @@ a {
 
 a:link,a:hover,a:visited;a:active {
     text-decoration: none;
+    color: #383838;
 }
 
 a:hover,a:active {

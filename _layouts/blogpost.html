@@ -13,7 +13,8 @@
 <section class="blog-post">
     <div class="container">
         <div class="twelve columns">
-                <img src="{{ page.cover }}">
+        {{ page.headerimg }}
+                <img src="{{ page.headerimg }}">
             <h3> {{ page.title }} </h3>
             <p> {{ page.date | date_to_long_string }} </p>
            {{ content }}

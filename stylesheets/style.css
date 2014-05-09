@@ -397,6 +397,10 @@ a:hover {
     background: #F5F4F0;
 }
 
+.blog-post a {
+	text-decoration: underline;	
+}
+
 /*---- Hover Effects ----*/
     
 .span4 {

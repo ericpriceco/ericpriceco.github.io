@@ -12,6 +12,10 @@ a:link,a:hover,a:visited;a:active {
     text-decoration: none !important;
 }
 
+a:hover {
+    color: #E38812 !important;
+}
+
 a.button,a.button:hover,button { 
     background: #383838 !important;
     font-size: 15px !important;
@@ -398,7 +402,7 @@ a:hover {
 }
 
 .blog-post a {
-	text-decoration: underline;	
+	text-decoration: underline !important;	
 }
 
 /*---- Hover Effects ----*/

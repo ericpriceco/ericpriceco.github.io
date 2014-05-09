@@ -383,11 +383,6 @@ img {
     padding-bottom: 2%;
 }
 
-.sidebar li { 
-    line-height: 5px !important; 
-    margin-bottom: 0px !important;
-}
-
 /*---- Single Blog Post Page ----*/
 
 .blog-post {

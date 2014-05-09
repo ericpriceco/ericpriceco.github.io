@@ -86,5 +86,4 @@ If you were to open index.html in your new project, you will see no styling at a
 > cd new-project
 > compass compile
 
-Congratulations for taking the first steps in what should make your development life easier.
-
+Congratulations for taking the first steps in what should make your development life easier. Feel free to contact me if you have any questions or comments.

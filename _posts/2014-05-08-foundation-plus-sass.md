@@ -1,7 +1,7 @@
 ---
 layout: blogpost
 title: Getting Started with SASS and Foundation
-date:   2014-05-08
+date: {}
 categories: sass foundation
 published: true
 ---
@@ -14,11 +14,11 @@ Note: This guide is tailored to Mac users. Sorry PC and Linux users. I will work
 
 There are programs out there like CodeKit that can do all this for you, but where's the fun in that plus this is free.
 
-## 1. Install Xcode
+#### 1. Install Xcode
 
 The first step is to install Xcode from the App Store. It's quite a large download so be prepared. It includes development libraries needed for most of the packages we will install. After it's installed, open Xcode to accept the license agreement and finish the install. 
 
-## 2. Install Homebrew
+#### 2. Install Homebrew
 
 Homebrew is package manager for OSX similar to macports that comes with OSX; however, Homebrew has a better community with more frequent package updates. Plus, a package will not overwrite a similar native OSX package causing future problems.
 
@@ -41,7 +41,7 @@ https://developer.apple.com/downloads/index.action
 
 Update Xcode-select and re-run brew doctor until you get: “Your system is ready to brew"
 
-## 3. Install Rbenv
+#### 3. Install Rbenv
 (https://github.com/sstephenson/rbenv)
 
 Another similar ruby packager is RVM, but I ran into issues where RVM screwed my ruby environment and was a pain to clean up. I have yet to experience this issue with Rbenv.
@@ -50,7 +50,7 @@ Command:
 
 > brew install rbenv ruby-build
      
-## 4. Install Ruby
+#### 4. Install Ruby
 
 Run Rbenv to install version 2.1.0 of Ruby :
 > rbenv init
@@ -60,27 +60,27 @@ Run brew doctor again to scan the package system before moving on:
 > brew doctor
 > brew update
      
-## 5. Install NodeJS and NPM (node package manager)
+#### 5. Install NodeJS and NPM (node package manager)
 
 Next we are going to install NodeJS and NPM:
 > brew install node
 
-## 6. Install Foundation
+#### 6. Install Foundation
 
 Install latest version of Foundation through Ruby:
 > sudo gem install foundation
 
-## 7. Install Bower
+#### 7. Install Bower
 
 Bower is the tool Foundation uses to install or update a Foundation project.
 > sudo npm install -g bower grunt-cli
 
-## 8. Install Compass
+#### 8. Install Compass
 
 Compass is CSS authoring framework that uses SASS to generate your stylesheets manually or in real-time during editing.
 > sudo gem install compass
 
-## Create Foundation Project
+#### 9. Create Foundation Project
 
 Next we are going to create a Foundation project. Change to the directory you want to store your project and run:
 

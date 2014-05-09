@@ -43,7 +43,7 @@ If you get a warning after running brew doctor saying your Xcode-select CLI tool
 Update Xcode-select and re-run brew doctor until you get: “Your system is ready to brew"
 
 #### 3. Install Rbenv
-(https://github.com/sstephenson/rbenv)
+[https://github.com/sstephenson/rbenv](https://github.com/sstephenson/rbenv)
 
 Another similar ruby packager is RVM, but I ran into issues where RVM screwed my ruby environment and was a pain to clean up. I have yet to experience this issue with Rbenv.
 

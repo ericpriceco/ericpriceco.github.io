@@ -2,33 +2,34 @@
 published: false
 ---
 
-![foundation sass](/_posts/foundation-sass.png)
+![](/_drafts/foundation-sass.png)
 
-In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS comes into play with its partial file system that compiles your custom stylesheet with foundations. I will talk more about partials and variables in my next post. Visit their basics page for more info. (http://sass-lang.com/guide)
+In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS can come into play with its partial system that will compile your custom style sheet with Foundations into one file. I will talk more about partials and variables in my next post. Visit SASS's basic page for more information. (http://sass-lang.com/guide)
 
-A partial will house your custom CSS and compile together with Foundations stylesheet. SASS also allows you to apply the DRY (Dont Repeat Yourself) pinciple to your coding with the use of variables.
+Note: This guide is tailored to Mac users. Sorry PC and Linux users. I will work on a guide for you too.
 
-Imagine a client doesn't like one of the primary colors on your site that is used in several elements on the page and having to change the color code on each of those elements in your stylesheet. Pain in the a##. You can assign a color code to a variable and call that variable anywhere in the SASS file allowing you to make the change once. This is just a couple of the amazing things SASS can do. Visit their basics page for more info. (http://sass-lang.com/guide)
+There are programs out there like CodeKit that can do all this for you, but where's the fun in that plus this is free.
 
-The guide below is for Mac users
+## 1. Install Xcode
 
-1. Install Xcode through the App Store
-    Xcode is a requirement for these installations. Includes required development libraries. After it installed, open Xode to Accept the agreement and finish the install.
+The first step is to install Xcode from the App Store. It's quite a large download so be prepared. It includes development libraries needed for most of the packages we will install. After it's installed, open Xcode to accept the license agreement and finish the install. 
 
-          
+## 2. Install Homebrew
 
-2. Install Homebrew
-     Homebrew is package manager for OSX similar to macports that comes with OSX; however, Homebrew has a better community with more frequent package updates. Plus, a package will not overwrite a similar native OSX package causing future problems.
+Homebrew is package manager for OSX similar to macports that comes with OSX; however, Homebrew has a better community with more frequent package updates. Plus, a package will not overwrite a similar native OSX package causing future problems.
 
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)”
+Open your terminal and run the following command:
 
-During the install it will prompt for your user account password. A prompt will come up asking to install “Xcode-select”, which is the Xcode CLI tools. Click the Install button.
+> ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)”
 
-When finished run:
-     brew doctor
-     brew update
+During the install it will ask for your user account password. A prompt will come up asking to install “Xcode-select”, which is the Xcode CLI tools. Click the Install button.
 
-Brew doctor scans your home-brew environment for any possible issues before installing a package and brew update refreshes the repository list.
+When finished run these commands in the terminal:
+
+> brew doctor
+> brew update
+
+Brew doctor scans your homebrew environment for any possible issues before installing a package and brew update refreshes the repository list.
 
 If you get a warning after running brew doctor saying your Xcode-select CLI tools are out of date, you can grab the latest version outside the app store from the link below:
 
@@ -36,41 +37,53 @@ https://developer.apple.com/downloads/index.action
 
 Update Xcode-select and re-run brew doctor until you get: “Your system is ready to brew"
 
-3. Install Rbenv (https://github.com/sstephenson/rbenv)
-     Another similar ruby packager is RVM, but I ran into issues where RVM screwed my ruby environment and was a pain to clean up. I have yet to experience this issue with Rbenv.
+## 3. Install Rbenv(https://github.com/sstephenson/rbenv)
 
-     Command:
-     brew install rbenv ruby-build
+Another similar ruby packager is RVM, but I ran into issues where RVM screwed my ruby environment and was a pain to clean up. I have yet to experience this issue with Rbenv.
+
+Command:
+
+> brew install rbenv ruby-build
      
-     Once installed run Rbenv to install version 2.1.0 of Ruby :
-     rbenv init
-     rbenv install 2.1.0
+## 4. Install Ruby
 
-      Run brew doctor again to scan the package system before moving on:
-      brew doctor
-     brew update
+Run Rbenv to install version 2.1.0 of Ruby :
+> rbenv init
+> rbenv install 2.1.0
+
+Run brew doctor again to scan the package system before moving on:
+> brew doctor
+> brew update
      
-     Next we are going to install NodeJS and NPM with the command below:
-     brew install node
-          
-     Install latest version of Foundation through Ruby:
-     sudo gem install foundation
+## 5. Install NodeJS and NPM (node package manager)
 
-     Install Bower, which is the tool Foundation uses to install or update a Foundation project.
-     sudo npm install -g bower grunt-cli
+Next we are going to install NodeJS and NPM:
+> brew install node
 
-     The Compass gem will need to be installed next. Compass is CSS authoring framework that uses SASS to generate your stylesheets automatically in real-time.
+## 6. Install Foundation
 
-     sudo gem install compass
+Install latest version of Foundation through Ruby:
+> sudo gem install foundation
 
-     Next we are going to create a Foundation project. Change to the directory you want to store your project and run:
-     foundation new new-project
+## 7. Install Bower
 
-     We now need to do the first SASS compile using compass to generate the CSS files.
-     cd new-project
-     compass compile
+Bower is the tool Foundation uses to install or update a Foundation project.
+> sudo npm install -g bower grunt-cli
 
-Congratulations for using the command line to start your next Foundation project. Happy coding!
+## 8. Install Compass
 
+Compass is CSS authoring framework that uses SASS to generate your stylesheets manually or in real-time during editing.
+> sudo gem install compass
 
+## Create Foundation Project
 
+Next we are going to create a Foundation project. Change to the directory you want to store your project and run:
+
+> foundation new test-project
+
+If you were to open index.html in your new project, you will see no styling at all. That's because the scss file needs to be compiled into a stylesheet. Change to your project folder and compile:
+     
+> cd new-project
+> compass compile
+
+Congratulations for taking the first steps in what should make your development life easier. Feel free to contact me if you have any questions or comments.

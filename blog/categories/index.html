@@ -1,0 +1,28 @@
+---
+layout: subpage
+title: Blog - Eric Price - Freelance Web Design and Developer
+---
+
+<section class="sub-cta">
+        <div class="container">
+            <div class="sixteen columns text-center">
+                <h2>MY BLOG</h2>
+                <h4>News, guides and resources</h4>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+    	<div class="container">
+    		<div class="sixteen columns">
+                    {% for post in site.categories.sass limit: 5 %}
+                        <div class="posts-list">
+                        <h4><a href="{{ categories.url }}">{{ post.title }}</a></h4>
+                        <p>{{ post.date | date_to_string }}</p>
+                        <p>{{ post.excerpt }}</p>
+                    {% endfor %}
+      				</div>
+    		</div>
+    	</div>
+    </section>

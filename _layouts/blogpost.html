@@ -12,14 +12,13 @@
 
 <section class="blog-post">
     <div class="container">
-        <div class="twelve columns">
-                <img src="{{ page.headerimg }}">
+        <div class="sixteen columns">
+                <div class="text-center">
+                        <img src="{{ page.headerimg }}">
+                </div>
             <h3> {{ page.title }} </h3>
             <p> {{ page.date | date_to_long_string }} </p>
            {{ content }}
-        </div>
-        <div class="three columns offset-by-one">
-            {% include sidebar.html %}
         </div>
     </div>
 </section>

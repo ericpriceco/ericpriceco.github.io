@@ -3,10 +3,9 @@
 {% for category in site.categories %}
 	<ul>
 		<li>
-    		<a href="/{{ category | first | slugize }}/">
+    		<a href="categories/{{ category | first | slugize }}/">
        			 {{ category | first }}
     		</a>
-    			{{ category | last | size }}
     	</li>
     </ul>
 {% endfor %}

@@ -2,7 +2,7 @@
 published: true
 ---
 
-![](/_drafts/foundation-sass.png)
+![](/images/blog/foundation-sass.png)
 
 In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS can come into play with its partial system that will compile your custom style sheet with Foundations into one file. I will talk more about partials and variables in my next post. Visit SASS's basic page for more information. (http://sass-lang.com/guide)
 

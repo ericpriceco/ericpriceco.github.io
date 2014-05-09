@@ -288,8 +288,12 @@ img {
     color: #E38812;
 }
 
-.footer a,.footer a:visited,.footer a:active {
+.footer a,.footer a:visited {
     color: #f2f2f2;
+}
+
+.footer a:hover,.footer a:active {
+    color: #E38812;
 }
 
 .footer p {

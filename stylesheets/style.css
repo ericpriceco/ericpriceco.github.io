@@ -222,16 +222,35 @@ img {
 
 /*---- Quote -----*/
 
-.quote {
-    padding-top: 5%;
-    padding-bottom: 3%; 
-    background: url('../images/quote-bg.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: relative;
-    color: #f7f7f7;
+@media only screen and (min-width:768px) {
+    .quote {
+        padding-top: 5%;
+        padding-bottom: 3%; 
+        background: url('../images/quote-bg.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+        color: #f7f7f7;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .quote {
+        padding-top: 5%;
+        padding-bottom: 3%; 
+        background: url('../images/quote-bg-sm.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+        color: #f7f7f7;
+    }
+    .quote h2 {
+        font-size: 1.5em;
+    }
 }
 
 .quote h2 {
@@ -300,6 +319,12 @@ img {
     padding-bottom: 3%;
     background: #383838;
     color: #f2f2f2;
+}
+
+@media only screen and (max-width:767px) {
+    .footer {
+        padding-bottom: 10%
+    }
 }
 
 .footer i {

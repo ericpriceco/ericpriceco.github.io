@@ -98,7 +98,7 @@ img {
 .cta {
     padding-top: 10%;
     padding-bottom: 5%;
-    background: #f2f2f2;
+    background: #F5F4F0;
       background: url('../images/cta-bg.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -369,6 +369,10 @@ img {
     padding-bottom: 5%;
 }
 
+.form-submit i {
+    font-size: 3em;
+}
+
 /*---- Portfolio Page ----*/
 
 .portfolio {
@@ -429,7 +433,6 @@ img {
 .blog-post a {
 	text-decoration: underline;	
 }
-
 /*---- Hover Effects ----*/
     
 .span4 {

@@ -1,9 +1,9 @@
 ---
 layout: blogpost
 title: Getting Started with SASS and Foundation
-date: 2014-05-08
+date: {}
 categories: sass foundation
-headerimg: /images/blog/foundation-sass.png
+headerimg: "/images/blog/foundation-sass.png"
 published: true
 ---
 
@@ -30,6 +30,7 @@ During the install it will ask for your user account password. A prompt will com
 When finished run these commands in the terminal:
 
 > brew doctor
+
 > brew update
 
 Brew doctor scans your homebrew environment for any possible issues before installing a package and brew update refreshes the repository list.
@@ -53,10 +54,12 @@ Command:
 
 Run Rbenv to install version 2.1.0 of Ruby :
 > rbenv init
+
 > rbenv install 2.1.0
 
 Run brew doctor again to scan the package system before moving on:
 > brew doctor
+
 > brew update
      
 #### 5. Install NodeJS and NPM (node package manager)
@@ -88,6 +91,7 @@ Next we are going to create a Foundation project. Change to the directory you wa
 If you were to open index.html in your new project, you will see no styling at all. That's because the scss file needs to be compiled into a stylesheet. Change to your project folder and compile:
      
 > cd new-project
+
 > compass compile
 
 Congratulations for taking the first steps in what should make your development life easier. Feel free to contact me if you have any questions or comments.

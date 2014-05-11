@@ -46,6 +46,11 @@ img {
     max-width: 100%;
 }
 
+.highlight { 
+    background: #EBE9E4;
+    padding: 10px;
+}
+
 /*---- Layout Styles ----*/
 
 .text-center {

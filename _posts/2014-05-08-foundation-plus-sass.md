@@ -7,7 +7,7 @@ headerimg: "/images/blog/foundation-sass.png"
 published: true
 ---
 
-In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS can come into play with its partial system that will compile your custom style sheet with Foundations into one file. I will talk more about partials and variables in my next post. Visit SASS's basic page for more information. ([http://sass-lang.com/guide](http://sass-lang.com/guide))
+In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS can come into play with its partial system that will compile your custom style sheet with Foundations into one file. I will talk more about partials and variables in my next post. Visit SASS's basic page for more information. [http://sass-lang.com/guide](http://sass-lang.com/guide)
 
 Note: This guide is tailored to Mac users. Sorry PC and Linux users. I will work on a guide for you too.
 
@@ -15,7 +15,7 @@ There are programs out there like CodeKit that can do all this for you, but wher
 
 #### 1. Install Xcode
 
-The first step is to install Xcode from the App Store. It's quite a large download so be prepared. It includes development libraries needed for most of the packages we will install. After it's installed, open Xcode to accept the license agreement and finish the install. 
+The first step is to install Xcode from the App Store. It includes development libraries needed for most of the packages we will install. After it's installed, open Xcode to accept the license agreement and finish the install. 
 
 #### 2. Install Homebrew
 

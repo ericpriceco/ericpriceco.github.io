@@ -289,24 +289,12 @@ img {
     padding-bottom: 10px;
 }
 
-/*---- Recent Blog ----*/
-
-.recent-blog {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background: #f9f8f7;
-}
-
-.recent-blog ul {
-    list-style: none;
-}
-
 /*---- Footer ----*/
 
 .project {
     padding-top: 2%;
     padding-bottom: 2%;
-    background: #4485A6;
+    background: #EBE9E4;
     color: #383838;
 }
 

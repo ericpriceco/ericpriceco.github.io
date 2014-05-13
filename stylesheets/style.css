@@ -265,10 +265,6 @@ img {
     background: #F5F4F0;
 }
 
-.img-box {
-    margin-top: 20px;
-}
-
 .recent-work img {
     background: #EBE9E4;
 }
@@ -468,27 +464,103 @@ pre {
 
 /*---- Hover Effects ----*/
     
-.span4 {
-    display:block;
+.overlay { 
+    background-color: #222; 
+    position: relative; 
+    margin: 15px 0; 
+    -webkit-transition: 0.2s ease; 
+    -moz-transition: 0.2s ease; 
+    -o-transition: 0.2s ease; 
+    transition: 0.2s ease; 
+}
+
+.overlay:hover figcaption,
+.fade figure.cs-hover figcaption { 
+    opacity: 1; 
+}
+
+.mask { 
+    list-style: none; 
+    text-align: center; 
+    margin: 0; 
+}
+
+.mask li { 
+    margin: 0; 
+    text-align: left;
+    position: relative; 
+}
+
+.mask figure { 
+    margin: 0; 
     position: relative;
 }
 
-.red {
-    background-color: red;
-    float:left;
-    overflow:hidden;
-    /*font-size:50px;*/
+.mask figure img { 
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+    position: relative; 
+}
+.mask figcaption { 
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    background: rgba(214, 123, 32, 0.6);
+    color: #222;
 }
 
-.span4:hover:after
-{
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
+.mask figcaption h3 {
+    margin: 0; 
+    padding: 0;
+    color: #fff;
+}
+.mask figcaption a { 
+    text-align: center; 
+    padding: 15px 25px 15px 25px; 
+    border-radius: 5px; 
+    display: inline-block; 
+    background: #222; 
+    color: #fff; 
 }
 
-.red:hover:after
-{
-    background: RGBA(255, 0, 0, .3);
+.mask figcaption a:hover { 
+    text-decoration: none; 
+    background-color: #000;
+}
+
+.fade figcaption { 
+    font-size: 1.2em; 
+    height: 100%; 
+    width: 100%; 
+    opacity: 0; 
+    text-align: center;
+    -webkit-backface-visibility: hidden; 
+    -moz-backface-visibility: hidden; 
+    backface-visibility: hidden; 
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s; 
+}
+
+.no-touch .fade figure:hover figcaption,
+.fade figure.cs-hover figcaption { 
+    opacity: 1;
+}
+
+.overlay:hover figcaption,
+.fade figure.cs-hover figcaption {
+    opacity: 1; 
+}
+
+.fade figcaption h3 { 
+    margin-top: 70px; 
+}
+
+.fade figcaption span { 
+    display: block; 
+}
+
+.fade figcaption a { 
+    margin-top: 35%; 
 }

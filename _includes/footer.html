@@ -10,31 +10,37 @@
         </div>
     </section>
     
-    <section class="footer text-center">
+    <section class="footer">
         <div class="container">
-            <div class="six columns">
-                <h4>Latest Blog Posts</h4>
-                     {% for post in site.posts limit: 3 %}
+            <div class="seven columns">
+                <h3>Latest Blog Post</h3>
+                     {% for post in site.posts limit: 1 %}
                         <ul>
                             <li>
-                                <a href="{{ post.url }}">{{ post.title }}</a>
+                                <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                                <p>{{ post.content | strip_html | truncatewords:45 }}</p>
+                                <p><a href="{{ post.url }}">Read More</a></p>
+
                         </li>
                         </ul>
                     {% endfor %}
             </div>
-            <div class="five columns">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="mailto:eric.price.co@gmail.com">eric.price.co@gmail.com</a></li>
-                    <li><a href="tel:+19197491678">(919) 749-1678</a></li>
-                </ul>
+            <div class="seven offset-by-two columns">
+                <h3>About Me</h3>
+                    <p>I have a passion for creating clean, modern responsive websites that makes your content and brand stand out.</p>
+                    <div itemscope itemtype="http://data-vocabulary.org/Person"><p>I'm a <span itemprop="title">freelance web developer and designer</span> based out of the <span itemprop="address">Raleigh area in North Carolina</span>. I believe a website should be easily accessible to any visitor on any screen whether that is a phone or a large monitor. My websites are hand-coded line by line because when a website is coded well, it works faster, more efficiently and performs better in search results.</p></div>
             </div>
-            <div class="five columns">
-                <h4>Find Me</h4>
-                    <a href="https://plus.google.com/u/2/105475388741669903128"><i class="fa fa-google-plus"></i></a>
-                    <a href="https://www.facebook.com/eric.price.125760"><i class="fa fa-facebook"></i></a>
-                    <a href="https://twitter.com/EricPrice2"><i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="container">
+            <div class="eight columns offset-by-five top-4 bottom-5">
+                <a href="https://plus.google.com/u/2/105475388741669903128"><i class="fa fa-google-plus"></i></a>
+                <a href="https://www.facebook.com/eric.price.125760"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/EricPrice2"><i class="fa fa-twitter"></i></a>
+                <a href="mailto:eric.price.co@gmail.com"><i class="fa fa-envelope"></i></a>
+                <a href="tel:+19197491678"><i class="fa fa-phone"></i></a>
             </div>
+        </div>
+        <div class="container">
             <div class="sixteen columns text-center top-2">
                 <p>Copyright 2014 - Eric Price. Powered by <a href="http://jekyllrb.com">Jekyll</a> and <a href="http://www.getskeleton.com">Skeleton.</a></p>
             </div>

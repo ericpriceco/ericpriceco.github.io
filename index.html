@@ -6,7 +6,7 @@ title: Eric Price - Freelance Web Designer and Developer
    <section class="cta">
         <div class="container">
             <div class="ten columns offset-by-three top-4 text-center">
-                <h1><span>Hi, I'm Eric Price</span></h1>
+                <div itemscope itemtype="http://data-vocabulary.org/Person"><h1><span>Hi, I'm </span><span itemprop="name">Eric Price</span></h1></div>
                 <h4 class="top-2"><span>Freelance Web Developer and Designer</span></h4>
                     <div class="top-10">
                         <a href="#about" class="button">FIND OUT MORE</a>
@@ -18,23 +18,9 @@ title: Eric Price - Freelance Web Designer and Developer
             <div id="about">
                 {% include navbar.html %}
             </div>
-    
-    <section class="about">
-        <div class="container">
-            <div class="sixteen columns text-center">
-                <h4>I have a passion for creating clean, modern responsive websites.</h4>
-                <div class="divider"></div>
-                <p class="top-2">Based out of the Triangle Area in North Carolina. I beleive a website should be easily accessible to any visitor on any screen whether that is a phone or a large monitor. My websites are hand-coded line by line because when a website is coded well, it works faster, more efficiently and performs better in search results.</p>
-            </div>
-        </div>
-    </section>
-    
+
     <section class="service-highlight">
         <div class="container">
-            <div class="sixteen columns text-center bottom-3">
-                <h4>What I have to offer</h4>
-                <div class="divider"></div>
-            </div>
                 <div class="one-third column text-center">
                         <img src="/images/imac.png">
                         <h4>Responsive Design</h4>
@@ -56,7 +42,7 @@ title: Eric Price - Freelance Web Designer and Developer
         </div>
     </section>
     
-      <section class="quote">
+    <section class="quote">
         <div class="container">
             <div class="sixteen columns text-center">
                 <h2>Design is not just what it looks like and feels like. Design is how it works.</h2>
@@ -69,17 +55,28 @@ title: Eric Price - Freelance Web Designer and Developer
     <section class="recent-work">
         <div class="container">
             <div class="sixteen columns text-center bottom-3">
-                <h4>Some of my latest work</h4>
+                <h3>Featured Work</h3>
                 <div class="divider"></div>
             </div>
-            <div class="one-third column text-center">
-                    <a href="/portfolio"><img src="images/recent-work1.png"></a>
+            <div class="img-box">
+                <div class="eight columns">
+                    <img src="/images/recent-work-mobile.png">
+                </div>
             </div>
-            <div class="one-third column text-center">
-                <a href="/portfolio"><img src="images/recent-work2.png"></a>
+            <div class="img-box">
+                <div class="eight columns">
+                    <img src="/images/recent-work-monitor.png">
+                </div>
             </div>
-            <div class="one-third column text-center">
-                <a href="/portfolio"><img src="images/recent-work3.png"></a>
+            <div class="img-box">
+                <div class="eight columns img-box">
+                    <img src="/images/recent-work-laptop.png">
+                </div>
+            </div>
+            <div class="img-box">
+                <div class="eight columns img-box">
+                    <img src="/images/recent-work-tablet.png">
+                </div>
             </div>
             <div class="sixteen columns text-center top-4">
                 <a href="/portfolio" class="button">SEE MORE</a>

@@ -455,6 +455,11 @@ img {
     letter-spacing: 0.03em;
 }
 
+.blog-post h4 {
+	font-weight: 300;
+	color: #548396;
+}
+
 .blog-post a {
 	text-decoration: underline;	
 }

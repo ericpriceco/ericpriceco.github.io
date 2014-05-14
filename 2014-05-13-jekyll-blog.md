@@ -1,10 +1,10 @@
-##  Creating A Blog With Jekyll
+##  Install Jekyll on OSX
 
-If you're not familiar with Jekyl, it's a parsing engine that static site generator that takes partial html files, text and markdown files and converts them into a working website. I'll explain partials and markdown later. The great thing about Jekyll is you can create a dynamic blog without a database. 
+If you're not familiar with Jekyll, it's a parsing engine that takes partial html files, text and markdown files and converts them into a working website. The great thing about Jekyll is you can create a dynamic blog without a database. 
 
-There are a few great things not needing a database. No single point of failure, backups are easy and you can host your site almost anywhere. I host this site on Github for free and with jekyll built-in to Github, it's a no brainer.
+A few things come to mind when you no longer need a database. No single point of failure, backups are easy and you can host your site almost anywhere. I host this site on Github for free and with jekyll built-in to Github, it's a no brainer.
 
-First things first, we need to install Jekyll on your system. I'm going to go through steps to install Jekyll on OSX Mavericks.
+Now let's get started!
 
 ## Install Xcode
 
@@ -53,5 +53,33 @@ Run brew doctor again to scan the package system before moving on:
 	brew doctor
 	brew update
 
+## Install Jekyll
+
+	gem install jekyll
+
+That's it! You now have Jekyll installed and the real fun can begin by creating your next Jekyll project.
+
+## Create Jekyll Project
+
+Creating a new jekyll project couldn't be easier. Run the following in a location you want to store your project:
+
+	jekyll new myblog
+    cd myblog
+
+If you open index.html in your new project, you will see a [YAML](http://yaml.org/) Frontmatter block at the top seperated by three dashes. These three dashes at the top and bottom are needed to tell Jekyll it's a YAML block. Below the block you will see some HTML markup and [Liquid](http://jekyllrb.com/docs/templates/) tags. These tags can be very powerful and is what makes your blog a dynamic one.
+
+## Build Project
+
+Now we need to convert the files to a functional site:
+
+	jekyll build
+  
+After running the build, you will see a new folder called "\_site". This is where your converted site is located. You can host the site locally by running this command while in the project folder:
+
+	jekyll serve
+    
+Open your browser and go to either 0.0.0.0:4000 or localhost:4000 to see Jekyll powered site.
+
+In my next post I will cover creating a blog with partials and layouts. Send me a message if you have any questions or comments. 
 
 

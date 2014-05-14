@@ -207,15 +207,15 @@ img {
 }
 
 .nav ul li a:hover, nav ul li a:focus { 
-    color: #E38812; 
+    color: #548396; 
 }
 
 .nav ul li.current_page_item a { 
-    color: #E38812; 
+    color: #548396; 
 }
 
 .nav ul li.current_page_ancestor a { 
-    color: #E38812; 
+    color: #548396; 
 }
 
 /*---- About ----*/

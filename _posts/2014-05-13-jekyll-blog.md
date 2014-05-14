@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 ##  Install Jekyll on OSX

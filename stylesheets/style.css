@@ -101,6 +101,10 @@ img {
     padding-bottom: 5%;
 }
 
+.bottom-8 {
+    padding-bottom: 8%;
+}
+
 /*---- CTA ----*/
 
 @media only screen and (min-width:768px) {

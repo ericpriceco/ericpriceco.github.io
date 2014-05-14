@@ -440,6 +440,7 @@ img {
 /*---- Single Blog Post Page ----*/
 
 .blog-post {
+	padding-top: 5%;
     padding-bottom: 5%;
     background: #F5F4F0;
 }

@@ -5,11 +5,13 @@
 <section class="blog-post">
     <div class="container">
         <div class="fourteen columns offset-by-one">
-                <div class="text-center bottom-3">
+                <div class="text-center top-4 bottom-4">
                         <img src="{{ page.headerimg }}">
                 </div>
-            <h3> {{ page.title }} </h3>
-            <p> {{ page.date | date_to_long_string }} </p>
+            <div class="text-center bottom-4">
+                <h2> {{ page.title }} </h2>
+                <p> {{ page.date | date_to_long_string }} </p>
+            </div>
            {{ content }}
         </div>
     </div>

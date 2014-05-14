@@ -147,7 +147,7 @@ img {
 .sub-cta {
     padding-top: 6%;
     padding-bottom: 5%;
-    background: #F5F4F0;
+    background: #f7f7f7;
 }
 
 .sub-cta h2 {
@@ -262,11 +262,11 @@ img {
 .recent-work {
     padding-top: 7%;
     padding-bottom: 7%;
-    background: #F5F4F0;
+    background: #f7f7f7;
 }
 
 .recent-work img {
-    background: #EBE9E4;
+    background: #f2f2f2;
 }
     
 /*---- Service ----*/
@@ -274,7 +274,7 @@ img {
 .service-highlight {
     padding-top: 5%;
     padding-bottom: 7%;
-    background: #EBE9E4;
+    background: #f7f7f7;
 }
 
 .service-highlight h4 {
@@ -290,7 +290,7 @@ img {
 .project {
     padding-top: 2%;
     padding-bottom: 2%;
-    background: #EBE9E4;
+    background: #548396;
     color: #383838;
 }
 
@@ -345,7 +345,7 @@ img {
 /*---- Process Page ----*/
 
 .process-group {
-    background: #F5F4F0;
+    background: #f7f7f7;
     padding-bottom: 8%;
 }
 
@@ -364,7 +364,7 @@ img {
 /*---- Services Page ----*/
 
 .services {
-    background: #F5F4F0;
+    background: #f7f7f7;
 }
 
 .service-section {
@@ -379,7 +379,7 @@ img {
 /*---- Contact Page ----*/
 
 .contact {
-    background: #F5F4F0;
+    background: #f7f7f7;
     padding-bottom: 5%;
 }
 
@@ -390,32 +390,32 @@ img {
 /*---- Portfolio Page ----*/
 
 .portfolio {
-    background: #F5F4F0;
+    background: #f7f7f7;
 }
 
 .portfolio-section-top {
     padding-top: 1%;
     padding-bottom: 6%;
-    background: #F5F4F0;
+    background: #f7f7f7;
 }
 
 .portfolio-section {
     padding-top: 6%;
     padding-bottom: 6%;
-    background: #F5F4F0;
+    background: #f7f7f7;
 }
 
 .portfolio-section2 {
     padding-top: 6%;
     padding-bottom: 6%;
-    background: #EBE9E4;
+    background: #f2f2f2;
 }
 
 /*---- Blog Page ----*/
 
 .blog {
     padding-bottom: 5%;
-    background: #F5F4F0;
+    background: #f7f7f7;
 }
 
 .blog ul {
@@ -440,9 +440,8 @@ img {
 /*---- Single Blog Post Page ----*/
 
 .blog-post {
-	padding-top: 5%;
     padding-bottom: 5%;
-    background: #F5F4F0;
+    background: #f7f7f7;
 }
 
 .blog-post a {
@@ -450,7 +449,7 @@ img {
 }
 
 .highlight { 
-    background: #EBE9E4;
+    background: #e8e8e8;
     padding: 15px;
     margin-bottom: 2%;
 }

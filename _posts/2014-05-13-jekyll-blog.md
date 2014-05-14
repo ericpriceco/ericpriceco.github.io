@@ -12,11 +12,11 @@ A few things come to mind when you no longer need a database. No single point of
 
 Now let's get started!
 
-### Install Xcode
+#### Install Xcode
 
 The first step is to install Xcode from the App Store. It includes development libraries needed for most of the packages we will install. After it's installed, open Xcode to accept the license agreement and finish the install.
 
-### Install Homebrew
+#### Install Homebrew
 
 Homebrew is package manager for OSX similar to macports that comes with OSX; however, Homebrew has a better community with more frequent package updates. Plus, a package will not overwrite a similar native OSX package causing future problems.
 
@@ -37,7 +37,7 @@ If you get a warning after running brew doctor saying your Xcode-select CLI tool
 
 https://developer.apple.com/downloads/index.action
 
-### Install Rbenv (ruby package manager)
+#### Install Rbenv (ruby package manager)
 
 https://github.com/sstephenson/rbenv
 
@@ -47,7 +47,7 @@ Command:
 
 	brew install rbenv ruby-build
 
-### Install Ruby
+#### Install Ruby
 
 Run Rbenv to install version 2.1.0 of Ruby:
 
@@ -59,13 +59,13 @@ Run brew doctor again to scan the package system before moving on:
 	brew doctor
 	brew update
 
-### Install Jekyll
+#### Install Jekyll
 
 	gem install jekyll
 
 That's it! You now have Jekyll installed and the real fun can begin by creating your next Jekyll project.
 
-### Create Jekyll Project
+#### Create Jekyll Project
 
 Creating a new jekyll project couldn't be easier. Run the following in a location you want to store your project:
 
@@ -74,7 +74,7 @@ Creating a new jekyll project couldn't be easier. Run the following in a locatio
 
 If you open index.html in your new project, you will see a [YAML](http://yaml.org/) Frontmatter block at the top seperated by three dashes. These three dashes at the top and bottom are needed to tell Jekyll it's a YAML block. Below the block you will see some HTML markup and [Liquid](http://jekyllrb.com/docs/templates/) tags. These tags can be very powerful and is what makes your blog a dynamic one.
 
-### Build Project
+#### Build Project
 
 Now we need to convert the files to a functional site:
 

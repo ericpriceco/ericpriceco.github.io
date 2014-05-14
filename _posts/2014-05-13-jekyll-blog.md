@@ -1,7 +1,10 @@
 ---
+layout: blogpost
+title: Install Jekyll on OSX
+date: 2014-05-13
+categories: jekyll
 published: true
 ---
-
 ##  Install Jekyll on OSX
 
 If you're not familiar with Jekyll, it's a parsing engine that takes partial html files, text and markdown files and converts them into a working website. The great thing about Jekyll is you can create a dynamic blog without a database. 

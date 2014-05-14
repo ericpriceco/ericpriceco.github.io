@@ -86,6 +86,5 @@ After running the build, you will see a new folder called "\_site". This is wher
     
 Open your browser and go to either 0.0.0.0:4000 or localhost:4000 to see Jekyll powered site.
 
-In my next post I will cover creating a blog with partials and layouts. Send me a message if you have any questions or comments. 
-
+In my next post I will cover creating a blog with partials and layouts.
 

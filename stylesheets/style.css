@@ -433,6 +433,11 @@ img {
     padding-bottom: 2%;
 }
 
+.posts-list h4 {
+	font-weight: 700;
+	color: #548396;
+}
+
 .sidebar li {
     line-height: 0px;
     margin: 0px;

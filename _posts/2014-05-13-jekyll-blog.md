@@ -1,5 +1,5 @@
 ---
-layout: blogpost
+layout: blogpostnoimg
 title: Install Jekyll on OSX
 date: 2014-05-13
 categories: jekyll

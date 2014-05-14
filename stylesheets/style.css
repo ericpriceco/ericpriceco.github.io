@@ -135,10 +135,7 @@ img {
     .cta h1 {
         font-size: 2.5em;
     }
-
 }
-
-
 
 .cta h4 {
     color: #f7f7f7;
@@ -157,7 +154,7 @@ img {
 .sub-cta h2 {
     font-size: 2em;
     font-weight: 700;
-    letter-spacing: 0.10em;
+    letter-spacing: 0.08em;
 }
 
 /*---- Nav Bar ----*/
@@ -446,6 +443,12 @@ img {
 .blog-post {
     padding-bottom: 5%;
     background: #f7f7f7;
+}
+
+.blog-post h2 {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
 .blog-post a {

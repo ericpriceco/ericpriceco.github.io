@@ -5,13 +5,14 @@ body {
     color: #212121 !important;
 }
 
-a,a:link,a:hover,a:visited,a:active {
+a,a:link,a:visited {
     text-decoration: none;
     color: #212121;
 }
 
 a:hover,a:active {
-    color: #E38812;
+    color: #548396;
+    text-decoration: none;
 }
 
 a.button,a.button:hover,button { 
@@ -331,7 +332,7 @@ img {
 }
 
 .footer i:hover {
-    color: #E38812;
+    color: #548396;
 }
 
 .footer a,.footer a:visited {
@@ -339,7 +340,7 @@ img {
 }
 
 .footer a:hover,.footer a:active {
-    color: #E38812;
+    color: #548396;
 }
 
 .footer h3,.footer h4 {

@@ -1,0 +1,27 @@
+{% include header.html %}
+
+{% include navbar.html %}
+
+<section class="sub-cta">
+        <div class="container">
+            <div class="sixteen columns text-center">
+                <h2>MY BLOG</h2>
+                <h4>News, guides and resources</h4>
+                <div class="divider"></div>
+            </div>
+        </div>
+</section>
+
+<section class="blog-post">
+    <div class="container">
+        <div class="fourteen columns offset-by-one">
+            <div class="text-center">
+                <h2> {{ page.title }} </h2>
+                <p> {{ page.date | date_to_long_string }} </p>
+            </div>
+           {{ content }}
+        </div>
+    </div>
+</section>
+
+{% include footer.html %}

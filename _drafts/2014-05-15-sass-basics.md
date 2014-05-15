@@ -12,5 +12,5 @@ I'm going to use the Foundation framework in this article; however, you can use 
 
 Partials allow you to split up your CSS snippets into logical separate files, which will then be compiled into a single stylesheet with the @import option. Partial files start with an underscore to tell SASS what they are. It's a good idea not to touch the stylesheets that come with Foundation for two reasons: you can't break it and avoid any future issues upgrading Foundation for that project.
 
-When you install the SASS version of Foundation (see my post), 
+When you install the SASS version of Foundation (see my post),
 

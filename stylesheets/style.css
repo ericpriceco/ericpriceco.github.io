@@ -111,7 +111,7 @@ img {
 .cta {
     padding-top: 10%;
     padding-bottom: 5%;
-    background: #F5F4F0;
+    background: #f2f2f2;
       background: url('../images/cta-bg2.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -220,14 +220,6 @@ img {
 
 .nav ul li.current_page_ancestor a { 
     color: #548396; 
-}
-
-/*---- About ----*/
-
-.about {
-    padding-top: 7%;
-    padding-bottom: 5%;
-    background: #F5F4F0;
 }
 
 /*---- Quote -----*/

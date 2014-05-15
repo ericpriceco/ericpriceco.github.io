@@ -93,7 +93,7 @@ Next we are going to create a Foundation project. Change to the directory you wa
 
 If you were to open index.html in your new project, you will see no styling at all. That's because the scss file needs to be compiled into a stylesheet. Change to your project folder and compile:
      
-	cd new-project
+	cd test-project
 	compass compile
 
 Congratulations for taking the first steps in what should make your development life easier.

@@ -302,15 +302,9 @@ img {
 
 .footer {
     padding-top: 2%;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
     background: #383838;
     color: #f2f2f2;
-}
-
-@media only screen and (max-width:767px) {
-    .footer {
-        padding-bottom: 10%
-    }
 }
 
 .footer i {

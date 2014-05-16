@@ -170,8 +170,7 @@ img {
 
 .nav { 
     display: block;
-    background-color: #f7f7f7;
-    text-align: center; 
+    background-color: #f7f7f7; 
     width: 100%;
     padding: 10px 0; 
     z-index: 101; 

@@ -1,4 +1,4 @@
-// STICKY NAVIGATION ---->
+/*// STICKY NAVIGATION ---->
 $(function() {
 
 	var windowWidth = $(window).width();
@@ -38,7 +38,7 @@ $(function() {
 	}
 });
 
-
+*/
 // RESPONSIVE SELECT NAVIGATION ---->
 $(document).ready(function() {
 	//build dropdown

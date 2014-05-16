@@ -7,8 +7,7 @@
         <div class="fourteen columns offset-by-one">
             <div class="text-center top-10 bottom-8">
                 <h2> {{ page.title }} </h2>
-                <p> {{ page.date | date_to_long_string }} </p>
-                <div class="divider"></div>
+                <p> {{ page.date | date: '%B %d, %Y' }} </p>
             </div>
            {{ content }}
         </div>

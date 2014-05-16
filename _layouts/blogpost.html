@@ -4,18 +4,18 @@
 
 <section class="blog-post">
     <div class="container">
-        <div class="fourteen columns offset-by-one">
+        <div class="twelve columns offset-by-two">
                 <div class="text-center top-4 bottom-4">
                         <img src="{{ page.headerimg }}">
                 </div>
             <div class="text-center bottom-8">
                 <h2> {{ page.title }} </h2>
-                <p> {{ page.date | date_to_long_string }} </p>
+                <p> {{ page.date | date: '%B %d, %Y' }} </p>
                 <div class="divider"></div>
             </div>
            {{ content }}
         </div>
-        <div class="fourteen columns offset-by-one top-4">
+        <div class="twelve columns offset-by-two top-4">
             <p class="text-center">Have a comment, question or just want to share this?</p>
         </div>
         <div class="two columns offset-by-six">

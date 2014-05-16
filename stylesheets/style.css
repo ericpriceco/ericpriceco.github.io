@@ -7,11 +7,11 @@ body {
 
 a,a:link,a:visited {
     text-decoration: none;
-    color: #212121;
+    color: #DE8435;
 }
 
 a:hover,a:active {
-    color: #548396;
+    color: #DE8435;
     text-decoration: none;
 }
 
@@ -456,7 +456,7 @@ img {
 }
 
 .blog-post a {
-	text-decoration: underline;	
+	
 }
 
 .highlight { 

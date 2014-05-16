@@ -7,7 +7,7 @@ body {
 
 a,a:link,a:visited {
     text-decoration: none;
-    color: #383838;
+    color: #292929;
 }
 
 a:hover,a:active {
@@ -16,7 +16,7 @@ a:hover,a:active {
 }
 
 a.button,a.button:hover,button { 
-    background: #383838 !important;
+    background: #292929 !important;
     font-size: 15px !important;
     font-weight:normal !important;
     text-align: center !important;
@@ -31,7 +31,7 @@ a.button,a.button:hover,button {
 
 .divider {
     width: 100px;
-    border-bottom: #383838 2px solid;
+    border-bottom: #292929 2px solid;
     margin:auto;
     margin-top:20px;
     margin-bottom:20px;
@@ -299,17 +299,17 @@ img {
     padding-top: 2%;
     padding-bottom: 2%;
     background: #548396;
-    color: #383838;
+    color: #292929;
 }
 
 .project h3 {
-    color: #383838;
+    color: #292929;
 }
 
 .footer {
     padding-top: 2%;
     padding-bottom: 2%;
-    background: #383838;
+    background: #292929;
     color: #f2f2f2;
 }
 

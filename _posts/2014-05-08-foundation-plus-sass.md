@@ -1,7 +1,7 @@
 ---
 layout: blogpost
 title: Getting Started with SASS and Foundation
-date: 2014-05-08
+date: {}
 categories: sass foundation
 headerimg: "/images/blog/foundation-sass.png"
 published: true
@@ -95,5 +95,9 @@ If you were to open index.html in your new project, you will see no styling at a
      
 	cd test-project
 	compass compile
+    
+You can have compass watch for changes in real-time and it will auto compile your stylesheet when you save a change to your scss files.
+
+	compass watch
 
 Congratulations for taking the first steps in what should make your development life easier.

@@ -1,7 +1,7 @@
 ---
 layout: blogpostnoimg
 title: Install Jekyll on OSX
-date: 2014-05-10
+date: {}
 categories: jekyll
 published: true
 ---
@@ -35,11 +35,11 @@ Brew doctor scans your homebrew environment for any possible issues before insta
 
 If you get a warning after running brew doctor saying your Xcode-select CLI tools are out of date, you can grab the latest version outside the app store from the link below:
 
-https://developer.apple.com/downloads/index.action
+[https://developer.apple.com/downloads/index.action](https://developer.apple.com/downloads/index.action)
 
 #### Install Rbenv (ruby package manager)
 
-https://github.com/sstephenson/rbenv
+[https://github.com/sstephenson/rbenv](https://github.com/sstephenson/rbenv)
 
 Another similar ruby packager is RVM, but I ran into issues where RVM screwed my ruby environment and was a pain to clean up. I have yet to experience this issue with Rbenv.
 

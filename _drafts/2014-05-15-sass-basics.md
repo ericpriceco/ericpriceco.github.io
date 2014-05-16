@@ -16,7 +16,11 @@ Partials allow you to split up your CSS code into logical separate files, which 
 
 When you install the SASS version of Foundation (see my post), you will find a folder called "scss". This is where you will store you custom settings. You can name the file anything as long as it starts with an underscore and ends with the ".scss" extension. (ex: \_custom.scss)
 
-Now we point Foundation to the new partial. Open up "app.scss" in the scss folder and add your partial below foundation
+Now we point Foundation to the new partial. Open up "app.scss" in the scss folder and add your partial below "@import foundation;". It's important that it's last to load so it will be compiled into the stylesheet last.
 
+app.scss:
 
+	@import "settings";
+	@import "foundation";
+	**@import "custom";**
 

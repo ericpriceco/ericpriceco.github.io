@@ -457,11 +457,11 @@ img {
 
 .blog-post a, .blog-post a:link, .blog-post a:visited {
     text-decoration: none;
-    color: #548396;
+    color: #43AED9;
 }
 
 .blog-post a:hover, .blog-post a:active {
-    color: #548396;
+    color: #43AED9;
     text-decoration: none;
 }
 

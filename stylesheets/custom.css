@@ -454,12 +454,12 @@ img {
 /* line 405, ../scss/custom.scss */
 .blog-post a, .blog-post a:link, .blog-post a:visited {
   text-decoration: none;
-  color: #43AED9;
+  color: #DE8614;
 }
 
 /* line 410, ../scss/custom.scss */
 .blog-post a:hover, .blog-post a:active {
-  color: #43AED9;
+  color: #DE8614;
   text-decoration: none;
 }
 

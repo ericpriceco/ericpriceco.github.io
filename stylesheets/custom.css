@@ -426,6 +426,11 @@ img {
   margin: 0px;
 }
 
+.sidebar ul {
+  list-style: none;
+}
+
+}
 /* line 383, ../scss/custom.scss */
 .sidebar h5 {
   margin-bottom: 7px;

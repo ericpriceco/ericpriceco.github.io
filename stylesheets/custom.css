@@ -24,7 +24,7 @@ a:hover, a:active {
 }
 
 /* line 24, ../scss/custom.scss */
-a.button, a.button:hover, button {
+a.button, button {
   background: #292929;
   font-size: 15px;
   font-weight: normal;
@@ -36,6 +36,10 @@ a.button, a.button:hover, button {
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0;
+}
+
+a.button:hover {
+  background: #DE8614;
 }
 
 /* line 38, ../scss/custom.scss */
@@ -264,7 +268,7 @@ img {
 .project {
   padding-top: 2%;
   padding-bottom: 2%;
-  background: #548396;
+  background: #dedede;
   color: #292929;
 }
 
@@ -298,7 +302,7 @@ img {
 }
 /* line 270, ../scss/custom.scss */
 .footer i:hover {
-  color: #548396;
+  color: #DE8614;
 }
 
 /* line 274, ../scss/custom.scss */
@@ -308,7 +312,7 @@ img {
 
 /* line 278, ../scss/custom.scss */
 .footer a:hover, .footer a:active {
-  color: #548396;
+  color: #DE8614;
 }
 
 /* line 282, ../scss/custom.scss */
@@ -549,7 +553,7 @@ code {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(84, 131, 150, 0.6);
+  background: rgba(222, 134, 20, 0.6);
   color: #222;
 }
 

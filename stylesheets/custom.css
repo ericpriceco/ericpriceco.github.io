@@ -1,0 +1,632 @@
+/*---- General Styles ----*/
+/* line 3, ../scss/custom.scss */
+body {
+  font-family: 'Lato', sans-serif;
+  color: #212121;
+  background: #f7f7f7;
+}
+
+/* line 9, ../scss/custom.scss */
+p {
+  font-weight: 300;
+}
+
+/* line 13, ../scss/custom.scss */
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #292929;
+}
+
+/* line 18, ../scss/custom.scss */
+a:hover, a:active {
+  color: #DE8614;
+  text-decoration: none;
+}
+
+/* line 24, ../scss/custom.scss */
+a.button, a.button:hover, button {
+  background: #292929;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+  padding: .6em 1.1em;
+  color: #f7f7f7;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0;
+}
+
+/* line 38, ../scss/custom.scss */
+.divider {
+  width: 100px;
+  border-bottom: #292929 2px solid;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* line 47, ../scss/custom.scss */
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+/* line 52, ../scss/custom.scss */
+img {
+  max-width: 100%;
+}
+
+/*---- Layout Styles ----*/
+/* line 58, ../scss/custom.scss */
+.top-2 {
+  padding-top: 2%;
+}
+
+/* line 62, ../scss/custom.scss */
+.top-4 {
+  padding-top: 4%;
+}
+
+/* line 66, ../scss/custom.scss */
+.top-5 {
+  padding-top: 5%;
+}
+
+/* line 70, ../scss/custom.scss */
+.top-6 {
+  padding-top: 6%;
+}
+
+/* line 74, ../scss/custom.scss */
+.top-10 {
+  padding-top: 10%;
+}
+
+/* line 78, ../scss/custom.scss */
+.bottom-3 {
+  padding-bottom: 3%;
+}
+
+/* line 82, ../scss/custom.scss */
+.bottom-2 {
+  padding-bottom: 2%;
+}
+
+/* line 86, ../scss/custom.scss */
+.bottom-4 {
+  padding-bottom: 4%;
+}
+
+/* line 90, ../scss/custom.scss */
+.bottom-5 {
+  padding-bottom: 5%;
+}
+
+/* line 94, ../scss/custom.scss */
+.bottom-8 {
+  padding-bottom: 8%;
+}
+
+/*---- CTA ----*/
+@media only screen and (min-width: 768px) {
+  /* line 101, ../scss/custom.scss */
+  .cta {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    background: #f2f2f2;
+    background: url("../images/cta-bg2.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+  }
+}
+/* line 114, ../scss/custom.scss */
+.cta h1 {
+  color: #f7f7f7;
+  font-size: 3.2em;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 123, ../scss/custom.scss */
+  .cta {
+    padding-top: 10%;
+    padding-bottom: 5%;
+    background: #f2f2f2;
+    background: url("../images/cta-bg-sm.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* line 134, ../scss/custom.scss */
+  .cta h1 {
+    font-size: 2.5em;
+  }
+}
+/* line 139, ../scss/custom.scss */
+.cta h4 {
+  color: #f7f7f7;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.2em;
+}
+
+/* line 147, ../scss/custom.scss */
+.sub-cta {
+  padding-top: 6%;
+  padding-bottom: 5%;
+  background: #f7f7f7;
+}
+
+/* line 153, ../scss/custom.scss */
+.sub-cta h2 {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/*---- Nav Bar ----*/
+/* line 161, ../scss/custom.scss */
+.top-nav {
+  border-bottom: 1px solid #dedede;
+  border-top: 4px solid #DE8614;
+}
+
+/* line 166, ../scss/custom.scss */
+.top-bar-section ul li.active > a {
+  border-bottom: 2px solid #DE8614;
+  background: #f7f7f7 !important;
+}
+
+/*---- Quote -----*/
+@media only screen and (min-width: 768px) {
+  /* line 174, ../scss/custom.scss */
+  .quote {
+    padding-top: 5%;
+    padding-bottom: 3%;
+    background: url("../images/quote-bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    color: #f7f7f7;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /* line 188, ../scss/custom.scss */
+  .quote {
+    padding-top: 5%;
+    padding-bottom: 3%;
+    background: url("../images/quote-bg-sm.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    color: #f7f7f7;
+  }
+
+  /* line 199, ../scss/custom.scss */
+  .quote h2 {
+    font-size: 1.5em;
+  }
+}
+/* line 204, ../scss/custom.scss */
+.quote h2 {
+  color: #f7f7f7;
+}
+
+/*---- Recent Work ----*/
+/* line 210, ../scss/custom.scss */
+.recent-work {
+  padding-top: 7%;
+  padding-bottom: 7%;
+  background: #f7f7f7;
+}
+
+/* line 216, ../scss/custom.scss */
+.recent-work img {
+  background: #f2f2f2;
+}
+
+/*---- Service ----*/
+/* line 222, ../scss/custom.scss */
+.service-highlight {
+  padding-top: 5%;
+  padding-bottom: 7%;
+  background: #f7f7f7;
+}
+
+/* line 228, ../scss/custom.scss */
+.service-highlight h4 {
+  padding-bottom: 10px;
+}
+
+/* line 232, ../scss/custom.scss */
+.service-highlight img {
+  padding-bottom: 10px;
+}
+
+/*---- Footer ----*/
+/* line 238, ../scss/custom.scss */
+.project {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background: #548396;
+  color: #292929;
+}
+
+/* line 245, ../scss/custom.scss */
+.project h3 {
+  color: #292929;
+}
+
+/* line 249, ../scss/custom.scss */
+.footer {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background: #292929;
+  color: #f2f2f2;
+}
+
+/* line 256, ../scss/custom.scss */
+.footer i {
+  font-size: 2em;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 264, ../scss/custom.scss */
+  .footer i {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+/* line 270, ../scss/custom.scss */
+.footer i:hover {
+  color: #548396;
+}
+
+/* line 274, ../scss/custom.scss */
+.footer a, .footer a:visited {
+  color: #f2f2f2;
+}
+
+/* line 278, ../scss/custom.scss */
+.footer a:hover, .footer a:active {
+  color: #548396;
+}
+
+/* line 282, ../scss/custom.scss */
+.footer h3, .footer h4 {
+  color: #f2f2f2;
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+/*---- Process Page ----*/
+/* line 290, ../scss/custom.scss */
+.process-group {
+  background: #f7f7f7;
+  padding-bottom: 8%;
+}
+
+/* line 295, ../scss/custom.scss */
+.process-section {
+  padding-top: 5%;
+}
+
+/* line 299, ../scss/custom.scss */
+.process-group img {
+  padding-bottom: 2%;
+}
+
+/* line 303, ../scss/custom.scss */
+.process-group h4 {
+  padding-bottom: 4%;
+}
+
+/*---- Services Page ----*/
+/* line 309, ../scss/custom.scss */
+.services {
+  background: #f7f7f7;
+}
+
+/* line 313, ../scss/custom.scss */
+.service-section {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+/* line 318, ../scss/custom.scss */
+.service-section span {
+  text-decoration: underline;
+}
+
+/*---- Contact Page ----*/
+/* line 324, ../scss/custom.scss */
+.contact {
+  background: #f7f7f7;
+  padding-bottom: 5%;
+}
+
+/* line 329, ../scss/custom.scss */
+.form-submit i {
+  font-size: 3em;
+}
+
+/*---- Portfolio Page ----*/
+/* line 335, ../scss/custom.scss */
+.portfolio {
+  background: #f7f7f7;
+}
+
+/* line 339, ../scss/custom.scss */
+.portfolio-section-top {
+  padding-top: 1%;
+  padding-bottom: 6%;
+  background: #f7f7f7;
+}
+
+/* line 345, ../scss/custom.scss */
+.portfolio-section {
+  padding-top: 6%;
+  padding-bottom: 6%;
+  background: #f7f7f7;
+}
+
+/* line 351, ../scss/custom.scss */
+.portfolio-section2 {
+  padding-top: 6%;
+  padding-bottom: 6%;
+  background: #f2f2f2;
+}
+
+/*---- Blog Page ----*/
+/* line 359, ../scss/custom.scss */
+.blog {
+  padding-bottom: 5%;
+  background: #f7f7f7;
+}
+
+/* line 364, ../scss/custom.scss */
+.blog ul {
+  list-style: none;
+}
+
+/* line 368, ../scss/custom.scss */
+.posts-list {
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/* line 373, ../scss/custom.scss */
+.posts-list h4 {
+  font-weight: 700;
+  color: #548396;
+}
+
+/* line 378, ../scss/custom.scss */
+.sidebar li {
+  line-height: 0px;
+  margin: 0px;
+}
+
+/* line 383, ../scss/custom.scss */
+.sidebar h5 {
+  margin-bottom: 7px;
+  text-decoration: underline;
+}
+
+/*---- Single Blog Post Page ----*/
+/* line 390, ../scss/custom.scss */
+.blog-post {
+  padding-bottom: 5%;
+  background: #f7f7f7;
+}
+
+/* line 395, ../scss/custom.scss */
+.blog-post h2 {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* line 401, ../scss/custom.scss */
+.blog-post h4 {
+  font-weight: 700;
+}
+
+/* line 405, ../scss/custom.scss */
+.blog-post a, .blog-post a:link, .blog-post a:visited {
+  text-decoration: none;
+  color: #43AED9;
+}
+
+/* line 410, ../scss/custom.scss */
+.blog-post a:hover, .blog-post a:active {
+  color: #43AED9;
+  text-decoration: none;
+}
+
+/* line 415, ../scss/custom.scss */
+.highlight {
+  background: #ededed;
+  padding: 15px;
+  margin-bottom: 2%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: solid 0.5px #dedede;
+}
+
+/* line 425, ../scss/custom.scss */
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+/* line 433, ../scss/custom.scss */
+code {
+  font-weight: 400;
+  color: #212121;
+}
+
+/*---- Hover Effects ----*/
+/* line 440, ../scss/custom.scss */
+.overlay {
+  background-color: #f7f7f7;
+  position: relative;
+  margin: 15px 0;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+/* line 451, ../scss/custom.scss */
+.overlay:hover figcaption,
+.fade figure.cs-hover figcaption {
+  opacity: 1;
+}
+
+/* line 455, ../scss/custom.scss */
+.mask {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+}
+
+/* line 461, ../scss/custom.scss */
+.mask li {
+  margin: 0;
+  text-align: left;
+  position: relative;
+}
+
+/* line 467, ../scss/custom.scss */
+.mask figure {
+  margin: 0;
+  position: relative;
+}
+
+/* line 472, ../scss/custom.scss */
+.mask figure img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+/* line 478, ../scss/custom.scss */
+.mask figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(84, 131, 150, 0.6);
+  color: #222;
+}
+
+/* line 486, ../scss/custom.scss */
+.mask figcaption h3 {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* line 491, ../scss/custom.scss */
+.mask figcaption a {
+  text-align: center;
+  padding: 15px 25px 15px 25px;
+  border-radius: 5px;
+  display: inline-block;
+  background: #222;
+  color: #fff;
+}
+
+/* line 500, ../scss/custom.scss */
+.mask figcaption a:hover {
+  text-decoration: none;
+  background-color: #000;
+}
+
+/* line 505, ../scss/custom.scss */
+.fade figcaption {
+  font-size: 1.2em;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* line 520, ../scss/custom.scss */
+.no-touch .fade figure:hover figcaption,
+.fade figure.cs-hover figcaption {
+  opacity: 1;
+}
+
+/* line 525, ../scss/custom.scss */
+.overlay:hover figcaption,
+.fade figure.cs-hover figcaption {
+  opacity: 1;
+}
+
+/* line 529, ../scss/custom.scss */
+.fade figcaption h3 {
+  margin-top: 70px;
+}
+
+/* line 533, ../scss/custom.scss */
+.fade figcaption span {
+  display: block;
+}
+
+/* line 537, ../scss/custom.scss */
+.fade figcaption a {
+  margin-top: 35%;
+}
+
+/* line 543, ../scss/custom.scss */
+.slicknav_menu {
+  display: none;
+}
+
+@media screen and (max-width: 40em) {
+  /* #menu is the original menu */
+  /* line 549, ../scss/custom.scss */
+  .js #menu {
+    display: none;
+  }
+
+  /* line 553, ../scss/custom.scss */
+  .js .slicknav_menu {
+    display: block;
+  }
+}

@@ -5,9 +5,9 @@ title: Blog - Eric Price - Freelance Web Design and Developer
 
 {% include navbar.html %}
 
-<section class="sub-cta">
-        <div class="container">
-            <div class="sixteen columns text-center">
+    <section class="sub-cta">
+        <div class="row">
+            <div class="large-12 columns text-center">
                 <h2>GUIDES AND VARIOUS HELPFUL THINGS</h2>
                 <div class="divider"></div>
             </div>
@@ -15,8 +15,8 @@ title: Blog - Eric Price - Freelance Web Design and Developer
     </section>
 
     <section class="blog">
-    	<div class="container">
-    		<div class="sixteen columns">
+    	<div class="row">
+    		<div class="large-8 large-centered columns">
                     {% for post in site.categories.foundation limit: 5 %}
                         <div class="posts-list">
                         <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>

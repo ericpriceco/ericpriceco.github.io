@@ -5,8 +5,8 @@ title: Blog - Eric Price - Freelance Web Designer and Developer
 {% include navbar.html %}
 
 <section class="sub-cta">
-        <div class="container">
-            <div class="sixteen columns text-center">
+        <div class="row">
+            <div class="large-12 columns text-center">
                 <h2>GUIDES AND VARIOUS HELPFUL THINGS</h2>
                 <div class="divider"></div>
             </div>
@@ -14,19 +14,19 @@ title: Blog - Eric Price - Freelance Web Designer and Developer
     </section>
 
     <section class="blog">
-    	<div class="container">
-    		<div class="twelve columns">
-    			{% for post in site.posts limit: 5 %}
-    				<div class="posts-list">
-      					<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-      					<p>{{ post.date | date: '%B %d, %Y' }}</p>
-      					<p>{{ post.excerpt }}</p>
+        <div class="row">
+            <div class="large-8 columns">
+                {% for post in site.posts limit: 5 %}
+                    <div class="posts-list">
+                        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                        <p>{{ post.date | date: '%B %d, %Y' }}</p>
+                        <p>{{ post.excerpt }}</p>
                         <p><a href="{{ post.url }}">Read More</a></p>
-      				</div>
-    			{% endfor %}
-    		</div>
-    		<div class="three columns offset-by-one sidebar">
-    			{% include sidebar.html %}
-    		</div>
-    	</div>
-    </section>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="large-2 columns">
+                {% include sidebar.html %}
+            </div>
+        </div>
+</section>

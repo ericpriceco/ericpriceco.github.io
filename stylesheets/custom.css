@@ -251,6 +251,7 @@ img {
   padding-top: 5%;
   padding-bottom: 7%;
   background: #f7f7f7;
+  border-top: 2px solid #DE8614;
 }
 
 /* line 228, ../scss/custom.scss */

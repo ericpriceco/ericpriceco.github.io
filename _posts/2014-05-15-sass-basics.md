@@ -1,7 +1,7 @@
 ---
 layout: blogpost
-title: ""
-date: {}
+title: SASS and Compass Basics
+date: 2014-05-19
 categories: sass foundation compass
 published: true
 ---

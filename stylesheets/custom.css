@@ -170,7 +170,8 @@ img {
 .sub-cta {
   padding-top: 6%;
   padding-bottom: 5%;
-  background: #f7f7f7;
+  background: #f2f2f2;
+  border-bottom: 1px solid #dedede;
 }
 
 /* line 153, ../scss/custom.scss */

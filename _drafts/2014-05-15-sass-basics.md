@@ -76,6 +76,6 @@ Resulting CSS:
   		border-radius: 10px;
 		}
 
-Check that out! You can apply that to other vendor fixes for transitions and animations. Just put the type of prefix in the property field.
+Check that out! You can apply that to other vendor fixes for transitions and animations. Just put the type of prefix in the property field. With some clever thinking, you can create other mixins with variables to do cool stuff.
 
 These are just a few things that make my coding less repitisous and easier to change. I hope this will do the same for you.

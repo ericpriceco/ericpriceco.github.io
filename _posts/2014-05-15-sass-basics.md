@@ -41,14 +41,14 @@ Variables is where it starts to get fun. You can assign a declaration to a varia
 SASS variables start with a $ sign and can be named anything you want as long as it hasn't been used previously. These example variables would be placed in your custom partial file before they are called:
 
 	$primary-color: #f7f7f7;
-    	$secondary-color: #f2f2f2;
-    	$box-margin: 2em;
+	$secondary-color: #f2f2f2;
+	$box-margin: 2em;
 
 Calling the variable in your declaration:
 
 	h4 {color: $primary-color;}
-    	p {margin: $box-margin;}
-    	button {color: $secondary-color;}
+	p {margin: $box-margin;}
+	button {color: $secondary-color;}
     
 SASS will convert it to CSS after compiling.
 

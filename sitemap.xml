@@ -1,89 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>http://eric-price.co/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/services/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/process/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/portfolio/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/blog/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/contact/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/blog/sass-basics/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/portfolio/creative-sights.html</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/portfolio/anvil-software.html</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/portfolio/spot.html</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/portfolio/hammer-industries.html</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/blog/foundation-plus-sass/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/blog/jekyll-osx/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/blog/categories/sass/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/blog/categories/foundation/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://eric-price.co/blog/categories/jekyll/</loc>
-  <lastmod>2014-05-19T17:54:11+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-</url>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://eric-price.co/blog/categories/foundation/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/blog/categories/sass/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/blog/categories/jekyll/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/blog/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/contact/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/blog/foundation-plus-sass/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/blog/jekyll-osx/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/portfolio/anvil-software.html</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/portfolio/hammer-industries.html</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/portfolio/creative-sights.html</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/portfolio/spot.html</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/portfolio/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/process/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/blog/sass-basics/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/services/</loc>
+  </url>
 </urlset>
+<!--<guid value="3493b951-8c09-4100-b21e-300be4dab7b1" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->

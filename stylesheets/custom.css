@@ -350,6 +350,7 @@ img {
 /* line 309, ../scss/custom.scss */
 .services {
   background: #f7f7f7;
+  padding-top: 4%;
 }
 
 /* line 313, ../scss/custom.scss */
@@ -367,6 +368,7 @@ img {
 /* line 324, ../scss/custom.scss */
 .contact {
   background: #f7f7f7;
+  padding-top: 4%;
   padding-bottom: 5%;
 }
 
@@ -379,6 +381,7 @@ img {
 /* line 335, ../scss/custom.scss */
 .portfolio {
   background: #f7f7f7;
+  padding-top: 4%;
 }
 
 /* line 339, ../scss/custom.scss */
@@ -411,6 +414,7 @@ img {
 /*---- Blog Page ----*/
 /* line 359, ../scss/custom.scss */
 .blog {
+  padding-top: 4%;
   padding-bottom: 5%;
   background: #f7f7f7;
 }
@@ -452,6 +456,7 @@ img {
 /*---- Single Blog Post Page ----*/
 /* line 390, ../scss/custom.scss */
 .blog-post {
+  padding-top: 4%;
   padding-bottom: 5%;
   background: #f7f7f7;
 }

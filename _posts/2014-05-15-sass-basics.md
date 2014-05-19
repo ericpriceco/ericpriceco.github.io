@@ -6,8 +6,6 @@ categories: sass foundation compass
 published: true
 ---
 
-## Basics of SASS and Compass
-
 SASS has made my web development life so much easier and I want to share some of the basics I've learned using it on a daily basis. If you're not familiar with SASS, it's a CSS preprocessor that allows you to use variables, mixins and partials. You can read more on their documentation page [here](http://sass-lang.com/documentation/file.SASS_REFERENCE.html). If you haven't installed it yet, you can find the steps in my last post on the getting started with Foundation and SASS. ([http://eric-price.co/blog/foundation-plus-sass/](http://eric-price.co/blog/foundation-plus-sass/))
 
 I'm going to use the Foundation framework in this article; however, you can use SASS with almost anything with a little know how. Using SASS with Foundation is practically a necessity to take advantage of their built-in SASS variables. When starting a Foundation project, the first thing to do is create a partial file to hold your custom settings since it's not recommended to touch the original Foundation settings.

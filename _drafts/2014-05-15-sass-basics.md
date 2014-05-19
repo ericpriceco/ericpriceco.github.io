@@ -1,7 +1,10 @@
 ---
-published: false
+layout: blogpost
+title: SASS and Compass Basics
+date: 2014-05-19
+categories: sass foundation compass
+published: true
 ---
-
 ## Basics of SASS and Compass
 
 SASS has made my web development life so much easier and I want to share some of the basics I've learned using it on a daily basis. If you're not familiar with SASS, it's a CSS preprocessor that allows you to use variables, mixins and partials. You can read more on their documentation page [here](http://sass-lang.com/documentation/file.SASS_REFERENCE.html). If you haven't installed it yet, you can find the steps in my last post on the getting started with Foundation and SASS. ([http://eric-price.co/blog/foundation-plus-sass/](http://eric-price.co/blog/foundation-plus-sass/))
@@ -37,14 +40,14 @@ Variables is where it starts to get fun. You can assign a declaration to a varia
 SASS variables start with a $ sign and can be named anything you want as long as it hasn't been used previously. These example variables would be placed in your custom partial file before they are called:
 
 	$primary-color: #f7f7f7;
-    $secondary-color: #f2f2f2;
-    $box-margin: 2em;
+    	$secondary-color: #f2f2f2;
+    	$box-margin: 2em;
 
 Calling the variable in your declaration:
 
 	h4 {color: $primary-color;}
-    p {margin: $box-margin;}
-    button {color: $secondary-color;}
+    	p {margin: $box-margin;}
+    	button {color: $secondary-color;}
     
 SASS will convert it to CSS after compiling.
 

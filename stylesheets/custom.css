@@ -238,8 +238,6 @@ img {
   padding-top: 7%;
   padding-bottom: 7%;
   background: #f7f7f7;
-  border-top: 2px solid #DE8614;
-  border-top: 2px solid #212121;
 }
 
 /* line 216, ../scss/custom.scss */
@@ -254,7 +252,6 @@ img {
   padding-bottom: 7%;
   background: #f7f7f7;
   border-top: 2px solid #DE8614;
-  border-top: 2px solid #212121;
 }
 
 /* line 228, ../scss/custom.scss */

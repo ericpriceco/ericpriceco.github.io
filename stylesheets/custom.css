@@ -273,6 +273,7 @@ img {
 /* line 204, ../scss/custom.scss */
 .quote h2 {
   color: #f7f7f7;
+  font-style: italic;
 }
 
 /*---- Recent Work ----*/

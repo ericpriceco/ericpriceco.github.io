@@ -231,8 +231,12 @@ img {
 }
 
 .full-nav span {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 2.5em;
+}
+
+.full-nav.logo-color {
+  color: #DE8614;
 }
 
 

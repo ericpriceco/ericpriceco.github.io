@@ -38,7 +38,7 @@ a.button, button {
   border: 0;
 }
 
-a.button:hover {
+a.button:hover,button:hover {
   background: #DE8614;
 }
 
@@ -182,17 +182,59 @@ img {
 }
 
 /*---- Nav Bar ----*/
-/* line 161, ../scss/custom.scss */
-.top-nav {
+
+.nav-style {
   border-bottom: 1px solid #dedede;
   border-top: 4px solid #DE8614;
 }
 
-/* line 166, ../scss/custom.scss */
 .top-bar-section ul li.active > a {
   border-bottom: 2px solid #DE8614;
   background: #f7f7f7 !important;
 }
+
+.top-bar .name h1 {
+  line-height: 50px;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.top-bar .name h1 a {
+  font-weight: 700;
+  font-style: normal;
+  color: #383838;
+  width: 75%;
+  display: block;
+  padding: 0 16.66667px;
+}
+
+.top-bar .name h1 a span {
+  font-style: italic;
+}
+
+.full-nav {
+  border-bottom: 1px solid #dedede;
+  border-top: 4px solid #DE8614;
+  background: #f7f7f7;
+  height: 100px;
+  padding-top: 8px;
+}
+
+.full-nav ul {
+  list-style: none;
+}
+
+.full-nav ul li {
+  display: inline;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.full-nav span {
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
 
 /*---- Quote -----*/
 @media only screen and (min-width: 768px) {
@@ -329,6 +371,7 @@ img {
 .process-group {
   background: #f7f7f7;
   padding-bottom: 8%;
+  padding-top: 4%;
 }
 
 /* line 295, ../scss/custom.scss */

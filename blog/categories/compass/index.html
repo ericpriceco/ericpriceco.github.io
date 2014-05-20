@@ -1,0 +1,30 @@
+---
+layout: main
+title: Blog - Eric Price - Freelance Web Design and Developer
+---
+
+{% include navbar.html %}
+
+<section class="sub-cta">
+        <div class="row">
+            <div class="large-12 columns text-center">
+                <h2>GUIDES AND VARIOUS HELPFUL THINGS</h2>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="row">
+            <div class="large-8 large-centered columns">
+                    {% for post in site.categories.compass limit: 5 %}
+                        <div class="posts-list">
+                        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                        <p>{{ post.date | date_to_string }}</p>
+                        <p>{{ post.excerpt }}</p>
+                        <p><a href="{{ post.url }}">Read More</a></p>
+                    {% endfor %}
+                    </div>
+            </div>
+        </div>
+    </section>

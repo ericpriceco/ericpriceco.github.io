@@ -115,7 +115,7 @@ img {
 }
 
 /*---- CTA ----*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 40.063em) {
   /* line 101, ../scss/custom.scss */
   .cta {
     padding-top: 10%;
@@ -138,7 +138,7 @@ img {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 40.063em) {
   /* line 123, ../scss/custom.scss */
   .cta {
     padding-top: 10%;
@@ -349,12 +349,12 @@ img {
 
 /* line 274, ../scss/custom.scss */
 .footer a, .footer a:visited {
-  color: #DE8614;
+  color: #f2f2f2;
 }
 
 /* line 278, ../scss/custom.scss */
 .footer a:hover, .footer a:active {
-  color: #f2f2f2;
+  color: #DE8614;
 }
 
 /* line 282, ../scss/custom.scss */

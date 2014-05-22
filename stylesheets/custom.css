@@ -349,12 +349,12 @@ img {
 
 /* line 274, ../scss/custom.scss */
 .footer a, .footer a:visited {
-  color: #f2f2f2;
+  color: #DE8614;
 }
 
 /* line 278, ../scss/custom.scss */
 .footer a:hover, .footer a:active {
-  color: #DE8614;
+  color: #f2f2f2;
 }
 
 /* line 282, ../scss/custom.scss */

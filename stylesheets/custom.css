@@ -184,32 +184,7 @@ img {
 /*---- Nav Bar ----*/
 
 .nav-style {
-  border-bottom: 1px solid #dedede;
   border-top: 4px solid #DE8614;
-}
-
-.top-bar-section ul li.active > a {
-  border-bottom: 2px solid #DE8614;
-  background: #f7f7f7 !important;
-}
-
-.top-bar .name h1 {
-  line-height: 50px;
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.top-bar .name h1 a {
-  font-weight: 700;
-  font-style: normal;
-  color: #383838;
-  width: 75%;
-  display: block;
-  padding: 0 16.66667px;
-}
-
-.top-bar .name h1 a span {
-  font-style: italic;
 }
 
 .full-nav {

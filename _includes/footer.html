@@ -12,22 +12,18 @@
     
     <section class="footer">
         <div class="row">
-            <div class="large-6 columns">
-                <h3>Latest Blog Post</h3>
-                     {% for post in site.posts limit: 1 %}
-                                <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-                                <p>{{ post.content | strip_html | truncatewords:45 }}</p>
-                                <p><a href="{{ post.url }}">Read More</a></p>
-                    {% endfor %}
-            </div>
-            <div class="large-6 columns">
-                <h3>About Me</h3>
-                    <p>I have a passion for creating clean, modern responsive websites that makes your content and brand stand out.</p>
-                    <div itemscope itemtype="http://data-vocabulary.org/Person"><p>I'm a <span itemprop="title">freelance web developer and designer</span> based out of the <span itemprop="address">Raleigh area in North Carolina</span>. I believe a website should be easily accessible to any visitor on any screen whether that is a phone or a large monitor. My websites are hand-coded line by line because when a website is coded well, it works faster, more efficiently and performs better in search results.</p></div>
+            <div class="large-12 columns text-center">
+                <ul>
+                    <li><a href="/services">Services</a></li><span>/</span>
+                    <li><a href="/process">Process</a></li><span>/</span>
+                    <li><a href="/portfolio">Work</a></li><span>/</span>
+                    <li><a href="/blog">Blog</a></li><span>/</span>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
             </div>
         </div>
         <div class="row">
-            <div class="large-12 columns text-center top-4 bottom-5">
+            <div class="large-12 columns text-center top-2 bottom-5">
                 <a href="https://plus.google.com/u/2/105475388741669903128"><i class="fa fa-google-plus"></i></a>
                 <a href="https://www.facebook.com/eric.price.125760"><i class="fa fa-facebook"></i></a>
                 <a href="https://twitter.com/EricPrice2"><i class="fa fa-twitter"></i></a>
@@ -40,11 +36,11 @@
                 <p>Copyright 2014 - Eric Price. Powered by <a href="http://jekyllrb.com">Jekyll.</a></p>
             </div>
         </div>
-    </section>
-    
+    </section>  
       
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/foundation/js/foundation.min.js"></script>
     <script src="/js/app.js"></script>
+      
   </body>
 </html>

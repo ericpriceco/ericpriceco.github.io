@@ -26,7 +26,7 @@ a:hover, a:active {
 }
 
 /* line 24, ../scss/custom.scss */
-.button {
+.button,button {
   background-color: transparent;
   color: #292929;
   border: 1px solid #292929;
@@ -54,9 +54,6 @@ a.button:hover, button:hover {
 
 /* line 52, ../scss/custom.scss */
 /* line 49, ../scss/custom.scss */
-img {
-  max-width: 100%;
-}
 
 /*---- Layout Styles ----*/
 /* line 55, ../scss/custom.scss */

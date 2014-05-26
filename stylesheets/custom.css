@@ -289,12 +289,10 @@ img {
   color: #292929;
 }
 
-/* line 245, ../scss/custom.scss */
 .project h3 {
   color: #292929;
 }
 
-/* line 249, ../scss/custom.scss */
 .footer {
   padding-top: 2%;
   padding-bottom: 2%;
@@ -302,7 +300,6 @@ img {
   color: #f2f2f2;
 }
 
-/* line 256, ../scss/custom.scss */
 .footer i {
   font-size: 2em;
   padding-right: 20px;
@@ -311,7 +308,6 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-  /* line 264, ../scss/custom.scss */
   .footer i {
     padding-right: 10px;
     padding-left: 10px;

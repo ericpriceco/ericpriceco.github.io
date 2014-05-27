@@ -21,7 +21,7 @@ a, a:link, a:visited {
 
 /* line 19, ../scss/custom.scss */
 a:hover, a:active {
-  color: #2980B9;
+  color: #226EA1;
   text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ a:hover, a:active {
 
 /* line 35, ../scss/custom.scss */
 a.button:hover, button:hover {
-  background: #2980B9;
+  background: #226EA1;
 }
 
 /* line 39, ../scss/custom.scss */
@@ -52,61 +52,49 @@ a.button:hover, button:hover {
   text-align: center;
 }
 
-/* line 52, ../scss/custom.scss */
-/* line 49, ../scss/custom.scss */
 
 /*---- Layout Styles ----*/
-/* line 55, ../scss/custom.scss */
+
 .top-2 {
   padding-top: 2%;
 }
 
-/* line 59, ../scss/custom.scss */
 .top-4 {
   padding-top: 4%;
 }
 
-/* line 63, ../scss/custom.scss */
 .top-5 {
   padding-top: 5%;
 }
 
-/* line 67, ../scss/custom.scss */
 .top-6 {
   padding-top: 6%;
 }
 
-/* line 71, ../scss/custom.scss */
 .top-10 {
   padding-top: 10%;
 }
 
-/* line 75, ../scss/custom.scss */
 .bottom-2 {
   padding-bottom: 2%;
 }
 
-/* line 79, ../scss/custom.scss */
 .bottom-3 {
   padding-bottom: 3%;
 }
 
-/* line 83, ../scss/custom.scss */
 .bottom-4 {
   padding-bottom: 4%;
 }
 
-/* line 87, ../scss/custom.scss */
 .bottom-5 {
   padding-bottom: 5%;
 }
 
-/* line 91, ../scss/custom.scss */
 .bottom-8 {
   padding-bottom: 8%;
 }
 
-/* line 95, ../scss/custom.scss */
 .fullwidth {
   width: 100%;
   margin-left: auto;
@@ -277,7 +265,7 @@ a.button:hover, button:hover {
 
 /* line 243, ../scss/custom.scss */
 .sub-cta-bg {
-  background: #2980B9;
+  background: #226EA1;
 }
 
 /* line 247, ../scss/custom.scss */
@@ -334,7 +322,7 @@ a.button:hover, button:hover {
 .recent-work {
   padding-top: 5%;
   padding-bottom: 5%;
-  background: #ebebeb;
+  background: #f0f0f0;
 }
 
 /* line 299, ../scss/custom.scss */
@@ -377,7 +365,7 @@ a.button:hover, button:hover {
 .project {
   padding-top: 2%;
   padding-bottom: 2%;
-  background: #2980B9;
+  background: #226EA1;
 }
 
 /* line 334, ../scss/custom.scss */
@@ -437,7 +425,7 @@ a.button:hover, button:hover {
 }
 /* line 381, ../scss/custom.scss */
 .footer i:hover {
-  color: #2980B9;
+  color: #226EA1;
 }
 
 /* line 385, ../scss/custom.scss */
@@ -447,7 +435,7 @@ a.button:hover, button:hover {
 
 /* line 389, ../scss/custom.scss */
 .footer a:hover, .footer a:active {
-  color: #2980B9;
+  color: #226EA1;
 }
 
 /* line 393, ../scss/custom.scss */
@@ -560,7 +548,7 @@ a.button:hover, button:hover {
 .portfolio-section2 {
   padding-top: 6%;
   padding-bottom: 6%;
-  background: #dedede;
+  background: #f0f0f0;
 }
 
 /* line 486, ../scss/custom.scss */
@@ -692,7 +680,7 @@ code {
 /* line 440, ../scss/custom.scss */
 /* line 597, ../scss/custom.scss */
 .overlay {
-  background-color: #ebebeb;
+  background-color: #f0f0f0;
   position: relative;
   margin: 15px 0;
   -webkit-transition: 0.2s ease;

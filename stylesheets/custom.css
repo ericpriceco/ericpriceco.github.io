@@ -160,88 +160,81 @@ a.button:hover, button:hover {
 
 /* line 150, ../scss/custom.scss */
 .top-bar {
-  background: #2980B9 !important;
+  background: rgba(0, 0, 0, 0);
 }
 
 /* line 154, ../scss/custom.scss */
 .top-bar-section ul {
-  background: #2980B9 !important;
+  background: rgba(0,0,0,0)!important;
 }
 
 /* line 158, ../scss/custom.scss */
 .top-bar-section ul li > a {
-  background: #2980B9 !important;
+  background: rgba(0,0,0,0) !important;
+}
+
+.top-bar.expanded .title-area {
+  background: rgba(0, 0, 0, 0);
+}
+
+ .top-bar.expanded {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  .top-bar.expanded .title-area {
+  background: rgba(0, 0, 0, 0);
+}
+
+.contain-to-grid {
+  background: rgba(0, 0, 0, 0);
 }
 
 /*---- CTA Landing ----*/
-/* line 164, ../scss/custom.scss */
+
 .cta {
-  padding-top: 10%;
+  padding-top: 5%;
+  padding-bottom: 4%;
   color: #f7f7f7;
 }
 
-/* line 169, ../scss/custom.scss */
 .cta-bg {
-  background: url("/images/cta-bg4.jpg") center center no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  position: relative;
+  background: url('/images/pattern-bg2.png') top left repeat;
 }
 
-@media only screen and (max-width: 40em) {
-  /* line 181, ../scss/custom.scss */
-  .cta-bg {
-    background: #2980B9;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 64.063em) {
-  /* line 193, ../scss/custom.scss */
-  .cta h1 {
-    font-weight: 900;
-    font-size: 5em;
+.cta h1 {
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
     color: #f7f7f7;
+}
+
+@media only screen and (min-width: 64.063em) {
+  .cta h1 {
+    font-size: 5em;
   }
 }
-@media only screen and (max-width: 40em) {
-  /* line 201, ../scss/custom.scss */
-  .cta {
-    padding-top: 20%;
-  }
 
-  /* line 204, ../scss/custom.scss */
+@media only screen and (max-width: 40em) {
+  .cta {
+    padding-top: 10%;
+  }
   .cta h1 {
     font-size: 2.5em;
-    font-weight: 900;
-    color: #f7f7f7;
   }
 }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  /* line 212, ../scss/custom.scss */
-  .cta {
-    padding-top: 20%;
-  }
 
-  /* line 215, ../scss/custom.scss */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .cta {
+    padding-top: 10%;
+  }
   .cta h1 {
     font-size: 3.5em;
-    font-weight: 900;
-    color: #f7f7f7;
   }
 }
-/* line 222, ../scss/custom.scss */
-.cta h3 {
+
+.cta h4 {
   color: #f7f7f7;
-  font-weight: 300;
+  font-weight: 400;
+  font-family: 'Roboto Slab', serif;
 }
 
 /* line 227, ../scss/custom.scss */
@@ -259,18 +252,19 @@ a.button:hover, button:hover {
 }
 
 /* line 239, ../scss/custom.scss */
-.sub-cta h2 {
+.sub-cta h1 {
   font-weight: 700;
 }
 
 /* line 243, ../scss/custom.scss */
 .sub-cta-bg {
-  background: #226EA1;
+  background: url('/images/pattern-bg2.png') top left repeat;
 }
 
 /* line 247, ../scss/custom.scss */
-.sub-cta h2, .sub-cta h5 {
+.sub-cta h1, .sub-cta h4 {
   color: #f2f2f2;
+  font-family: 'Roboto Slab', serif;
 }
 
 /*---- About ----*/

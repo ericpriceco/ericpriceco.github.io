@@ -1,10 +1,18 @@
 /*---- General Styles ----*/
 /* line 3, ../scss/custom.scss */
 /* line 3, ../scss/custom.scss */
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #212121;
   background: #fafafa;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* line 9, ../scss/custom.scss */

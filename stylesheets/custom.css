@@ -344,6 +344,7 @@ a.button:hover, button:hover {
 .recent-work img {
   max-width: 385px;
   max-height: 315px;
+  text-align: center;
 }
 
 /*---- Recent Blog ----*/

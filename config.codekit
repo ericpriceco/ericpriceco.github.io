@@ -4866,17 +4866,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/pattern-bg2.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 115553,
-		"inputAbbreviatedPath": "\/images\/pattern-bg2.png",
-		"outputAbbreviatedPath": "\/images\/pattern-bg2.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/portfolio\/anvil-software-responsive.png": {
 		"fileType": 32768,
 		"ignore": 0,

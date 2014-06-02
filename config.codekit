@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "16921",
+"creatorBuild": "17018",
 "files": {
 	"\/_drafts\/2014-05-08-foundation-plus-sass.md": {
 		"enableFootnoteSupport": 0,
@@ -742,6 +742,17 @@
 		"initialSize": 13324,
 		"inputAbbreviatedPath": "\/_site\/images\/responsive-design.png",
 		"outputAbbreviatedPath": "\/_site\/images\/responsive-design.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/_site\/images\/shattered.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 73609,
+		"inputAbbreviatedPath": "\/_site\/images\/shattered.png",
+		"outputAbbreviatedPath": "\/_site\/images\/shattered.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -4866,6 +4877,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/pattern-bg2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 59866,
+		"inputAbbreviatedPath": "\/images\/pattern-bg2.png",
+		"outputAbbreviatedPath": "\/images\/pattern-bg2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/portfolio\/anvil-software-responsive.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -5049,6 +5071,17 @@
 		"initialSize": 13324,
 		"inputAbbreviatedPath": "\/images\/responsive-design.png",
 		"outputAbbreviatedPath": "\/images\/responsive-design.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/shattered.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 73609,
+		"inputAbbreviatedPath": "\/images\/shattered.png",
+		"outputAbbreviatedPath": "\/images\/shattered.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -5294,10 +5327,6 @@
 			"active": 0,
 			"flagValue": 3
 			},
-		"no-unnecessary_fat_arrows": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"no_backticks": {
 			"active": 1,
 			"flagValue": -1
@@ -5352,6 +5381,10 @@
 			},
 		"no_unnecessary_double_quotes": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"no_unnecessary_fat_arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"non_empty_constructor_needs_parens": {

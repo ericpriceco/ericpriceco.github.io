@@ -6,6 +6,17 @@ $secondary-bg: #2980b9;
 $pri-font-color: #212121;
 $sec-font-color: #f7f7f7;
 
+@font-face {
+    font-family: 'entypo-social';
+    src: url('/images/icons/entypo-social.eot');
+    src: url('/images/icons/entypo-social.eot?#iefix') format('embedded-opentype'),
+         url('/images/icons/entypo-social.woff') format('woff'),
+         url('/images/icons/entypo-social.ttf') format('truetype'),
+         url('/images/icons/entypo-social.svg#entypo-social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: $pri-font-color;
@@ -179,6 +190,18 @@ a.button:hover, button:hover {
   padding-top: 6%;
   padding-bottom: 4%;
   color: #f7f7f7;
+}
+
+.cta span.pictogram {
+    font-family: "entypo-social";
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 6em;
+    color: #f7f7f7;
+}
+
+.cta span.pictogram:hover {
+    color: $secondary-bg;
 }
 
 .cta-bg {
@@ -432,6 +455,18 @@ a.button:hover, button:hover {
 .footer a.button:hover, button:hover {
   background: #226EA1;
   color: #f7f7f7;
+}
+
+.footer span.pictogram {
+    font-family: "entypo-social";
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 4em;
+    color: #f7f7f7;
+}
+
+.footer span.pictogram:hover {
+    color: $secondary-bg;
 }
 
 /*---- Process Page ----*/

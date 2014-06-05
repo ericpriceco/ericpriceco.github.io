@@ -2,6 +2,7 @@
 
 $primary-bg: #f7f7f7;
 $secondary-bg: #2980b9;
+$grey-bg: #e8e8e8;
 
 $pri-font-color: #212121;
 $sec-font-color: #f7f7f7;
@@ -148,25 +149,14 @@ a.button:hover, button:hover {
   padding-right: 1.8%;
   font-weight: 400;
   font-size: 1.1em;
-  color: #f7f7f7;
+  color: $sec-font-color;
 }
 
 .full-nav ul li a {
-  color: #f7f7f7;
+  color: $sec-font-color;
 }
 
 .full-nav ul li a:hover {
-  color: #212121;
-}
-
-.full-nav i {
-  font-size: 1.8em;
-  padding-right: 10px;
-  padding-left: 10px;
-  color: #f7f7f7;
-}
-
-.full-nav i:hover {
   color: #212121;
 }
 
@@ -189,7 +179,7 @@ a.button:hover, button:hover {
 .cta {
   padding-top: 6%;
   padding-bottom: 4%;
-  color: #f7f7f7;
+  color: $sec-font-color;
 }
 
 .cta span.pictogram {
@@ -197,7 +187,7 @@ a.button:hover, button:hover {
     padding-left: 1.5%;
     padding-right: 1.5%;
     font-size: 6em;
-    color: #f7f7f7;
+    color: $sec-font-color;
 }
 
 .cta span.pictogram:hover {
@@ -222,16 +212,16 @@ a.button:hover, button:hover {
 .cta h1 {
     font-weight: 700;
     font-family: 'Source Sans Pro', serif;
-    color: #f7f7f7;
+    color: $sec-font-color;
 }
 
 .sub-cta h1 {
   font-weight: 700;
-  color: #f7f7f7;
+  color: $sec-font-color;
 }
 
 .sub-cta h4 {
-  color: #f7f7f7;
+  color: $sec-font-color;
 }
 
 .sub-cta h1, .sub-cta h4 {
@@ -291,7 +281,7 @@ a.button:hover, button:hover {
 
 .cta .button {
   background-color: transparent;
-  color: #f7f7f7;
+  color: $sec-font-color;
   border: 1px solid #f7f7f7;
 }
 
@@ -310,7 +300,7 @@ a.button:hover, button:hover {
 .about-highlight {
     padding-top: 5%;
     padding-bottom: 5%;
-    background: #e8e8e8;
+    background: $grey-bg;
 }
 
 .about-highlight h3 {
@@ -354,7 +344,7 @@ a.button:hover, button:hover {
 .recent-work {
   padding-top: 5%;
   padding-bottom: 5%;
-    background: #f2f2f2;
+    background: $grey-bg;
 }
 
 .recent-work h2 {
@@ -374,7 +364,7 @@ a.button:hover, button:hover {
 .recent-blog {
   padding-top: 5%;
   padding-bottom: 5%;
-  background: #f7f7f7;
+  background: $primary-bg;
 }
 
 .recent-blog h2 {
@@ -394,7 +384,7 @@ a.button:hover, button:hover {
 .project {
     padding-top: 3%;
     padding-bottom: 3%;
-    background: #e8e8e8;
+    background: $grey-bg;
 }
 
 .footer {
@@ -454,7 +444,7 @@ a.button:hover, button:hover {
 
 .footer a.button:hover, button:hover {
   background: #226EA1;
-  color: #f7f7f7;
+  color: $sec-font-color;
 }
 
 .footer span.pictogram {
@@ -462,7 +452,7 @@ a.button:hover, button:hover {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 4em;
-    color: #f7f7f7;
+    color: $sec-font-color;
 }
 
 .footer span.pictogram:hover {

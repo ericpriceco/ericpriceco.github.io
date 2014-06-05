@@ -177,8 +177,7 @@ a.button:hover, button:hover {
 /*---- CTA Landing ----*/
 
 .cta {
-  padding-top: 6%;
-  padding-bottom: 4%;
+  padding-top: 4%;
   color: $sec-font-color;
 }
 
@@ -213,6 +212,7 @@ a.button:hover, button:hover {
     font-weight: 700;
     font-family: 'Source Sans Pro', serif;
     color: $sec-font-color;
+    line-height: 93%;
 }
 
 .sub-cta h1 {
@@ -300,7 +300,7 @@ a.button:hover, button:hover {
 .about-highlight {
     padding-top: 5%;
     padding-bottom: 5%;
-    background: $grey-bg;
+    background: #B2CBDB;
 }
 
 .about-highlight h3 {

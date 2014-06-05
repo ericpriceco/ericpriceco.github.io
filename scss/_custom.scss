@@ -194,8 +194,8 @@ a.button:hover, button:hover {
 
 .cta span.pictogram {
     font-family: "entypo-social";
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
     font-size: 6em;
     color: #f7f7f7;
 }
@@ -310,11 +310,11 @@ a.button:hover, button:hover {
 .about-highlight {
     padding-top: 5%;
     padding-bottom: 5%;
-    background: $secondary-bg;
+    background: #e8e8e8;
 }
 
 .about-highlight h3 {
-    color: #f7f7f7;
+    color: $pri-font-color;
     font-weight: 300;
 }
 

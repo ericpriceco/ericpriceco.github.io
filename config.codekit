@@ -304,28 +304,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/_site\/images\/cta-bg-sm.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 103046,
-		"inputAbbreviatedPath": "\/_site\/images\/cta-bg-sm.jpg",
-		"outputAbbreviatedPath": "\/_site\/images\/cta-bg-sm.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/_site\/images\/cta-bg4.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 104387,
-		"inputAbbreviatedPath": "\/_site\/images\/cta-bg4.jpg",
-		"outputAbbreviatedPath": "\/_site\/images\/cta-bg4.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/_site\/images\/cta.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -4744,28 +4722,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/cta-bg-sm.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 103046,
-		"inputAbbreviatedPath": "\/images\/cta-bg-sm.jpg",
-		"outputAbbreviatedPath": "\/images\/cta-bg-sm.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/cta-bg4.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 104387,
-		"inputAbbreviatedPath": "\/images\/cta-bg4.jpg",
-		"outputAbbreviatedPath": "\/images\/cta-bg4.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/cta.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -5453,7 +5409,7 @@
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
 	"displayValue": "ericpriceco.github.io",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "globe_blue"
 	},
 "projectSettings": {
@@ -5462,7 +5418,7 @@
 	"autoApplyPSLanguageSettingsStyle": 0,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, ff 17, opera 12.1",
 	"autoSyncProjectSettingsFile": 1,
-	"browserRefreshDelay": 0,
+	"browserRefreshDelay": 3,
 	"coffeeAutoOutputPathRelativePath": "",
 	"coffeeAutoOutputPathReplace1": "",
 	"coffeeAutoOutputPathReplace2": "",

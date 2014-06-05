@@ -4,6 +4,7 @@ $primary-bg: #f7f7f7;
 $secondary-bg: #2980b9;
 
 $pri-font-color: #212121;
+$sec-font-color: #f7f7f7;
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -57,6 +58,10 @@ a.button:hover, button:hover {
 
 
 /*---- Layout Styles ----*/
+
+.top20px {
+    padding-top: 20px;
+}
 
 .top-2 {
   padding-top: 2%;
@@ -276,21 +281,33 @@ a.button:hover, button:hover {
 
 .about {
   padding-top: 8%;
-  padding-bottom: 15%;
+  padding-bottom: 8%;
+}
+
+.about-highlight {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: $secondary-bg;
+}
+
+.about-highlight h3 {
+    color: #f7f7f7;
+    font-weight: 300;
 }
 
 /*---- Service ----*/
 
 .service-highlight {
-  padding-top: 3%;
-  padding-bottom: 3%;
+    padding-top: 5%;
+  padding-bottom: 5%;
   background: $primary-bg;
 }
 
 .service-highlight h2 {
-  font-weight: 600;
-  font-size: 2.2em;
-  letter-spacing: 0.03em;
+    font-weight: 300;
+    font-size: 2em;
+    letter-spacing: 0.03em;
+    color: $pri-font-color;
 }
 
 .service-highlight h4 {
@@ -298,8 +315,8 @@ a.button:hover, button:hover {
   color: #3498db;
 }
 
-.service-highlight h5 {
-    font-size: 2em;
+.service-highlight h3 {
+    font-size: 1.7em;
     font-weight: 300;
 }
 
@@ -329,14 +346,6 @@ a.button:hover, button:hover {
   color: $pri-font-color;
 }
 
-/*
-.recent-work img {
-  max-width: 385px;
-  max-height: 315px;
-  text-align: center;
-}
-*/
-
 /*---- Recent Blog ----*/
 
 .recent-blog {
@@ -359,10 +368,17 @@ a.button:hover, button:hover {
 
 /*---- Footer ----*/
 
+.project {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #e8e8e8;
+}
+
 .footer {
-  padding-top: 2%;
-  background: #e8e8e8;
+  padding-top: 20px;
+  background: #292929;
   font-weight: 300;
+    color: $sec-font-color;
 }
 
 .footer ul {
@@ -389,7 +405,7 @@ a.button:hover, button:hover {
 }
 
 .footer a, .footer a:visited {
-  color: $pri-font-color;
+  color: $sec-font-color;
 }
 
 .footer a:hover, .footer a:active {
@@ -399,11 +415,12 @@ a.button:hover, button:hover {
 .footer h3, .footer h4 {
   padding-bottom: 10px;
   font-weight: 400;
-  color: $pri-font-color;
+  color: $sec-font-color;
 }
 
 .footer p {
   font-weight: 300;
+    color: $sec-font-color;
 }
 
 .footer-divider > hr {

@@ -159,9 +159,13 @@ a.button:hover, button:hover {
   width: 80px;
 }
 
-.menu-icon
-{
+.menu-icon {
   width: auto; /* hack for menu icon bug */
+}
+
+.nav-logo {
+    height: 75px;
+    width: 75px;
 }
 
 /*---- CTA Landing ----*/
@@ -193,26 +197,49 @@ a.button:hover, button:hover {
     color: #f7f7f7;
 }
 
+.sub-cta h1 {
+  font-weight: 700;
+  color: #f7f7f7;
+}
+
+.sub-cta h4 {
+  color: #f7f7f7;
+}
+
+.sub-cta h1, .sub-cta h4 {
+  font-family: 'Source Sans Pro', serif;
+}
+
+
 /* Large Screen */
 
 @media only screen and (min-width: 64.063em) {
-  .cta h1 {
-    font-size: 6em;
-  }
+    .cta h1 {
+        font-size: 6em;
+    }
+    .sub-cta h1 {
+        font-size: 6em;
+    }
+    .sub-cta h4 {
+        font-size: 1.2em;
+    }
 }
 
 @media only screen and (max-width: 40em) {
-  .cta {
-    padding-top: 10%;
-  }
-  .cta h1 {
-    font-size: 2.5em;
-  }
-  .sub-cta-bg {
-  background: #2980b9;
-  }
-  .cta-bg {
-  background: #2980b9;
+    .cta, .sub-cta {
+        padding-top: 3%;
+    }
+    .cta h1 {
+        font-size: 2.5em;
+    }
+    .sub-cta-bg {
+        background: #2980b9;
+    }
+    .sub-cta h1 {
+        font-size: 2.5em;
+    }
+    .cta-bg {
+        background: #2980b9;
   }
 }
 
@@ -221,6 +248,9 @@ a.button:hover, button:hover {
     padding-top: 10%;
   }
   .cta h1 {
+    font-size: 3.5em;
+  }
+    .sub-cta h1 {
     font-size: 3.5em;
   }
 }
@@ -240,21 +270,6 @@ a.button:hover, button:hover {
 .sub-cta {
   padding-top: 2%;
   padding-bottom: 6%;
-}
-
-.sub-cta h1 {
-  font-weight: 700;
-  font-size: 5em;
-  color: #f7f7f7;
-}
-
-.sub-cta h4 {
-  font-size: 1.2em;
-  color: #f7f7f7;
-}
-
-.sub-cta h1, .sub-cta h4 {
-  font-family: 'Source Sans Pro', serif;
 }
 
 /*---- About ----*/
@@ -394,7 +409,7 @@ a.button:hover, button:hover {
 .footer-divider > hr {
   margin:0;
   padding:0;
-  border-top: #dedede 1px solid;
+  border-top: #dedede 2px solid;
 }
 
 .footer a.button:hover, button:hover {

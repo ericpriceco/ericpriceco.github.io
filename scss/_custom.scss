@@ -35,10 +35,7 @@ p {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'PT Sans Narrow';
-}
-
-h3 {
+    font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 700;
 }
 
@@ -246,7 +243,6 @@ a.button:hover, button:hover {
 }
 
 .cta h1 {
-    font-weight: 700;
     color: $sec-font-color;
     letter-spacing: 0.02em;
     line-height: 0.9em;
@@ -301,7 +297,6 @@ a.button:hover, button:hover {
 }
 
 .about h4 {
-    font-weight: 700;
     font-size: 1.3em;
 }
 
@@ -416,12 +411,10 @@ a.button:hover, button:hover {
 }
 
 .process-list h5 {
-    font-weight: 700;
     font-size: 1.4em;
 }
 
 .process h4 {
-    font-weight: 700;
     font-size: 1.4em;
 }
 
@@ -503,10 +496,6 @@ textarea {
   padding-bottom: 2%;
 }
 
-.posts-list h3 {
-  font-weight: 700;
-}
-
 .posts-list h3 > a,.posts-list h3 > a:visited {
     color: $pri-font-color;
 }
@@ -525,12 +514,7 @@ textarea {
 
 .blog-post h2 {
   font-size: 2.5em;
-  font-weight: 700;
   letter-spacing: 0.03em;
-}
-
-.blog-post h4 {
-  font-weight: 700;
 }
 
 .highlight {

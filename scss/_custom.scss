@@ -3,8 +3,9 @@
 $primary-bg: #f7f7f7;
 $secondary-bg: #2980b9;
 $grey-bg: #e8e8e8;
+$primary-color: #f39c12;
 
-$pri-font-color: #212121;
+$pri-font-color: #3b3b3b;
 $sec-font-color: #f7f7f7;
 
 @font-face {
@@ -19,7 +20,7 @@ $sec-font-color: #f7f7f7;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: $pri-font-color;
   background: $primary-bg;
   -webkit-font-smoothing: antialiased;
@@ -33,30 +34,39 @@ p {
   font-weight: 400;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'PT Sans Narrow';
+}
+
+h3 {
+    font-weight: 700;
+}
+
 a, a:link, a:visited {
   text-decoration: none;
-  color: $pri-font-color;
+  color: $primary-color;
 }
 
-a:hover, a:active {
-  color: #226EA1;
+a:hover {
+  color: $pri-font-color;
   text-decoration: none;
 }
 
-.button,button {
-  background-color: transparent;
-  color: $pri-font-color;
-  border: 1px solid #292929;
-  text-decoration: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+.button,button, a.button {
+    background-color: $pri-font-color;
+    color: $sec-font-color;
+    border: 1px solid #292929;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     padding: 10px;
-    width: 160px;
+    width: 125px;
 }
 
 a.button:hover, button:hover {
-  background: #226EA1;
+    background: $primary-color;
+    color: $sec-font-color;
 }
 
 .divider {
@@ -68,6 +78,14 @@ a.button:hover, button:hover {
   text-align: center;
 }
 
+.headline > hr {
+    border: 0;
+    height: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: 50px;
+    border-top: 2px solid $primary-color;
+}
 
 /*---- Layout Styles ----*/
 
@@ -131,19 +149,15 @@ a.button:hover, button:hover {
 
 /*---- NavBar ----*/
 
-.full-nav {
+#full-nav {
   padding-top: 20px;
 }
 
-.full-nav h2 {
-  color: #f7f7f7;
-}
-
-.full-nav ul {
+#full-nav ul {
   list-style: none;
 }
 
-.full-nav ul li {
+#full-nav ul li {
   display: inline;
   padding-left: 1.8%;
   padding-right: 1.8%;
@@ -152,26 +166,53 @@ a.button:hover, button:hover {
   color: $sec-font-color;
 }
 
-.full-nav ul li a {
+#full-nav ul li a {
   color: $sec-font-color;
 }
 
-.full-nav ul li a:hover {
-  color: #212121;
+#full-nav ul li a:hover {
+  color: $primary-color;
 }
 
-.full-nav img {
+#full-nav img {
   height: 80px;
   width: 80px;
 }
 
-.menu-icon {
-  width: auto; /* hack for menu icon bug */
+/* ---- Sub Navbar ---- */
+
+#sub-nav {
+  padding-top: 20px;
 }
 
-.nav-logo {
-    height: 75px;
-    width: 75px;
+#sub-nav ul {
+  list-style: none;
+}
+
+#sub-nav ul li {
+  display: inline;
+    padding-left: 1.8%;
+  padding-right: 1.8%;
+  font-weight: 400;
+  font-size: 1.1em;
+  color: $pri-font-color;
+}
+
+#sub-nav ul li a {
+  color: $pri-font-color;
+}
+
+#sub-nav ul li a:hover {
+  color: $primary-color;
+}
+
+#sub-nav img, #full-nav img, #nav-logo img {
+  height: 80px;
+  width: 80px;
+}
+
+#sub-nav-menu .top-bar ul li > a, #sub-nav-menu .top-bar-section ul li > a {
+    color: $pri-font-color;
 }
 
 /*---- CTA Landing ----*/
@@ -190,11 +231,11 @@ a.button:hover, button:hover {
 }
 
 .cta span.pictogram:hover {
-    color: $secondary-bg;
+    color: $primary-color;
 }
 
 .cta-bg {
-    background: url('/images/cta.jpg') center center no-repeat fixed;
+    background: #2980b9 url('/images/cta.jpg') center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -204,79 +245,46 @@ a.button:hover, button:hover {
     position: relative;
 }
 
-.sub-cta-bg {
-  background: $secondary-bg;
-}
-
 .cta h1 {
     font-weight: 700;
-    font-family: 'Source Sans Pro', serif;
     color: $sec-font-color;
-    line-height: 93%;
+    letter-spacing: 0.02em;
+    line-height: 0.9em;
 }
-
-.sub-cta h1 {
-  font-weight: 700;
-  color: $sec-font-color;
-}
-
-.sub-cta h4 {
-  color: $sec-font-color;
-}
-
-.sub-cta h1, .sub-cta h4 {
-  font-family: 'Source Sans Pro', serif;
-}
-
 
 /* Large Screen */
 
 @media only screen and (min-width: 64.063em) {
     .cta h1 {
-        font-size: 6em;
-    }
-    .sub-cta h1 {
-        font-size: 6em;
-    }
-    .sub-cta h4 {
-        font-size: 1.2em;
+        font-size: 5.8em;
     }
 }
 
+/* Small Screen */
+
 @media only screen and (max-width: 40em) {
-    .cta, .sub-cta {
+    .cta {
         padding-top: 3%;
     }
     .cta h1 {
-        font-size: 2.5em;
+        font-size: 3em;
     }
-    .sub-cta-bg {
-        background: #2980b9;
-    }
-    .sub-cta h1 {
-        font-size: 2.5em;
-    }
-    .cta-bg {
-        background: #2980b9;
-  }
 }
+
+/* Medium Screen */
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   .cta {
     padding-top: 10%;
   }
   .cta h1 {
-    font-size: 3.5em;
-  }
-    .sub-cta h1 {
-    font-size: 3.5em;
+    font-size: 4.5em;
   }
 }
 
 .cta h4 {
   color: #f7f7f7;
   font-weight: 400;
-  font-family: 'Source Sans Pro', serif;
 }
 
 .cta .button {
@@ -285,98 +293,38 @@ a.button:hover, button:hover {
   border: 1px solid #f7f7f7;
 }
 
-.sub-cta {
-  padding-top: 2%;
-  padding-bottom: 6%;
-}
-
 /*---- About ----*/
 
 .about {
-  padding-top: 8%;
-  padding-bottom: 8%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
-.about-highlight {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background: #B2CBDB;
+.about h4 {
+    font-weight: 700;
+    font-size: 1.3em;
 }
 
-.about-highlight h3 {
-    color: $pri-font-color;
-    font-weight: 300;
+.about img {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
 }
 
 /*---- Service ----*/
 
 .service-highlight {
     padding-top: 5%;
-  padding-bottom: 5%;
-  background: $primary-bg;
-}
-
-.service-highlight h2 {
-    font-weight: 300;
-    font-size: 2em;
-    letter-spacing: 0.03em;
-    color: $pri-font-color;
-}
-
-.service-highlight h4 {
-  padding-bottom: 10px;
-  color: #3498db;
-}
-
-.service-highlight h3 {
-    font-size: 1.7em;
-    font-weight: 300;
-}
-
-.service-highlight img {
-  padding-bottom: 10px;
-  max-height: 128px;
-  max-width: 128px;
+    padding-bottom: 5%;
+    background: $primary-bg;
 }
 
 /*---- Recent Work ----*/
 
 .recent-work {
-  padding-top: 5%;
-  padding-bottom: 5%;
-    background: $grey-bg;
-}
-
-.recent-work h2 {
-  font-weight: 300;
-  font-size: 2em;
-  letter-spacing: 0.03em;
-  color: $pri-font-color;
-}
-
-.recent-work h5 {
-  font-weight: 300;
-  color: $pri-font-color;
-}
-
-/*---- Recent Blog ----*/
-
-.recent-blog {
-  padding-top: 5%;
-  padding-bottom: 5%;
-  background: $primary-bg;
-}
-
-.recent-blog h2 {
-  font-weight: 300;
-  font-size: 2em;
-  letter-spacing: 0.03em;
-  color: $pri-font-color;
-}
-
-.recent-blog h4 {
-  font-weight: 300;
-  color: $pri-font-color;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: $primary-bg;
 }
 
 /*---- Footer ----*/
@@ -385,6 +333,7 @@ a.button:hover, button:hover {
     padding-top: 3%;
     padding-bottom: 3%;
     background: $grey-bg;
+    border-top: 2px #dedede solid;
 }
 
 .footer {
@@ -407,39 +356,17 @@ a.button:hover, button:hover {
   font-size: 1.1em;
 }
 
-.footer i {
-  font-size: 1.4em;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.footer i:hover {
-  color: #226EA1;
-}
-
 .footer a, .footer a:visited {
   color: $sec-font-color;
 }
 
 .footer a:hover, .footer a:active {
-  color: #226EA1;
-}
-
-.footer h3, .footer h4 {
-  padding-bottom: 10px;
-  font-weight: 400;
-  color: $sec-font-color;
+  color: $primary-color;
 }
 
 .footer p {
   font-weight: 300;
     color: $sec-font-color;
-}
-
-.footer-divider > hr {
-  margin:0;
-  padding:0;
-  border-top: #dedede 2px solid;
 }
 
 .footer a.button:hover, button:hover {
@@ -456,103 +383,101 @@ a.button:hover, button:hover {
 }
 
 .footer span.pictogram:hover {
-    color: $secondary-bg;
+    color: $primary-color;
 }
 
-/*---- Process Page ----*/
+/*---- Process ----*/
 
-.process-group {
-  background: $primary-bg;
-  padding-bottom: 8%;
-  padding-top: 8%;
+.process {
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
-.process-section {
-  padding-top: 5%;
+.circle {
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    background: $pri-font-color;
+    color: $primary-color;
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    float: left;
+    text-align: center;
 }
 
-.process-group img {
-  padding-right: 10px;
-  max-height: 50px;
-  max-width: 50px;
+.process-list {
+    text-align: left;
 }
 
-.process-group h4 {
-  padding-bottom: 4%;
+.process-list h5, .process-list p { 
+    padding-left: 40px;
+    margin-left: 10px;
 }
 
-.process-header {
-  display: inline-block;
-  padding-bottom: 15px;
+.process-list h5 {
+    font-weight: 700;
+    font-size: 1.4em;
 }
 
-.process-header span {
-  font-weight: 700;
-  font-size: 1.4em;
+.process h4 {
+    font-weight: 700;
+    font-size: 1.4em;
 }
 
-.process-bg {
-  background: #dedede;
-  padding: 20px;
+.process h4 > a,.process h4 > a:visited {
+    color: $pri-font-color;
 }
 
-/*---- Services Page ----*/
-
-.services {
-  background: $primary-bg;
-  padding-top: 8%;
-  padding-bottom: 8%;
-}
-
-.service-section {
-  padding-top: 1%;
-  padding-bottom: 1%;
-}
-
-.service-section img {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.service-section span {
-  text-decoration: underline;
+.process h4 > a:hover {
+    color: $primary-color;
 }
 
 /*---- Contact Page ----*/
 
 .contact {
   background: $primary-bg;
-  padding-top: 5%;
+  padding-top: 8%;
   padding-bottom: 5%;
+}
+
+.contact h4 {
+    margin-bottom: 0px;
 }
 
 .form-submit i {
   font-size: 3em;
 }
 
+.contact span.pictogram {
+    font-family: "entypo-social";
+    font-size: 4em;
+    color: $pri-font-color;
+}
+
+.contact span.pictogram:hover {
+    color: $primary-color;
+}
+
+textarea { 
+    height: auto; 
+}
+
 /*---- Portfolio Page ----*/
 
 .portfolio {
-  background: $primary-bg;
-  padding-top: 8%;
-}
-
-.portfolio-section-top {
-  padding-top: 1%;
-  padding-bottom: 6%;
-  background: $primary-bg;
+    background: $primary-bg;
+    padding-top: 8%;
+    padding-bottom: 5%;
 }
 
 .portfolio-section {
-  padding-top: 6%;
-  padding-bottom: 6%;
-  background: $primary-bg;
+  padding-top: 8%;
+  padding-bottom: 8%;
 }
 
-.portfolio-section2 {
-  padding-top: 6%;
-  padding-bottom: 6%;
-  background: #f0f0f0;
+.portfolio-section-top {
+  padding-bottom: 8%;
 }
 
 .shadow {
@@ -578,50 +503,34 @@ a.button:hover, button:hover {
   padding-bottom: 2%;
 }
 
-.posts-list h4 {
+.posts-list h3 {
   font-weight: 700;
 }
 
-.sidebar li {
-  line-height: 0px;
-  margin: 0px;
+.posts-list h3 > a,.posts-list h3 > a:visited {
+    color: $pri-font-color;
 }
 
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar h5 {
-  margin-bottom: 7px;
-  text-decoration: underline;
+.posts-list h3 > a:hover {
+    color: $primary-color;
 }
 
 /*---- Single Blog Post Page ----*/
 
 .blog-post {
-  padding-top: 4%;
+  padding-top: 1%;
   padding-bottom: 5%;
   background: $primary-bg;
 }
 
 .blog-post h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 
 .blog-post h4 {
   font-weight: 700;
-}
-
-.blog-post a, .blog-post a:link, .blog-post a:visited {
-  text-decoration: none;
-  color: #2980B9;
-}
-
-.blog-post a:hover, .blog-post a:active {
-  color: #2980B9;
-  text-decoration: none;
 }
 
 .highlight {

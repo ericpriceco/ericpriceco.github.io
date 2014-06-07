@@ -3,47 +3,30 @@ layout: main
 title: Contact - Eric Price - Freelance Web Designer and Developer
 ---
 
-<div class="sub-cta-bg">
+{% include subnavbar.html %}
 
-{% include navbar.html %}
-
-<section class="sub-cta">
-        <div class="row">
-            <div class="large-12 columns text-center">
-                <h1>CONTACT ME</h1>
-                <h4>LET'S START YOUR NEXT PROJECT. CONTACT ME FROM ANY OF THE METHODS BELOW.</h4>
-            </div>
-        </div>
-    </section>
-
-</div>
-    
     <section class="contact">
         <div class="row">
-            <div class="large-4 columns text-center">
+            <div class="medium-4 columns">
+                <h3>CONTACT ME</h3>
+                <div class="headline"><hr></div>
                 <h4>Call Me</h4>
                 <p><a href="tel:+19197491678">(919) 749-1678</a></p>
-            </div>
-            <div class="large-4 columns text-center">
-                <h4>Send Me A Message</h4>
-                <p>Fill out the form below</p>
-            </div>
-            <div class="large-4 columns text-center">
                 <h4>Email Me</h4>
                 <p><a href="mailto:eric.price.co@gmail.com">eric.price.co@gmail.com</a></p>
+                <h4>CONNECT:</h4>
+                <a href="https://plus.google.com/u/2/105475388741669903128"><span class="pictogram">&#62224;</span></a>
+                <a href="https://twitter.com/EricPrice2"><span class="pictogram">&#62218;</span></a>
+                <a href="https://www.facebook.com/eric.price.125760"><span class="pictogram">&#62221;</span></a>
             </div>
-        </div>
-        <div class="top-2">
-        <div class="row">
-            <div class="large-8 columns large-centered">
+            <div class="medium-8 columns top-2">
                 <form action="//forms.brace.io/eric.price.co@gmail.com" method="post">
                     <input type="text" name="name" placeholder="Name" />
                     <input type="email" name="_replyto" placeholder="Email" />
-                    <textarea id="text" name="message" placeholder="Message"></textarea>
+                    <textarea rows="6" id="text" name="message" placeholder="Message"></textarea>
                     <input type="hidden" name="_next" value="//eric-price.co/contact/thanks.html" />
                     <button type="submit" value="send">Submit</button>
                 </form>
             </div>
-        </div>
         </div>
     </section>

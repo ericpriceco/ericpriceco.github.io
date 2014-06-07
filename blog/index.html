@@ -3,20 +3,22 @@ layout: main
 title: Blog - Eric Price - Freelance Web Designer and Developer
 ---
 
-<div class="sub-cta-bg">
-
-{% include navbar.html %}
-
-{% include blog-cta.html %}
+{% include subnavbar.html %}
 
 </div>
 
     <section class="blog">
         <div class="row">
             <div class="large-9 large-centered columns">
+                <h3>BLOG</h3>
+                <div class="headline"><hr></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-9 large-centered columns">
                 {% for post in site.posts limit: 5 %}
                     <div class="posts-list">
-                        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                         <p>{{ post.date | date: '%B %d, %Y' }}</p>
                         <p>{{ post.excerpt }}</p>
                         <p><a href="{{ post.url }}">Read More</a></p>

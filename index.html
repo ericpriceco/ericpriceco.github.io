@@ -28,60 +28,45 @@ title: Eric Price - Freelance Web Designer and Developer
     
 </div> <!--End CTA Background -->
 
-        <section id="seemore" class="about-highlight">
-            <div class="row">
-                <div class="large-10 large-centered text-center columns">
-                    <h3>Hi, I'm Eric Price, a freelance web developer and designer based in the Raleigh area, North Carolina, specializing in responsive design websites. Contact me </h3>
+        <section id="seemore" class="service-highlight">
+            <div class="row largewidth">
+                <div class="large-3 columns">
+                    <h3>RESPONSIVE DESIGN</h3>
+                    <div class="headline"><hr></div>
+                    <p>I create responsive designs that allow your website to adjust to variety of screen sizes and devices. With mobile use projected to surpass PC browsing this year, it is vital to have easy to navigate mobile website. No visitor will have anything less than a perfect experience on whatever screen-size they use.</p>
+                </div>
+                <div class="large-3 columns">
+                    <h3>UX and UI Design</h3>
+                    <div class="headline"><hr></div>
+                    <p>First impressions are everything and you only have a few seconds to capture a visitors attention before they move on. My hand-coded sites focus on clean, modern designs with clear visibility of your content and brand, while providing easy navigation for your visitors.</p>
+                </div>
+                <div class="large-3 columns">
+                    <h3>CMS INTERGRATION</h3>
+                    <div class="headline"><hr></div>
+                    <p>Provide my clients with a CMS that gives them control to manage content after the sites launch. I use the <a href="http://grabaperch.com/">Perch</a> CMS to manage this. The simple to use interface requires no HTML experience and with its light-weight design, it provides quicker response time.</p>
+                </div>
+                <div class="large-3 columns">
+                    <h3>SEO/ANALYTICS</h3>
+                    <div class="headline"><hr></div>
+                    <p>My sites are optimized for performance and follow Google's best practices for SEO. My goal for every site I create is to provide a great user experience with easy navigation, which results in better navigation for search engines when they index your site.</p>
                 </div>
             </div>
         </section>
 
-     <section class="service-highlight">
-        <div class="row">
-            <div class="large-12 columns text-center">
-                <h2>WHAT I CAN DO FOR YOU</h2>
-            </div>
-        </div>
-        <div class="row text-center largewidth top-4">
-                <div class="medium-6 large-3 columns">
-                        <img src="/images/icons/responsive.png">
-                        <h4>Responsive Design</h4>
-                        <p>I create responsive designs that allow your website to adjust to variety of screen sizes and devices.</p>
-                </div>
-                <div class="medium-6 large-3 columns">
-                        <img src="/images/icons/cms.png">
-                        <h4>CMS Integration</h4>
-                        <p>Provide my clients with the ability to manage content on their site after the sites launch.</p>
-                </div>
-                <div class="medium-6 large-3 columns">
-                        <img src="/images/icons/uxui.png">
-                        <h4>UX and UI Design</h4>
-                        <p>My hand-coded sites focus on clean, modern designs with clear visibility of your content and brand.</p>
-                </div>
-        
-                <div class="medium-6 large-3 columns">
-                    <img src="/images/icons/maintenance.png">
-                    <h4>SEO and Analytics</h4>
-                    <p>My sites are optimized for performance and follow Google's best practices for SEO.</p>
-                </div>
-        </div>
-    
-        <div class="row">
-            <div class="large-12 columns text-center top-4">
-                <a href="/services" class="button">LEARN MORE</a>
-            </div>
-        </div>
-    </section>
+    <div class="row">
+        <hr>
+    </div>
 
+<!--
     <section class="recent-work">
-        <div class="row">
-            <div class="large-12 columns text-center bottom-2">
-                <h2>FEATURED WORK</h2>
+        <div class="row largewidth">
+            <div class="large-6 columns">
+                <h3>FEATURED WORK</h3>
+                <hr>
                 <h5>I believe my passion for web design shows in my work. Here are few examples of my most recent work.</h5>
+                <a href="/services" class="button">SEE MORE</a>
             </div>
-        </div>
-        <div class="row">
-            <div class="large-9 large-centered columns">
+            <div class="large-6 columns">
                 <div class="slider-wrapper">
                 <div id="slider">
                     <div class="slide1">
@@ -101,21 +86,72 @@ title: Eric Price - Freelance Web Designer and Developer
         </div>
     </section>
 
-    <section class="recent-blog">
-       <div class="row">
-            <div class="large-12 columns text-center bottom-5">
-                <h2>LATEST POSTS</h2>
-                <h5>Helpful guides on all things web development</h5>
+
+    <div class="row">
+        <hr>
+    </div>
+
+-->
+
+    <section id="about" class="about">
+        <div class="row largewidth">
+            <div class="large-6 columns">
+                <h3>ABOUT</h3>
+                <div class="headline"><hr></div>
+                <p>I’m Eric Price, a freelance web designer and developer in the Raleigh area of North Carolina, specializing in responsive web design. I have been coding both personally and professionally for years and the last few years have been focused primarily on web development.</p>
+
+			<p>I have a minimalistic and clean design style where content works with the overall design, not against it. That style also applies to my coding, with clean code that is optimized for performance. My design process from the beginning accounts for all screen sizes. With this approach, it’s not necessary to remove content to fit a mobile screen.</p>
+
+			<p>I mainly work with small companies, individuals and startups and take pride in the relationships I build with my clients. This is built through communication, dependability and providing value for their business. Please get in touch if you would like to discuss a project with me.</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="large-10 large-centered columns">
-                {% for post in site.posts limit: 2 %}
-                    <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-                    <p>{{ post.content | strip_html | truncatewords:45 }}</p>
-                    <p><a href="{{ post.url }}">Read More</a></p>
-                {% endfor %}
+            
+            <div class="large-4 columns large-pull-1 show-for-large">
+                <img src="/images/profile.jpg">
             </div>
+            
         </div>
     </section>
-    
+
+     <div class="row">
+        <hr>
+    </div>
+
+<section class="process">
+        <div class="row largewidth">
+            <div class="large-6 columns">
+                <h3>PROCESS</h3>
+                    <div class="headline"><hr></div>
+                        <div class="process-list">
+                            <span class="circle">1</span>
+                            <h5>RESEARCH/PLANNING</h5>
+                            <p>I'll start by getting to know your bussiness such as your goals, competition and customers. This information will greatly help shape your site.</p>
+                        </div>
+                        <div class="process-list">
+                            <span class="circle">2</span>
+                            <h5>DESIGN/DEVELOPMENT</h5>
+                            <p>Start sketching designs and turn them into digital wireframes for review followed by a site mockup. Once the mockup is agreed on, the coding process begins.</p>
+                        </div>
+                        <div class="process-list">
+                            <span class="circle">3</span>
+                            <h5>LAUNCH</h5>
+                            <p>Final site will be posted to a test environment first for your review and then uploaded to the production environment of your choice.</p>
+                        </div>
+                        <div class="process-list">
+                            <span class="circle">4</span>
+                            <h5>POST-LAUNCH/SUPPORT</h5>
+                            <p>Send you a soft-copy of assets and write up site documenation, plus provide training on using the CMS. On-going maintenance is available if needed.</p>
+                        </div>
+            </div>
+            
+            <div class="large-6 columns">
+                <h3>RECENT POSTS</h3>
+                <div class="headline"><hr></div>
+			     {% for post in site.posts limit: 2 %}
+                    <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                    <p>{{ post.content | strip_html | truncatewords:65 }}</p>
+                    <p><a href="{{ post.url }}">Read More</a></p>
+                {% endfor %}
+		  </div>
+            
+        </div>
+    </section>

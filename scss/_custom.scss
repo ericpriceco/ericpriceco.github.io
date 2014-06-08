@@ -179,7 +179,7 @@ a.button:hover, button:hover {
 /* ---- Sub Navbar ---- */
 
 #sub-nav {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 #sub-nav ul {
@@ -210,6 +210,10 @@ a.button:hover, button:hover {
 
 #sub-nav-menu .top-bar ul li > a, #sub-nav-menu .top-bar-section ul li > a {
     color: $pri-font-color;
+}
+
+.sub-nav-border {
+    border-top: 3px solid $primary-color;
 }
 
 /*---- CTA Landing ----*/

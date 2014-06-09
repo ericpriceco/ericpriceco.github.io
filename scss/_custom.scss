@@ -81,7 +81,7 @@ a.button:hover, button:hover {
 
 hr {
     border: 0;
-    border-top: 1px solid #adadad;
+    border-top: 1px solid #dedede;
 }
 
 .headline > hr {
@@ -340,10 +340,15 @@ hr {
 /*---- Footer ----*/
 
 .project {
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 30px;
+    padding-bottom: 10px;
     background: $grey-bg;
     border-top: 2px #dedede solid;
+}
+
+.project h3 {
+    display: inline;
+    padding-right: 15px;
 }
 
 .footer {

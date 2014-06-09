@@ -1,11 +1,11 @@
 /*---- General Styles ----*/
 
-$primary-bg: #f7f7f7;
+$primary-bg: #fff;
 $secondary-bg: #2980b9;
 $grey-bg: #e8e8e8;
 $primary-color: #f39c12;
 
-$pri-font-color: #3b3b3b;
+$pri-font-color: #2e2e2e;
 $sec-font-color: #f7f7f7;
 
 @font-face {
@@ -73,6 +73,11 @@ a.button:hover, button:hover {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #adadad;
 }
 
 .headline > hr {
@@ -296,8 +301,8 @@ a.button:hover, button:hover {
 /*---- About ----*/
 
 .about {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 .about h4 {
@@ -308,13 +313,15 @@ a.button:hover, button:hover {
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
+    max-height: 331px;
+    max-width: 272px;
 }
 
 /*---- Service ----*/
 
 .service-highlight {
     padding-top: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
     background: $primary-bg;
 }
 
@@ -388,8 +395,8 @@ a.button:hover, button:hover {
 /*---- Process ----*/
 
 .process {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .circle {
@@ -434,7 +441,7 @@ a.button:hover, button:hover {
 
 .contact {
   background: $primary-bg;
-  padding-top: 8%;
+  padding-top: 5%;
   padding-bottom: 5%;
 }
 
@@ -464,17 +471,17 @@ textarea {
 
 .portfolio {
     background: $primary-bg;
-    padding-top: 8%;
+    padding-top: 5%;
     padding-bottom: 5%;
 }
 
 .portfolio-section {
-  padding-top: 8%;
-  padding-bottom: 8%;
+  padding-top: 4%;
+  padding-bottom: 4%;
 }
 
 .portfolio-section-top {
-  padding-bottom: 8%;
+  padding-bottom: 4%;
 }
 
 .shadow {
@@ -486,7 +493,7 @@ textarea {
 /*---- Blog Page ----*/
 
 .blog {
-  padding-top: 8%;
+  padding-top: 5%;
   padding-bottom: 8%;
   background: $primary-bg;
 }

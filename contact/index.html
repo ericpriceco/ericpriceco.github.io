@@ -21,9 +21,15 @@ title: Contact - Eric Price - Freelance Web Designer and Developer
             </div>
             <div class="medium-8 columns top-2">
                 <form action="//forms.brace.io/eric.price.co@gmail.com" method="post">
-                    <input type="text" name="name" placeholder="Name" />
-                    <input type="email" name="_replyto" placeholder="Email" />
-                    <textarea rows="6" id="text" name="message" placeholder="Message"></textarea>
+                        <label>Name:
+                            <input type="text" name="name" />
+                        </label>
+                    <label>Email:
+                        <input type="email" name="_replyto" />
+                    </label>
+                    <label>Message:
+                        <textarea rows="6" id="text" name="message"></textarea>
+                    </label>
                     <input type="hidden" name="_next" value="//eric-price.co/contact/thanks.html" />
                     <button type="submit" value="send">Submit</button>
                 </form>

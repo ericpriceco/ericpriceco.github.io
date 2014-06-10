@@ -20,7 +20,7 @@ $sec-font-color: #f7f7f7;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Droid Serif', sans-serif;
   color: $pri-font-color;
   background: $primary-bg;
   -webkit-font-smoothing: antialiased;
@@ -329,6 +329,15 @@ hr {
     background: $primary-bg;
 }
 
+.service-highlight p {
+    text-align: justify;
+}
+
+.service-highlight img {
+    max-height: 175px;
+    max-width: 175px;
+}
+
 /*---- Footer ----*/
 
 .project {
@@ -346,7 +355,6 @@ hr {
 .footer {
   padding-top: 3%;
   background: #292929;
-  font-weight: 300;
     color: $sec-font-color;
 }
 
@@ -372,7 +380,6 @@ hr {
 }
 
 .footer p {
-  font-weight: 300;
     color: $sec-font-color;
 }
 

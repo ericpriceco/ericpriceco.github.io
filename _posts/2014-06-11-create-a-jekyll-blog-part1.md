@@ -105,7 +105,6 @@ Jekyll layout files are the main structure of your pages and can include any num
 {% raw %} {{ content }} {% endraw %}
 
 {% raw %} {% include footer.html %} {% endraw %}
-{% raw %} {% endhighlight %} {% endraw %}
 ```
 
 

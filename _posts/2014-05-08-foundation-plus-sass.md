@@ -3,7 +3,6 @@ layout: blogpost
 title: Getting Started with SASS and Foundation
 date: 2014-05-08
 tags: sass foundation
-headerimg: "/images/blog/foundation-sass.png"
 published: true
 ---
 

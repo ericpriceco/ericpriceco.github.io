@@ -72,7 +72,7 @@ Creating a new jekyll project couldn't be easier. Run the following in a locatio
 	jekyll new myblog
     cd myblog
 
-If you open index.html in a text editor, you will see a [YAML](http://yaml.org/) Frontmatter block at the top seperated by three dashes. These three dashes at the top and bottom are needed to tell Jekyll it's a YAML block. Below that you will see some HTML markup and [Liquid](http://jekyllrb.com/docs/templates/) tags. These tags can be pretty powerful and will make your blog a dynamic one.
+If you open index.html in a text editor, you will see a [YAML](http://yaml.org/) Frontmatter block at the top separated by three dashes. These three dashes at the top and bottom are needed to tell Jekyll it's a YAML block. Below that you will see some HTML markup and [Liquid](http://jekyllrb.com/docs/templates/) tags. These tags can be pretty powerful and will make your blog a dynamic one.
 
 #### Build Project
 
@@ -84,6 +84,6 @@ After running the build, you will see a new folder called "\_site". This is wher
 
 	jekyll serve
     
-Open your browser and go to either http://0.0.0.0:4000 or htpp://localhost:4000 to see your Jekyll powered site.
+Open your browser and go to either http://0.0.0.0:4000 or http://localhost:4000 to see your Jekyll powered site.
 
 In my next post I will cover creating a blog with partials and layouts.

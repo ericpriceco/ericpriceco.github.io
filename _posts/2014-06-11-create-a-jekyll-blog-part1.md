@@ -57,28 +57,34 @@ First we are going to start by creating the partial files that will be included 
 
 Example header.html:
 
-	<!doctype html>
-	<html class="no-js" lang="en">
-  	<head>
-    <title>{{ page.title }}</title>
-    </head>
-   	<body>
-   	< Menu Bar Content >
-    
+```
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<title>{{ page.title }}</title>
+</head>
+<body>
+< Menu Bar Content >
+```
+ 
 Change your page title name to the following in your head tag: 
 
- 	<title>{{ page.title }}</title>
+```
+ <title>{{ page.title }}</title>
+ ```
 
 This will grab the title set in your pages. I'll explain more on this in the next section.
 
 Open up your footer.html file and copy content that will be used on each page and the closing BODY and HTML tags.
 
 footer.html:
-	
-    < FOOTER CONTENT ON EACH PAGE >
-	< JS SCRIPTS >
-  	</body>
-	</html>
+
+```
+< FOOTER CONTENT ON EACH PAGE >
+< JS SCRIPTS >
+</body>
+</html>
+```
 
 #### Layouts
 

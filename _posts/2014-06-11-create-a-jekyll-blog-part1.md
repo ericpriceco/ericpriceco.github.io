@@ -84,11 +84,11 @@ footer.html:
 
 Jekyll layout files are the main structure of your pages and can include any number of partials. Change to the **\_layouts** folder and create a new file called main.html. Copy the following to it and save.
 
-	{% include header.html %}
+	`{% include header.html %}
 
 	{{ content }}
 
-	{% include footer.html %}
+	{% include footer.html %}`
 
 Basically this layout is telling Jekyll to grab the header and footer partials and in the middle include the content from the page that is using this layout. Moving on to creating pages next.
 

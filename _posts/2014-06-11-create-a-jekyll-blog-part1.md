@@ -13,8 +13,10 @@ Even if you don't want a blog, Jekyll can make the development process easier wi
 
 Open up your terminal, change to the folder you want to store your project and create your new jekyll project with the name of your choosing:
 
-	jekyll new myblog
-	cd myblog
+```
+jekyll new myblog
+cd myblog
+```
     
 #### Jekyll Folder Structure
 
@@ -34,20 +36,26 @@ Your Jekyll site is useless until you build it. When you run a build it will cre
 
 Open your terminal and run:
 
-	jekyll build
-	
+```
+jekyll build
+```	
+
 Each time you run a build, it will re-create the files in the **\_site** folder.
 
 Jekyll conveniently has a built-in server to view your page after you build it. Run this command in the root of the project folder:
 
-	jekyll serve
-	
+```
+jekyll serve
+```	
+
 Open your browser and go to http://localhost:4000
 
 You can tell Jekyll to watch for changes and automatically generate the file with the **watch** command:
 
-	jekyll server --watch
-	
+```
+jekyll server --watch
+```	
+
 Very handy!
 
 
@@ -70,8 +78,8 @@ Example header.html:
 Change your page title name to the following in your head tag: 
 
 ```
- <title>{{ page.title }}</title>
- ```
+ <title>{% raw %}{{ page.title }}{% endraw %}</title>
+```
 
 This will grab the title set in your pages. I'll explain more on this in the next section.
 
@@ -90,13 +98,16 @@ footer.html:
 
 Jekyll layout files are the main structure of your pages and can include any number of partials. Change to the **\_layouts** folder and create a new file called main.html. Copy the following to it and save.
 
-```html
-{% include header.html %}
 
-{{ content }}
-
-{% include footer.html %}
 ```
+{% raw %} {% include header.html %} {% endraw %}
+
+{% raw %} {{ content }} {% endraw %}
+
+{% raw %} {% include footer.html %} {% endraw %}
+{% raw %} {% endhighlight %} {% endraw %}
+```
+
 
 Basically this layout is telling Jekyll to grab the header and footer partials and in the middle include the content from the page that is using this layout. Moving on to creating pages next.
 
@@ -106,10 +117,12 @@ You can create different layouts if needed for specific pages. For example, I ha
 
 If you open the index.html file that is created when you make your Jekyll project, you will see something similar below at the top:
 
-	---
-	layout: main
-	title: My Site
-	---
+```yaml
+---
+layout: main
+title: My Site
+---
+```
 	
 This is a [YAML](http://yaml.org/) front matter block between the three dashes. These dashes must be two sets of three to tell Jekyll what they are. The example above is grabbing the main layout and setting the Title of the page. Your header.html partial will grab this title and put it in the head tag.
 
@@ -117,7 +130,9 @@ After the YAML block is the content of your site not including any of the code i
 
 You can call partials in your pages, not just in your layout files. For example,  you can create a side-nav partial file and call it anywhere in your page with:
 
-	{ % include side-nav.html % }
+```
+{% raw %} { % include side-nav.html % } {% endraw %}
+```
 	
 In part two I will delve deeper into creating a dynamic blog with some helpful code snippets.
 

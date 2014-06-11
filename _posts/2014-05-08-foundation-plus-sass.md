@@ -22,14 +22,18 @@ Homebrew is package manager for OSX similar to macports that comes with OSX; how
 
 Open your terminal and run the following command:
 
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)”
+```
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)”
+```
 
 During the install it will ask for your user account password. A prompt will come up asking to install “Xcode-select”, which is the Xcode CLI tools. Click the Install button.
 
 When finished run these commands in the terminal:
 
-	brew doctor
-	brew update
+```
+brew doctor
+brew update
+```
 
 Brew doctor scans your homebrew environment for any possible issues before installing a package and brew update refreshes the repository list.
 
@@ -46,57 +50,77 @@ Another similar ruby packager is RVM, but I ran into issues where RVM screwed my
 
 Command:
 
-	brew install rbenv ruby-build
+```
+brew install rbenv ruby-build
+```
      
 #### 4. Install Ruby
 
 Run Rbenv to install version 2.1.0 of Ruby:
 
-	rbenv init
-	rbenv install 2.1.0
+```
+rbenv init
+rbenv install 2.1.0
+```
 
 Run brew doctor again to scan the package system before moving on:
 
-	brew doctor
-	brew update
+```
+brew doctor
+brew update
+```
      
 #### 5. Install NodeJS and NPM (node package manager)
 
 Next we are going to install NodeJS and NPM:
 
-	brew install node
+```
+brew install node
+```
 
 #### 6. Install Foundation
 
 Install latest version of Foundation through Ruby:
 
-	sudo gem install foundation
+```
+sudo gem install foundation
+```
 
 #### 7. Install Bower
 
 Bower is the tool Foundation uses to install or update a Foundation project.
 
-	sudo npm install -g bower grunt-cli
+```
+sudo npm install -g bower grunt-cli
+```
 
 #### 8. Install Compass
 
 Compass is CSS authoring framework that uses SASS to generate your stylesheets manually or in real-time during editing.
 
-	sudo gem install compass
+```
+sudo gem install compass
+```
 
 #### 9. Create Foundation Project
 
 Next we are going to create a Foundation project. Change to the directory you want to store your project and run:
 
-	foundation new test-project
+```
+foundation new test-project
+```
 
 If you were to open index.html in your new project, you will see no styling at all. That's because the scss file needs to be compiled into a stylesheet. Change to your project folder and compile:
-     
-	cd test-project
-	compass compile
+
+```     
+cd test-project
+compass compile
+```
     
 You can have compass watch for changes in real-time and it will auto compile your stylesheet when you save a change to your scss files.
 
-	compass watch
+```
+compass watch
+```
 
 Congratulations for taking the first steps in what should make your development life easier.

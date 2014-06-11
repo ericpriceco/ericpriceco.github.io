@@ -20,17 +20,23 @@ We need to point Foundation to the new partial. Open up "app.scss" in the scss f
 
 app.scss:
 
-	@import "settings";
-	@import "foundation";
-	@import "custom";
+```
+@import "settings";
+@import "foundation";
+@import "custom";
+```
 
 After adding in your CSS to the custom partial you need to compile it. In the root of your project run:
 
-	compass watch
+```
+compass watch
+```
     
 While running compass in watch mode, it will automatically compile your sass when it detects a change after saving. You can also compile one time with:
 
-	compass compile
+```
+compass compile
+```
     
 #### Variables
 
@@ -38,15 +44,19 @@ Variables is where it starts to get fun. You can assign a declaration to a varia
 
 SASS variables start with a $ sign and can be named anything you want as long as it hasn't been used previously. These example variables would be placed in your custom partial file before they are called:
 
-	$primary-color: #f7f7f7;
-	$secondary-color: #f2f2f2;
-	$box-margin: 2em;
+```
+$primary-color: #f7f7f7;
+$secondary-color: #f2f2f2;
+$box-margin: 2em;
+```
 
 Calling the variable in your declaration:
 
-	h4 {color: $primary-color;}
-	p {margin: $box-margin;}
-	button {color: $secondary-color;}
+```
+h4 {color: $primary-color;}
+p {margin: $box-margin;}
+button {color: $secondary-color;}
+```
     
 SASS will convert it to CSS after compiling.
 
@@ -56,27 +66,33 @@ Mixins are like variables, but a group of declarations and are assigned with the
 
 SCSS:
 
-	@mixin vendorprefix($property, $value) {
-		-webkit-#{$property}: $value;
-		-moz-#{$property}: $value;
-		-ms-#{$property}: $value;
-		-o-#{$property}: $value;
-		#{$property}: $value;
-	}
+```
+@mixin vendorprefix($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+```
 
 Calling mixin:
 
-	.button { @include vendorprefix(border-radius, 10px); }
+```
+.button { @include vendorprefix(border-radius, 10px); }
+```
     
 Resulting CSS:
 
-	.box {
-  		-webkit-border-radius: 10px;
-  		-moz-border-radius: 10px;
-  		-ms-border-radius: 10px;
-  		-o-border-radius: 10px;
-  		border-radius: 10px;
-		}
+```
+.box {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+```
 
 Check that out! You can apply that to other vendor fixes for transitions and animations. Just put the type of prefix in the property field. With some clever thinking, you can create a ton of cool mixins.
 

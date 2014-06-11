@@ -7,7 +7,7 @@ published: true
 ---
 I'm going to go through the steps to create a site and blog using [Jekyll](http://jekyllrb.com/). This assumes you already have Jekyll installed on your system. If you don't, my previous post goes through the beginning steps on setting up Jekyll. [http://eric-price.co/blog/jekyll-osx/](http://eric-price.co/blog/jekyll-osx/)
 
-Even if you don't want a blog, Jekyll can make the development process easier with the use of its partial system. If you have worked with Wordpress or similar CMS, this will be familiar to you. This allows you to splice up your site into separate files such as header, footer and navigation, and called on any number of pages. This means you only need to edit a single file for a header or footer that is used across the site.
+Even if you don't want a blog, Jekyll can make the development process easier with the use of its partial system. If you have worked with Wordpress or similar CMS, this will be familiar to you. This allows you to splice up your site into separate files like the header, footer and navigation, and can be called on a layout or within your pages. This means you only need to edit a single file for a header or footer that is used across the site.
 
 #### Create a Jekyll Project
 
@@ -22,13 +22,13 @@ cd myblog
 
 **\_includes**: This folder is where you store your partials like your header.html and footer.html. You can have as many partials as you need.
 
-**\_layouts**: How your pages are structured is located here. For example, I have a main.html file that most of my pages use and a specific layout of blogposts. Your pages will call this layout to use.
+**\_layouts**: These files determine the structure of your pages. For example, I have a main.html file that most of my pages use and a specific layout for blogposts.
 
 **\_posts**: This folder contains your posts in Markdown format.
 
 #### Existing or New Site
 
-For my projects I use the SASS version of the Foundation framework, but you can use anything for your Jekyll project. My typical process is to create a Foundation project and copy over the needed files to the new Jekyll project folder. See my post on setting up a Foundation project using SASS. [http://eric-price.co/blog/foundation-plus-sass/](http://eric-price.co/blog/foundation-plus-sass/)
+For my projects I use the SASS version of the Foundation framework, but you can use anything for your Jekyll project. My typical process is to create a Foundation project and copy over the needed files to the new Jekyll project folder. You can start creating your site within your Jekyll project or copy over an existing site and splice it into your partials and pages. See my post on setting up a Foundation project using SASS. [http://eric-price.co/blog/foundation-plus-sass/](http://eric-price.co/blog/foundation-plus-sass/)
 
 #### Build
 
@@ -40,9 +40,9 @@ Open your terminal and run:
 jekyll build
 ```	
 
-Each time you run a build, it will re-create the files in the **\_site** folder.
+Each time you run a build, it will re-create the files in the **\_site** folder. Jekyll can simply be used make your development process easier with its partials and you only need to give your client the output files in the **\_site** folder. 
 
-Jekyll conveniently has a built-in server to view your page after you build it. Run this command in the root of the project folder:
+Jekyll conveniently has a built-in server to view your page after you built it. Run this command in the root of the project folder:
 
 ```
 jekyll serve
@@ -61,7 +61,7 @@ Very handy!
 
 #### Includes (Partials)
 
-First we are going to start by creating the partial files that will be included in your layout file. Change to the **\_includes** folder and create two files: header.html and footer.html. The header file should contain everything from the top HTML tag to the opening BODY tag. If your navigation menu is the same on each page, copy that as well.
+First we are going to start by creating the partial files that will be included in your layout file. Change to the **\_includes** folder and create two files: **header.html** and **footer.html**. The header file should contain everything from the top HTML tag to the opening BODY tag. If your navigation menu is the same on each page, copy that as well.
 
 Example header.html:
 
@@ -109,13 +109,13 @@ Jekyll layout files are the main structure of your pages and can include any num
 ```
 
 
-Basically this layout is telling Jekyll to grab the header and footer partials and in the middle include the content from the page that is using this layout. Moving on to creating pages next.
+Basically this layout is telling Jekyll to grab the header and footer partials and in the middle include the content from the page that is using this layout. 
 
-You can create different layouts if needed for specific pages. For example, I have two layouts, a main layout and a blog post layout. On the blog post layout, I added some html after the **{{ content }}** line for social sharing buttons. Doing this, I don't have to add this code for every blogpost I create; it's there automatically.
+You can create different layouts if needed for specific pages. For example, I have two layouts, a main layout and a blog post layout. On my blog post layout, I added some html after the **{% raw %}{{ content }}{% endraw %}** line for social sharing buttons. Doing this, I don't have to add this code for every blogpost I create; it's there automatically.
 
 #### Pages
 
-If you open the index.html file that is created when you make your Jekyll project, you will see something similar below at the top:
+If you open the index.html file that is created when you make your Jekyll project, you will see something similar below at the top of the file:
 
 ```yaml
 ---
@@ -126,9 +126,9 @@ title: My Site
 	
 This is a [YAML](http://yaml.org/) front matter block between the three dashes. These dashes must be two sets of three to tell Jekyll what they are. The example above is grabbing the main layout and setting the Title of the page. Your header.html partial will grab this title and put it in the head tag.
 
-After the YAML block is the content of your site not including any of the code in your header and footer partials.
+After the YAML block, you will place the content of the page not including any of the code in your header and footer partials.
 
-You can call partials in your pages, not just in your layout files. For example,  you can create a side-nav partial file and call it anywhere in your page with:
+Note: You can call partials in your pages, not just in your layout files. For example,  you can create a side-nav partial file and call it anywhere in your page with:
 
 ```
 {% raw %} { % include side-nav.html % } {% endraw %}

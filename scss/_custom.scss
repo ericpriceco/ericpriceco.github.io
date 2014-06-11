@@ -90,7 +90,7 @@ hr {
     margin-top: 0;
     margin-bottom: 16px;
     width: 50px;
-    border-top: 2px solid $primary-color;
+    border-top: 4px solid $primary-color;
 }
 
 /*---- Layout Styles ----*/
@@ -222,7 +222,7 @@ hr {
 }
 
 .sub-nav-border {
-    border-top: 3px solid $primary-color;
+    border-top: 4px solid $primary-color;
 }
 
 /*---- CTA Landing ----*/
@@ -330,7 +330,7 @@ hr {
 }
 
 .service-highlight p {
-    text-align: justify;
+
 }
 
 .service-highlight img {
@@ -449,7 +449,7 @@ hr {
 
 .contact {
   background: $primary-bg;
-  padding-top: 5%;
+  padding-top: 2%;
   padding-bottom: 5%;
 }
 
@@ -479,17 +479,18 @@ textarea {
 
 .portfolio {
     background: $primary-bg;
-    padding-top: 5%;
+    padding-top: 3%;
     padding-bottom: 5%;
 }
 
 .portfolio-section {
-  padding-top: 5%;
-  padding-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .portfolio-section-top {
-  padding-bottom: 5%;
+    padding-top: 8%;
+    padding-bottom: 5%;
 }
 
 .shadow {
@@ -501,7 +502,7 @@ textarea {
 /*---- Blog Page ----*/
 
 .blog {
-  padding-top: 5%;
+  padding-top: 2%;
   padding-bottom: 8%;
   background: $primary-bg;
 }
@@ -526,14 +527,9 @@ textarea {
 /*---- Single Blog Post Page ----*/
 
 .blog-post {
-  padding-top: 1%;
-  padding-bottom: 5%;
-  background: $primary-bg;
-}
-
-.blog-post h2 {
-  font-size: 2.5em;
-  letter-spacing: 0.03em;
+    padding-top: 2%;
+    padding-bottom: 8%;
+    background: $primary-bg;
 }
 
 .highlight {

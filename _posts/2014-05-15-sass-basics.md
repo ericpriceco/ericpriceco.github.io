@@ -34,7 +34,7 @@ While running compass in watch mode, it will automatically compile your sass whe
     
 #### Variables
 
-Variables is where it starts to get fun. You can assign a declaration to a variable and call it anywhere in your CSS. This means you can apply the [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) (Dont Repeat Yourself) principle to your website development. Imagine only needing to change a single variable for a color that is used is several places across your site. Beautiful!
+Variables is where it starts to get fun. You can assign a declaration to a variable and call it anywhere in your CSS. This means you can apply the [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) (Don't Repeat Yourself) principle to your website development. Imagine only needing to change a single variable for a color that is used is several places across your site. Beautiful!
 
 SASS variables start with a $ sign and can be named anything you want as long as it hasn't been used previously. These example variables would be placed in your custom partial file before they are called:
 

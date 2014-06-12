@@ -69,7 +69,7 @@ Example header.html:
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-<title>{{ page.title }}</title>
+<title>{% raw %}{{ page.title }}{% endraw %}</title>
 </head>
 <body>
 < Menu Bar Content >

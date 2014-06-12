@@ -9,7 +9,7 @@ This is a guide on creating a site and blog using [Jekyll](http://jekyllrb.com/)
 
 Even if you don't want a blog, Jekyll can make the development process easier with the use of its partial system. If you have worked with Wordpress or similar CMS, this will be familiar to you. This allows you to splice up your site into separate files for the header, footer and navigation, etc., and can be called from the layout file or within your pages. This means you only need to edit a single file for sections that are re-used across the site.
 
-#### Create a Jekyll Project
+### Create a Jekyll Project
 
 Open up your terminal, change to the folder you want to store your project and create your new jekyll project with the name of your choosing:
 
@@ -18,7 +18,7 @@ jekyll new myblog
 cd myblog
 ```
     
-#### Jekyll Folder Structure
+### Jekyll Folder Structure
 
 **\_includes**: This folder is where you store your partials like the header.html and footer.html. You can have as many partials as you need.
 
@@ -26,11 +26,11 @@ cd myblog
 
 **\_posts**: This folder contains your posts in Markdown format.
 
-#### Existing or New Site
+### Existing or New Site
 
 For my projects I use the SASS version of the Foundation framework, but you can use anything for your Jekyll project. My typical process is to create a Foundation project and copy over the needed files to the new Jekyll project folder. You can start creating your site within the Jekyll project folder or copy over an existing site and splice it into your partials and pages. See my post on setting up a Foundation project using SASS. [http://eric-price.co/blog/foundation-plus-sass/](http://eric-price.co/blog/foundation-plus-sass/)
 
-#### Build
+### Build
 
 Your Jekyll site is useless until you build it. When you run a build it will create a **\_site** folder with the converted html files. 
 
@@ -59,7 +59,7 @@ jekyll server --watch
 Very handy!
 
 
-#### Includes (Partials)
+### Includes (Partials)
 
 First we are going to start by creating the partial files that will be included in your layout file. Change to the **\_includes** folder and create two files: **header.html** and **footer.html**. The header file should contain everything from the top HTML tag to the opening BODY tag. If your navigation menu is the same on each page, copy that as well.
 
@@ -94,7 +94,7 @@ footer.html:
 </html>
 ```
 
-#### Layouts
+### Layouts
 
 Jekyll layout files are the main structure of your pages and can include any number of partials. Change to the **\_layouts** folder and create a new file called main.html. Copy the following to it and save.
 
@@ -112,7 +112,7 @@ Basically this layout is telling Jekyll to grab the header and footer partials a
 
 You can create different layouts if needed for specific pages. For example, I have two layouts, a main layout and a blog post layout. On my blog post layout, I added some html after the **{% raw %}{{ content }}{% endraw %}** line for social sharing buttons. Doing this, I don't have to add this code for every blogpost I create; it's there automatically.
 
-#### Pages
+### Pages
 
 If you open the index.html file that is created when you make your Jekyll project, you will see something similar at the top of the file:
 

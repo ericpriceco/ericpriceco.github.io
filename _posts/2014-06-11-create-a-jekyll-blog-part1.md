@@ -5,7 +5,9 @@ date: 2014-06-11
 tags: jekyll foundation
 published: true
 ---
-This is a guide on creating a site and blog using [Jekyll](http://jekyllrb.com/). This assumes you already have Jekyll installed on your system. If you don't, my previous post goes through the steps on setting up Jekyll. [http://eric-price.co/blog/jekyll-osx/](http://eric-price.co/blog/jekyll-osx/)
+I'm going to go through the steps for creating a site and blog using [Jekyll](http://jekyllrb.com/). Jekyll is a static site generator that will convert markdown files and partials into a working website.  See my previous post on how to install Jekyll if you havent already. [http://eric-price.co/blog/jekyll-osx/](http://eric-price.co/blog/jekyll-osx/)
+
+Github pages has Jekyll built-in, so you can host your site on Github for free like this one! Another plus is Github automatically generates the HTML output, so adding posts is a breeze.
 
 Even if you don't want a blog, Jekyll can make the development process easier with the use of its partial system. If you have worked with Wordpress or similar CMS, this will be familiar to you. This allows you to splice up your site into separate files for the header, footer and navigation, etc., and can be called from the layout file or within your pages. This means you only need to edit a single file for sections that are re-used across the site.
 

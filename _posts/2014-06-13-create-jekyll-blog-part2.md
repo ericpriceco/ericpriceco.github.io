@@ -14,7 +14,7 @@ In this guide, I'm going to explain some very helpful variables that I've gather
 
 ### Recent Posts
 
-On my homepage I like to include a recent posts section to intice people click through and read, and also to have no content on the homepage every time I write an article. Important part of SEO!
+On my homepage I like to include a recent posts section to entice people click through and read, and also to have no content on the homepage every time I write an article. Important part of SEO!
 
 You can easily change this to suit your site. Maybe you want 3 posts, instead of 2 or more words in the snippet.
 
@@ -39,7 +39,7 @@ The first line is the start of the loop with a limit of 2 posts. If you wanted t
 {% raw %}{% for post in site.posts limit: 2 %}{% endraw %}
 ```
 
-These lines are self explanatory. The post.url and post.title variables grab the link and title of each post. On the post.content line, I added a filter to remove any HTML from the post and limit the snippet to 45 words. Removing the HTML ensures the formatting looks how I want it to on the hopepage. You can wrap these variables in any HTML markup for styling and formatting.
+These lines are self explanatory. The post.url and post.title variables grab the link and title of each post. On the post.content line, I added a filter to remove any HTML from the post and limit the snippet to 45 words. Removing the HTML ensures the formatting looks how I want it to on the home-page. You can wrap these variables in any HTML markup for styling and formatting.
 
 ```
 {% raw %}
@@ -64,7 +64,7 @@ published: true
 ---
 ```
 
-This information is critical since Jekyll will use this to pull the data, title, tags. The published line tells Github it's ready to publish and no longer a draft. I will explain the tags later on. The post file must be saved with a markdown extension and have the date first and the name seperated by dashes. Example: "2014-06-13-create-jekyll-blog-part2.md"
+This information is critical since Jekyll will use this to pull the data, title, tags. The published line tells Github it's ready to publish and no longer a draft. I will explain the tags later on. The post file must be saved with a markdown extension and have the date first and the name separated by dashes. Example: "2014-06-13-create-jekyll-blog-part2.md"
 
 ### Blog Page
 
@@ -164,7 +164,7 @@ When a visitor clicks a tag link on the blog page, they will go to that specific
 
 ### Permalinks
 
-This part is really just prefence for the link style of your posts. By default, it includes the post date in the link, which I wasn't a fan of. To only include the post title in the post link, you need to edit the **"\_config.yml"** file in the root of the Jekyll project folder. Add the line below:
+This part is really just preference for the link style of your posts. By default, it includes the post date in the link, which I wasn't a fan of. To only include the post title in the post link, you need to edit the **"\_config.yml"** file in the root of the Jekyll project folder. Add the line below:
 
 ```
 permalink: /blog/:title

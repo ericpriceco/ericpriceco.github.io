@@ -132,7 +132,7 @@ tags
 The index.html file for each tag should look like the example below:
 
 ```
-{% raw %]
+{% raw %}
 ---
 layout: main
 title: Blog - Eric Price - Freelance Web Design and Developer
@@ -157,7 +157,7 @@ title: Blog - Eric Price - Freelance Web Design and Developer
 When a visitor clicks a tag link on the blog page, they will go to that specific tag page with the loop above. The only line you need to edit for each tag is the one below. In this example I have a tag for "sass". 
 
 ```
-{% raw %]
+{% raw %}
 {% for post in site.tags.sass limit: 5 %}
 {% endraw %}
 ```

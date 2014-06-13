@@ -18,7 +18,7 @@ On my homepage I like to include a recent posts section to intice people click t
 
 You can easily change this to suit your site. Maybe you want 3 posts, instead of 2 or more words in the snippet.
 
-```html
+```
 {% raw %}
 <div class="large-6 columns">
 	<h3>RECENT POSTS</h3>
@@ -70,7 +70,7 @@ This information is critical since Jekyll will use this to pull the data, title,
 
 The blog page will use a similar loop, but with a little more features like Tags and dates.
 
-```html
+```
 {% raw %}
 <div class="large-9 large-centered columns">
 	{% for post in site.posts limit: 5 %}
@@ -103,7 +103,7 @@ For the blog page I increased the post limit to 5 with the same post.url and pos
 
 Including tags on your blog page is a tricky one and gets its own section. This is a great way to group your posts into groups if a visitor is looking to read your posts on a specific topic. 
 
-```html
+```
 {% raw %}
 <p>Tags:
 	{% for tag in post.tags %}

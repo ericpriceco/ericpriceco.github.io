@@ -4,8 +4,6 @@ title: Eric Price - Freelance Web Designer and Developer
 ---
 
 <div class="cta-bg">
-
-   {% include navbar.html %}
       
     <section class="cta">
         <div class="row">
@@ -16,14 +14,11 @@ title: Eric Price - Freelance Web Designer and Developer
                 </header>
             </div>
         </div>
-        <div class="large-12 columns text-center top-2">
+        <div class="row">
+            <div class="large-12 columns text-center top-2">
                 <a href="https://plus.google.com/u/2/105475388741669903128"><span class="pictogram">&#62224;</span></a>
                 <a href="https://twitter.com/EricPrice2"><span class="pictogram">&#62218;</span></a>
                 <a href="https://www.facebook.com/eric.price.125760"><span class="pictogram">&#62221;</span></a>
-        </div>
-        <div class="row">
-            <div class="text-center top-2">
-                <a href="#seemore" class="button">READ MORE</a>
             </div>
         </div>
     </section>
@@ -31,31 +26,26 @@ title: Eric Price - Freelance Web Designer and Developer
 </div> <!--End CTA Background -->
 
         <section id="seemore" class="service-highlight">
-            <div class="row largewidth">
-                <div class="large-3 columns">
+            <div class="row">
+                <div class="large-4 columns">
                     <h3>RESPONSIVE DESIGN</h3>
                     <div class="headline"><hr></div>
                     <p>I create responsive designs that allow websites to adjust to variety of screen sizes and devices. With mobile use projected to surpass PC, it is vital to have easy to navigate mobile website. No visitor will have anything less than a perfect experience on whatever screen-size they use.</p>
                 </div>
-                <div class="large-3 columns">
+                <div class="large-4 columns">
                     <h3>UX and UI Design</h3>
                     <div class="headline"><hr></div>
                     <p>First impressions are everything and you only have a few seconds to capture a visitors attention before they move on. My hand-coded sites focus on clean, modern designs with clear visibility of your content and brand, while providing easy navigation for your visitors.</p>
                 </div>
-                <div class="large-3 columns">
+                <div class="large-4 columns">
                     <h3>CMS INTERGRATION</h3>
                     <div class="headline"><hr></div>
                     <p>Provide my clients with a CMS that gives them control to manage content after the sites launch. I use the <a href="http://grabaperch.com/">Perch</a> CMS to manage this. The simple to use interface requires no HTML experience and with its light-weight design, it provides quicker response time.</p>
                 </div>
-                <div class="large-3 columns">
-                    <h3>SEO/ANALYTICS</h3>
-                    <div class="headline"><hr></div>
-                    <p>My sites are optimized for performance and follow Google's best practices for SEO. My goal for every site I create is to provide a great user experience with easy navigation, which results in better navigation for search engines when they index your site.</p>
-                </div>
             </div>
         </section>
 
-    <div class="row largewidth">
+    <div class="row">
         <hr>
     </div>
 
@@ -96,7 +86,7 @@ title: Eric Price - Freelance Web Designer and Developer
 -->
 
     <section id="about" class="about">
-        <div class="row largewidth">
+        <div class="row">
             <div class="large-7 columns">
                 <h3>ABOUT</h3>
                 <div class="headline"><hr></div>
@@ -114,13 +104,13 @@ title: Eric Price - Freelance Web Designer and Developer
         </div>
     </section>
 
-     <div class="row largewidth">
+     <div class="row">
         <hr>
     </div>
 
 <section class="process">
-        <div class="row largewidth">
-            <div class="large-6 columns">
+        <div class="row">
+            <div class="large-7 columns">
                 <h3>PROCESS</h3>
                     <div class="headline"><hr></div>
                         <div class="process-list">
@@ -145,14 +135,17 @@ title: Eric Price - Freelance Web Designer and Developer
                         </div>
             </div>
             
-            <div class="large-6 columns">
+            <div class="large-5 columns">
                 <h3>RECENT POSTS</h3>
                 <div class="headline"><hr></div>
-			     {% for post in site.posts limit: 2 %}
+			     {% for post in site.posts limit: 3 %}
                     <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-                    <p>{{ post.content | strip_html | truncatewords:65 }}</p>
-                    <p><a href="{{ post.url }}">Read More</a></p>
+                    <p>{{ post.date | date: '%B %d, %Y' }}</p>
                 {% endfor %}
+                
+                <h3>WORD FROM MY CLIENTS</h3>
+                <div class="headline"><hr></div>
+                <p>Eric was so helpful from the beginning. He always kept me updated on his progress and went above and beyond helping me create social media accounts for my business.</p>
 		  </div>
             
         </div>

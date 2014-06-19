@@ -351,13 +351,13 @@ hr {
     background: $primary-bg;
 }
 
-.service-highlight p {
-
+.service-highlight img {
+    max-height: 125px;
+    max-width: 125px;
 }
 
-.service-highlight img {
-    max-height: 175px;
-    max-width: 175px;
+.service-img-container {
+    padding-bottom: 20px;
 }
 
 /*---- Footer ----*/

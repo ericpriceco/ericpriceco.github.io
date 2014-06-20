@@ -292,18 +292,15 @@ hr {
 /* Large Screen */
 
 @media only screen and (min-width: 64.063em) {
-    .cta h1 {
-        font-size: 5.8em;
-    }
-    .sub-cta h1 {
-        font-size: 3.8em;
+    .cta h1, .sub-cta h1 {
+        font-size: 4.8em;
     }
 }
 
 /* Small Screen */
 
 @media only screen and (max-width: 40em) {
-    .cta h1 {
+    .cta h1, .sub-cta h1 {
         font-size: 2.8em;
     }
 }
@@ -311,8 +308,8 @@ hr {
 /* Medium Screen */
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  .cta h1 {
-    font-size: 4.5em;
+  .cta h1, .sub-cta h1 {
+    font-size: 4em;
   }
 }
 

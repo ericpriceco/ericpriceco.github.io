@@ -158,7 +158,6 @@ hr {
 
 #full-nav {
     padding-top: 20px;
-    background: $primary-color;
 }
 
 #full-nav ul {
@@ -185,10 +184,6 @@ hr {
 #full-nav img, #nav-logo img {
   height: 80px;
   width: 80px;
-}
-
-.nav-bg {
-    background: $primary-color;
 }
 
 /* ---- Sub Navbar ---- */
@@ -237,11 +232,14 @@ hr {
 
 /*---- CTA Landing ----*/
 
+.cta-bg {
+    background: $primary-color;
+}
+
 .cta {
     padding-top: 4%;
     padding-bottom: 3%;
     color: $sec-font-color;
-    background: $primary-color;
     border-bottom: 3px solid #2980b9;
 }
 

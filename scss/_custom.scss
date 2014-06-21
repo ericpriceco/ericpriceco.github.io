@@ -233,15 +233,18 @@ hr {
 /*---- CTA Landing ----*/
 
 .cta-bg {
-    background: $primary-color;
-
+    background: $primary-color url('/images/cta-bg.jpg') center center no-repeat;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .cta {
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     color: $sec-font-color;
-    border-bottom: 3px solid #2980b9;
 }
 
 .cta span.pictogram {
@@ -256,19 +259,6 @@ hr {
     color: $link-hover;
 }
 
-/*
-.cta-bg {
-    background: #2980b9 url('/images/cta.jpg') center center no-repeat fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    min-height: 100%;
-}
-*/
-
 .cta h1 {
     color: $sec-font-color;
     letter-spacing: 0.02em;
@@ -276,10 +266,8 @@ hr {
 }
 
 .sub-cta {
-    background: $primary-color;
-    padding-top: 3%;
-    padding-bottom: 4%;
-    border-bottom: 3px solid #2980b9;
+    padding-top: 4%;
+    padding-bottom: 6%;
 }
 
 .sub-cta h1, .sub-cta h4, .cta h4, .cta h3 {

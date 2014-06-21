@@ -185,50 +185,6 @@ hr {
   width: 80px;
 }
 
-/* ---- Sub Navbar ---- */
-
-/*
-
-#sub-nav {
-    padding-top: 20px;
-}
-
-#sub-nav ul {
-  list-style: none;
-}
-
-#sub-nav ul li {
-  display: inline;
-    padding-left: 1.8%;
-  padding-right: 1.8%;
-  font-weight: 400;
-  font-size: 1.1em;
-  color: $pri-font-color;
-}
-
-#sub-nav ul li a {
-  color: $pri-font-color;
-}
-
-#sub-nav ul li a:hover {
-  color: $primary-color;
-}
-
-#sub-nav img, #full-nav img, #nav-logo img {
-  height: 80px;
-  width: 80px;
-}
-
-#sub-nav-menu .top-bar ul li > a, #sub-nav-menu .top-bar-section ul li > a {
-    color: $pri-font-color;
-}
-
-.sub-nav-border {
-    border-top: 4px solid $primary-color;
-}
-
-*/
-
 /*---- CTA Landing ----*/
 
 .cta-bg {
@@ -248,8 +204,8 @@ hr {
 
 .cta span.pictogram {
     font-family: "entypo-social";
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    padding: 0 10px;
+    margin: 0;
     font-size: 6em;
     color: $sec-font-color;
 }
@@ -258,7 +214,7 @@ hr {
     color: $link-hover;
 }
 
-.cta h1 {
+.cta h1, sub-cta h1 {
     color: $sec-font-color;
     letter-spacing: 0.02em;
     line-height: 0.9em;
@@ -281,15 +237,7 @@ hr {
 
 @media only screen and (min-width: 64.063em) {
     .cta h1, .sub-cta h1 {
-        font-size: 4em;
-    }
-}
-
-/* Small Screen */
-
-@media only screen and (max-width: 40em) {
-    .cta h1, .sub-cta h1 {
-        font-size: 2.8em;
+        font-size: 4.3em;
     }
 }
 
@@ -299,6 +247,14 @@ hr {
   .cta h1, .sub-cta h1 {
     font-size: 4em;
   }
+}
+
+/* Small Screen */
+
+@media only screen and (max-width: 40em) {
+    .cta h1, .sub-cta h1 {
+        font-size: 2.8em;
+    }
 }
 
 .cta .button {
@@ -369,11 +325,11 @@ hr {
 }
 
 .footer ul li {
-  display: inline;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: 400;
-  font-size: 1.1em;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 400;
+    font-size: 1.1em;
 }
 
 .footer a, .footer a:visited {
@@ -395,8 +351,8 @@ hr {
 
 .footer span.pictogram {
     font-family: "entypo-social";
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
+    margin: 0;
     font-size: 4.8em;
     color: $sec-font-color;
 }

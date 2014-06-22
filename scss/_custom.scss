@@ -222,7 +222,7 @@ hr {
 
 .sub-cta {
     padding-top: 4%;
-    padding-bottom: 6%;
+    padding-bottom: 7%;
 }
 
 .sub-cta h1, .sub-cta h4, .cta h4, .cta h3 {
@@ -302,10 +302,10 @@ hr {
 /*---- Footer ----*/
 
 .project {
-    padding-top: 2%;
-    padding-bottom: 1%;
-    background: $grey-bg;
-    border-top: 2px #dedede solid;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    background: $primary-color;
+    border-top: 2px #3F96D1 solid;
 }
 
 .project h3 {
@@ -313,9 +313,13 @@ hr {
     padding-right: 15px;
 }
 
+.project a.button:hover {
+    background: #636363;
+}
+
 .footer {
-  padding-top: 3%;
-  background: #292929;
+    padding-top: 3%;
+    background: #292929;
     color: $sec-font-color;
 }
 

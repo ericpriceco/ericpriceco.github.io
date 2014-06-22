@@ -225,11 +225,11 @@ hr {
     padding-bottom: 7%;
 }
 
-.sub-cta h1, .sub-cta h4, .cta h4, .cta h3 {
+.sub-cta h1, .sub-cta h3, .cta h4, .cta h3 {
     color: $sec-font-color;
 }
 
-.sub-cta h4, .cta h4 {
+.sub-cta h3, .cta h3 {
     font-weight: 400;
 }
 
@@ -237,7 +237,9 @@ hr {
 
 @media only screen and (min-width: 64.063em) {
     .cta h1, .sub-cta h1 {
-        font-size: 4.3em;
+        font-size: 5.5em;
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -247,6 +249,9 @@ hr {
   .cta h1, .sub-cta h1 {
     font-size: 4em;
   }
+    .cta h3, .sub-cta h3 {
+        font-size: 1.4em;
+    }
 }
 
 /* Small Screen */
@@ -254,6 +259,9 @@ hr {
 @media only screen and (max-width: 40em) {
     .cta h1, .sub-cta h1 {
         font-size: 2.8em;
+    }
+     .cta h3, .sub-cta h3 {
+        font-size: 1.2em;
     }
 }
 

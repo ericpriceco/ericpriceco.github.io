@@ -9,6 +9,7 @@ $pri-font-color: #2e2e2e;
 $sec-font-color: #f7f7f7;
 $link-hover: #292929;
 
+
 @font-face {
     font-family: 'entypo-social';
     src: url('/images/icons/entypo-social.eot');
@@ -135,7 +136,7 @@ hr {
 }
 
 .full-nav ul li a:hover {
-  color: $link-hover;
+  color: $primary-color;
 }
 
 .nav-logo {
@@ -150,7 +151,7 @@ hr {
 /*---- CTA Landing ----*/
 
 .cta-bg {
-    background: $primary-color url('/images/cta-bg.jpg') center center no-repeat;
+    background: #34495e url('/images/cta-bg2.jpg') center center no-repeat;
     width: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -182,7 +183,7 @@ hr {
 }
 
 .cta span.pictogram:hover {
-    color: $link-hover;
+    color: $primary-color;
 }
 
 .cta h1, .sub-cta h1 {
@@ -454,7 +455,7 @@ textarea {
 /*---- Blog Page ----*/
 
 .blog {
-  padding-top: 7%;
+  padding-top: 5%;
   padding-bottom: 8%;
   background: $primary-bg;
 }
@@ -463,16 +464,20 @@ textarea {
   list-style: none;
 }
 
+.blog-header {
+    text-align: center;
+}
+
 .posts-list {
   padding-top: 2%;
   padding-bottom: 2%;
 }
 
-.posts-list h3 > a,.posts-list h3 > a:visited {
+.posts-list h2 a, .posts-list h2 a:visited {
     color: $pri-font-color;
 }
 
-.posts-list h3 > a:hover {
+.posts-list h2 a:hover {
     color: $primary-color;
 }
 

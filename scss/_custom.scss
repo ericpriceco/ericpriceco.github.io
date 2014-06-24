@@ -113,16 +113,16 @@ hr {
 
 /*---- NavBar ----*/
 
-#full-nav {
+.full-nav {
     padding-top: 20px;
     text-align: center;
 }
 
-#full-nav ul {
+.full-nav ul {
   list-style: none;
 }
 
-#full-nav ul li {
+.full-nav ul li {
   display: inline-block;
   padding: 0 3%;
   font-weight: 400;
@@ -130,19 +130,19 @@ hr {
   color: $sec-font-color;
 }
 
-#full-nav ul li a {
+.full-nav ul li a {
   color: $sec-font-color;
 }
 
-#full-nav ul li a:hover {
+.full-nav ul li a:hover {
   color: $link-hover;
 }
 
-#nav-logo {
+.nav-logo {
     text-align: center;
 }
 
-#full-nav img, #nav-logo img {
+.full-nav img, #nav-logo img {
   height: 80px;
   width: 80px;
 }
@@ -185,7 +185,7 @@ hr {
     color: $link-hover;
 }
 
-.cta h1, sub-cta h1 {
+.cta h1, .sub-cta h1 {
     color: $sec-font-color;
     letter-spacing: 0.02em;
     line-height: 0.9em;
@@ -446,9 +446,9 @@ textarea {
 }
 
 .shadow {
-  -moz-box-shadow: 0px 0px 4px 4px #ccc;
-  -webkit-box-shadow: 0px 0px 4px 4px #ccc;
-  box-shadow: 0px 0px 4px 4px #ccc;
+  -moz-box-shadow: 0 0 4px 4px #ccc;
+  -webkit-box-shadow: 0 0 4px 4px #ccc;
+  box-shadow: 0 0 4px 4px #ccc;
 }
 
 /*---- Blog Page ----*/

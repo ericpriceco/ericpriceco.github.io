@@ -22,7 +22,7 @@ Homebrew is package manager for OSX similar to macports that comes with OSX; how
 
 Open your terminal and run the following command:
 
-```
+```bash
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)”
 ```
 
@@ -30,7 +30,7 @@ During the install it will ask for your user account password. A prompt will com
 
 When finished run these commands in the terminal:
 
-```
+```bash
 brew doctor
 brew update
 ```

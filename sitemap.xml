@@ -2,19 +2,28 @@
 <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://eric-price.co/blog/categories/foundation/</loc>
+    <loc>http://eric-price.co/blog/tags/jekyll/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/blog/categories/sass/</loc>
+    <loc>http://eric-price.co/blog/tags/foundation/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/blog/categories/jekyll/</loc>
+    <loc>http://eric-price.co/blog/tags/sass/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/blog/tags/compass/</loc>
   </url>
   <url>
     <loc>http://eric-price.co/blog/</loc>
   </url>
   <url>
     <loc>http://eric-price.co/contact/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/blog/create-a-jekyll-blog-part1/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/blog/create-jekyll-blog-part2/</loc>
   </url>
   <url>
     <loc>http://eric-price.co/</loc>
@@ -26,29 +35,23 @@
     <loc>http://eric-price.co/blog/jekyll-osx/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/portfolio/anvil-software.html</loc>
+    <loc>http://eric-price.co/portfolio/spot.html</loc>
   </url>
   <url>
     <loc>http://eric-price.co/portfolio/hammer-industries.html</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/portfolio/creative-sights.html</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/portfolio/spot.html</loc>
-  </url>
-  <url>
     <loc>http://eric-price.co/portfolio/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/process/</loc>
+    <loc>http://eric-price.co/portfolio/creative-sights.html</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/portfolio/anvil-software.html</loc>
   </url>
   <url>
     <loc>http://eric-price.co/blog/sass-basics/</loc>
   </url>
-  <url>
-    <loc>http://eric-price.co/services/</loc>
-  </url>
 </urlset>
-<!--<guid value="3493b951-8c09-4100-b21e-300be4dab7b1" />-->
+<!--<guid value="b3e87255-8185-4e8a-bc40-f077e4568e94" />-->
 <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->

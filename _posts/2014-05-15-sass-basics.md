@@ -52,7 +52,7 @@ $box-margin: 2em;
 
 Calling the variable in your declaration:
 
-```
+```html
 h4 {color: $primary-color;}
 p {margin: $box-margin;}
 button {color: $secondary-color;}

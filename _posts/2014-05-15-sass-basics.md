@@ -52,14 +52,14 @@ $box-margin: 2em;
 
 Calling the variable in your declaration:
 
-```
 {% highlight html %}
+```
 h4 {color: $primary-color;}
 p {margin: $box-margin;}
 button {color: $secondary-color;}
-{% endhighlight %}
 ```
-    
+{% endhighlight %}
+
 SASS will convert it to CSS after compiling.
 
 #### Mixins

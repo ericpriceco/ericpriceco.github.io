@@ -28,8 +28,8 @@ app.scss:
 
 After adding in your CSS to the custom partial you need to compile it. In the root of your project run:
 
-```
-compass watch
+```bash
+# compass watch
 ```
     
 While running compass in watch mode, it will automatically compile your sass when it detects a change after saving. You can also compile one time with:
@@ -44,7 +44,7 @@ Variables is where it starts to get fun. You can assign a declaration to a varia
 
 SASS variables start with a $ sign and can be named anything you want as long as it hasn't been used previously. These example variables would be placed in your custom partial file before they are called:
 
-```sass
+```css
 $primary-color: #f7f7f7;
 $secondary-color: #f2f2f2;
 $box-margin: 2em;
@@ -52,7 +52,7 @@ $box-margin: 2em;
 
 Calling the variable in your declaration:
 
-```
+```css
 h4 {color: $primary-color;}
 p {margin: $box-margin;}
 button {color: $secondary-color;}
@@ -66,7 +66,7 @@ Mixins are like variables, but a group of declarations and are assigned with the
 
 SCSS:
 
-```
+```css
 @mixin vendorprefix($property, $value) {
 	-webkit-#{$property}: $value;
 	-moz-#{$property}: $value;
@@ -78,13 +78,13 @@ SCSS:
 
 Calling mixin:
 
-```
+```css
 .button { @include vendorprefix(border-radius, 10px); }
 ```
     
 Resulting CSS:
 
-```
+```css
 .box {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;

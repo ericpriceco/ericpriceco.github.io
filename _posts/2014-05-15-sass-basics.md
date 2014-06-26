@@ -28,7 +28,7 @@ app.scss:
 
 After adding in your CSS to the custom partial you need to compile it. In the root of your project run:
 
-```bash
+```shell
 # compass watch
 ```
     

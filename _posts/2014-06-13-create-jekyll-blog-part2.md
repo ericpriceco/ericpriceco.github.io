@@ -18,7 +18,7 @@ On my homepage I like to include a recent posts section to entice people click t
 
 You can easily change this to suit your site. Maybe you want 3 posts, instead of 2 or more words in the snippet.
 
-```
+```html
 {% raw %}
 <div class="large-6 columns">
 	<h3>RECENT POSTS</h3>
@@ -41,7 +41,7 @@ The first line is the start of the loop with a limit of 2 posts. If you wanted t
 
 These lines are self explanatory. The post.url and post.title variables grab the link and title of each post. On the post.content line, I added a filter to remove any HTML from the post and limit the snippet to 45 words. Removing the HTML ensures the formatting looks how I want it to on the home-page. You can wrap these variables in any HTML markup for styling and formatting.
 
-```
+```html
 {% raw %}
 <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
 <p>{{ post.content | strip_html | truncatewords:65 }}</p>
@@ -54,7 +54,7 @@ The blog posts are written in Markdown format. Here's a [cheat sheet](https://gi
 
 Below is an example YAML Front Matter block in a post file.
 
-```yaml
+```
 ---
 layout: blogpost
 title: Create a Jekyll Blog - Part 2
@@ -70,7 +70,7 @@ This information is critical since Jekyll will use this to pull the data, title,
 
 The blog page will use a similar loop, but with a little more features like Tags and dates.
 
-```
+```html
 {% raw %}
 <div class="large-9 large-centered columns">
 	{% for post in site.posts limit: 5 %}
@@ -103,7 +103,7 @@ For the blog page I increased the post limit to 5 with the same post.url and pos
 
 Including tags on your blog page is a tricky one and gets its own section. This is a great way to group your posts into groups if a visitor is looking to read your posts on a specific topic. 
 
-```
+```html
 {% raw %}
 <p>Tags:
 	{% for tag in post.tags %}
@@ -131,7 +131,7 @@ tags
 
 The index.html file for each tag should look like the example below:
 
-```
+```html
 {% raw %}
 ---
 layout: main

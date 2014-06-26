@@ -67,7 +67,7 @@ First we are going to start by creating the partial files that will be included 
 
 Example header.html:
 
-```
+```html
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -89,7 +89,7 @@ Open up your footer.html file and copy content that will be used on each page an
 
 footer.html:
 
-```
+```html
 < FOOTER CONTENT ON EACH PAGE >
 < JS SCRIPTS >
 </body>
@@ -118,7 +118,7 @@ You can create different layouts if needed for specific pages. For example, I ha
 
 If you open the index.html file that is created when you make your Jekyll project, you will see something similar at the top of the file:
 
-```yaml
+```
 ---
 layout: main
 title: My Site

@@ -20,7 +20,7 @@ We need to point Foundation to the new partial. Open up "app.scss" in the scss f
 
 app.scss:
 
-```sass
+```css
 @import "settings";
 @import "foundation";
 @import "custom";
@@ -28,8 +28,8 @@ app.scss:
 
 After adding in your CSS to the custom partial you need to compile it. In the root of your project run:
 
-```shell
-# compass watch
+```
+compass watch
 ```
     
 While running compass in watch mode, it will automatically compile your sass when it detects a change after saving. You can also compile one time with:

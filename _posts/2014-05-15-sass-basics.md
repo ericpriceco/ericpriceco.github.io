@@ -20,7 +20,7 @@ We need to point Foundation to the new partial. Open up "app.scss" in the scss f
 
 app.scss:
 
-```
+```sass
 @import "settings";
 @import "foundation";
 @import "custom";
@@ -44,7 +44,7 @@ Variables is where it starts to get fun. You can assign a declaration to a varia
 
 SASS variables start with a $ sign and can be named anything you want as long as it hasn't been used previously. These example variables would be placed in your custom partial file before they are called:
 
-```
+```sass
 $primary-color: #f7f7f7;
 $secondary-color: #f2f2f2;
 $box-margin: 2em;

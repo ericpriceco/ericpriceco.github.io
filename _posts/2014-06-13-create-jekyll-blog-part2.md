@@ -3,6 +3,7 @@ layout: blogpost
 title: Create a Jekyll Blog - Part 2
 date: 2014-06-13
 tags: jekyll foundation
+categories: jekyll foundation
 published: true
 ---
 

@@ -13,13 +13,15 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
       
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/stylesheets/app.css" />
-    <script src="/bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
 
-<div class="cta-bg">
+<div id="layout" class="pure-g">
+    
+    {% include sidebar.html %}
 
-{% include navbar.html %}
+    <div class="content pure-u-1 pure-u-md-3-4">

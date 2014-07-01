@@ -3,22 +3,18 @@ layout: main
 title: Blog - Eric Price - Freelance Web Design and Developer
 ---
 
-    <div class="sub-cta">
-        <div class="row">
-            <div class="large-12 columns text-center">
-                <header>
-                    <h1>VARIOUS HELPFUL THINGS</h1>
-                    <h3>Giving back to the web community</h3>
-                </header>
-            </div>
-        </div>
-    </div>
+<div class="sub-cta">
+    <header>
+        <h1>VARIOUS HELPFUL THINGS</h1>
+        <h3>Giving back to the web community</h3>
+    </header>
+</div>
     
 </div> <!--End CTA Background -->
 
     <section class="blog">
-        <div class="row">
-            <div class="large-9 large-centered columns">
+        <div class="pure-g">
+            <div class="pure-u-3-5 grid-center">
                     {% for post in site.tags.compass limit: 5 %}
                         <div class="posts-list">
                         <div class="blog-header">

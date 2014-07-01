@@ -3,6 +3,7 @@ layout: blogpost
 title: Install Jekyll on OSX
 date: 2014-05-10
 tags: jekyll
+categories: jekyll
 published: true
 ---
 

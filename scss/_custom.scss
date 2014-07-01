@@ -18,7 +18,7 @@ $sec-font-color: #f7f7f7;
 $link-hover: #292929;
 
 body {
-  font-family: 'Droid Serif', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: $pri-font-color;
   background: $primary-bg;
   -webkit-font-smoothing: antialiased;
@@ -30,7 +30,7 @@ img {
 }
 
 p {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5 {
@@ -206,7 +206,6 @@ BLOG SECTION
 ##########################################*/
 
 .blog {
-    padding-top: 2%;
     padding-bottom: 2%;
     background: $primary-bg;
 }

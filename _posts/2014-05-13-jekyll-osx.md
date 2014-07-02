@@ -4,6 +4,7 @@ title: Install Jekyll on OSX
 date: 2014-05-10
 tags: jekyll
 categories: jekyll
+image: /images/blog/jekyll-osx.png
 published: true
 ---
 

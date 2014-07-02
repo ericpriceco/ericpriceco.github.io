@@ -4,6 +4,7 @@ title: Create a Jekyll Blog - Part 1
 date: 2014-06-11
 tags: jekyll foundation
 categories: jekyll foundation
+image: /images/blog/jekyll-part1.png
 published: true
 ---
 I'm going to go through the steps for creating a site and blog using [Jekyll](http://jekyllrb.com/). Jekyll is a static site generator that will convert markdown files and partials into a working website.  See my previous post on how to install Jekyll if you havent already. [http://eric-price.co/blog/jekyll-osx/](http://eric-price.co/blog/jekyll-osx/)

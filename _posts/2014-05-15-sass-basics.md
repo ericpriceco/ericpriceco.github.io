@@ -4,6 +4,7 @@ title: SASS and Compass Basics
 date: 2014-05-19
 tags: sass foundation compass
 categories: sass foundation compass
+image: /images/blog/sass-compass.png
 published: true
 ---
 

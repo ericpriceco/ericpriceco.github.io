@@ -154,9 +154,15 @@ Sidebar
 
 .sidebar ul {
     list-style: none;
-}   
+}
 
-@media (min-width: 49em) {
+.desktop-footer p {
+    position: absolute;
+    bottom: 0;
+    padding: 0em 2em 0em 0em;
+}
+
+@media (min-width: 48.063em) {
     .content {
         padding: 2em 3em 0;
         margin-left: 25%;
@@ -183,6 +189,9 @@ Sidebar
     nav .mobile-menu {
         display: none;
     }
+    .mobile-footer {
+        display: none;
+    }
 }
 
 @media (max-width: 48em) {
@@ -207,6 +216,12 @@ Sidebar
     .header {
         margin-top: 2%;
     }
+    .blog-sidebar {
+        display: none;
+    }
+    .desktop-footer {
+        display: none;
+    }
 }
 
 
@@ -215,7 +230,7 @@ BLOG SECTION
 ##########################################*/
 
 .blog {
-    padding-bottom: 2%;
+    padding-bottom: 5%;
     background: $primary-bg;
 }
 
@@ -324,7 +339,6 @@ PORTFOLIO PAGE
 ##########################################*/
 
 .projects {
-    padding-top: 4%;
     padding-bottom: 50%;
 }
 
@@ -333,7 +347,6 @@ CONTACT PAGE
 ##########################################*/
 
 .contact {
-    padding-top: 4%;
     padding-bottom: 12%;
 }
 
@@ -359,8 +372,18 @@ ABOUT PAGE
 ##########################################*/
 
 .about {
-    padding-top: 3%;
     padding-bottom: 15%;
+}
+
+.about-image {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.about-image img {
+    width: 450px;
+    height: 300px;
+    border-radius: 10px;
 }
 
 /*##########################################

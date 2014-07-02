@@ -11,7 +11,8 @@ GENERAL STYLES
 $primary-bg: #fff;
 $secondary-bg: #2980b9;
 
-$primary-color: #2980b9;
+$primary-color: #34495e;
+$link-color: #16a085;
 
 $pri-font-color: #2e2e2e;
 $sec-font-color: #f7f7f7;
@@ -39,7 +40,7 @@ h1, h2, h3, h4, h5 {
 
 a, a:link, a:visited {
   text-decoration: none;
-  color: $primary-color;
+  color: $link-color;
 }
 
 a:hover {
@@ -73,6 +74,10 @@ hr {
     text-align: left;
     color: $pri-font-color;
     margin-bottom: 0;
+}
+
+.page-head h1 {
+    margin: 0;
 }
 
 .page-head hr {
@@ -130,12 +135,16 @@ Sidebar
     margin: 0;
 }
 
-.sidebar a, .sidebar a:visited {
+.sidebar a {
+    color: $sec-font-color;
+}
+
+.sidebar a:visited {
     color: $sec-font-color;
 }
 
 .sidebar a:hover {
-    color: $pri-font-color;
+    color: $link-color;
 }
 
 .sidebar a i { 
@@ -210,6 +219,10 @@ BLOG SECTION
     background: $primary-bg;
 }
 
+.blog img {
+    border-radius: 20px;
+}
+
 .blog-sidebar {
     padding-left: 5%;
 }
@@ -246,7 +259,7 @@ BLOG SECTION
 }
 
 .posts-list h1 a:hover {
-    color: $primary-color;
+    color: $link-color;
 }
 
 .paginator {
@@ -258,13 +271,20 @@ BLOG POST SECTION
 ##########################################*/
 
 .blog-post {
-    padding: 4% 0;
     background: $primary-bg;
 }
 
-.post-header {
-    text-align: center;
-    padding-bottom: 3%;
+.blog-post img {
+    border-radius: 20px;
+}
+
+.post-header h1 {
+    margin: 0;
+}
+
+.post-header p {
+    margin-top: 0.7em;
+    margin-bottom: 1em;
 }
 
 .post-share {
@@ -302,7 +322,8 @@ code {
 PORTFOLIO PAGE
 ##########################################*/
 
-.portfolio {
+.projects {
+    padding-top: 4%;
     padding-bottom: 50%;
 }
 
@@ -323,8 +344,9 @@ CONTACT PAGE
     margin: 0;
 }
 
-.contact-header {
-    padding-bottom: 3%;
+.contact span p {
+    margin-bottom: 1%;
+    font-weight: 400;
 }
 
 .contact .page-head hr {

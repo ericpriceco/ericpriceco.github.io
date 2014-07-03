@@ -2,53 +2,35 @@
 <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://eric-price.co/blog/categories/foundation/</loc>
+    <loc>http://eric-price.co/blog/tags/jekyll/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/blog/categories/sass/</loc>
+    <loc>http://eric-price.co/blog/tags/foundation/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/blog/categories/jekyll/</loc>
+    <loc>http://eric-price.co/blog/tags/sass/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/blog/</loc>
+    <loc>http://eric-price.co/blog/tags/compass/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/contact/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/blog/foundation-plus-sass/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/blog/jekyll-osx/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/portfolio/anvil-software.html</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/portfolio/hammer-industries.html</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/portfolio/creative-sights.html</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/portfolio/spot.html</loc>
+    <loc>http://eric-price.co/archive.html</loc>
   </url>
   <url>
     <loc>http://eric-price.co/portfolio/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/process/</loc>
+    <loc>http://eric-price.co/about/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/blog/sass-basics/</loc>
+    <loc>http://eric-price.co/contact/</loc>
   </url>
   <url>
-    <loc>http://eric-price.co/services/</loc>
+    <loc>http://eric-price.co/blog/page2/</loc>
+  </url>
+  <url>
+    <loc>http://eric-price.co/</loc>
   </url>
 </urlset>
-<!--<guid value="3493b951-8c09-4100-b21e-300be4dab7b1" />-->
+<!--<guid value="2b3ad698-e88b-49f1-8b5e-14e54fda14f3" />-->
 <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->

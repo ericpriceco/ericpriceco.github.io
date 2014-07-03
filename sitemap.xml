@@ -1,36 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://eric-price.co/blog/tags/jekyll/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/blog/tags/foundation/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/blog/tags/sass/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/blog/tags/compass/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/archive.html</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/portfolio/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/about/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/contact/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/blog/page2/</loc>
-  </url>
-  <url>
-    <loc>http://eric-price.co/</loc>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://eric-price.co/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/about/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/portfolio/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/contact/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/create-jekyll-blog-part2/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/tags/jekyll/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/tags/foundation/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/create-a-jekyll-blog-part1/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/sass-basics/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/tags/sass/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/tags/compass/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/jekyll-osx/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/page2/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/archive.html</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/blog/foundation-plus-sass/</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
+<url>
+  <loc>http://eric-price.co/index.html</loc>
+  <lastmod>2014-07-03T17:34:05+00:00</lastmod>
+</url>
 </urlset>
-<!--<guid value="2b3ad698-e88b-49f1-8b5e-14e54fda14f3" />-->
-<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->

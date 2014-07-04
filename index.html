@@ -54,12 +54,12 @@ title: Eric Price - Freelance Web Designer and Developer
                     
         <div class="pure-u-1 pure-u-md-1-6 blog-sidebar">
         <ul>
-            <span>Categories:</span>
+            <span>Tags:</span>
             {% for category in site.categories %}
             <li><a href="/blog/tags/{{ category | first }}/">{{ category | first }}</a></li>
             {% endfor %}
         </ul>
-            <a href="/archive.html">Archive</a>
+            <a href="/archive.html"><span>Archive</span></a>
         </div> 
     </div>
 </section>

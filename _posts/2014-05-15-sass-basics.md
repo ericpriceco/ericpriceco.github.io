@@ -12,7 +12,7 @@ SASS has made my web development life so much easier and I want to share some of
 
 I'm going to use the Foundation framework in this article; however, you can use SASS with almost anything with a little know how. Using SASS with Foundation is practically a necessity to take advantage of their built-in SASS variables. When starting a Foundation project, the first thing to do is create a partial file to hold your custom settings since it's not recommended to touch the original Foundation settings.
 
-#### Partials
+### Partials
 
 Partials allow you to split up your CSS code into logical separate files, which will then be compiled into a single stylesheet with the @import option. Partial file names start with an underscore to tell SASS what they are.
 
@@ -40,7 +40,7 @@ While running compass in watch mode, it will automatically compile your sass whe
 compass compile
 ```
     
-#### Variables
+### Variables
 
 Variables is where it starts to get fun. You can assign a declaration to a variable and call it anywhere in your CSS. This means you can apply the [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) (Don't Repeat Yourself) principle to your website development. Imagine only needing to change a single variable for a color that is used is several places across your site. Beautiful!
 
@@ -62,7 +62,7 @@ button {color: $secondary-color;}
 
 SASS will convert it to CSS after compiling.
 
-#### Mixins
+### Mixins
 
 Mixins are like variables, but a group of declarations and are assigned with the @ symbol. No more tediously writing the same vendor prefix over and over again! Below is an example mixin that can be used with several different vendor prefixes:
 

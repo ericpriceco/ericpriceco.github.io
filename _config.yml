@@ -2,5 +2,5 @@ name: Eric Price
 markdown: redcarpet
 highlighter: true
 permalink: /blog/:title
-paginate: 4
+paginate: 5
 paginate_path: "blog/page:num"

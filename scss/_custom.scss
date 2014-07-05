@@ -12,7 +12,7 @@ $primary-bg: #fff;
 $secondary-bg: #2980b9;
 
 $primary-color: #34495e;
-$link-color: #16a085;
+$link-color: #2980b9;
 
 $pri-font-color: #2e2e2e;
 $sec-font-color: #f7f7f7;
@@ -132,7 +132,7 @@ Sidebar
 }
 
 .sidebar {
-    background: $primary-bg;
+    background: #f2f2f2;
     color: $pri-font-color;
     border-right: 1px solid #dedede;
 }
@@ -191,7 +191,7 @@ Sidebar
 .desktop-footer p {
     position: absolute;
     bottom: 0;
-    padding: 0em 2em 0em 1em;
+    padding: 0em 1em 0em 2em;
 }
 
 @media (min-width: 48.063em) {
@@ -222,9 +222,6 @@ Sidebar
     .sidebar .social-icons {
         padding-top: 2%;
     }
-    nav .mobile-menu {
-        display: none;
-    }
     .mobile-footer {
         display: none;
     }
@@ -245,9 +242,6 @@ Sidebar
     .sidebar a i { 
         font-size: 2em;
         padding: 1% 2% 0 2%;
-    }
-    nav .desktop-menu {
-        display: none;
     }
     .header {
         margin-top: 2%;
@@ -337,18 +331,28 @@ BLOG POST SECTION
     border-radius: 10px;
 }
 
+.blog-post .share-icons span {
+    font-family: 'entypo-social';
+    font-size: 2em;
+    margin: 0;
+}
+
 .post-header h1 {
     margin: 0;
 }
 
 .post-header p {
     margin-top: 0.7em;
-    margin-bottom: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.post-share {
-    padding: 2% 0;
-    text-align: center;
+.share-icons span {
+    padding: 0 0.15em;
+}
+
+.share-icons p {
+    padding-bottom: 1em;
 }
 
 .highlight {

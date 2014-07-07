@@ -117,8 +117,8 @@ HEADER SECTION
 
 .cta p {
     color: $sec-font-color;
-    margin: 0;
-    padding: 0 1%;  
+    padding-left: 1%;  
+    padding-right: 1%;
 }
 
 .cta h1 {
@@ -220,8 +220,7 @@ BLOG PAGE
 }
 
 .blog-header h1 {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0;
 }
 
 .blog-header h1 {
@@ -291,14 +290,8 @@ BLOG POSTS
     border-radius: 10px;
 }
 
-.post-header h1 {
-    margin: 0;
-}
-
 .post-header p {
-    margin-top: 0.7em;
     margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 .post-share span, .post-share a {

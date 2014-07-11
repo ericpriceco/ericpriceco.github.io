@@ -77,6 +77,10 @@ hr {
 HEADER SECTION
 #########################################*/
 
+.header-border {
+    border-top: $link-color 5px solid;
+}
+
 .cta {
     margin-top: 3%;
     text-align: center;

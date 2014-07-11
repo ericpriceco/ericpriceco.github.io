@@ -27,7 +27,6 @@ body {
          url('/images/entypo-social.svg#entypo-social') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 img {
@@ -79,26 +78,72 @@ HEADER SECTION
 #########################################*/
 
 .cta {
-    padding-top: 5%;
+    margin-top: 3%;
     text-align: center;
-    background: #383838 url('/images/header-bg2.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-     background-size: cover;
-    position: relative;
+    //background: #383838 url('/images/header-bg2.jpg') no-repeat center center fixed;
+    //-webkit-background-size: cover;
+    //-moz-background-size: cover;
+    //-o-background-size: cover;
+     //background-size: cover;
+    //position: relative;
 }
 
 .cta img {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-     -webkit-border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    margin-bottom: 4%;
+    //border-radius: 50%;
+    //-moz-border-radius: 50%;
+    // -webkit-border-radius: 50%;
 }
 
+.cta p {
+    color: $pri-font-color;
+    padding-left: 1%;  
+    padding-right: 1%;
+}
+
+.cta h1 {
+    color: $pri-font-color;
+    font-size: 2em;
+}
+
+.cta nav {
+    padding: 10px 0;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+
+.cta ul {
+    list-style: none;
+    margin: 0;
+}
+
+.cta ul li {
+    padding: 0 0.6rem;
+    display: inline-block;
+    font-weight: 400;
+}
+
+.cta ul li a {
+    color: $pri-font-color;
+}
+
+.cta ul li a:hover {
+    color: $link-color;
+}
+
+.header-row hr {
+    border-bottom: 4px solid #383838;
+}
+
+/*#########################################
+SOCIAL ICONS
+#########################################*/
+
 .social-icons {
-    padding-bottom: 4%;
+    padding-top: 2%;
+    margin-bottom: 2%;
 }
 
 .social-icons a {
@@ -115,47 +160,12 @@ HEADER SECTION
     padding: 0 0.2rem;
 }
 
-.cta p {
-    color: $sec-font-color;
-    padding-left: 1%;  
-    padding-right: 1%;
-}
-
-.cta h1 {
-    color: $sec-font-color;
-    font-size: 2em;
-}
-
-.cta nav {
-    padding: 10px 0;
-    background: rgba(0,0,0,0.6);
-}
-
-.cta ul {
-    list-style: none;
-    margin: 0;
-}
-
-.cta ul li {
-    padding: 0 0.6rem;
-    display: inline-block;
-    font-weight: 400;
-}
-
-.cta ul li a {
-    color: $sec-font-color;
-}
-
-.cta ul li a:hover {
-    color: $link-color;
-}
-
-.social-icons span:hover {
-    color: $link-color;
-}
+/*#########################################
+SUBHEADER SECTION
+#########################################*/
 
 .sub-header {
-    padding-bottom: 4%;
+    margin-bottom: 4%;
 }
 
 .sub-header h1 {
@@ -175,7 +185,7 @@ ABOUT PAGE
 #########################################*/
 
 .about {
-    padding: 4% 0;
+    margin: 4% 0;
 }
 
 .about-image {
@@ -192,7 +202,7 @@ PROJECTS PAGE
 #########################################*/
 
 .projects {
-    padding: 4% 0;
+    margin: 4% 0 50% 0;
 }
 
 /*#########################################
@@ -200,7 +210,7 @@ CONTACTS PAGE
 #########################################*/
 
 .contact {
-    padding: 4% 0;
+    margin: 4% 0;
 }
 
 .contact p {
@@ -216,7 +226,7 @@ BLOG PAGE
 #########################################*/
 
 .blog {
-    padding: 4% 0 2% 0;
+    margin: 4% 0 2% 0;
 }
 
 .blog-header h1 {
@@ -251,7 +261,8 @@ BLOG PAGE
 }
 
 .paginator {
-    padding-top: 4%;
+    margin-top: 4%;
+    margin-bottom: 4%;
     text-align: right;
 }
 
@@ -260,7 +271,7 @@ BLOG POSTS
 #########################################*/
 
 .blog-post {
-    padding: 4% 0;
+    margin: 4% 0;
 }
 
 .post-header {
@@ -287,7 +298,7 @@ BLOG POSTS
 }
 
 .blog-post h3 {
-    padding-top: 3%;
+    margin-top: 5%;
 }
 
 .blog-post img {
@@ -326,7 +337,7 @@ code {
 }
 
 .disqus {
-    padding-top: 10%;
+    margin-top: 10%;
 }
 
 /*#########################################
@@ -335,10 +346,21 @@ FOOTER
 
 footer {
     text-align: center;
+    background: #383838;
+}
+
+footer p {
+    color: $sec-font-color;
+    margin-bottom: 0;
+    padding-bottom: 5px;
 }
 
 footer img {
     margin: 15px 0;
     width: 40px;
     height: 40px;
+}
+
+footer p > a, footer p a:visted, footer a:active {
+    color: $sec-font-color;
 }

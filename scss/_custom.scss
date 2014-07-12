@@ -12,7 +12,7 @@ $sec-font-color: #f7f7f7;
 $link-hover: #F27935;
 
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: $pri-font-color;
   background: $primary-bg;
   -webkit-font-smoothing: antialiased;
@@ -87,9 +87,6 @@ header img {
     height: 90px;
     width: 90px;
     margin-bottom: 1%;
-    //border-radius: 50%;
-    //-moz-border-radius: 50%;
-    // -webkit-border-radius: 50%;
 }
 
 header p {
@@ -127,10 +124,6 @@ header ul li {
     color: $link-color;
 }
 
-.header-row hr {
-    border-bottom: 1px solid #dedede;
-}
-
 /*#########################################
 CTA SECTION
 #########################################*/
@@ -138,6 +131,10 @@ CTA SECTION
 .cta {
     padding: 5% 0;
     text-align: center;
+}
+
+.cta h1 {
+    font-family: 'Droid Serif', sans-serif;
 }
 
 .cta h1 span {

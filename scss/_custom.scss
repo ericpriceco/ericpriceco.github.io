@@ -39,6 +39,7 @@ p {
 
 h1, h2, h3, h4, h5 {
     font-weight: 400;
+    font-family: 'Droid Serif', sans-serif;
 }
 
 a, a:link, a:visited {
@@ -131,10 +132,6 @@ CTA SECTION
 .cta {
     padding: 5% 0;
     text-align: center;
-}
-
-.cta h1 {
-    font-family: 'Droid Serif', sans-serif;
 }
 
 .cta h1 span {

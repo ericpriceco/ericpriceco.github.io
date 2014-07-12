@@ -5,14 +5,14 @@ GENERAL STYLES
 $primary-bg: #fff;
 
 $primary-color: #34495e;
-$link-color: #2980b9;
+$link-color: #F27935;
 
 $pri-font-color: #2e2e2e;
 $sec-font-color: #f7f7f7;
-$link-hover: #2980b9;
+$link-hover: #F27935;
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   color: $pri-font-color;
   background: $primary-bg;
   -webkit-font-smoothing: antialiased;
@@ -52,15 +52,12 @@ a:hover {
 }
 
 .button,button, a.button {
-    background-color: $pri-font-color;
-    color: $sec-font-color;
+    background-color: $primary-bg;
+    color: $pri-font-color;
     border: 1px solid #292929;
-    text-decoration: none;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    padding: 10px;
-    width: 100px;
 }
 
 a.button:hover, button:hover {
@@ -78,67 +75,104 @@ HEADER SECTION
 #########################################*/
 
 .header-border {
-    border-top: $link-color 5px solid;
+    border-top: #F27935 7px solid;
 }
 
-.cta {
-    margin-top: 3%;
+header {
+    margin-top: 10px;
     text-align: center;
-    //background: #383838 url('/images/header-bg2.jpg') no-repeat center center fixed;
-    //-webkit-background-size: cover;
-    //-moz-background-size: cover;
-    //-o-background-size: cover;
-     //background-size: cover;
-    //position: relative;
 }
 
-.cta img {
+header img {
     height: 90px;
     width: 90px;
-    margin-bottom: 4%;
+    margin-bottom: 1%;
     //border-radius: 50%;
     //-moz-border-radius: 50%;
     // -webkit-border-radius: 50%;
 }
 
-.cta p {
+header p {
     color: $pri-font-color;
     padding-left: 1%;  
     padding-right: 1%;
 }
 
-.cta h1 {
+header h1 {
     color: $pri-font-color;
     font-size: 2em;
 }
 
-.cta nav {
-    padding: 10px 0;
-    border-top: 1px solid #dedede;
-    border-bottom: 1px solid #dedede;
+header nav {
+    margin-bottom: 3%;
 }
 
-.cta ul {
+header ul {
     list-style: none;
     margin: 0;
 }
 
-.cta ul li {
+header ul li {
     padding: 0 0.6rem;
     display: inline-block;
     font-weight: 400;
+    font-size: 0.9rem;
 }
 
-.cta ul li a {
+.top-nav ul li a {
     color: $pri-font-color;
 }
 
-.cta ul li a:hover {
+.top-nav ul li a:hover {
     color: $link-color;
 }
 
 .header-row hr {
-    border-bottom: 4px solid #383838;
+    border-bottom: 1px solid #dedede;
+}
+
+/*#########################################
+CTA SECTION
+#########################################*/
+
+.cta {
+    padding: 5% 0;
+    text-align: center;
+}
+
+.cta h1 span {
+    font-weight: 700;
+    color: #F27935;
+}
+
+@media only screen and (max-width: 40em) {
+    .cta h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .cta h1 {
+        font-size: 2.2em;
+    }
+}
+
+@media only screen and (min-width: 64.063em) {
+    .cta h1 {
+        font-size: 3rem;
+    }
+}
+
+.cta .project-button {
+    margin-top: 10%;
+}
+
+/*#########################################
+RECENT WORK
+#########################################*/
+
+.recent-work {
+    padding: 4% 0;
 }
 
 /*#########################################
@@ -221,8 +255,18 @@ CONTACTS PAGE
     margin: 0;
 }
 
-form {
+.contact form {
     padding-top: 2%;
+}
+
+input, textarea {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.cta form button {
+    padding: 5px;
 }
 
 /*#########################################

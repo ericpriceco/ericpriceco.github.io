@@ -34,7 +34,11 @@ img {
 }
 
 p {
-  font-weight: 400;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Lato', sans-serif;
 }
 
 a, a:link, a:visited {
@@ -66,10 +70,6 @@ hr {
     border-top: 1px solid #dedede;
 }
 
-.bold {
-    font-weight: 700;
-}
-
 /*#########################################
 HEADER SECTION
 #########################################*/
@@ -78,160 +78,174 @@ HEADER SECTION
     border-top: #F27935 7px solid;
 }
 
-.header {
-    padding: 3% 0;
+header {
+    margin-top: 10px;
+    text-align: center;
 }
 
-.header img {
-    float: left;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    height: 125px;
-    width: 125px;
-    margin-right: 4%;
+header img {
+    height: 90px;
+    width: 90px;
+    margin-bottom: 1%;
 }
 
-.header h1 {
-    padding-top: 20px;
-    font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 1;
+header p {
+    color: $pri-font-color;
+    padding-left: 1%;  
+    padding-right: 1%;
 }
 
-.header h4 {
-    line-height: 1;
+header h1 {
+    color: $pri-font-color;
+    font-size: 2em;
 }
 
-.header nav ul {
+header nav {
+    margin-bottom: 3%;
+}
+
+header ul {
     list-style: none;
     margin: 0;
 }
 
-.header nav ul li {
-    padding-right: 0.2rem;
+header ul li {
+    padding: 0 0.6rem;
     display: inline-block;
     font-weight: 400;
     font-size: 0.9rem;
 }
 
-.header a, .header a:visited {
+.top-nav ul li a {
     color: $pri-font-color;
 }
 
-.header a:hover {
-    color: $link-hover;
+.top-nav ul li a:hover {
+    color: $link-color;
 }
 
 /*#########################################
-SUBPAGE-HEADER SECTION
+CTA SECTION
 #########################################*/
 
-.subpage-header{
-    margin-top: 1%;
-    margin-bottom: 4%;
+.cta {
+    padding: 5% 0;
+    text-align: center;
 }
 
-.subpage-header ul {
-    list-style: none;
-    margin: 0;
+.cta h1 span {
+    font-weight: 700;
+    color: #F27935;
 }
 
-.subpage-header ul li {
-    padding-right: 0.2rem;
-    display: inline-block;
-    font-weight: 400;
-    font-size: 0.9rem;
+@media only screen and (max-width: 40em) {
+    .cta h1 {
+        font-size: 1.6rem;
+    }
 }
 
-.subpage-header a {
-    color: $pri-font-color ;
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .cta h1 {
+        font-size: 2.2em;
+    }
 }
 
-.subpage-header a:visted {
-    color: $pri-font-color ;
+@media only screen and (min-width: 64.063em) {
+    .cta h1 {
+        font-size: 3rem;
+    }
 }
 
-.sub-header nav ul li a:hover {
-    color: $link-color;
+.cta .project-button {
+    margin-top: 10%;
+}
+
+/*#########################################
+RECENT WORK
+#########################################*/
+
+.recent-work {
+    padding: 4% 0;
 }
 
 /*#########################################
 SOCIAL ICONS
 #########################################*/
 
+.social-icons {
+    padding-top: 2%;
+    margin-bottom: 2%;
+}
+
 .social-icons a {
     color: $sec-font-color;
 }
 
 .social-icons a:hover {
-    color: $link-color;
+    color: $link-hover;
 }
 
 .social-icons a {
     font-family: 'entypo-social';
-    font-size: 4em;
+    font-size: 5em;
     padding: 0 0.2rem;
 }
 
 /*#########################################
-ABOUT SECTION
+SUBHEADER SECTION
 #########################################*/
 
-.about hr {
-    margin:0;
-    padding:0;
-    margin-top: -22px;
+.sub-header {
     margin-bottom: 4%;
 }
 
+.sub-header h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
 
-.about h4 span {
-     padding-right: 20px;
-     background: $primary-bg;
- }
+@media only screen and (max-width: 40em) {
+    .sub-header h1 {
+        font-size: 1.6em;
+        font-weight: 700;
+    }
+}
 
 /*#########################################
-CONTACT SECTION
+ABOUT PAGE
 #########################################*/
 
-.contact {
-    margin-top: 4%;
-    margin-bottom: 4%;
+.about-section {
+    padding: 3% 0;
 }
 
-.contact ul {
-    list-style: none;
-    margin-left: 0;
+.about-section img {
+    float: left;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    margin-right: 40px;
 }
 
-.contact ul li {
-    padding-right: 3%;
-    display: inline-block;
+.about-section h1 {
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 2.5rem;
 }
 
-.contact hr {
-    margin:0;
-    padding:0;
-    margin-top: -22px;
-    margin-bottom: 4%;
+.about {
+    margin: 4% 0;
 }
 
-.contact h4 span {
-     padding-right: 20px;
-     background: $primary-bg;
- }
-
-.contact i {
-    margin-right: 10px;
+.about-image {
+    padding-top: 5%;
+    text-align: center;
 }
 
-.contact a, .contact a:visited {
-    color: $pri-font-color;
-}
-
-.contact a:hover {
-    color: $link-hover;
+.about-image img {
+    border-radius: 10px;
 }
 
 /*#########################################
@@ -239,21 +253,41 @@ PROJECTS PAGE
 #########################################*/
 
 .projects {
-    margin-bottom: 35%;
+    margin: 4% 0 50% 0;
 }
 
-.projects h1 {
-    font-size: 2rem;
+/*#########################################
+CONTACTS PAGE
+#########################################*/
+
+.contact {
+    margin: 4% 0;
 }
 
+.contact p {
+    margin: 0;
+}
+
+.contact form {
+    padding-top: 2%;
+}
+
+input, textarea {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.cta form button {
+    padding: 5px;
+}
 
 /*#########################################
 BLOG PAGE
 #########################################*/
 
 .blog {
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin: 4% 0 2% 0;
 }
 
 .blog-header h1 {
@@ -298,8 +332,7 @@ BLOG POSTS
 #########################################*/
 
 .blog-post {
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin: 4% 0;
 }
 
 .post-header {
@@ -337,6 +370,10 @@ BLOG POSTS
     margin-bottom: 0;
 }
 
+.post-share span, .post-share a {
+    font-weight: 300;
+}
+
 .highlight {
   background: #ededed;
   padding: 10px 10px;
@@ -368,6 +405,23 @@ code {
 FOOTER
 #########################################*/
 
-.footer {
+footer {
     text-align: center;
+    background: #383838;
+}
+
+footer p {
+    color: $sec-font-color;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+footer img {
+    margin: 15px 0;
+    width: 40px;
+    height: 40px;
+}
+
+footer p > a, footer p a:visted, footer a:active {
+    color: $sec-font-color;
 }

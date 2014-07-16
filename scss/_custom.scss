@@ -250,16 +250,6 @@ ABOUT SECTION
     text-align: center;
  }
 
-.about-contact {
-    text-align: center;
-    margin-top: 5%;
-}
-
-.about-contact .button {
-    font-size: 1rem;
-    padding: 13px;
-}
-
 //.profile-picture {
 //    text-align: center;
 //    margin-top: 4%;
@@ -333,7 +323,7 @@ WORK SECTION
 #########################################*/
 
 .work {
-    padding-top: 6%;
+    padding-top: 5%;
     padding-bottom: 3%;
 }
 
@@ -367,6 +357,10 @@ WORK SECTION
 
 .slider a.button:hover, button:hover {
     background: none;
+}
+
+.work-slider {
+    padding: 0 !important;
 }
 
 
@@ -498,4 +492,23 @@ FOOTER
 
 .footer {
     text-align: center;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    padding: 0 1%;
+    font-size: 0.9rem;
+}
+
+.footer-nav a {
+    color: $pri-font-color;
+}
+
+.footer-nav a:visted {
+    color: $pri-font-color;
 }

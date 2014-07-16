@@ -2,6 +2,15 @@
     <div class="row">
         <div class="large-9 medium-10 columns small-centered">
             <hr>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/">ABOUT</a></li>
+                    <li><a href="/">WORK</a></li>
+                    <li><a href="/">BLOG</a></li>
+                    <li><a href="/">CONTACT</a></li>
+                </ul>
+    </nav>
             <p>&copy; 2014 - Eric Price. Powered by <a href="http://jekyllrb.com">Jekyll</a>.</p>
         </div>
     </div>
@@ -12,12 +21,34 @@
     <script src="/js/app.js"></script>
     <script src="/js/slick.min.js"></script>
     <script src="/js/jquery.backstretch.min.js"></script>
+    <script src="/js/owl.carousel.min.js"></script>
 
 <script>
 $('.project1').slick({
   dots: true
 });
 </script>
+
+<script>
+ $(document).ready(function() {
+      $("#project1").owlCarousel({
+
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
+      });
+    });
+</script>
+
 
 <script>
       $(".cta-bg").backstretch("/images/cta.jpg");

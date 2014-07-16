@@ -20,11 +20,22 @@ body {
 
 @font-face {
     font-family: 'entypo-social';
-    src: url('/images/entypo-social.eot');
-    src: url('/images/entypo-social.eot?#iefix') format('embedded-opentype'),
-         url('/images/entypo-social.woff') format('woff'),
-         url('/images/entypo-social.ttf') format('truetype'),
-         url('/images/entypo-social.svg#entypo-social') format('svg');
+    src: url('/images/fonts/entypo-social.eot');
+    src: url('/images/fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
+         url('/images/fonts/entypo-social.woff') format('woff'),
+         url('/images/fonts/entypo-social.ttf') format('truetype'),
+         url('/images/fonts/entypo-social.svg#entypo-social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'entypo';
+    src: url('/images/fonts/entypo.eot');
+    src: url('/images/fonts/entypo.eot?#iefix') format('embedded-opentype'),
+         url('/images/fonts/entypo.woff') format('woff'),
+         url('/images/fonts/entypo.ttf') format('truetype'),
+         url('/images/fonts/entypo.svg#entypo-social') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -75,85 +86,122 @@ HEADER SECTION
 #########################################*/
 
 .header-border {
-    border-top: #F27935 7px solid;
+    border-top: $pri-font-color 7px solid;
 }
 
-.header {
-    padding: 3% 0;
+.section-header {
+    text-align: center;
 }
 
-.header img {
-    float: left;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    height: 125px;
-    width: 125px;
-    margin-right: 4%;
+.section-content {
+    padding-top: 3%;
 }
 
-.header h1 {
-    padding-top: 20px;
-    font-weight: 700;
-    font-size: 2.5rem;
-    line-height: 1;
+/*#########################################
+NAV MENU
+#########################################*/
+
+#trigger-overlay {
+    font-family: 'entypo';
+    font-size: 4rem;
 }
 
-.header h4 {
-    line-height: 1;
+.nav-menu {
+    font-size: 2em;
+    color: $sec-font-color;
+    text-align: right;
+    padding-right: 20px;
 }
 
-.header nav ul {
-    list-style: none;
-    margin: 0;
-}
-
-.header nav ul li {
-    padding-right: 0.2rem;
-    display: inline-block;
-    font-weight: 400;
-    font-size: 0.9rem;
-}
-
-.header a, .header a:visited {
+.subpage-nav-menu {
+    font-size: 2em;
     color: $pri-font-color;
-}
-
-.header a:hover {
-    color: $link-hover;
+    text-align: right;
+    padding-right: 20px;
 }
 
 /*#########################################
 SUBPAGE-HEADER SECTION
 #########################################*/
 
-.subpage-header{
-    margin-top: 1%;
-    margin-bottom: 4%;
+.subpage-logo {
+    text-align: center;
 }
 
-.subpage-header ul {
-    list-style: none;
-    margin: 0;
+.subpage-logo img {
+    width: 100px;
+    height: 100px;
 }
 
-.subpage-header ul li {
-    padding-right: 0.2rem;
-    display: inline-block;
-    font-weight: 400;
-    font-size: 0.9rem;
+/*#########################################
+CTA SECTION
+#########################################*/
+
+.cta-bg {
+    background: $primary-bg url('/images/cta.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
-.subpage-header a {
-    color: $pri-font-color ;
+.cta {
+    text-align: center;
+    padding-top: 15%;
 }
 
-.subpage-header a:visted {
-    color: $pri-font-color ;
+.cta h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: $sec-font-color;
+    letter-spacing: 0.85rem;
 }
 
-.subpage-header nav ul li a:hover {
-    color: $link-color;
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .cta h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 40em) { 
+    .cta h1 {
+        font-size: 2rem;
+    }
+}
+
+.cta h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: $sec-font-color;
+}
+
+.cta p {
+    color: $sec-font-color;
+    line-height: 0.4;
+}
+
+.cta img {
+    height: 100px;
+    widows: 100px;
+    margin-bottom: 2%;
+}
+
+.cta .scroll {
+    position:absolute;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.cta .scroll span {
+    font-family: 'entypo';
+    color: $sec-font-color;
+    font-size: 3.5rem;
+    line-height: 0.5rem;
 }
 
 /*#########################################
@@ -161,7 +209,7 @@ SOCIAL ICONS
 #########################################*/
 
 .social-icons a {
-    color: $pri-font-color;
+    color: $sec-font-color;
 }
 
 .social-icons a:hover {
@@ -170,13 +218,18 @@ SOCIAL ICONS
 
 .social-icons a {
     font-family: 'entypo-social';
-    font-size: 4em;
+    font-size: 5rem;
     padding: 0 0.2rem;
 }
 
 /*#########################################
 ABOUT SECTION
 #########################################*/
+
+.about {
+    padding-top: 6%;
+    padding-bottom: 1%;
+}
 
 .about hr {
     margin:0;
@@ -185,11 +238,32 @@ ABOUT SECTION
     margin-bottom: 4%;
 }
 
-
 .about h4 span {
-     padding-right: 20px;
+     padding: 20px;
      background: $primary-bg;
+    text-align: center;
  }
+
+.about-contact {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.about-contact .button {
+    font-size: 1rem;
+    padding: 13px;
+}
+
+//.profile-picture {
+//    text-align: center;
+//    margin-top: 4%;
+//}
+//    
+.about img {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
 
 /*#########################################
 CONTACT SECTION
@@ -218,7 +292,7 @@ CONTACT SECTION
 }
 
 .contact h4 span {
-     padding-right: 20px;
+     padding: 20px;
      background: $primary-bg;
  }
 
@@ -234,25 +308,67 @@ CONTACT SECTION
     color: $link-hover;
 }
 
+.contact input, .contact textarea {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.contact button[type="submit"] {
+    padding: 10px;
+}
+
+.social-contact {
+    text-align: center;
+}
+
 /*#########################################
-PROJECTS PAGE
+WORK SECTION
 #########################################*/
 
-.projects {
-    margin-bottom: 35%;
+.work {
+    padding-top: 6%;
+    padding-bottom: 3%;
 }
 
-.projects h1 {
-    font-size: 2rem;
+.work hr {
+    margin:0;
+    padding:0;
+    margin-top: -22px;
+    margin-bottom: 4%;
 }
 
+.work h4 span {
+     padding: 20px;
+     background: $primary-bg;
+    text-align: center;
+ }
+
+.work ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.work .button {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.slider {
+    font-family: 'slider';
+    color: $pri-font-color;
+}
+
+.slider a.button:hover, button:hover {
+    background: none;
+}
 
 /*#########################################
 BLOG PAGE
 #########################################*/
 
 .blog {
-    margin-top: 2%;
+    margin-top: 4%;
     margin-bottom: 2%;
 }
 
@@ -302,7 +418,7 @@ BLOG POSTS
 #########################################*/
 
 .blog-post {
-    margin-top: 2%;
+    margin-top: 4%;
     margin-bottom: 2%;
 }
 

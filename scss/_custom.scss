@@ -11,11 +11,17 @@ $pri-font-color: #2e2e2e;
 $sec-font-color: #f7f7f7;
 $link-hover: #F27935;
 
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   color: $pri-font-color;
   background: $primary-bg;
   -webkit-font-smoothing: antialiased;
+    min-height: 100%;
 }
 
 @font-face {
@@ -138,11 +144,11 @@ CTA SECTION
 #########################################*/
 
 .cta-bg {
-    background: $primary-bg url('/images/cta.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+//    background: #383838 url('/images/cta.jpg') no-repeat center center fixed;
+//    -webkit-background-size: cover;
+//    -moz-background-size: cover;
+//    -o-background-size: cover;
+//    background-size: cover;
     height: 100%;
     width: 100%;
 }

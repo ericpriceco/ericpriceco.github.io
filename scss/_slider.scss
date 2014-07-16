@@ -37,6 +37,12 @@
 .slick-next { right: -25px; }
 .slick-next:before { content: "\2192"; }
 
+@media only screen and (max-width: 40em) { 
+    .slick-prev, .slick-next, .slick-prev:before, .slick-next:before {
+        display: none;
+    }
+}
+
 /* Dots */
 .slick-slider { margin-bottom: 30px; }
 

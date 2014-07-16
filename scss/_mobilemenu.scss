@@ -66,6 +66,12 @@
 	color: #F27935;
 }
 
+@media only screen and (max-width: 40em) { 
+    .overlay ul li a {
+        font-size: 1.2rem;
+    }
+}
+
 /* Effects */
 .overlay-hugeinc {
 	opacity: 0;

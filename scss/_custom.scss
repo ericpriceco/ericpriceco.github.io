@@ -185,15 +185,17 @@ CTA SECTION
     margin-bottom: 2%;
 }
 
-.cta .scroll {
+.scroll {
     position:absolute;
     bottom: 0;
     margin: auto;
     left: 0;
     right: 0;
+    text-align: center;
+    color: $sec-font-color;
 }
 
-.cta .scroll span {
+.scroll span {
     font-family: 'entypo';
     color: $sec-font-color;
     font-size: 3.5rem;

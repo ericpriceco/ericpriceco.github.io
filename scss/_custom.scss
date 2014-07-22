@@ -108,9 +108,11 @@ NAV MENU
 
 .nav-menu {
     font-size: 2em;
-    color: $sec-font-color;
+    color: $pri-font-color;
     text-align: right;
-    padding-right: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    line-height: 0.5;
 }
 
 .subpage-nav-menu {
@@ -118,6 +120,8 @@ NAV MENU
     color: $pri-font-color;
     text-align: right;
     padding-right: 20px;
+    margin-top: 10px;
+    line-height: 0.5;
 }
 
 /*#########################################
@@ -129,31 +133,25 @@ SUBPAGE-HEADER SECTION
 }
 
 .subpage-logo img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 
 /*#########################################
 CTA SECTION
 #########################################*/
 
-.cta-bg {
-    background: #383838;
-    height: 100%;
-    width: 100%;
-}
-
 .cta {
     text-align: center;
-    padding-top: 12%;
+    padding-bottom: 2%;
 }
 
 .cta h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 3.5rem;
-    color: $sec-font-color;
-    letter-spacing: 0.85rem;
+    font-size: 2.5rem;
+    color: $pri-font-color;
+    letter-spacing: 0.2rem;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
@@ -170,13 +168,8 @@ CTA SECTION
 
 .cta h4 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    color: $sec-font-color;
-}
-
-.cta p {
-    color: $sec-font-color;
-    line-height: 0.4;
+    font-size: 1rem;
+    color: $pri-font-color;
 }
 
 .cta img {
@@ -206,17 +199,14 @@ CTA SECTION
 SOCIAL ICONS
 #########################################*/
 
-.social-icons a {
-    color: $sec-font-color;
-}
-
 .social-icons a:hover {
     color: $link-color;
 }
 
 .social-icons a {
     font-family: 'entypo-social';
-    font-size: 5rem;
+    font-size: 3.6rem;
+    color: $pri-font-color;
     padding: 0 0.2rem;
 }
 
@@ -254,7 +244,7 @@ CONTACT SECTION
 
 .contact {
     margin-top: 4%;
-    margin-bottom: 4%;
+    margin-bottom: 7%;
 }
 
 .contact ul {
@@ -295,10 +285,6 @@ CONTACT SECTION
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-}
-
-.contact button[type="submit"] {
-    padding: 10px;
 }
 
 .contact button[type="submit"] {
@@ -367,7 +353,7 @@ BLOG PAGE
 
 .blog {
     margin-top: 4%;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
 }
 
 .blog-header h1 {
@@ -417,7 +403,7 @@ BLOG POSTS
 
 .blog-post {
     margin-top: 4%;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
 }
 
 .post-header {
@@ -480,6 +466,7 @@ code {
 
 .disqus {
     margin-top: 10%;
+    margin-bottom: 8%;
 }
 
 /*#########################################

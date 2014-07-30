@@ -107,7 +107,7 @@ NAV MENU
 }
 
 .nav-menu {
-    background: #f2f2f2;
+    background: #fff;
     font-size: 2em;
     color: $pri-font-color;
     text-align: right;
@@ -141,38 +141,58 @@ SUBPAGE-HEADER SECTION
 /*#########################################
 CTA SECTION
 #########################################*/
-
+    
 .cta {
-    background: #f2f2f2;
-    text-align: center;
-    padding-top: 4%;
+    background: #fff;
+    height: 100%;
+    padding-top: 2%;
     padding-bottom: 6%;
 }
 
 .cta h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
-    color: $pri-font-color;
-    letter-spacing: 0.2rem;
+    font-size: 4.5rem;
+    color: $link-color;
+}
+
+.cta h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.cta-about {
+    margin-top: 4%;
+}
+
+.cta h3 {
+    font-weight: 300;
+    font-size: 1.2rem;
 }
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
     .cta h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+    }
+    .cta h2 {
+        font-size: 1.7rem;
+    }
+    .cta h3 {
+        font-size: 1.1rem;
     }
 }
 
 @media only screen and (max-width: 40em) { 
     .cta h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
-}
-
-.cta h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: $pri-font-color;
+    .cta h2 {
+        font-size: 1.4rem;
+    }
+    .cta h3 {
+        font-size: 1rem;
+    }
 }
 
 .cta img {
@@ -188,14 +208,18 @@ CTA SECTION
     left: 0;
     right: 0;
     text-align: center;
-    color: $sec-font-color;
+    color: $pri-font-color;
 }
 
 .scroll span {
     font-family: 'entypo';
-    color: $sec-font-color;
+    color: $pri-font-color;
     font-size: 3.5rem;
-    line-height: 0.5rem;
+    line-height: 0.2;
+}
+
+.scroll p {
+    line-height: 0.2;
 }
 
 /*#########################################
@@ -208,9 +232,9 @@ SOCIAL ICONS
 
 .social-icons a {
     font-family: 'entypo-social';
-    font-size: 3.6rem;
+    font-size: 4rem;
     color: $pri-font-color;
-    padding: 0 0.2rem;
+    padding-right: 0.5rem;
 }
 
 /*#########################################

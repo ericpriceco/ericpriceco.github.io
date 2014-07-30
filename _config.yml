@@ -1,5 +1,5 @@
 name: Eric Price
-markdown: redcarpet
+markdown: kramdown
 highlighter: true
 permalink: /blog/:title
 paginate: 5

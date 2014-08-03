@@ -421,7 +421,9 @@ BLOG PAGE
 }
 
 .sub-header h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 /*#########################################
@@ -507,6 +509,7 @@ FOOTER
 .footer-nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-nav ul li {
@@ -526,3 +529,19 @@ FOOTER
 .footer-nav a:hover {
     color: $link-color;
 }
+
+.footer-social-icons {
+    margin: 2% 0;
+}
+
+.footer-social-icons a {
+    font-family: 'entypo-social';
+    font-size: 4rem;
+    color: $pri-font-color;
+    padding-right: 0.5rem;
+}
+
+.footer-social-icons a:hover {
+    color: $link-color;
+}
+    

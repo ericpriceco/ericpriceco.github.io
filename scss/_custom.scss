@@ -2,12 +2,11 @@
 GENERAL STYLES
 #########################################*/
 
-$primary-bg: #fff;
-
+$primary-bg: #000;
 $primary-color: #34495e;
-$link-color: #F27935;
-
-$pri-font-color: #2e2e2e;
+$link-color: #fff;
+$link-hover-color: #F27935;
+$pri-font-color: #fff;
 $sec-font-color: #f7f7f7;
 
 body {
@@ -15,29 +14,6 @@ body {
   color: $pri-font-color;
   background: $primary-bg;
   -webkit-font-smoothing: antialiased;
-
-}
-
-@font-face {
-    font-family: 'entypo-social';
-    src: url('/images/fonts/entypo-social.eot');
-    src: url('/images/fonts/entypo-social.eot?#iefix') format('embedded-opentype'),
-         url('/images/fonts/entypo-social.woff') format('woff'),
-         url('/images/fonts/entypo-social.ttf') format('truetype'),
-         url('/images/fonts/entypo-social.svg#entypo-social') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'entypo';
-    src: url('/images/fonts/entypo.eot');
-    src: url('/images/fonts/entypo.eot?#iefix') format('embedded-opentype'),
-         url('/images/fonts/entypo.woff') format('woff'),
-         url('/images/fonts/entypo.ttf') format('truetype'),
-         url('/images/fonts/entypo.svg#entypo-social') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }
 
 img {
@@ -54,7 +30,7 @@ a, a:link, a:visited {
 }
 
 a:hover {
-  color: $pri-font-color;
+  color: $link-hover-color;
   text-decoration: none;
 }
 
@@ -81,467 +57,66 @@ hr {
     font-weight: 700;
 }
 
-/*#########################################
-HEADER SECTION
-#########################################*/
-
-.header-border {
-    border-top: $pri-font-color 7px solid;
-}
-
-.section-header {
-    text-align: center;
-}
-
-.section-content {
-    padding-top: 3%;
-}
 
 /*#########################################
-NAV MENU
+CTA
 #########################################*/
 
-#trigger-overlay {
-    font-family: 'entypo';
-    font-size: 4rem;
+.cta-bg {
+     background: url('../images/cta-bg.jpg') no-repeat center center scroll;
+     -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+     background-size: cover;
+     height: 100%;
+     width: 100%;
+     position: relative;
 }
 
-.nav-menu {
-    background: #fff;
-    font-size: 2em;
-    color: $pri-font-color;
-    text-align: right;
-    padding-right: 20px;
-    padding-top: 10px;
-    line-height: 0.5;
-}
-
-.subpage-nav-menu {
-    font-size: 2em;
-    color: $pri-font-color;
-    text-align: right;
-    padding-right: 20px;
-    margin-top: 10px;
-    line-height: 0.5;
-}
-
-/*#########################################
-SUBPAGE-HEADER SECTION
-#########################################*/
-
-.subpage-logo {
-    text-align: center;
-}
-
-.subpage-logo img {
-    width: 90px;
-    height: 90px;
-}
-
-/*#########################################
-CTA SECTION
-#########################################*/
-    
 .cta {
-    background: #fff;
-    height: 100%;
-    padding-top: 2%;
-    padding-bottom: 6%;
-}
-
-.cta h1 {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 4.5rem;
-    color: $link-color;
-}
-
-.cta h2 {
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 1;
-}
-
-.cta-about {
-    margin-top: 4%;
-}
-
-.cta h3 {
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-    .cta h1 {
-        font-size: 3.5rem;
-    }
-    .cta h2 {
-        font-size: 1.7rem;
-    }
-    .cta h3 {
-        font-size: 1.1rem;
-    }
-}
-
-@media only screen and (max-width: 40em) { 
-    .cta h1 {
-        font-size: 2.5rem;
-    }
-    .cta h2 {
-        font-size: 1.4rem;
-    }
-    .cta h3 {
-        font-size: 1rem;
-    }
-}
-
-.cta img {
-    height: 100px;
-    widows: 100px;
-    margin-bottom: 2%;
-}
-
-.scroll {
-    position:absolute;
-    bottom: 0;
-    margin: auto;
-    left: 0;
-    right: 0;
+    padding-top: 10%;
     text-align: center;
-    color: $pri-font-color;
-}
-
-.scroll span {
-    font-family: 'entypo';
-    color: $pri-font-color;
-    font-size: 3.5rem;
-    line-height: 0.2;
-}
-
-.scroll p {
-    line-height: 0.2;
-}
-
-/*#########################################
-SOCIAL ICONS
-#########################################*/
-
-.social-icons a:hover {
-    color: $link-color;
-}
-
-.social-icons a {
-    font-family: 'entypo-social';
-    font-size: 4rem;
-    color: $pri-font-color;
-    padding-right: 0.5rem;
-}
-
-/*#########################################
-ABOUT SECTION
-#########################################*/
-
-.about {
-    padding-top: 6%;
-    padding-bottom: 4%;
-}
-
-.about hr {
-    margin:0;
-    padding:0;
-    margin-top: -22px;
-    margin-bottom: 4%;
-}
-
-.about h4 span {
-     padding: 20px;
-     background: $primary-bg;
-    text-align: center;
- }
-   
-.about img {
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-}
-
-/*#########################################
-CONTACT SECTION
-#########################################*/
-
-.contact {
-    margin-top: 4%;
-    margin-bottom: 7%;
-}
-
-.contact ul {
-    list-style: none;
-    margin-left: 0;
-}
-
-.contact ul li {
-    padding-right: 3%;
-    display: inline-block;
-}
-
-.contact hr {
-    margin:0;
-    padding:0;
-    margin-top: -22px;
-    margin-bottom: 4%;
-}
-
-.contact h4 span {
-     padding: 20px;
-     background: $primary-bg;
- }
-
-.contact i {
-    margin-right: 5px;
-}
-
-.contact a, .contact a:visited {
-    color: $pri-font-color;
-}
-
-.contact a:hover {
-    color: $link-color;
-}
-
-.contact input, .contact textarea {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
-.contact button[type="submit"] {
-    padding: 10px;
-}
-
-.contact button[type="submit"]:hover {
-    color: $sec-font-color;
-    background-color: $link-color;
-}
-
-.social-contact {
-    text-align: center;
-}
-
-/*#########################################
-WORK SECTION
-#########################################*/
-
-.work {
-    padding-top: 4%;
-    padding-bottom: 4%;
-}
-
-.work hr {
-    margin:0;
-    padding:0;
-    margin-top: -22px;
-    margin-bottom: 4%;
-}
-
-.work h4 span {
-     padding: 20px;
-     background: $primary-bg;
-    text-align: center;
- }
-
-.work ul {
-    list-style: none;
-    margin-left: 0;
-}
-
-.work .button {
-    font-size: 1rem;
-    padding: 10px;
-}
-
-.slider {
-    font-family: 'slider';
-    color: $pri-font-color;
-}
-
-.slider a.button:hover, button:hover {
-    background: none;
-}
-
-.work-slider {
-    padding: 0 !important;
-}
-
-
-
-/*#########################################
-BLOG PAGE
-#########################################*/
-
-.blog {
-    margin-top: 4%;
-    margin-bottom: 4%;
-}
-
-.blog-header h1 {
-    margin-bottom: 0;
-}
-
-.blog-header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.blog-header h1 a {
-    color: $pri-font-color;
-}
-
-.blog-header h1 a:hover {
-    color: $link-color;
-}
-
-@media only screen and (max-width: 40em) { 
-    .blog-header h1 {
-        font-size: 1.5rem;
-    }
-}
-
-.post-date {
-    font-size: 0.9rem;
-}   
-
-.posts-list {
-    padding: 1% 0;
-}
-
-.paginator {
-    margin-top: 4%;
-    margin-bottom: 4%;
-    text-align: right;
-}
-
-.sub-header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-/*#########################################
-BLOG POSTS
-#########################################*/
-
-.blog-post {
-    margin-top: 4%;
-    margin-bottom: 4%;
-}
-
-.post-header {
-    text-align: center;
-    margin-bottom: 8%;
-}
-
-.post-header h1 {
-    color: $pri-font-color;
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-@media only screen and (max-width: 40em) { 
-    .post-header h1 {
-        font-size: 1.6em;
-    }
-}
-
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
-     .post-header h1 {
-        font-size: 2rem;
-    }
-}
-
-.blog-post h3 {
-    margin-top: 5%;
-}
-
-.blog-post img {
-    border-radius: 10px;
-}
-
-.post-header p {
-    margin-bottom: 0;
-}
-
-.highlight {
-  background: #ededed;
-  padding: 10px 10px;
-  margin-bottom: 2%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border: solid 0.5px #dedede;
-}
-
-pre {
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
-}
-
-code {
-  font-weight: 400;
-  color: $pri-font-color;
-}
-
-.disqus {
-    margin-top: 10%;
-    margin-bottom: 8%;
-}
-
-/*#########################################
-FOOTER
-#########################################*/
-
-.footer {
-    text-align: center;
-}
-
-.footer-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-nav ul li {
-    display: inline-block;
-    padding: 0 1%;
-    font-size: 0.9rem;
-}
-
-.footer-nav a {
-    color: $pri-font-color;
-}
-
-.footer-nav a:visted {
-    color: $pri-font-color;
-}
-
-.footer-nav a:hover {
-    color: $link-color;
-}
-
-.footer-social-icons {
-    margin: 2% 0;
-}
-
-.footer-social-icons a {
-    font-family: 'entypo-social';
-    font-size: 4rem;
-    color: $pri-font-color;
-    padding-right: 0.5rem;
-}
-
-.footer-social-icons a:hover {
-    color: $link-color;
 }
     
+.cta h1 {
+    font-size: 2.8em;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Droid Sans', serif;
+}
+
+.cta h5 {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.cta-description {
+    padding-top: 4%;
+}
+
+.cta-description p {
+    font-size: 1.1em;
+}
+
+.social {
+    padding-top: 6%;
+}
+
+.social-icons {
+    color: #fff;
+    padding-top: 1%;
+}
+
+.social-icons ul {
+    list-style: none;
+}
+
+.social-icons li {
+    padding-right: 6%;
+    display: inline-block;
+}
+
+.social-icons i {
+    font-size: 2em;
+}

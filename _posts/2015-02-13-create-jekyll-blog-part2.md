@@ -20,7 +20,7 @@ On my homepage I like to include a recent posts section to entice people click t
 
 You can easily change this to suit your site. Maybe you want 3 posts, instead of 2 or more words in the snippet.
 
-```html
+```
 {% raw %}
 <div class="large-6 columns">
 	<h3>RECENT POSTS</h3>

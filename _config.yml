@@ -1,5 +1,5 @@
 name: "Eric Price"
-markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
 permalink: /blog/:title
 paginate: 5

@@ -1,0 +1,10 @@
+name: "Eric Price"
+markdown: kramdown
+highlighter: pygments
+permalink: /blog/:title
+paginate: 5
+paginate_path: "blog/page:num"
+twitter_username: ericprice2
+github_username:  eric2025
+url: "http://eric-price.co"
+title: "Eric Price"

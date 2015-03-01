@@ -4,15 +4,15 @@ GENERAL STYLES
 
 $primary-bg: #000;
 $primary-color: #34495e;
-$link-color: #fff;
+$link-color: #000;
 $link-hover-color: #F27935;
-$pri-font-color: #fff;
+$pri-font-color: #000;
 $sec-font-color: #f7f7f7;
 
 body {
   font-family: 'Lato', sans-serif;
   color: $pri-font-color;
-  background: $primary-bg;
+  //background: $primary-bg;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -76,36 +76,65 @@ CTA
 .cta {
     padding-top: 10%;
     text-align: center;
+    color: $sec-font-color;
+}
+
+.cta a {
+    color: $sec-font-color;
+}
+
+.cta a:hover {
+    color: $link-hover-color;
 }
     
 .cta h1 {
-    font-size: 2.8em;
-    color: #fff;
+    font-size: 2.8rem;
+    color: $sec-font-color;
     font-weight: 700;
     font-family: 'Droid Sans', serif;
 }
 
+@media only screen and (max-width: 40em) { 
+    .cta h1 {
+        font-size: 2rem;
+    }
+}
+
 .cta h5 {
-    color: #fff;
+    color: $sec-font-color;
     font-size: 1em;
     font-weight: 700;
 }
 
+//@media only screen and (max-width: 40em) { 
+//    .cta h5 {
+//        font-size: 0.9rem;
+//    }
+//}
+
 .cta-description {
-    padding-top: 4%;
+    padding-top: 2%;
 }
 
 .cta-description p {
-    font-size: 1.1em;
+    font-size: 1rem;
+    color: $sec-font-color;
 }
 
 .social {
-    padding-top: 6%;
+    padding-top: 4%;
 }
 
 .social-icons {
-    color: #fff;
     padding-top: 1%;
+}
+
+.social-icons a {
+    color: $sec-font-color;
+}
+
+.social-icons a:hover {
+    color: $link-hover-color;
 }
 
 .social-icons ul {
@@ -119,4 +148,184 @@ CTA
 
 .social-icons i {
     font-size: 2em;
+}
+
+/*#########################################
+SUBPAGE-HEADER SECTION
+#########################################*/
+
+.blog-header {
+    padding-bottom: 1%;
+    width: 100%;
+}
+
+.subpage-logo {
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.subpage-logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+}
+
+.nav-menu {
+    text-align: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/*#########################################
+BLOG PAGE
+#########################################*/
+
+.header-border {
+    border-top: $link-hover-color 5px solid;
+}
+
+.nav-link a:hover {
+    color: $link-hover-color;
+}
+
+.blog {
+    margin-top: 3%;
+    margin-bottom: 4%;
+}
+
+.blog a {
+    color: $pri-font-color;   
+}
+
+.blog-header h1 {
+    margin-bottom: 0;
+}
+
+.blog-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.blog-header h1 a {
+    color: $pri-font-color;
+}
+
+//.blog-header h1 a:hover {
+//    color: $link-hover-color;
+//}
+
+@media only screen and (max-width: 40em) { 
+    .blog-header h1 {
+        font-size: 1rem;
+    }
+}
+
+.post-date {
+    font-size: 0.9rem;
+}   
+
+.posts-list {
+    padding: 1% 0;
+}
+
+.posts-list p a:hover {
+    color: $link-hover-color;
+}
+
+.paginator {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    text-align: right;
+}
+
+.sub-header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/*#########################################
+BLOG POSTS
+#########################################*/
+
+.blog-post {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.blog-post a {
+    color: $pri-font-color;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+.post-header h1 {
+    color: $pri-font-color;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 40em) { 
+    .post-header h1 {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
+     .post-header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+.blog-post h3 {
+    margin-top: 5%;
+}
+
+.blog-post img {
+    border-radius: 10px;
+}
+
+.post-header p {
+    margin-bottom: 0;
+}
+
+.highlight {
+  background: #ededed;
+  padding: 10px 10px;
+  margin-bottom: 2%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 0.5px #dedede;
+}
+
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+code {
+  font-weight: 400;
+  color: $pri-font-color;
+}
+
+.disqus {
+    margin-top: 10%;
+    margin-bottom: 8%;
 }

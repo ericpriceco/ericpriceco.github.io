@@ -159,6 +159,13 @@ SUBPAGE-HEADER SECTION
     width: 100%;
 }
 
+.blog-header-bg {
+     background: url('../images/blog-header3.jpg') no-repeat center center scroll;
+     width: 100%;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
 .subpage-logo {
     text-align: center;
     padding-top: 3%;
@@ -166,11 +173,11 @@ SUBPAGE-HEADER SECTION
 }
 
 .subpage-logo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 150px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+	-webkit-border-radius: 70px;
+	-moz-border-radius: 70px;
 }
 
 .nav-menu {
@@ -186,6 +193,35 @@ SUBPAGE-HEADER SECTION
     padding-left: 5px;
     padding-right: 5px;
 }
+
+.nav-menu a {
+    color: $sec-font-color;
+}
+
+.blog-nav-menu a {
+    color: $sec-font-color;
+    font-weight: 700;
+    background: rgba(0,0,0,0.6);
+    padding: 4px 8px;
+    border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.blog-nav-menu {
+    text-align: center;
+}
+
+.blog-nav-menu ul {
+    list-style: none;
+}
+
+.blog-nav-menu ul li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 
 /*#########################################
 BLOG PAGE

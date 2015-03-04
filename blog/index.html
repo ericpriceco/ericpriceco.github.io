@@ -6,16 +6,13 @@ title: Eric Price - Freelance Web Designer and Developer
 <div class="blog">
     <div class="row">
         <div class="large-9 medium-10 columns small-centered">
+            <span><hr></span>
                 
                 {% for post in paginator.posts %}
             
                     <div class="posts-list">
-                        <div class="blog-header">
-                            <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                            <p class="post-date">{{ post.date | date: '%B %d, %Y' }} - {% for tag in post.tags %} #<a href="/blog/tags/{{ tag }}/">{{ tag }}</a>{% endfor %} </p>
-                        </div>
-                            <p>{{ post.content | strip_html | truncatewords:65 }}</p>
-                            <p><a href="{{ post.url }}">Read More &#8594;</a></p>
+                        <div class="post-title"><a href="{{ post.url }}"><span>{{ post.title }}</span></a> / Published {{ post.date | date: '%B %d, %Y' }} - {% for tag in post.tags %} #<a href="/blog/tags/{{ tag }}/">{{ tag }}</a>{% endfor %}</div>
+                        
                         <hr>
                     </div>
             
@@ -55,5 +52,3 @@ title: Eric Price - Freelance Web Designer and Developer
         </div>
     </div>
 </div>
-
-  

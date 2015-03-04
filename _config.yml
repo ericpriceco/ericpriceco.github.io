@@ -2,7 +2,7 @@ name: "Eric Price"
 markdown: redcarpet
 highlighter: pygments
 permalink: /blog/:title
-paginate: 5
+paginate: 10
 paginate_path: "blog/page:num"
 twitter_username: ericprice2
 github_username:  eric2025

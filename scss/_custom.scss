@@ -14,6 +14,7 @@ body {
   color: $pri-font-color;
   //background: $primary-bg;
   -webkit-font-smoothing: antialiased;
+    background: #faf6ec;
 }
 
 img {
@@ -154,17 +155,16 @@ CTA
 SUBPAGE-HEADER SECTION
 #########################################*/
 
-.blog-header {
-    padding-bottom: 1%;
-    width: 100%;
+.blog-header hr {
+
 }
 
-.blog-header-bg {
-     background: url('../images/blog-header3.jpg') no-repeat center center scroll;
-     width: 100%;
-    padding-top: 1%;
-    padding-bottom: 3%;
-}
+//.blog-header-bg {
+//     background: url('../images/blog-header3.jpg') no-repeat center center scroll;
+//     width: 100%;
+//    padding-top: 1%;
+//    padding-bottom: 3%;
+//}
 
 .subpage-logo {
     text-align: center;
@@ -199,13 +199,11 @@ SUBPAGE-HEADER SECTION
 }
 
 .blog-nav-menu a {
-    color: $sec-font-color;
-    font-weight: 700;
-    background: rgba(0,0,0,0.6);
-    padding: 4px 8px;
-    border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
+    color: $pri-font-color;
+}
+
+.blog-nav-menu a:hover {
+    color: $link-hover-color;
 }
 
 .blog-nav-menu {
@@ -227,9 +225,9 @@ SUBPAGE-HEADER SECTION
 BLOG PAGE
 #########################################*/
 
-.header-border {
-    border-top: $link-hover-color 5px solid;
-}
+//.header-border {
+//    border-top: $link-hover-color 5px solid;
+//}
 
 .nav-link a:hover {
     color: $link-hover-color;
@@ -244,38 +242,15 @@ BLOG PAGE
     color: $pri-font-color;   
 }
 
-.blog-header h1 {
-    margin-bottom: 0;
-}
-
-.blog-header h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.blog-header h1 a {
-    color: $pri-font-color;
-}
-
-//.blog-header h1 a:hover {
-//    color: $link-hover-color;
-//}
-
-@media only screen and (max-width: 40em) { 
-    .blog-header h1 {
-        font-size: 1rem;
-    }
-}
-
-.post-date {
-    font-size: 0.9rem;
-}   
-
 .posts-list {
     padding: 1% 0;
 }
 
-.posts-list p a:hover {
+.posts-list span {
+    font-weight: 700;
+}
+
+.posts-list a:hover {
     color: $link-hover-color;
 }
 
@@ -285,9 +260,22 @@ BLOG PAGE
     text-align: right;
 }
 
-.sub-header h1 {
-    font-size: 1.5rem;
+.blog-footer {
+    padding-top: 1%;
+    background: #f1ecdf;
+}
+
+.blog-footer p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.tag-header p {
     font-weight: 700;
+}
+
+.tag-spacer {
+    padding-bottom: 25%;
 }
 
 /*#########################################
@@ -303,6 +291,10 @@ BLOG POSTS
     color: $pri-font-color;
 }
 
+.blog-post a:hover {
+    color: $link-hover-color;
+}
+
 .post-header {
     text-align: center;
     margin-bottom: 8%;
@@ -310,7 +302,7 @@ BLOG POSTS
 
 .post-header h1 {
     color: $pri-font-color;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
 }
 
@@ -326,12 +318,15 @@ BLOG POSTS
     }
 }
 
-.blog-post h3 {
-    margin-top: 5%;
+.post-header i {
+    font-size: 1.1rem;
+    padding-left: 5px;
 }
 
-.blog-post img {
-    border-radius: 10px;
+.blog-post h3 {
+    margin-top: 5%;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .post-header p {
@@ -339,13 +334,13 @@ BLOG POSTS
 }
 
 .highlight {
-  background: #ededed;
+  background: #424242;
   padding: 10px 10px;
   margin-bottom: 2%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  border: solid 0.5px #dedede;
+  //border: solid 0.5px #dedede;
 }
 
 pre {
@@ -357,8 +352,9 @@ pre {
 }
 
 code {
-  font-weight: 400;
-  color: $pri-font-color;
+    background-color: #424242;
+    border: none;
+  color: $sec-font-color;
 }
 
 .disqus {

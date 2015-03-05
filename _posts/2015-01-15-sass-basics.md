@@ -22,11 +22,13 @@ We need to point Foundation to the new partial. Open up "app.scss" in the scss f
 
 app.scss:
 
+{% highlight css %}
 ```css
 @import "settings";
 @import "foundation";
 @import "custom";
 ```
+{% endhighlight %}
 
 After adding in your CSS to the custom partial you need to compile it. In the root of your project run:
 

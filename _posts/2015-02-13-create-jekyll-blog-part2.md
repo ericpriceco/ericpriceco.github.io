@@ -20,7 +20,7 @@ On my homepage I like to include a recent posts section to entice people click t
 
 You can easily change this to suit your site. Maybe you want 3 posts, instead of 2 or more words in the snippet.
 
-```
+```html
 {% raw %}
 <div class="large-6 columns">
 	<h3>RECENT POSTS</h3>
@@ -56,7 +56,7 @@ The blog posts are written in Markdown format. Here's a [cheat sheet](https://gi
 
 Below is an example YAML Front Matter block in a post file.
 
-```
+```yaml
 ---
 layout: blogpost
 title: Create a Jekyll Blog - Part 2
@@ -94,7 +94,7 @@ The blog page will use a similar loop, but with a little more features like Tags
 
 For the blog page I increased the post limit to 5 with the same post.url and post.title line. The lines below show the date the post was published with a formatting filter. You can see examples [here](http://joshbranchaud.com/blog/2012/12/24/Date-Formatting-in-Jekyll.html). Post.excerpt creates a snippet of your post by copying the first paragraph.
 
-```
+```html
 {% raw %}
 <p>{{ post.date | date: '%B %d, %Y' }}</p>
 <p>{{ post.excerpt }}</p>
@@ -107,7 +107,8 @@ Including tags on your blog page is a tricky one and gets its own section. This 
 
 ```html
 {% raw %}
-<p>Tags:
+<p>
+Tags:
 	{% for tag in post.tags %}
 		#<a href="tags/{{ tag }}/">{{ tag }}</a>
 	{% endfor %}

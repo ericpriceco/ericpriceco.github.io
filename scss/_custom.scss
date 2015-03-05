@@ -12,7 +12,7 @@ $sec-font-color: #f7f7f7;
 body {
   font-family: 'Lato', sans-serif;
   color: $pri-font-color;
-  -webkit-font-smoothing: antialiased;
+//  -webkit-font-smoothing: antialiased;
     background: #faf6ec;
 }
 
@@ -315,27 +315,26 @@ BLOG POSTS
 }
 
 .highlight {
-  background: #424242;
   padding: 10px 10px;
   margin-bottom: 2%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+    overflow: auto; 
   //border: solid 0.5px #dedede;
 }
 
-pre {
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
-}
+//pre {
+//  white-space: pre-wrap;
+//  white-space: -moz-pre-wrap;
+//  white-space: -pre-wrap;
+//  white-space: -o-pre-wrap;
+//  word-wrap: break-word;
+//}
 
 code {
-    background-color: #424242;
     border: none;
-    color: $sec-font-color;
+    background-color: none;
 }
 
 .disqus {

@@ -114,7 +114,7 @@ color: $sec-font-color;
 .cta h5 {
     color: $sec-font-color;
     font-size: 1em;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 //@media only screen and (max-width: 40em) { 
@@ -176,8 +176,8 @@ BLOG-HEADER SECTION
 }
 
 .blog-logo img {
-    width: 70px;
-    height: 70px;
+    max-width: 70px;
+    max-height: 70px;
     border-radius: 70px;
 	-webkit-border-radius: 70px;
 	-moz-border-radius: 70px;

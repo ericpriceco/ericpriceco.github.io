@@ -1,5 +1,5 @@
 ---
-layout: blogpost
+layout: post
 title: Getting Started with SASS and Foundation
 date: 2015-01-05
 tags: sass foundation

@@ -1,9 +1,9 @@
 name: "Eric Price"
 markdown: redcarpet
 highlighter: pygments
-permalink: /blog/:title
+permalink: :title
 paginate: 10
-paginate_path: "blog/page:num"
+paginate_path: "page:num"
 twitter_username: ericprice2
 github_username:  eric2025
 url: "http://eric-price.co"

@@ -3,52 +3,23 @@ layout: main
 title: Eric Price - Web Designer and Developer
 ---
 
-<body>
-      <div class="cta-bg">
-      <div class="cta">
-        <div class="row">
-            <h1>Eric Price</h1>
-        </div>
-          <div class="row"> 
-                    <h5>WEB DEVELOPER/DESIGNER</h5>
-                <div class="nav-menu">
-                    <div class="row">
-                        <ul>
-                            <li><a href="/">Home</a></li><span>-</span>
-                            <li><a href="/blog/">Blog</a></li><span>-</span>
-                            <li><a href="mailto:ericpriceco@gmail.com">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-          </div>
-        
-        <div class="cta-description">
-            <div class="row">
-                <div class="large-8 large-centered columns">
-                    <p>Hello. I'm a starting web developer and designer living in the Raleigh area, North Carolina. Enjoy creating clean, responsive designs and currently focusing on back-end web technologies.</p>  
-                </div>
-              </div>
-          </div>
-          
-          <div class="social">
-          <div class="row">
-                <div class="large-8 large-centered columns">
-                    <h5>FIND ME HERE</h5>
-                </div>
-          </div>
-          <div class="social-icons">
-              <div class="row">
-                    <div class="small-8 small-centered columns">
-                        <ul>
-                            <li><a href="mailto:ericpriceco@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
-                            <li><a href="https://github.com/eric2025"><i class="fa fa-github"></i></a></li>
-                            <li><a href="https://twitter.com/EricPrice2"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.linkedin.com/pub/eric-price/7/31a/41b"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
 
+            <!-- A wrapper for all the blog posts -->
+            <div class="posts">
+                <h1 class="content-subhead">Recent Posts</h1>
+
+                <section class="post">
+                    
+                    {% for post in paginator.posts %}
+            
+                    <div class="posts-list">
+                        <header class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></header>
+                        <p>Published {{ post.date | date: '%B %d, %Y' }}</p>
+                        
+                       
                     </div>
-              </div>
-          </div>
-          </div>
-      </div>
-      </div>
+            
+                {% endfor %}
+
+                </section>
+            </div>

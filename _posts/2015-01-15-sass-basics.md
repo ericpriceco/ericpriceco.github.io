@@ -1,10 +1,9 @@
 ---
-layout: blogpost
+layout: post
 title: SASS and Compass Basics
 date: 2015-01-15
 tags: sass foundation compass
 categories: sass foundation compass
-image: /images/blog/sass-compass.png
 published: true
 ---
 

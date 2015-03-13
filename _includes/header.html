@@ -1,11 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ page.title }}</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Web developer and designer in the Raleigh area, North Carolina." />
-	<meta name="author" href="/humans.txt" />
+    <meta name="author" href="/humans.txt" />
 	<meta name="keywords" content="developer designer website responsive design north carolina nc raleigh garner durham" />
     
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -14,15 +13,45 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
     
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-      
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
-      
+
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="/stylesheets/app.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-      
-    <link rel="stylesheet" href="/stylesheets/app.css" />
-      <link rel="stylesheet" href="/stylesheets/syntax.css" />
-      
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-      
-  </head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+    
+<body>
+    
+    <div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+            <img src="/img/profile.jpg">
+            <h1 class="brand-title">Eric Price</h1>
+            <h2 class="brand-tagline">Web Developer</h2>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="http://yuilibrary.com">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <ul>
+                    <li><a href="mailto:ericpriceco@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+                    <li><a href="https://github.com/eric2025"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/EricPrice2"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/pub/eric-price/7/31a/41b"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content pure-u-1 pure-u-md-3-4">

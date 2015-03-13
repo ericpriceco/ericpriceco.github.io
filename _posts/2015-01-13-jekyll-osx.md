@@ -1,10 +1,9 @@
 ---
-layout: blogpost
+layout: post
 title: Install Jekyll on OSX
 date: 2015-01-13
 tags: jekyll
 categories: jekyll
-image: /images/blog/jekyll-osx.png
 published: true
 ---
 

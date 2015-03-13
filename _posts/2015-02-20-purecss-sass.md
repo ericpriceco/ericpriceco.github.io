@@ -1,10 +1,9 @@
 ---
-layout: blogpost
+layout: post
 title: PureCSS with SASS
 date: 2015-02-20
 tags: sass purecss
 categories: sass purecss
-image: /images/blog/purecss-sass.png
 published: true
 ---
 

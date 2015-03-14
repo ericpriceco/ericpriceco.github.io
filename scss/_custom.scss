@@ -22,6 +22,7 @@ body {
 a {
     text-decoration: none;
     color: $link-hover-color;
+    word-wrap: break-word;
 }
 a:hover,
 a:focus {

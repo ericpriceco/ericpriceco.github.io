@@ -1,11 +1,11 @@
 $primary-bg: #fff;
 $primary-color: #34495e;
 $link-color: #000;
-$link-hover-color: #306580;
+$link-hover-color: #03A678;
 $pri-font-color: #000;
 $sec-font-color: #f7f7f7;
 $sub-heading: #a1a1a1;
-$sidebar-links: #E8A64A;
+$sidebar-links: #fff;
 
 * {
     -webkit-box-sizing: border-box;
@@ -57,8 +57,10 @@ h3 {
 }
 
 .sidebar {
-    background: #306580;
-    color: #fff;
+    background: #03A678;
+    color: #000;
+//    -webkit-box-shadow: 2px 0 6px -2px #888;
+//            box-shadow: 2px 0 6px -2px #888;
 }
 
 .brand-title,
@@ -66,9 +68,10 @@ h3 {
     margin: 0;
 }
 .brand-title {
-    text-transform: uppercase;
+//    text-transform: uppercase;
     padding: 0.3em 0 0.1em 0;
     font-size: 1.4em;
+    font-weight: 600;
 }
 .brand-tagline {
     font-weight: 300;
@@ -89,7 +92,7 @@ h3 {
 }
 
 .nav-list a {
-    color: $sec-font-color;
+    color: $pri-font-color;
     text-decoration: none;
 }
 
@@ -98,7 +101,7 @@ h3 {
 }
 
 .social-icons a {
-    color: $sec-font-color;
+    color: $pri-font-color;
 }
 
 .social-icons a:hover {
@@ -166,9 +169,9 @@ BLOG PAGE
     font-size: 90%;
 }
 
-.posts-list p a {
-    color: $sub-heading;
-}
+//.posts-list p a {
+//    color: $sub-heading;
+//}
 
 /*#########################################
 POSTS
@@ -274,7 +277,7 @@ MEDIA QUERIES
     }
     
     .brand-tagline {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     
     .nav-list {

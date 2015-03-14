@@ -13,9 +13,9 @@ title: Eric Price - Web Designer and Developer
                     {% for post in paginator.posts %}
             
                     <div class="posts-list">
+                        <p>{{ post.date | date: '%B %d, %Y' }}</p>
                         <header class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></header>
-                        <p>Published {{ post.date | date: '%B %d, %Y' }}</p>
-                        
+                        <p>{{ post.content | truncatewords: 40 }}</p>
                        
                     </div>
             

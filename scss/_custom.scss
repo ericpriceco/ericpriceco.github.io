@@ -235,17 +235,17 @@ FOOTER
     text-align: center;
 }
 
-.scrollBtn a {
+.scrollBtn {
+    text-align: center;
+}
+
+.scrollBtn button {
     bottom: 0;
     margin: 0.5em;
     position: fixed;
-    text-align: center;
     border-radius: 10px;
     background: #03A678;
-}
-
-.textCenter {
-    text-align: center;
+    font-size: 0.8em;
 }
 
 /*#########################################
@@ -312,7 +312,4 @@ MEDIA QUERIES
         font-size: 1.3em;
     }
     
-    .scrollBtn {
-        display: none;
-    }
 }

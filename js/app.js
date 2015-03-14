@@ -10,7 +10,7 @@ $(function() {
     
     myWindow.on('scroll', function() {
         if (window.matchMedia('(max-width: 768px)').matches) {
-            if ($(this).scrollTop() > 400) { //height from top to trigger slideDown
+            if ($(this).scrollTop() > 800) { //height from top to trigger slideDown
                 myButton.show();
             }
             else {

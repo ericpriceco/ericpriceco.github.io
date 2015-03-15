@@ -60,8 +60,6 @@ h3 {
 .sidebar {
     background: #03A678;
     color: #000;
-//    -webkit-box-shadow: 2px 0 6px -2px #888;
-//            box-shadow: 2px 0 6px -2px #888;
 }
 
 .brand-title,
@@ -69,7 +67,6 @@ h3 {
     margin: 0;
 }
 .brand-title {
-//    text-transform: uppercase;
     padding: 0.3em 0 0.1em 0;
     font-size: 1.4em;
     font-weight: 600;
@@ -118,6 +115,7 @@ h3 {
     display: inline-block;
     padding-left: 0.3em;
     padding-right: 0.3em;
+    font-size: 1.2em;
 }
 
 /*#########################################
@@ -170,10 +168,6 @@ BLOG PAGE
     color: $sub-heading;
     font-size: 90%;
 }
-
-//.posts-list p a {
-//    color: $sub-heading;
-//}
 
 /*#########################################
 POSTS

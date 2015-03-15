@@ -9,14 +9,14 @@ $(function() {
     myButton.hide();
     
     myWindow.on('scroll', function() {
-        if (window.matchMedia('(max-width: 768px)').matches) {
+        //if (window.matchMedia('(max-width: 768px)').matches) {
             if ($(this).scrollTop() > 800) { //height from top to trigger slideDown
                 myButton.show();
             }
             else {
                 myButton.hide();
             }
-        }
+       // }
     });
     myButton.click(function(){
 		$('html, body').animate({scrollTop : 0},800);

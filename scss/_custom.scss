@@ -238,16 +238,31 @@ FOOTER
 
 .scrollBtn {
     text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 0.5em 0.5em 0em 0.5em;
+    bottom: 0;
+    right: 0;
+    margin: 0 1em 0.7em 0;
+    position: fixed;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: $sec-font-color;
+    border-radius: 3px;
 }
 
-.scrollBtn button {
-    bottom: 0;
-    margin: 0.5em;
-    position: fixed;
-    border-radius: 10px;
-    background: #03A678;
-    font-size: 0.8em;
+a:hover.scrollBtn,a.scrollBtn {
+    text-decoration: none;
 }
+
+//.scrollBtn button {
+//    bottom: 0;
+//    right: 0;
+//    margin: 0.5em;
+//    position: fixed;
+//    border-radius: 10px;
+//    background: #03A678;
+//    font-size: 0.8em;
+//}
 
 /*#########################################
 MEDIA QUERIES

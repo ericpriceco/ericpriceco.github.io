@@ -7,15 +7,15 @@ categories: sass foundation
 published: true
 ---
 
-In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS can come into play with its partial system that will compile your custom style sheet with Foundations into one file. I will talk more about partials and variables in my next post. Visit SASS's basic page for more information. [http://sass-lang.com/guide](http://sass-lang.com/guide)
+In this article I'm going to show you how to use SASS with the Foundation framework. Since it's not recommended to edit the massive stylesheet that comes with Foundation, SASS can help  greatly with its partial system that will compile your custom style sheet(s) with Foundations into one file. I will talk more about partials and variables in my another post. Visit SASS's basic page for more information. [http://sass-lang.com/guide](http://sass-lang.com/guide)
 
-Note: This guide is tailored to Mac users. Sorry PC and Linux users. I will work on a guide for you too.
+Note: This guide is tailored to Mac users.
 
-There are programs out there like CodeKit that can do all this for you, but where's the fun in that plus this is free.
+There are programs out there like CodeKit that can do all this for you, but where's the fun in that, plus this is free.
 
 ### 1. Install Xcode
 
-The first step is to install Xcode from the App Store. It includes development libraries needed for most of the packages we will install. After it's installed, open Xcode to accept the license agreement and finish the install. 
+The first step is to install Xcode from the App Store. It includes development libraries needed for most of the packages we will install. After it's installed, open Xcode to accept the license agreement and finish the install.
 
 ### 2. Install Homebrew
 
@@ -42,27 +42,18 @@ If you get a warning after running brew doctor saying your Xcode-select CLI tool
 
 [https://developer.apple.com/downloads/index.action](https://developer.apple.com/downloads/index.action)
 
-Update Xcode-select and re-run brew doctor until you get: “Your system is ready to brew"
+Update Xcode-select and re-run "brew doctor" until you get: “Your system is ready to brew"
 
-### 3. Install Rbenv
-[https://github.com/sstephenson/rbenv](https://github.com/sstephenson/rbenv)
+### 3. Install RVM
+[https://rvm.io/](https://rvm.io/)
 
-Another similar ruby packager is RVM, but I ran into issues where RVM screwed my ruby environment and was a pain to clean up. I have yet to experience this issue with Rbenv.
-
-Command:
+The Ruby Version Manager manages multiple installations of Ruby and ruby gemsets. This command installs the manager along with the current version of ruby.
 
 ```
-brew install rbenv ruby-build
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
-     
-### 4. Install Ruby
 
-Run Rbenv to install version 2.1.0 of Ruby:
-
-```
-rbenv init
-rbenv install 2.1.0
-```
+### 4. Brew Check
 
 Run brew doctor again to scan the package system before moving on:
 
@@ -70,7 +61,7 @@ Run brew doctor again to scan the package system before moving on:
 brew doctor
 brew update
 ```
-     
+
 ### 5. Install NodeJS and NPM (node package manager)
 
 Next we are going to install NodeJS and NPM:
@@ -79,20 +70,20 @@ Next we are going to install NodeJS and NPM:
 brew install node
 ```
 
-### 6. Install Foundation
-
-Install latest version of Foundation through Ruby:
-
-```
-sudo gem install foundation
-```
-
-### 7. Install Bower
+### 6. Install Bower
 
 Bower is the tool Foundation uses to install or update a Foundation project.
 
 ```
 sudo npm install -g bower grunt-cli
+```
+
+### 7. Install Foundation
+
+Install latest version of Foundation through Ruby:
+
+```
+sudo gem install foundation
 ```
 
 ### 8. Install Compass
@@ -113,11 +104,11 @@ foundation new test-project
 
 If you were to open index.html in your new project, you will see no styling at all. That's because the scss file needs to be compiled into a stylesheet. Change to your project folder and compile:
 
-```     
+```
 cd test-project
 compass compile
 ```
-    
+
 You can have compass watch for changes in real-time and it will auto compile your stylesheet when you save a change to your scss files.
 
 ```

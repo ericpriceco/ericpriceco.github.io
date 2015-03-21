@@ -7,11 +7,9 @@ categories: jekyll
 published: true
 ---
 
-If you're not familiar with [Jekyll](http://jekyllrb.com/), it's a parsing engine that takes partial html files, text and markdown files and converts them into a working website. The great thing about Jekyll is you can create a dynamic blog without a database and only using static files. 
+If you're not familiar with [Jekyll](http://jekyllrb.com/), it's a parsing engine that takes partial html files, text and markdown files and converts them into a working website. The great thing about Jekyll is you can create a dynamic blog using only static files without a need for database.
 
-A few things come to mind when you no longer need a database. No single point of failure, backups are easy and you can host your site almost anywhere. I host this site on Github for free and with jekyll built-in to Github, it's a no brainer.
-
-Now let's get started!
+One big plus is being able to host a site on Github for free. Jekyll is built-in to Github and generates your site for you.
 
 ### Install Xcode
 
@@ -42,26 +40,16 @@ If you get a warning after running brew doctor saying your Xcode-select CLI tool
 
 [https://developer.apple.com/downloads/index.action](https://developer.apple.com/downloads/index.action)
 
-### Install Rbenv (ruby package manager)
+### 3. Install RVM
+[https://rvm.io/](https://rvm.io/)
 
-[https://github.com/sstephenson/rbenv](https://github.com/sstephenson/rbenv)
-
-Another similar ruby packager is RVM, but I ran into issues where RVM screwed my ruby environment and was a pain to clean up. I have yet to experience this issue with Rbenv.
-
-Command:
+The Ruby Version Manager manages multiple installations of Ruby and ruby gemsets. This command installs the manager along with the current version of ruby.
 
 ```
-brew install rbenv ruby-build
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 
-### Install Ruby
-
-Run Rbenv to install version 2.1.0 of Ruby:
-
-```
-rbenv init
-rbenv install 2.1.0
-```
+### 4. Brew Check
 
 Run brew doctor again to scan the package system before moving on:
 
@@ -96,13 +84,13 @@ Now we need to convert the files to a functional site:
 ```
 jekyll build
 ```
-  
+
 After running the build, you will see a new folder called "\_site". This is where your converted site is located. You can host the site locally by running this command while in the project folder:
 
 ```
 jekyll serve
 ```
-    
+
 Open your browser and go to either http://0.0.0.0:4000 or http://localhost:4000 to see your Jekyll powered site.
 
 In my next post I will cover creating a blog with partials and layouts.

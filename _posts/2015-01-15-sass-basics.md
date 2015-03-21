@@ -9,7 +9,7 @@ published: true
 
 SASS has made my web development life so much easier and I want to share some of the basics I've learned using it on a daily basis. If you're not familiar with SASS, it's a CSS preprocessor that allows you to use variables, mixins and partials. You can read more on their documentation page [here](http://sass-lang.com/documentation/file.SASS_REFERENCE.html). If you haven't installed it yet, you can find the steps in my last post on the getting started with Foundation and SASS. ([http://eric-price.co/blog/foundation-plus-sass/](http://eric-price.co/blog/foundation-plus-sass/))
 
-I'm going to use the Foundation framework in this article; however, you can use SASS with almost anything with a little know how. Using SASS with Foundation is practically a necessity to take advantage of their built-in SASS variables. When starting a Foundation project, the first thing to do is create a partial file to hold your custom settings since it's not recommended to touch the original Foundation settings.
+I'm going to use the Foundation framework in this article; however, you can use SASS with almost anything. When starting a Foundation project, the first thing to do is create a partial file to hold your custom settings since it's not recommended to touch the original Foundation settings.
 
 ### Partials
 
@@ -33,16 +33,16 @@ After adding in your CSS to the custom partial you need to compile it. In the ro
 ```
 compass watch
 ```
-    
+
 While running compass in watch mode, it will automatically compile your sass when it detects a change after saving. You can also compile one time with:
 
 ```
 compass compile
 ```
-    
+
 ### Variables
 
-Variables is where it starts to get fun. You can assign a declaration to a variable and call it anywhere in your CSS. This means you can apply the [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) (Don't Repeat Yourself) principle to your website development. Imagine only needing to change a single variable for a color that is used is several places across your site. Beautiful!
+Variables is where it starts to get fun. You can assign a declaration to a variable and call it anywhere in your CSS. This means you can apply the [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself) (Don't Repeat Yourself) principle to your website development. Imagine only needing to change a single variable for a color that is used is several places across your site.
 
 SASS variables start with a $ sign and can be named anything you want as long as it hasn't been used previously. These example variables would be placed in your custom partial file before they are called:
 
@@ -83,7 +83,7 @@ Calling mixin:
 ```css
 .button { @include vendorprefix(border-radius, 10px); }
 ```
-    
+
 Resulting CSS:
 
 ```css

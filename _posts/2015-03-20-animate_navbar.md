@@ -16,7 +16,7 @@ Make sure you have the jQuery script at the bottom of your page to make these wo
 
 ### Demo 1
 
-The first demo pulls down the navigation bar when the screen scrolls down a specific length and hides when they scroll back up to the top. A good case for this is a slimmer navbar that comes down making navigation available at all times and disappears when they reach the top where there might be a larger nav menu with more options.
+The first demo pulls down the navigation bar when the someone scrolls down a specified length and hides when they scroll back up to the top. A good case for this is a slimmer navbar that comes down making navigation available at all times and disappears when they reach the top where there might be a larger nav menu with more options.
 
 ### HTML
 
@@ -74,7 +74,7 @@ Here you can see it running: [https://jsfiddle.net/eric2025/xj4t7rfk/4/](https:/
 
 ### Demo 2
 
-This demo is my personal method since it frees the screen of any navigation bars until the user starts to scroll up. When they reach the top, it hides itself. The same HTML and CSS snippets from the first demo apply here, so I will just show the javascript.
+This demo is my favorite method since it frees the screen of any navigation bars until the user starts to scroll up. When they reach the top, it hides itself. The same HTML and CSS snippets from the first demo apply here, so I will just show the javascript.
 
 ### Javascript
 

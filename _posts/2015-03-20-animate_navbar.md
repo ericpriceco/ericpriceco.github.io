@@ -14,11 +14,11 @@ Make sure you have the jQuery script at the bottom of your page to make these wo
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 ```
 
-Tip: It's best practice to store your javascript in a separate file and calling after your jQuery source tag instead of including it in your markup.
+Tip: It's best practice to store your javascript in a separate file and calling it after your jQuery source tag instead of including it in your markup.
 
 ## Demo 1
 
-The first demo pulls down the navigation bar when the someone scrolls down a specified length and hides when they scroll back up to the top. A good case for this is a slimmer navbar that comes down making navigation available at all times and disappears when they reach the top where there might be a larger nav menu with more options.
+The first demo pulls down the navigation bar when scrolling down a specified length and hides when scrolling back up to the top. A good case for this is a slimmer navbar that comes down making navigation available at all times and disappears when they reach the top where there might be a larger nav menu with more options.
 
 ### HTML
 

@@ -6,7 +6,7 @@ tags: jquery
 published: true
 ---
 
-Adding a scroll-to-top button makes a conveniant way for readers to get back to the top navigation, especially for a lengthy scroll on a mobile screen. Below is an example of a scroll-to-top button that appears when scrolling down a specific distance and disappers when scrolled back to the top.
+Adding a scroll-to-top button creates a conveniant way for readers to get back to your top navigation, especially for a lengthy page on a mobile screen. Below is an example of a scroll-to-top button that appears when scrolling down a specific distance and disappers when scrolled back to the top.
 
 Make sure you have the jQuery script at the bottom of your page to make these work.
 

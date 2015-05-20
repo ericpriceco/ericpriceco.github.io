@@ -94,6 +94,11 @@ CTA
 }
 
 @media only screen and (max-width: 40em) { 
+    
+    .cta {
+        padding-top: 8em;
+    }
+    
     .cta img {
         max-width: 85%;
     }

@@ -6,5 +6,5 @@ paginate: 10
 paginate_path: "/blog/page:num"
 twitter_username: ericprice2
 github_username:  eric-price
-url: "http://eric-price.co"
+url: "http://eric-price.net"
 title: "Eric Price"

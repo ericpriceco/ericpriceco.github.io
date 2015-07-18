@@ -57,7 +57,7 @@ gulp.task('default', function() {
 });
 ```
 
-You will need to modify your guild build file to suite your project. On line 5, you will need to specify where your stylesheet is located. On line 7, you will need to include all HTML file locations. The single wildcard will cover all files in a folder and a double wildcard will look in all folders.
+You will need to modify your guild build file to suite your project. On line 5, you will need to specify where your stylesheet is located. On line 7, you will need to include all HTML file locations.
 
 In this example build file, I'm using Jekyll and pointed it to the locally running Jekyll server. 
 

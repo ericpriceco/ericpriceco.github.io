@@ -1,5 +1,7 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
+Foundation.set_namespace = function() {};
+
 $(document).foundation();
 
 //Mobile button to scroll to top
@@ -40,4 +42,3 @@ $(function() {
     }
   });
 });
-    

@@ -46,7 +46,7 @@ LOGO
 
 .logo a, .logo a:hover, .logo a:visited {
     text-decoration: none;
-    color: $link-color;
+    color: #fff;
 }
 
 .logo span {
@@ -57,6 +57,12 @@ LOGO
 /*#########################################
 NAVIGATION
 #########################################*/
+
+.logo-background {
+    background: #000 url(/img/logoback2.jpg) no-repeat center center;
+    padding-bottom: 1em;
+    margin-top: 1.3em;
+}
 
 .nav-bar {
     padding-top: 0.6em;
@@ -71,7 +77,7 @@ NAVIGATION
 }
 
 .nav-bar a {
-    color: $link-color;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -134,7 +140,7 @@ ABOUT
 #########################################*/
 
 .about {
-    padding-top: 1em;
+    padding-top: 2em;
     padding-bottom: 2em;
 }
 

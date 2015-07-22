@@ -2,35 +2,12 @@
 layout: main
 title: Eric Price - Web Developer
 ---
-<div class="header-bar"></div>
-
-    <div class="row">
-        
-        <div class="large-9 large-centered columns">
-
-        <div class="background-logo">
-      
-              <div class="logo">
-                    <span>ERIC PRICE</span>
-              </div>
-      
-        <div class="nav-bar">
-            <ul>
-                <li><a href="#work">WORK</a></li>
-                <li><a href="/blog/">BLOG</a></li>
-                <li><a href="mailto:mail@eric-price.net">CONTACT</a></li>
-              </ul>
-        </div>
-      
-        </div>
-        </div>
-</div>
 
       <div class="intro">
           <div class="row">
-            <div class="large-9 large-centered columns">
-                <p>Hi, I'm Eric Price, a web developer in Durham, North Carolina, currently attending the Tech Talent South bootcamp. </p>
-                <span>Find me on:</span>
+            <div class="medium-9 small-centered columns">
+                <p>Hi, I'm Eric Price, a web developer in Durham, North Carolina, currently attending the Tech Talent South bootcamp. <a href="/about.html"><span>More about me.</span></a></p>
+                <div class="social-links"><p>Find me on:</p></div>
                 <p><a href="https://github.com/eric-price">GitHub</a> - <a href="https://www.linkedin.com/pub/eric-price/7/31a/41b">LinkedIn</a> - <a href="https://twitter.com/EricPrice2">Twitter</a></p>
             </div>
           </div>
@@ -42,8 +19,8 @@ title: Eric Price - Web Developer
       
       <div id="work" class="work">
           <div class="row">
-              <div class="large-9 large-centered columns">
-                  <h6>RECENT WORK</h6>
+              <div class="medium-9 small-centered columns">
+                  <h5>RECENT WORK</h5>
                   <p><a href="http://stacipricephoto.com/">Staci Price Photography</a></p>
                   <p><a href="https://github.com/eric-price/Jekyll-PureCSS">Responsive Blog Template</a></p>
               </div>
@@ -53,8 +30,8 @@ title: Eric Price - Web Developer
 
     <div class="blog-list">
         <div class="row">
-          <div class="large-9 large-centered columns">
-              <h6>RECENT ARTICLES</h6>
+          <div class="medium-9 small-centered columns">
+              <h5>RECENT ARTICLES</h5>
               {% for post in site.posts %}
                     <p class="post-date">{{ post.date | date: '%m-%d-%y' }} - <a href="{{ post.url }}">{{ post.title }}</a></p>
             {% endfor %}

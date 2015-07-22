@@ -1,11 +1,8 @@
 $primary-bg: #fff;
 $secondary-bg: #F7F5ED;
-$primary-color: #34495e;
 $link-color: #000;
-$cta-link-color: #fff;
-$sec-link-color: #f28b12;
+$sec-link-color: #D18E30;
 $pri-font-color: #000;
-$sec-font-color: #f7f7f7;
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -33,7 +30,7 @@ hr {
 }
 
 .header-bar {
-    border-bottom: 4px solid #000;
+    border-bottom: 5px solid #000;
 }
 
 /*#########################################
@@ -45,6 +42,11 @@ LOGO
     text-align: center;
     padding-bottom: 1em;
     padding-top: 2em;
+}
+
+.logo a, .logo a:hover, .logo a:visited {
+    text-decoration: none;
+    color: $link-color;
 }
 
 .logo span {
@@ -84,7 +86,6 @@ INTRODUCTION
 .intro {
     padding-top: 2em;
     padding-bottom: 2em;
-//    text-align: center;
 }
 
 .intro a {
@@ -93,6 +94,14 @@ INTRODUCTION
 
 .intro a:hover {
     color: $sec-link-color;
+}
+
+.intro span {
+    text-decoration: underline;
+}
+
+.social-links p {
+    margin: 0;
 }
 
 /*#########################################
@@ -104,7 +113,7 @@ WORK
     padding-bottom: 3em;
 }
 
-.work h6 {
+.work h5 {
     font-weight: 700;
 }
 
@@ -121,6 +130,65 @@ WORK
 }
 
 /*#########################################
+ABOUT
+#########################################*/
+
+.about {
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.about h5 {
+    font-weight: 700;
+}
+
+.about img {
+    border-radius: 50%;
+    max-width: 110px;
+}
+
+.profile-pic {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.about a.resume-button {
+    border: 2px solid;
+    padding: 5px 5px;
+    color: $link-color;
+}
+
+.about a.resume-button:hover {
+    color: $sec-link-color;
+}
+
+.skills {
+    padding-bottom: 2em;
+}
+
+.skills p {
+    margin: 0;
+}
+
+.tools {
+    padding-bottom: 1.5em;
+}
+
+.tools a {
+    color: $link-color;
+}
+
+.tools a:hover {
+    color: $sec-link-color;
+}
+
+.tools ul {
+    list-style: none;
+    margin: 0;
+}
+
+/*#########################################
 BLOG ARTICLE LIST ON HOME
 #########################################*/
 
@@ -128,7 +196,7 @@ BLOG ARTICLE LIST ON HOME
     padding-bottom: 4em;
 }
 
-.blog-list h6 {
+.blog-list h5 {
     font-weight: 700;
 }
 
@@ -287,11 +355,7 @@ FOOTER
 .footer-social-icons {
     padding-top: 0.5em;
     text-align: center;
-}
-
-.footer-social-icons h4 {
-    color: $sec-font-color;
-}    
+}  
 
 .footer-social-icons a {
     color: $link-color;

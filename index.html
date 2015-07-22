@@ -2,82 +2,62 @@
 layout: main
 title: Eric Price - Web Developer
 ---
+<div class="header-bar"></div>
 
-<div class="cta-bg">
-   
-          <div class="nav-bar">
+    <div class="row">
+        
+        <div class="large-9 large-centered columns">
+
+        <div class="background-logo">
+      
+              <div class="logo">
+                    <span>ERIC PRICE</span>
+              </div>
+      
+        <div class="nav-bar">
             <ul>
-                <li><a href="#about">ABOUT</a></li>
                 <li><a href="#work">WORK</a></li>
                 <li><a href="/blog/">BLOG</a></li>
                 <li><a href="mailto:mail@eric-price.net">CONTACT</a></li>
               </ul>
+        </div>
+      
+        </div>
+        </div>
+</div>
+
+      <div class="intro">
+          <div class="row">
+            <div class="large-9 large-centered columns">
+                <p>Hi, I'm Eric Price, a web developer in Durham, North Carolina, currently attending the Tech Talent South bootcamp. </p>
+                <span>Find me on:</span>
+                <p><a href="https://github.com/eric-price">GitHub</a> - <a href="https://www.linkedin.com/pub/eric-price/7/31a/41b">LinkedIn</a> - <a href="https://twitter.com/EricPrice2">Twitter</a></p>
+            </div>
           </div>
-        
-        <div class="row">
-            <div class="cta">
-                <img src="/img/logo.png">
-                <h2>WEB DEVELOPER</h2>
-            </div>
-        </div>
-        
-            <div class="row">
-                <div class="nav-arrow">
-                    <a href="#about"><span>&darr;</span></a>
-                </div>
+      </div>
+      
+      <div class="row">
+        <hr>
+      </div>
+      
+      <div id="work" class="work">
+          <div class="row">
+              <div class="large-9 large-centered columns">
+                  <h6>RECENT WORK</h6>
+                  <p><a href="http://stacipricephoto.com/">Staci Price Photography</a></p>
+                  <p><a href="https://github.com/eric-price/Jekyll-PureCSS">Responsive Blog Template</a></p>
+              </div>
           </div>
-          
-      </div> <!-- cta-bg -->
-      
-      <div class="about" id="about">
-            <div class="row">
-                <div class="large-4 columns profile-picture">
-                    <img src="/img/profile.jpg">
-                </div>
-                <div class="large-8 columns">
-                    <h3>Hello!</h3>
-                    <p>I'm Eric Price, a web developer in the Triangle area of North Carolina. I have a passion for web technologies and love to be inspired by clean thoughtful designs. I thrive on constantly growing my knowledge of everything from responsive web design to the back-end of the web stack using Javascript or Rails.</p>
-                    <h3>Find Me Here</h3>
-                        <div class="social-icons">
-                            <ul>
-                                <li><a href="mailto:mail@eric-price.net"><i class="fa fa-envelope"></i></a></li>
-                                <li><a href="https://github.com/eric-price"><i class="fa fa-github-square"></i></a></li>
-                                <li><a href="https://twitter.com/EricPrice2"><i class="fa fa-twitter-square"></i></a></li>
-                                <li><a href="https://www.linkedin.com/pub/eric-price/7/31a/41b"><i class="fa fa-linkedin-square"></i></a></li>
-                            </ul>
-                        </div>
-                </div>
-            </div>
+            
       </div>
-      
-      <div class="work" id="work">
-      
-      <div class="work-section-1">
+
+    <div class="blog-list">
         <div class="row">
-            <div class="medium-6 columns work-img">
-                <img src="/img/website1.png">
-            </div>
-            <div class="medium-6 columns">
-                <h4>STACI PRICE PHOTOGRAPHY</h4>
-                <h6>PORTFOLIO</h6>
-                <p>Website for photographer Staci Price to showcase her work to clients. With a clean and responsive design, her work stands out and looks great on any screen size.</p>
-                <a href="http://stacipricephoto.com" class="small button">Visit Site</a>
-            </div>
-        </div>
+          <div class="large-9 large-centered columns">
+              <h6>RECENT ARTICLES</h6>
+              {% for post in site.posts %}
+                    <p class="post-date">{{ post.date | date: '%m-%d-%y' }} - <a href="{{ post.url }}">{{ post.title }}</a></p>
+            {% endfor %}
+          </div>
       </div>
-      
-      <div class="work-section-2">
-        <div class="row">
-            <div class="medium-6 columns work-img">
-                <img src="/img/website2.png">
-            </div>
-            <div class="medium-6 columns">
-                <h4>RESPONSIVE TEMPLATE</h4>
-                <h6>BLOG</h6>
-                <p>I wanted to create a blog site that's responsive with a static side-bar providing easy navigation. This template is built using the PureCSS framework and Jekyll, and is freely available on GitHub.</p>
-                <a href="https://github.com/eric-price/Jekyll-PureCSS" class="small button">Visit Site</a>
-            </div>
-        </div>
-      </div>
-          
-      </div> <!-- work section -->
+    </div>

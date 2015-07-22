@@ -1,5 +1,5 @@
 $primary-bg: #fff;
-$secondary-bg: #e8e8e8;
+$secondary-bg: #F7F5ED;
 $primary-color: #34495e;
 $link-color: #000;
 $cta-link-color: #fff;
@@ -9,6 +9,7 @@ $sec-font-color: #f7f7f7;
 
 body {
     font-family: 'Roboto', sans-serif;
+    background: $secondary-bg;
 }
 
 a {
@@ -26,35 +27,49 @@ img {
     height: auto;
 }
 
+hr {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.header-bar {
+    border-bottom: 4px solid #000;
+}
+
 /*#########################################
-CTA
+LOGO
 #########################################*/
 
-.cta-bg {
-    background: #000 url(/img/cta-bg2.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; 
-    height: 100%;
-    width: 100%;
+.logo {
+    font-size: 1.4em;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 2em;
 }
+
+.logo span {
+    padding: 10px 15px;
+    border: solid 3px;
+}
+
+/*#########################################
+NAVIGATION
+#########################################*/
 
 .nav-bar {
     padding-top: 0.6em;
-    padding-right: 1em;
     list-style: none;
-    text-align: right;
+    text-align: center;
 }
 
 .nav-bar li {
     display: inline;
     font-size: 0.9em;
-    padding-left: 0.8em;
+    padding-right: 1em;
 }
 
 .nav-bar a {
-    color: $sec-font-color;
+    color: $link-color;
     text-decoration: none;
 }
 
@@ -62,224 +77,78 @@ CTA
     color: $sec-link-color;
 }
 
-.cta {
-    text-align: center;
-    padding-top: 11em;
-}
-
-.cta img {
-    margin-bottom: 1em;
-}
-
-.cta h1 {
-    font-size: 3.2em;
-    letter-spacing: 0.3em;
-    margin-bottom: 0.2em;
-    color: $sec-font-color;
-}
-
-.cta h2 {
-    font-size: 1.2em;
-    letter-spacing: 0.2em;
-    color: $sec-font-color;
-}
-
-.nav-arrow {
-    color: #bfbfbf;
-    font-size: 2.3em;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-}
-
-.nav-arrow a, .nav-arrow a:visited {
-    color: #bfbfbf;
-}
-
-@media only screen and (max-width: 40em) { 
-    
-    .cta {
-        padding-top: 8em;
-    }
-    
-    .cta img {
-        max-width: 85%;
-    }
-    
-    .nav-bar {
-        text-align: center;
-    }
-    
-    .nav-bar li {
-        padding-left: 0.4em;
-        padding-right: 0.4em;
-        font-size: 0.9em;
-    }
-    
-    .cta h2 {
-        font-size: 1em;
-    }
-}
-
-@media only screen and (min-width: 90.063em) {
-    .cta {
-        padding-top: 14em;
-    }
-}
-
 /*#########################################
-ABOUT
+INTRODUCTION
 #########################################*/
 
-.about {
-    padding-top: 10em;
-    padding-bottom: 10em;
-    background: $secondary-bg;
+.intro {
+    padding-top: 2em;
+    padding-bottom: 2em;
+//    text-align: center;
 }
 
-.social-icons a {
-    color: $pri-font-color;
+.intro a {
+    color: $link-color;
 }
 
-.social-icons a:hover {
+.intro a:hover {
     color: $sec-link-color;
-}
-
-.social-icons ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-icons li {
-    padding-left: 0;
-    display: inline-block;
-    padding-right: 0.6em;
-    font-size: 1.8em;
-}
-
-@media only screen and (max-width: 64em) {
-    
-    .about {
-        padding-top: 5em;
-        padding-bottom: 5em;
-    }
-    
-    .about img {
-        display: none;
-    }
 }
 
 /*#########################################
 WORK
 #########################################*/
 
-.work h4 {
+.work {
+    padding-top: 4em;
+    padding-bottom: 3em;
+}
+
+.work h6 {
     font-weight: 700;
 }
 
-.work button, .work .button {
-    background-color: $sec-link-color
+.work p {
+    margin: 0;
 }
 
-.work button:hover, .work .button:hover {
-    background-color: $link-color
+.work a {
+    color: $link-color;
 }
 
-.work-section-1 {
-    padding-top: 10em;
-    padding-bottom: 10em;
-    background: $primary-bg;
+.work a:hover {
+    color: $sec-link-color;
 }
 
-.work-section-2 {
-    padding-top: 10em;
-    padding-bottom: 10em;
-    background: $secondary-bg;
+/*#########################################
+BLOG ARTICLE LIST ON HOME
+#########################################*/
+
+.blog-list {
+    padding-bottom: 4em;
 }
 
-.work-img {
-    text-align: center;
+.blog-list h6 {
+    font-weight: 700;
 }
 
-@media only screen and (max-width: 40em) {
-    .work-section-1, .work-section-2 {
-        padding-top: 5em;
-        padding-bottom: 5em;
-    }
-    
-    .work img {
-        padding-bottom: 1.3em;
-    }
+.blog-list p {
+    margin: 0;
+    font-size: 1em;
 }
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { 
-    .work-section-1, .work-section-2 {
-        padding-top: 7em;
-        padding-bottom: 7em;
-    }
+.blog-list a {
+    color: $link-color;
 }
 
-//@media only screen and (min-width: 64.063em) { 
-//    .lg-row {
-//        width: 90%;
-//        margin-left: auto;
-//        margin-right: auto;
-//        max-width: initial;
-//    }
-//}
+.blog-list a:hover {
+    color: $sec-link-color;
+}
+
 
 /*#########################################
 BLOG
 #########################################*/
-
-.header-bar {
-    border-bottom: 4px solid #000;
-}
-
-.blog-logo {
-    padding-top: 1em;
-    text-align: center;
-}
-
-.blog-logo img {
-    max-height: 90px;
-    max-width: 90px;
-}
-
-.blog-nav-bar {
-    padding-top: 0.6em;
-    padding-right: 1em;
-    list-style: none;
-    text-align: right;
-}
-
-.blog-nav-bar li {
-    display: inline;
-    font-size: 0.9em;
-    padding-left: 0.8em;
-}
-
-.blog-nav-bar a {
-    color: $link-color;
-    text-decoration: none;
-}
-
-.blog-nav-bar a:hover {
-    color: $sec-link-color;
-}
-
-@media only screen and (max-width: 40em) { 
-    .blog-nav-bar {
-        text-align: center;
-    }
-    
-    .blog-nav-bar li {
-        padding-left: 0.4em;
-        padding-right: 0.4em;
-        font-size: 0.9em;
-    }
-}
 
 .blog {
     margin-top: 3em;
@@ -291,7 +160,7 @@ BLOG
 }
 
 .blog-header h1 {
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 700;
     margin-bottom: 0;
 }
@@ -323,7 +192,7 @@ BLOG POSTS
 #########################################*/
 
 .blog-post {
-    margin-top: 3em;
+    margin-top: 4em;
     margin-bottom: 3em;
 }
 
@@ -397,12 +266,26 @@ FOOTER
 #########################################*/
 
 .footer {
-    background: #212121;
-    padding-top: 4em;
-    padding-bottom: 4em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: $link-color;
+}
+
+.footer a:hover {
+    color: $sec-link-color;
 }
 
 .footer-social-icons {
+    padding-top: 0.5em;
     text-align: center;
 }
 
@@ -411,7 +294,7 @@ FOOTER
 }    
 
 .footer-social-icons a {
-    color: $sec-font-color;
+    color: $link-color;
 }
 
 .footer-social-icons a:hover {

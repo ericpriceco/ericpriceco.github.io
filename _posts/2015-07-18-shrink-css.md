@@ -10,7 +10,7 @@ If you use any front-end frameworks like Foundation or Bootstrap, you know the b
 
 I use the SASS version of Foundation and used to pick only the modules I needed, which shrunk my CSS by around 50%. After minifying it, I got another 30-40% savings in file size. Not too bad, but if I wanted to add anything new later I had to make sure I had the correct css modules enabled. Not anymore with gulp-uncss!
 
-With gulp and uncss, I leave everything enabled in Foundation or Bootstrap and shrink my CSS from 326kb to 12kb. [Uncss](https://github.com/giakki/uncss) uses PhantomJS to load the HTML files and javascript, and only the used stylesheets are parsed out. [Gulp-Uncss](https://github.com/ben-eb/gulp-uncss) uses the [Gulp](http://gulpjs.com/) build tool to automate the process. Let's get started.
+With gulp and uncss, I leave everything enabled in Foundation or Bootstrap and shrink my CSS from 326kb to 6kb! [Uncss](https://github.com/giakki/uncss) uses PhantomJS to load the HTML files and javascript, and only the used stylesheets are parsed out. [Gulp-Uncss](https://github.com/ben-eb/gulp-uncss) uses the [Gulp](http://gulpjs.com/) build tool to automate the process. Let's get started.
 
 ### Install Node.js
 

@@ -154,9 +154,12 @@ ABOUT
 }
 
 .profile-pic {
-    margin-top: 2em;
-    margin-bottom: 2em;
     text-align: center;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    max-width: 110px;
 }
 
 .about a.resume-button {

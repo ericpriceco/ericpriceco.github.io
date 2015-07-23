@@ -34,6 +34,32 @@ hr {
 }
 
 /*#########################################
+Scroll to Top Button
+#########################################*/
+
+.scrollBtn {
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 0.5em 0.5em 0em 0.5em;
+    bottom: 0;
+    right: 0;
+    margin: 0 1em 0.7em 0;
+    position: fixed;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #f7f7f7;
+    border-radius: 3px;
+}
+
+a:hover.scrollBtn,a.scrollBtn {
+    text-decoration: none;
+}
+
+a:hover.scrollBtn {
+    color: $sec-link-color;
+}
+
+/*#########################################
 LOGO
 #########################################*/
 
@@ -60,28 +86,28 @@ NAVIGATION
 
 .logo-background {
     background: #000 url(/img/logoback2.jpg) no-repeat center center;
-    padding-bottom: 1em;
+    padding-bottom: 0.3em;
     margin-top: 1.3em;
 }
 
-.nav-bar {
+nav {
     padding-top: 0.6em;
     list-style: none;
     text-align: center;
 }
 
-.nav-bar li {
+nav li {
     display: inline;
     font-size: 0.9em;
     padding-right: 1em;
 }
 
-.nav-bar a {
+nav a {
     color: #fff;
     text-decoration: none;
 }
 
-.nav-bar a:hover {
+nav a:hover {
     color: $sec-link-color;
 }
 
@@ -90,8 +116,8 @@ INTRODUCTION
 #########################################*/
 
 .intro {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .intro a {
@@ -115,8 +141,8 @@ WORK
 #########################################*/
 
 .work {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .work h5 {
@@ -140,8 +166,8 @@ ABOUT
 #########################################*/
 
 .about {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .about h5 {
@@ -202,7 +228,7 @@ BLOG ARTICLE LIST ON HOME
 #########################################*/
 
 .blog-list {
-    padding-bottom: 4em;
+    margin-bottom: 4em;
 }
 
 .blog-list h5 {
@@ -259,8 +285,8 @@ BLOG
 }
 
 .paginator {
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     text-align: right;
 }
 
@@ -342,22 +368,22 @@ code {
 FOOTER
 #########################################*/
 
-.footer {
-    padding-top: 3em;
-    padding-bottom: 3em;
+footer {
+    margin-top: 3em;
+    margin-bottom: 3em;
     text-align: center;
 }
 
-.footer p {
+footer p {
     margin: 0;
     font-size: 0.9em;
 }
 
-.footer a {
+footer a {
     color: $link-color;
 }
 
-.footer a:hover {
+footer a:hover {
     color: $sec-link-color;
 }
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Speed-Up Jekyll Regeneration
-date: 2015-07-23
+date: 2015-07-22
 tags: jekyll
 published: true
 ---

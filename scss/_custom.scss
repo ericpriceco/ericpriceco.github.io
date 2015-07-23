@@ -102,7 +102,7 @@ nav li {
     padding-right: 1em;
 }
 
-nav a {
+nav a, nav a:visited, nav a:active {
     color: #fff;
     text-decoration: none;
 }
@@ -336,11 +336,11 @@ BLOG POSTS
 }
 
 .highlight {
-  padding: 10px 10px;
-  margin-bottom: 2%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+    padding: 10px 10px;
+    margin-bottom: 2%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     overflow: auto; 
 }
 

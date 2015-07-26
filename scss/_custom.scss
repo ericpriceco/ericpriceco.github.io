@@ -284,6 +284,10 @@ BLOG
     padding: 1% 0;
 }
 
+.posts-list p {
+    word-wrap: break-word;
+}
+
 .paginator {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -345,11 +349,9 @@ BLOG POSTS
 }
 
 pre {
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
+  white-space: pre;
+    word-wrap: normal;
+    overflow: auto;
 }
 
 code {

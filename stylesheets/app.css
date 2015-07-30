@@ -3335,7 +3335,7 @@ LOGO
 .logo { font-size: 1.4em; text-align: center; padding-bottom: 1em; padding-top: 2em; }
 
 /* line 73, ../scss/_custom.scss */
-.logo a, .logo a:hover, .logo a:visited { text-decoration: none; color: #fff; }
+.logo a, .logo a:hover, .logo a:visited { text-decoration: none; color: #000; }
 
 /* line 78, ../scss/_custom.scss */
 .logo span { padding: 10px 15px; border: solid 3px; }
@@ -3353,7 +3353,7 @@ nav { padding-top: 0.6em; list-style: none; text-align: center; }
 nav li { display: inline; font-size: 0.9em; padding-right: 1em; }
 
 /* line 105, ../scss/_custom.scss */
-nav a, nav a:visited, nav a:active { color: #fff; text-decoration: none; }
+nav a, nav a:visited, nav a:active { color: #000; text-decoration: none; }
 
 /* line 110, ../scss/_custom.scss */
 nav a:hover { color: #D18E30; }

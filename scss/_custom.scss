@@ -72,7 +72,7 @@ LOGO
 
 .logo a, .logo a:hover, .logo a:visited {
     text-decoration: none;
-    color: #fff;
+    color: $link-color;
 }
 
 .logo span {
@@ -103,7 +103,7 @@ nav li {
 }
 
 nav a, nav a:visited, nav a:active {
-    color: #fff;
+    color: $link-color;
     text-decoration: none;
 }
 

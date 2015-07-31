@@ -3488,7 +3488,7 @@ BLOG
 BLOG POSTS
 #########################################*/
 /* line 301, ../scss/_custom.scss */
-.blog-post { margin-top: 4em; margin-bottom: 3em; }
+.blog-post { margin-top: 3em; margin-bottom: 3em; }
 
 /* line 306, ../scss/_custom.scss */
 .blog-post a { color: #D18E30; }
@@ -3507,48 +3507,48 @@ BLOG POSTS
 .blog-post h2 { font-size: 1.8em; font-weight: 700; }
 
 /* line 338, ../scss/_custom.scss */
-.blog-post h3 { font-size: 1.3em; }
+.blog-post h3 { font-size: 1.3em; font-weight: 700; margin-top: 2em; }
 
-/* line 342, ../scss/_custom.scss */
+/* line 344, ../scss/_custom.scss */
 .highlight { padding: 10px 10px; margin-bottom: 2%; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; overflow: auto; }
 
-/* line 351, ../scss/_custom.scss */
+/* line 353, ../scss/_custom.scss */
 pre { white-space: pre; word-wrap: normal; overflow: auto; }
 
-/* line 357, ../scss/_custom.scss */
+/* line 359, ../scss/_custom.scss */
 code { border: none; background-color: none !important; color: #f7f7f7; }
 
-/* line 363, ../scss/_custom.scss */
+/* line 365, ../scss/_custom.scss */
 .disqus { margin-top: 4em; margin-bottom: 3em; }
 
 /*#########################################
 FOOTER
 #########################################*/
-/* line 373, ../scss/_custom.scss */
+/* line 375, ../scss/_custom.scss */
 footer { margin-top: 3em; margin-bottom: 3em; text-align: center; }
 
-/* line 379, ../scss/_custom.scss */
+/* line 381, ../scss/_custom.scss */
 footer p { margin: 0; font-size: 0.9em; }
 
-/* line 384, ../scss/_custom.scss */
+/* line 386, ../scss/_custom.scss */
 footer a { color: #000; }
 
-/* line 388, ../scss/_custom.scss */
+/* line 390, ../scss/_custom.scss */
 footer a:hover { color: #D18E30; }
 
-/* line 392, ../scss/_custom.scss */
+/* line 394, ../scss/_custom.scss */
 .footer-social-icons { padding-top: 0.5em; text-align: center; }
 
-/* line 397, ../scss/_custom.scss */
+/* line 399, ../scss/_custom.scss */
 .footer-social-icons a { color: #000; }
 
-/* line 401, ../scss/_custom.scss */
+/* line 403, ../scss/_custom.scss */
 .footer-social-icons a:hover { color: #D18E30; }
 
-/* line 405, ../scss/_custom.scss */
+/* line 407, ../scss/_custom.scss */
 .footer-social-icons ul { list-style: none; padding: 0; margin: 0; }
 
-/* line 411, ../scss/_custom.scss */
+/* line 413, ../scss/_custom.scss */
 .footer-social-icons li { padding-left: 0; display: inline-block; padding-right: 0.6em; padding-left: 0.6em; font-size: 1.8em; }
 
 /* railscasts syntax highlighting */

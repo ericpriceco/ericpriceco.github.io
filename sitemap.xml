@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://eric-price.net/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/about/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/rails-paperclip-s3/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/search-form-rails/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/speedup-jekyll-regeneration/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/shrink-css/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/scroll-to-top-button/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/animate_navbar/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/purecss-sass/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/create-jekyll-blog-part2/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/create-a-jekyll-blog-part1/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/sass-basics/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/tags/rails/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/tags/jekyll/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/tags/css/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/tags/jquery/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/tags/sass/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/tags/purecss/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/tags/foundation/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/tags/compass/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/page2/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/jekyll-osx/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/foundation-plus-sass/</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/blog/index.html</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://eric-price.net/index.html</loc>
+  <lastmod>2015-08-10T20:35:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+</urlset>

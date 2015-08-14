@@ -3425,133 +3425,142 @@ ABOUT
 .skills p { margin: 0; }
 
 /* line 209, ../scss/_custom.scss */
-.tools { padding-bottom: 1.5em; }
+.html-progress .meter { background: #e34f26; }
 
 /* line 213, ../scss/_custom.scss */
-.tools a { color: #000; }
+.css-progress .meter { background: #0070bb; }
 
 /* line 217, ../scss/_custom.scss */
-.tools a:hover { color: #D18E30; }
+.javascript-progress .meter { background: #f0db4f; }
 
 /* line 221, ../scss/_custom.scss */
+.ruby-progress .meter { background: #a31c20; }
+
+/* line 225, ../scss/_custom.scss */
+.tools { padding-bottom: 1.5em; }
+
+/* line 229, ../scss/_custom.scss */
+.tools a { color: #000; }
+
+/* line 233, ../scss/_custom.scss */
+.tools a:hover { color: #D18E30; }
+
+/* line 237, ../scss/_custom.scss */
 .tools ul { list-style: none; margin: 0; }
 
 /*#########################################
 BLOG ARTICLE LIST ON HOME
 #########################################*/
-/* line 230, ../scss/_custom.scss */
+/* line 246, ../scss/_custom.scss */
 .blog-list { margin-bottom: 4em; }
 
-/* line 234, ../scss/_custom.scss */
+/* line 250, ../scss/_custom.scss */
 .blog-list h5 { font-weight: 700; }
 
-/* line 238, ../scss/_custom.scss */
+/* line 254, ../scss/_custom.scss */
 .blog-list p { margin: 0; font-size: 1em; }
 
-/* line 243, ../scss/_custom.scss */
+/* line 259, ../scss/_custom.scss */
 .blog-list a { color: #000; }
 
-/* line 247, ../scss/_custom.scss */
+/* line 263, ../scss/_custom.scss */
 .blog-list a:hover { color: #D18E30; }
 
 /*#########################################
 BLOG
 #########################################*/
-/* line 256, ../scss/_custom.scss */
+/* line 272, ../scss/_custom.scss */
 .blog { margin-top: 3em; margin-bottom: 3em; }
 
-/* line 261, ../scss/_custom.scss */
+/* line 277, ../scss/_custom.scss */
 .blog a { color: #D18E30; }
 
-/* line 265, ../scss/_custom.scss */
+/* line 281, ../scss/_custom.scss */
 .blog-header h1 { font-size: 1.3em; font-weight: 700; margin-bottom: 0; }
 
-/* line 271, ../scss/_custom.scss */
+/* line 287, ../scss/_custom.scss */
 .blog-header h1 a { color: #000; }
 
-/* line 275, ../scss/_custom.scss */
+/* line 291, ../scss/_custom.scss */
 .blog-header h1 a:hover { color: #D18E30; }
 
-/* line 279, ../scss/_custom.scss */
+/* line 295, ../scss/_custom.scss */
 .post-date { font-size: 0.9em; }
 
-/* line 283, ../scss/_custom.scss */
+/* line 299, ../scss/_custom.scss */
 .posts-list { padding: 1% 0; }
 
-/* line 287, ../scss/_custom.scss */
+/* line 303, ../scss/_custom.scss */
 .posts-list p { word-wrap: break-word; }
 
-/* line 291, ../scss/_custom.scss */
+/* line 307, ../scss/_custom.scss */
 .paginator { margin-top: 1em; margin-bottom: 1em; text-align: right; }
 
 /*#########################################
 BLOG POSTS
 #########################################*/
-/* line 301, ../scss/_custom.scss */
+/* line 317, ../scss/_custom.scss */
 .blog-post { margin-top: 3em; margin-bottom: 3em; }
 
-/* line 306, ../scss/_custom.scss */
+/* line 322, ../scss/_custom.scss */
 .blog-post a { color: #D18E30; }
 
-/* line 310, ../scss/_custom.scss */
-.blog-post p img { text-align: center; }
-
-/* line 314, ../scss/_custom.scss */
+/* line 326, ../scss/_custom.scss */
 .post-header { text-align: center; margin-bottom: 3em; }
 
-/* line 319, ../scss/_custom.scss */
+/* line 331, ../scss/_custom.scss */
 .post-header h1 { color: #000; font-size: 2rem; font-weight: 700; }
 
-@media only screen and (max-width: 40em) { /* line 326, ../scss/_custom.scss */
+@media only screen and (max-width: 40em) { /* line 338, ../scss/_custom.scss */
   .post-header h1 { font-size: 1.6em; } }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { /* line 332, ../scss/_custom.scss */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { /* line 344, ../scss/_custom.scss */
   .post-header h1 { font-size: 1.8em; } }
-/* line 337, ../scss/_custom.scss */
+/* line 349, ../scss/_custom.scss */
 .blog-post h2 { font-size: 1.8em; font-weight: 700; }
 
-/* line 342, ../scss/_custom.scss */
+/* line 354, ../scss/_custom.scss */
 .blog-post h3 { font-size: 1.3em; font-weight: 700; margin-top: 2em; }
 
-/* line 348, ../scss/_custom.scss */
+/* line 360, ../scss/_custom.scss */
 .highlight { padding: 10px 10px; margin-bottom: 2%; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; overflow: auto; }
 
-/* line 357, ../scss/_custom.scss */
+/* line 369, ../scss/_custom.scss */
 pre { white-space: pre; word-wrap: normal; overflow: auto; }
 
-/* line 363, ../scss/_custom.scss */
+/* line 375, ../scss/_custom.scss */
 code { border: none; background-color: none !important; color: #f7f7f7; }
 
-/* line 369, ../scss/_custom.scss */
+/* line 381, ../scss/_custom.scss */
 .disqus { margin-top: 4em; margin-bottom: 3em; }
 
 /*#########################################
 FOOTER
 #########################################*/
-/* line 379, ../scss/_custom.scss */
+/* line 391, ../scss/_custom.scss */
 footer { margin-top: 3em; margin-bottom: 3em; text-align: center; }
 
-/* line 385, ../scss/_custom.scss */
+/* line 397, ../scss/_custom.scss */
 footer p { margin: 0; font-size: 0.9em; }
 
-/* line 390, ../scss/_custom.scss */
+/* line 402, ../scss/_custom.scss */
 footer a { color: #000; }
 
-/* line 394, ../scss/_custom.scss */
+/* line 406, ../scss/_custom.scss */
 footer a:hover { color: #D18E30; }
 
-/* line 398, ../scss/_custom.scss */
+/* line 410, ../scss/_custom.scss */
 .footer-social-icons { padding-top: 0.5em; text-align: center; }
 
-/* line 403, ../scss/_custom.scss */
+/* line 415, ../scss/_custom.scss */
 .footer-social-icons a { color: #000; }
 
-/* line 407, ../scss/_custom.scss */
+/* line 419, ../scss/_custom.scss */
 .footer-social-icons a:hover { color: #D18E30; }
 
-/* line 411, ../scss/_custom.scss */
+/* line 423, ../scss/_custom.scss */
 .footer-social-icons ul { list-style: none; padding: 0; margin: 0; }
 
-/* line 417, ../scss/_custom.scss */
+/* line 429, ../scss/_custom.scss */
 .footer-social-icons li { padding-left: 0; display: inline-block; padding-right: 0.6em; padding-left: 0.6em; font-size: 1.8em; }
 
 /* railscasts syntax highlighting */

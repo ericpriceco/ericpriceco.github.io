@@ -6,7 +6,7 @@ tags: rails
 published: true
 ---
 
-This is going to assume you already have Paperclip setup for local storage in your rails app. If not, Thoughtbot's [quickstart](https://github.com/thoughtbot/paperclip#quick-start) guide on their github page will get you going very easily. 
+This is going to assume you already have Paperclip setup for local storage in your rails app. If not, Thoughtbot's [quickstart](https://github.com/thoughtbot/paperclip#quick-start) guide on their github page will get you going very easily.
 
 There are plenty of reasons for using cloud storage service like S3 for your rails app; performance being a big one. The main reason I use it, is it still allows me to use Heroku's hosting service. This guide will be more focused on using Heroku with S3.
 
@@ -33,7 +33,7 @@ Restart your rails server to apply the changes.
 
 ### Setup Development Environment
 
-Create a new file called 'aws.yml' in the config folder. The AWS-SDK gem will automatically read this file.
+Create a new file called 'aws.yml' in the config folder and put in your keys. The AWS-SDK gem will automatically read this file.
 
 ```ruby
 development:
@@ -43,7 +43,7 @@ development:
 
 You could setup a production section in this file here as well, but I'm going to set that up a little differently with Heroku.
 
-VERY IMPORTANT!! Add the 'aws.yml' file to '.gitignore' to prevent anyone from see your access keys after pushing these changes.
+VERY IMPORTANT!! Add the 'aws.yml' file to '.gitignore' to prevent anyone from seeing your access keys after pushing these changes.
 
 .gitignore
 

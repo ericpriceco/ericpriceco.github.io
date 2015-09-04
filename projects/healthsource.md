@@ -15,7 +15,7 @@ When a user logs in, they are greeted with a summary view of their health profil
 
 ### Admin Dashboard
 
-For the admin dashboard, they see a responsive table view due to the amount of information that is presented. The user table is paginated and links to a specific users health and profile views. From here an admin can manage anything for their users by editing existing records or adding new ones. An important feature that would allow a school nurse for instance to move away from paper records or at least use this for easy lookup.
+For the admin dashboard, they see a responsive table view due to the amount of information that is presented. The user table is paginated and links to a specific users health and profile views. From here an admin can manage anything for their users by editing existing records or adding new ones. An important feature that would allow a school nurse for instance to move away from paper records or at least use this for easy lookup. The admin also has access to the search function to quickly locate a user.
 
 ![AdminDashboard](/img/projects/healthsource-admindash1.png)  
 

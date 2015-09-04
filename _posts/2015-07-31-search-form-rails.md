@@ -26,7 +26,7 @@ get 'search' => 'search#index', as: :search
 
 ### Search Controller
 
-You will need to edit the following code for your specific controller you will be searching. In this case, I'm searching my Inventory and Contract controllers. You also need to modify the field you want to search. In the example below, I'm searching the name and contract_name fields. 
+You will need to edit the following code for your specific controller you will be searching. In this case, I'm searching my Inventory and Contract controllers. You also need to modify the field you want to search. In the example below, I'm searching the name and contract_name fields.
 
 Here is where you have your logic for exact search recognition. There is an if statement that will jump to the item page if it finds an exact match by name. If not, it goes to the search results page.
 
@@ -62,13 +62,13 @@ rake db:migrate
 
 ### Search Model
 
-Copy the following code into your Search model and again modify it for your models. 
+Copy the following code into your Search model and again modify it for your models. The lower(string) function will allow this to work in postgres as well as your sqlite development db.
 
 ```ruby
 class Search
   def self.for(keyword)
-    Inventory.where("name LIKE ?", "%#{keyword.downcase}%") +
-    Contract.where("contract_number LIKE ?", "%#{keyword.downcase}%")
+    Inventory.where('LOWER(name) LIKE ?', "%#{keyword.downcase}%") +
+    Contract.where('LOWER(contract_number) LIKE ?', "%#{keyword.downcase}%")
   end
 end
 ```
@@ -103,6 +103,3 @@ The search box can be placed any where you like. This will use the 'search-path'
 ```
 
 Happy searching!
-        
-
-

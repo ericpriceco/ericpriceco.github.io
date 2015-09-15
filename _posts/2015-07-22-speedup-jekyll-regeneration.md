@@ -6,7 +6,7 @@ tags: jekyll
 published: true
 ---
 
-When I recently started using Gulp and Gulp-Uncss in my Jekyll projects, my regeneration time went from less than 2 seconds to anywhere from 30-60 seconds. That was for any edit; small or large. Knowing the only thing that changed was adding Gulp to my workflow, I knew it had to be that. 
+When I recently started using Gulp and Gulp-Uncss in my Jekyll projects, my regeneration time went from less than 2 seconds to anywhere from 30-60 seconds. That was for any edit; small or large.
 
 So I looked at the "node_modules" folder that NPM created when I installed Gulp to the project, and it had over 5k of files. No wonder it was taking so long, since it regenerates all these files everytime I save an edit.
 

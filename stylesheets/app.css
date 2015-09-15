@@ -3314,253 +3314,247 @@ img { max-width: 100%; height: auto; }
 hr { width: 65%; margin: 0 auto; }
 
 /* line 32, ../scss/_custom.scss */
-.header-bar { border-bottom: 5px solid #000; }
+.header-bar { border-bottom: 5px solid #D18E30; }
+
+/* line 36, ../scss/_custom.scss */
+.section-header { text-align: center; margin: 3em 0 4em 0; }
+
+/* line 41, ../scss/_custom.scss */
+.section-header h2 { font-weight: 700; font-size: 2em; }
+
+/* line 46, ../scss/_custom.scss */
+.section-header hr { border-color: #D18E30; max-width: 50px; border-width: 2px; }
 
 /*#########################################
 Scroll to Top Button
 #########################################*/
-/* line 40, ../scss/_custom.scss */
+/* line 56, ../scss/_custom.scss */
 .scrollBtn { text-align: center; background: rgba(0, 0, 0, 0.5); padding: 0.5em 0.5em 0em 0.5em; bottom: 0; right: 0; margin: 0 1em 0.7em 0; position: fixed; font-size: 1.5em; font-weight: 700; color: #f7f7f7; border-radius: 3px; }
 
-/* line 54, ../scss/_custom.scss */
+/* line 70, ../scss/_custom.scss */
 a:hover.scrollBtn, a.scrollBtn { text-decoration: none; }
 
-/* line 58, ../scss/_custom.scss */
+/* line 74, ../scss/_custom.scss */
 a:hover.scrollBtn { color: #D18E30; }
 
 /*#########################################
 LOGO
 #########################################*/
-/* line 66, ../scss/_custom.scss */
+/* line 82, ../scss/_custom.scss */
 .logo { font-size: 1.4em; text-align: center; padding-bottom: 1em; padding-top: 2em; }
 
-/* line 73, ../scss/_custom.scss */
-.logo a, .logo a:hover, .logo a:visited { text-decoration: none; color: #000; }
+/* line 89, ../scss/_custom.scss */
+.logo a, .logo a:hover, .logo a:visited { text-decoration: none; color: #fff; }
 
-/* line 78, ../scss/_custom.scss */
+/* line 94, ../scss/_custom.scss */
 .logo span { padding: 10px 15px; border: solid 3px; }
 
 /*#########################################
 NAVIGATION
 #########################################*/
-/* line 87, ../scss/_custom.scss */
-.logo-background { background: #000 url(/img/logoback2.jpg) no-repeat center center; padding-bottom: 0.3em; margin-top: 1.3em; }
+/* line 103, ../scss/_custom.scss */
+.logo-background { background: #000 url(/img/logoback3.jpg) no-repeat center center; padding-bottom: 0.3em; }
 
-/* line 93, ../scss/_custom.scss */
-nav { padding-top: 0.6em; list-style: none; text-align: center; }
+/* line 108, ../scss/_custom.scss */
+nav ul { padding-top: 0.6em; list-style: none; text-align: center; }
 
-/* line 99, ../scss/_custom.scss */
+/* line 114, ../scss/_custom.scss */
 nav li { display: inline; font-size: 0.9em; padding-right: 1em; }
 
-/* line 105, ../scss/_custom.scss */
-nav a, nav a:visited, nav a:active { color: #000; text-decoration: none; }
+/* line 120, ../scss/_custom.scss */
+nav a, nav a:visited, nav a:active { color: #fff; text-decoration: none; }
 
-/* line 110, ../scss/_custom.scss */
+/* line 125, ../scss/_custom.scss */
 nav a:hover { color: #D18E30; }
+
+/* line 129, ../scss/_custom.scss */
+.cta { margin: 4em 0; text-align: center; color: #fff; }
+
+/* line 135, ../scss/_custom.scss */
+.cta h1 { color: #fff; font-weight: 700; }
 
 /*#########################################
 INTRODUCTION
 #########################################*/
-/* line 118, ../scss/_custom.scss */
+/* line 144, ../scss/_custom.scss */
 .intro { margin-top: 2em; margin-bottom: 2em; }
 
-/* line 123, ../scss/_custom.scss */
+/* line 149, ../scss/_custom.scss */
 .intro a { color: #000; }
 
-/* line 127, ../scss/_custom.scss */
+/* line 153, ../scss/_custom.scss */
 .intro a:hover { color: #D18E30; }
 
-/* line 131, ../scss/_custom.scss */
+/* line 157, ../scss/_custom.scss */
 .intro span { text-decoration: underline; }
 
-/* line 135, ../scss/_custom.scss */
+/* line 161, ../scss/_custom.scss */
 .social-links p { margin: 0; }
 
 /*#########################################
 WORK
 #########################################*/
-/* line 143, ../scss/_custom.scss */
+/* line 169, ../scss/_custom.scss */
 .work { margin-top: 3em; margin-bottom: 3em; }
 
-/* line 148, ../scss/_custom.scss */
-.work h5 { font-weight: 700; }
-
-/* line 152, ../scss/_custom.scss */
-.work p { margin: 0; }
-
-/* line 156, ../scss/_custom.scss */
+/* line 174, ../scss/_custom.scss */
 .work a { color: #000; }
 
-/* line 160, ../scss/_custom.scss */
+/* line 178, ../scss/_custom.scss */
 .work a:hover { color: #D18E30; }
+
+/* line 182, ../scss/_custom.scss */
+.work img { max-height: 160px; }
+
+/* line 186, ../scss/_custom.scss */
+.work h5 { font-weight: 700; margin-top: 1em; }
+
+/* line 191, ../scss/_custom.scss */
+.work .button { background: #F7F5ED; border: 2px solid #000; border-radius: 10px; }
+
+/* line 197, ../scss/_custom.scss */
+.work .button:hover { background: #D18E30; color: #000; }
 
 /*#########################################
 ABOUT
 #########################################*/
-/* line 168, ../scss/_custom.scss */
-.about { margin-top: 2em; margin-bottom: 2em; }
+/* line 206, ../scss/_custom.scss */
+.about { margin-top: 2em; margin-bottom: 4em; }
 
-/* line 173, ../scss/_custom.scss */
-.about h5 { font-weight: 700; }
-
-/* line 177, ../scss/_custom.scss */
+/* line 211, ../scss/_custom.scss */
 .about img { border-radius: 50%; max-width: 110px; }
 
-/* line 182, ../scss/_custom.scss */
-.profile-pic { text-align: center; }
-
-/* line 186, ../scss/_custom.scss */
-.profile-pic img { border-radius: 50%; max-width: 110px; }
-
-/* line 191, ../scss/_custom.scss */
-.about a.resume-button { border: 2px solid; padding: 5px 5px; color: #000; }
-
-/* line 197, ../scss/_custom.scss */
-.about a.resume-button:hover { color: #D18E30; }
-
-/* line 201, ../scss/_custom.scss */
-.skills { padding-bottom: 2em; }
-
-/* line 205, ../scss/_custom.scss */
-.skills p { margin: 0; }
-
-/* line 209, ../scss/_custom.scss */
-.html-progress .meter { background: #e34f26; }
-
-/* line 213, ../scss/_custom.scss */
-.css-progress .meter { background: #0070bb; }
-
-/* line 217, ../scss/_custom.scss */
-.javascript-progress .meter { background: #f0db4f; }
+/* line 216, ../scss/_custom.scss */
+.profile-pic { text-align: center; margin-bottom: 2em; }
 
 /* line 221, ../scss/_custom.scss */
-.ruby-progress .meter { background: #a31c20; }
+.profile-pic img { border-radius: 50%; max-width: 110px; }
 
-/* line 225, ../scss/_custom.scss */
-.tools { padding-bottom: 1.5em; }
+/* line 226, ../scss/_custom.scss */
+.social-links a { color: #000; }
 
-/* line 229, ../scss/_custom.scss */
-.tools a { color: #000; }
+/* line 230, ../scss/_custom.scss */
+.social-links a:hover { color: #D18E30; }
 
-/* line 233, ../scss/_custom.scss */
-.tools a:hover { color: #D18E30; }
-
-/* line 237, ../scss/_custom.scss */
-.tools ul { list-style: none; margin: 0; }
+/* line 234, ../scss/_custom.scss */
+.social-links p { margin: 0; }
 
 /*#########################################
 BLOG ARTICLE LIST ON HOME
 #########################################*/
-/* line 246, ../scss/_custom.scss */
+/* line 243, ../scss/_custom.scss */
 .blog-list { margin-bottom: 4em; }
 
-/* line 250, ../scss/_custom.scss */
+/* line 247, ../scss/_custom.scss */
 .blog-list h5 { font-weight: 700; }
 
-/* line 254, ../scss/_custom.scss */
+/* line 251, ../scss/_custom.scss */
 .blog-list p { margin: 0; font-size: 1em; }
 
-/* line 259, ../scss/_custom.scss */
+/* line 256, ../scss/_custom.scss */
 .blog-list a { color: #000; }
 
-/* line 263, ../scss/_custom.scss */
+/* line 260, ../scss/_custom.scss */
 .blog-list a:hover { color: #D18E30; }
+
+/* line 264, ../scss/_custom.scss */
+.blog-list span { font-weight: 300; }
 
 /*#########################################
 BLOG
 #########################################*/
-/* line 272, ../scss/_custom.scss */
+/* line 273, ../scss/_custom.scss */
 .blog { margin-top: 3em; margin-bottom: 3em; }
 
-/* line 277, ../scss/_custom.scss */
+/* line 278, ../scss/_custom.scss */
 .blog a { color: #D18E30; }
 
-/* line 281, ../scss/_custom.scss */
+/* line 282, ../scss/_custom.scss */
 .blog-header h1 { font-size: 1.3em; font-weight: 700; margin-bottom: 0; }
 
-/* line 287, ../scss/_custom.scss */
+/* line 288, ../scss/_custom.scss */
 .blog-header h1 a { color: #000; }
 
-/* line 291, ../scss/_custom.scss */
+/* line 292, ../scss/_custom.scss */
 .blog-header h1 a:hover { color: #D18E30; }
 
-/* line 295, ../scss/_custom.scss */
+/* line 296, ../scss/_custom.scss */
 .post-date { font-size: 0.9em; }
 
-/* line 299, ../scss/_custom.scss */
+/* line 300, ../scss/_custom.scss */
 .posts-list { padding: 1% 0; }
 
-/* line 303, ../scss/_custom.scss */
+/* line 304, ../scss/_custom.scss */
 .posts-list p { word-wrap: break-word; }
 
-/* line 307, ../scss/_custom.scss */
+/* line 308, ../scss/_custom.scss */
 .paginator { margin-top: 1em; margin-bottom: 1em; text-align: right; }
 
 /*#########################################
 BLOG POSTS
 #########################################*/
-/* line 317, ../scss/_custom.scss */
+/* line 318, ../scss/_custom.scss */
 .blog-post { margin-top: 3em; margin-bottom: 3em; }
 
-/* line 322, ../scss/_custom.scss */
+/* line 323, ../scss/_custom.scss */
 .blog-post a { color: #D18E30; }
 
-/* line 326, ../scss/_custom.scss */
+/* line 327, ../scss/_custom.scss */
 .post-header { text-align: center; margin-bottom: 3em; }
 
-/* line 331, ../scss/_custom.scss */
+/* line 332, ../scss/_custom.scss */
 .post-header h1 { color: #000; font-size: 2rem; font-weight: 700; }
 
-@media only screen and (max-width: 40em) { /* line 338, ../scss/_custom.scss */
+@media only screen and (max-width: 40em) { /* line 339, ../scss/_custom.scss */
   .post-header h1 { font-size: 1.6em; } }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { /* line 344, ../scss/_custom.scss */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { /* line 345, ../scss/_custom.scss */
   .post-header h1 { font-size: 1.8em; } }
-/* line 349, ../scss/_custom.scss */
+/* line 350, ../scss/_custom.scss */
 .blog-post h2 { font-size: 1.8em; font-weight: 700; }
 
-/* line 354, ../scss/_custom.scss */
+/* line 355, ../scss/_custom.scss */
 .blog-post h3 { font-size: 1.3em; font-weight: 700; margin-top: 2em; }
 
-/* line 360, ../scss/_custom.scss */
+/* line 361, ../scss/_custom.scss */
 .highlight { padding: 10px 10px; margin-bottom: 2%; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; overflow: auto; }
 
-/* line 369, ../scss/_custom.scss */
+/* line 370, ../scss/_custom.scss */
 pre { white-space: pre; word-wrap: normal; overflow: auto; }
 
-/* line 375, ../scss/_custom.scss */
+/* line 376, ../scss/_custom.scss */
 code { border: none; background-color: none !important; color: #f7f7f7; }
 
-/* line 381, ../scss/_custom.scss */
+/* line 382, ../scss/_custom.scss */
 .disqus { margin-top: 4em; margin-bottom: 3em; }
 
 /*#########################################
 FOOTER
 #########################################*/
-/* line 391, ../scss/_custom.scss */
+/* line 392, ../scss/_custom.scss */
 footer { margin-top: 3em; margin-bottom: 3em; text-align: center; }
 
-/* line 397, ../scss/_custom.scss */
+/* line 398, ../scss/_custom.scss */
 footer p { margin: 0; font-size: 0.9em; }
 
-/* line 402, ../scss/_custom.scss */
+/* line 403, ../scss/_custom.scss */
 footer a { color: #000; }
 
-/* line 406, ../scss/_custom.scss */
+/* line 407, ../scss/_custom.scss */
 footer a:hover { color: #D18E30; }
 
-/* line 410, ../scss/_custom.scss */
+/* line 411, ../scss/_custom.scss */
 .footer-social-icons { padding-top: 0.5em; text-align: center; }
 
-/* line 415, ../scss/_custom.scss */
+/* line 416, ../scss/_custom.scss */
 .footer-social-icons a { color: #000; }
 
-/* line 419, ../scss/_custom.scss */
+/* line 420, ../scss/_custom.scss */
 .footer-social-icons a:hover { color: #D18E30; }
 
-/* line 423, ../scss/_custom.scss */
+/* line 424, ../scss/_custom.scss */
 .footer-social-icons ul { list-style: none; padding: 0; margin: 0; }
 
-/* line 429, ../scss/_custom.scss */
+/* line 430, ../scss/_custom.scss */
 .footer-social-icons li { padding-left: 0; display: inline-block; padding-right: 0.6em; padding-left: 0.6em; font-size: 1.8em; }
 
 /* railscasts syntax highlighting */

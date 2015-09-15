@@ -30,7 +30,23 @@ hr {
 }
 
 .header-bar {
-    border-bottom: 5px solid #000;
+    border-bottom: 5px solid $sec-link-color;
+}
+
+.section-header {
+  text-align: center;
+  margin: 3em 0 4em 0;
+}
+
+.section-header h2 {
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.section-header hr {
+  border-color: $sec-link-color;
+  max-width: 50px;
+  border-width: 2px;
 }
 
 /*#########################################
@@ -72,7 +88,7 @@ LOGO
 
 .logo a, .logo a:hover, .logo a:visited {
     text-decoration: none;
-    color: $link-color;
+    color: #fff;
 }
 
 .logo span {
@@ -85,12 +101,11 @@ NAVIGATION
 #########################################*/
 
 .logo-background {
-    background: #000 url(/img/logoback2.jpg) no-repeat center center;
+    background: #000 url(/img/logoback3.jpg) no-repeat center center;
     padding-bottom: 0.3em;
-    margin-top: 1.3em;
 }
 
-nav {
+nav ul {
     padding-top: 0.6em;
     list-style: none;
     text-align: center;
@@ -103,12 +118,23 @@ nav li {
 }
 
 nav a, nav a:visited, nav a:active {
-    color: $link-color;
+    color: #fff;
     text-decoration: none;
 }
 
 nav a:hover {
     color: $sec-link-color;
+}
+
+.cta {
+  margin: 4em 0;
+  text-align: center;
+  color: #fff;
+}
+
+.cta h1 {
+  color: #fff;
+  font-weight: 700;
 }
 
 /*#########################################
@@ -145,14 +171,6 @@ WORK
     margin-bottom: 3em;
 }
 
-.work h5 {
-    font-weight: 700;
-}
-
-.work p {
-    margin: 0;
-}
-
 .work a {
     color: $link-color;
 }
@@ -161,17 +179,33 @@ WORK
     color: $sec-link-color;
 }
 
+.work img {
+  max-height: 160px;
+}
+
+.work h5 {
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.work .button {
+  background: $secondary-bg;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.work .button:hover {
+  background: $sec-link-color;
+  color: $pri-font-color;
+}
+
 /*#########################################
 ABOUT
 #########################################*/
 
 .about {
     margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.about h5 {
-    font-weight: 700;
+    margin-bottom: 4em;
 }
 
 .about img {
@@ -181,6 +215,7 @@ ABOUT
 
 .profile-pic {
     text-align: center;
+    margin-bottom: 2em;
 }
 
 .profile-pic img {
@@ -188,56 +223,18 @@ ABOUT
     max-width: 110px;
 }
 
-.about a.resume-button {
-    border: 2px solid;
-    padding: 5px 5px;
+.social-links a {
     color: $link-color;
 }
 
-.about a.resume-button:hover {
+.social-links a:hover {
     color: $sec-link-color;
 }
 
-.skills {
-    padding-bottom: 2em;
-}
-
-.skills p {
+.social-links p {
     margin: 0;
 }
 
-.html-progress .meter {
-    background: #e34f26;
-}
-
-.css-progress .meter {
-    background: #0070bb;
-}
-
-.javascript-progress .meter {
-    background: #f0db4f;
-}
-
-.ruby-progress .meter {
-    background: #a31c20;
-}
-
-.tools {
-    padding-bottom: 1.5em;
-}
-
-.tools a {
-    color: $link-color;
-}
-
-.tools a:hover {
-    color: $sec-link-color;
-}
-
-.tools ul {
-    list-style: none;
-    margin: 0;
-}
 
 /*#########################################
 BLOG ARTICLE LIST ON HOME
@@ -262,6 +259,10 @@ BLOG ARTICLE LIST ON HOME
 
 .blog-list a:hover {
     color: $sec-link-color;
+}
+
+.blog-list span {
+  font-weight: 300;
 }
 
 

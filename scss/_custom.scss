@@ -76,7 +76,7 @@ a:hover.scrollBtn {
 }
 
 /*#########################################
-LOGO
+CTA
 #########################################*/
 
 .logo {
@@ -96,14 +96,25 @@ LOGO
     border: solid 3px;
 }
 
-/*#########################################
-NAVIGATION
-#########################################*/
-
 .logo-background {
     background: #000 url(/img/logoback3.jpg) no-repeat center center;
     padding-bottom: 0.3em;
 }
+
+.cta {
+  margin: 4em 0;
+  text-align: center;
+  color: #fff;
+}
+
+.cta h1 {
+  color: #fff;
+  font-weight: 700;
+}
+
+/*#########################################
+NAVIGATION
+#########################################*/
 
 nav ul {
     padding-top: 0.6em;
@@ -126,16 +137,6 @@ nav a:hover {
     color: $sec-link-color;
 }
 
-.cta {
-  margin: 4em 0;
-  text-align: center;
-  color: #fff;
-}
-
-.cta h1 {
-  color: #fff;
-  font-weight: 700;
-}
 
 /*#########################################
 INTRODUCTION
@@ -169,6 +170,7 @@ WORK
 .work {
     margin-top: 3em;
     margin-bottom: 3em;
+    text-align: center;
 }
 
 .work a {
@@ -188,15 +190,8 @@ WORK
   margin-top: 1em;
 }
 
-.work .button {
-  background: $secondary-bg;
-  border: 2px solid #000;
-  border-radius: 10px;
-}
-
-.work .button:hover {
-  background: $sec-link-color;
-  color: $pri-font-color;
+.work .projects {
+  margin-bottom: 2em;
 }
 
 /*#########################################
@@ -241,7 +236,8 @@ BLOG ARTICLE LIST ON HOME
 #########################################*/
 
 .blog-list {
-    margin-bottom: 4em;
+    margin-top: 2em;
+    margin-bottom: 6em;
 }
 
 .blog-list h5 {

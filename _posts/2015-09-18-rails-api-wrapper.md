@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rails: Create an API wrapper with HTTParty
+title: Rails - Create an API wrapper with HTTParty
 date: 2015-09-18
 tags: rails
 published: true
@@ -114,7 +114,7 @@ The first line is pulling in the new class, followed by the 'wunderground' actio
 
 ### View
 
-```ruby
+```html
 # /app/views/wunderground.html.erb
 
 <div>

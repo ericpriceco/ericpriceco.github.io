@@ -30,23 +30,7 @@ hr {
 }
 
 .header-bar {
-    border-bottom: 5px solid $sec-link-color;
-}
-
-.section-header {
-  text-align: center;
-  margin: 3em 0 4em 0;
-}
-
-.section-header h2 {
-  font-weight: 700;
-  font-size: 2em;
-}
-
-.section-header hr {
-  border-color: $sec-link-color;
-  max-width: 50px;
-  border-width: 2px;
+    border-bottom: 5px solid $link-color;
 }
 
 /*#########################################
@@ -79,42 +63,58 @@ a:hover.scrollBtn {
 CTA
 #########################################*/
 
-.logo {
-    font-size: 1.4em;
-    text-align: center;
-    padding-bottom: 1em;
-    padding-top: 2em;
+// .logo {
+//     font-size: 1.4em;
+//     text-align: center;
+//     padding-bottom: 1em;
+//     padding-top: 2em;
+// }
+//
+// .logo a, .logo a:hover, .logo a:visited {
+//     text-decoration: none;
+//     color: #000;
+// }
+//
+// .logo span {
+//     padding: 10px 15px;
+//     border: solid 3px;
+// }
+//
+// .logo-background {
+//     background: #000 url(/img/logoback3.jpg) no-repeat center center;
+//     padding-bottom: 0.3em;
+// }
+
+.logo2 {
+  margin-top: 2em;
 }
 
-.logo a, .logo a:hover, .logo a:visited {
-    text-decoration: none;
-    color: #fff;
-}
-
-.logo span {
-    padding: 10px 15px;
-    border: solid 3px;
-}
-
-.logo-background {
-    background: #000 url(/img/logoback3.jpg) no-repeat center center;
-    padding-bottom: 0.3em;
+.logo2 img {
+  max-width: 65px;
 }
 
 .cta {
-  margin: 4em 0;
+  margin-top: 1em;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 .cta h1 {
-  color: #fff;
   font-weight: 700;
+  font-size: 2em;
+}
+
+.cta h1 a, .cta h1 a:hover {
+  color: $link-color;
 }
 
 /*#########################################
 NAVIGATION
 #########################################*/
+
+nav {
+  margin-bottom: 6em;
+}
 
 nav ul {
     padding-top: 0.6em;
@@ -129,7 +129,7 @@ nav li {
 }
 
 nav a, nav a:visited, nav a:active {
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
@@ -137,40 +137,13 @@ nav a:hover {
     color: $sec-link-color;
 }
 
-
-/*#########################################
-INTRODUCTION
-#########################################*/
-
-.intro {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.intro a {
-    color: $link-color;
-}
-
-.intro a:hover {
-    color: $sec-link-color;
-}
-
-.intro span {
-    text-decoration: underline;
-}
-
-.social-links p {
-    margin: 0;
-}
-
 /*#########################################
 WORK
 #########################################*/
 
 .work {
-    margin-top: 3em;
-    margin-bottom: 3em;
-    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
 .work a {
@@ -181,17 +154,33 @@ WORK
     color: $sec-link-color;
 }
 
-.work img {
-  max-height: 160px;
+// .work img {
+//   max-height: 160px;
+// }
+
+// .work h5 {
+//   font-weight: 700;
+//   margin-top: 1em;
+// }
+//
+// .work .projects {
+//   margin-bottom: 2em;
+// }
+
+.project-section {
+  margin: 1em 0;
 }
 
-.work h5 {
-  font-weight: 700;
-  margin-top: 1em;
+.project-section p {
+  margin: 0;
 }
 
-.work .projects {
-  margin-bottom: 2em;
+.project-section span {
+  color: #7d7d7d;
+}
+
+.project-section h6 {
+  margin-bottom: 0.1em;
 }
 
 /*#########################################
@@ -199,7 +188,7 @@ ABOUT
 #########################################*/
 
 .about {
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 4em;
 }
 
@@ -236,21 +225,20 @@ BLOG ARTICLE LIST ON HOME
 #########################################*/
 
 .blog-list {
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 6em;
 }
 
-.blog-list h5 {
-    font-weight: 700;
-}
-
 .blog-list p {
-    margin: 0;
-    font-size: 1em;
+    margin: 0.3em 0 0.3em 0;
 }
 
 .blog-list a {
     color: $link-color;
+}
+
+.blog-list h4 {
+  padding-bottom: 0.7em;
 }
 
 .blog-list a:hover {
@@ -258,7 +246,7 @@ BLOG ARTICLE LIST ON HOME
 }
 
 .blog-list span {
-  font-weight: 300;
+    color: #7d7d7d;
 }
 
 
@@ -272,7 +260,11 @@ BLOG
 }
 
 .blog a {
-    color: $sec-link-color;
+    color: $pri-font-color;
+}
+
+.blog a:hover {
+  color: $sec-link-color;
 }
 
 .blog-header h1 {
@@ -405,7 +397,7 @@ footer a:hover {
 }
 
 .footer-social-icons {
-    padding-top: 0.5em;
+    padding-bottom: 1em;
     text-align: center;
 }
 

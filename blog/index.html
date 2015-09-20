@@ -5,9 +5,9 @@ title: Eric Price - Web Developer
 
 <div class="blog">
     <div class="row">
-        <div class="large-9 medium-10 columns small-centered">
+        <div class="large-10 medium-10 columns small-centered">
             {% for post in paginator.posts %}
-            
+
                 <div class="posts-list">
                     <div class="blog-header">
                         <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
@@ -16,13 +16,13 @@ title: Eric Price - Web Developer
                         <p>{{ post.content | strip_html | truncatewords:65 }}</p>
                         <p><a href="{{ post.url }}">Read More <i class="fa fa-arrow-circle-o-right"></i></a></p>
                 </div>
-            
+
             {% endfor %}
-            
+
             <nav class="paginator">
-                
+
                 {% if paginator.total_pages > 1 %}
-                
+
                     <div class="pagination">
                             {% if paginator.previous_page %}
                                 <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
@@ -47,11 +47,9 @@ title: Eric Price - Web Developer
                     {% endif %}
                         </div>
                     {% endif %}
-                
-            </nav> 
-            
+
+            </nav>
+
         </div>
     </div>
 </div>
-
-    

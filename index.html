@@ -3,58 +3,46 @@ layout: main
 title: Eric Price - Web Developer
 ---
 
-      <div id="work" class="work">
-          <div class="row">
-              <div class="section-header">
-                <h2>Recent Projects</h2>
-                <hr>
-              </div>
-            </div>
-                <div class="row projects">
-
-                  <div class="large-4 columns">
-                    <a href="/projects/assetwire.html"><img src="/img/projects/dashboard.png"></a>
-                    <h5><a href="/projects/assetwire.html">AssetWire</a></h5>
-                    <p>AssetWire is an IT asset and contract tracking system with a business intelligence dashboard for critical data and a ticketing system.</p>
-                  </div>
-
-                  <div class="large-4 columns">
-                    <a href="/projects/healthsource.html"><img src="/img/projects/healthsource-userdash.png"></a>
-                    <h5><a href="/projects/healthsource.html">HealthSource</a></h5>
-                    <p>HealthSource is an app that makes it easy for school nurses or daycare facilities to keep track of critical health information for their students/children.</p>
-                  </div>
-
-                  <div class="large-4 columns">
-                      <a href="http://stacipricephoto.com"><img src="/img/projects/stacipricephoto.png"></a>
-                    <h5><a href="http://stacipricephoto.com">Staci Price Photography</a></h5>
-                    <p>Staci Price Photography is a portfolio website with a clean responsive design that makes the work stand out and provide easy navigation for visitors.</p>
-                </div>
-
-              </div>
-
-              <div class="row">
-                <p>Visit my <a href="http://github.com/eric-price/"><strong>Github</strong></a> page to see my other projects.</p>
-              </div>
-
-          </div>
-
+<div id="work" class="work">
+  <div class="row">
+    <div class="large-10 medium-10 small-centered columns">
+      <h4>PROJECTS</h4>
+      <div class="project-section">
+        <h6><a href="/projects/assetwire.html">AssetWire</a></h6>
+        <p><span>IT asset and contract tracking system with a business intelligence dashboard for critical data and a ticketing system.</span></p>
       </div>
-
-      <div class="row">
-        <hr>
+      <div class="project-section">
+        <h6><a href="/projects/healthsource.html">HealthSource</a></h6>
+        <p><span>app that makes it easy for school nurses or daycare facilities to keep track of critical health information for their students or children.</span></p>
       </div>
-
-    <div class="blog-list">
-        <div class="row">
-            <div class="section-header">
-              <h2>Recent Posts</h2>
-              <hr>
-            </div>
-          </div>
-          <div class="row">
-            {% for post in site.posts limit:5 %}
-              <h5><a href="{{ post.url }}">{{ post.title }}</a><span> - Posted {{ post.date | date: '%m-%d-%y' }}</span></h5>
-
-            {% endfor %}
-          </div>
+      <div class="project-section">
+        <h6><a href="http://stacipricephoto.com">Staci Price Photography</a></h6>
+        <p><span>portfolio website with a clean responsive design that makes the work stand out and provide easy navigation for visitors.</span></p>
+      </div>
     </div>
+  </div>
+
+  <div class="row text-center">
+    <p>Visit my <a href="http://github.com/eric-price/"><strong>Github</strong></a> page to see my other projects.</p>
+  </div>
+
+</div>
+
+<div class="row">
+  <hr>
+</div>
+
+<div class="blog-list">
+  <div class="row">
+    <div class="large-10 medium-10 small-centered columns">
+      <h4>POSTS</h4>
+
+    {% for post in site.posts limit:5 %}
+    <p><a href="{{ post.url }}">{{ post.title }}
+      <span> - Posted {{ post.date | date: '%m-%d-%y' }}</span>
+    </a>
+
+    {% endfor %}
+  </div>
+</div>
+</div>

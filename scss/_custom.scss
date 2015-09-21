@@ -3,6 +3,7 @@ $secondary-bg: #F7F5ED;
 $link-color: #000;
 $sec-link-color: #D18E30;
 $pri-font-color: #000;
+$light-font-color: #7d7d7d;
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -176,7 +177,7 @@ WORK
 }
 
 .project-section span {
-  color: #7d7d7d;
+  color: $light-font-color;
 }
 
 .project-section h6 {
@@ -269,7 +270,6 @@ BLOG
 
 .blog-header h1 {
     font-size: 1.3em;
-    font-weight: 700;
     margin-bottom: 0;
 }
 
@@ -291,6 +291,11 @@ BLOG
 
 .posts-list p {
     word-wrap: break-word;
+    color: $light-font-color;
+}
+
+.posts-list a {
+  color: $light-font-color;
 }
 
 .paginator {

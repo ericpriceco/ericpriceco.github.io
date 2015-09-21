@@ -3298,155 +3298,155 @@ th.hide-for-touch { display: table-cell !important; }
   th.show-for-print { display: table-cell !important; } }
 @media not print { /* line 489, ../bower_components/foundation/scss/foundation/components/_visibility.scss */
   .show-for-print { display: none !important; } }
-/* line 7, ../scss/_custom.scss */
+/* line 8, ../scss/_custom.scss */
 body { font-family: 'Roboto', sans-serif; background: #F7F5ED; }
 
-/* line 12, ../scss/_custom.scss */
+/* line 13, ../scss/_custom.scss */
 a { text-decoration: none; word-wrap: break-word; }
 
-/* line 17, ../scss/_custom.scss */
+/* line 18, ../scss/_custom.scss */
 a:hover, a:focus { text-decoration: none; }
 
-/* line 22, ../scss/_custom.scss */
+/* line 23, ../scss/_custom.scss */
 img { max-width: 100%; height: auto; }
 
-/* line 27, ../scss/_custom.scss */
+/* line 28, ../scss/_custom.scss */
 hr { width: 65%; margin: 0 auto; }
 
-/* line 32, ../scss/_custom.scss */
+/* line 33, ../scss/_custom.scss */
 .header-bar { border-bottom: 5px solid #000; }
 
 /*#########################################
 Scroll to Top Button
 #########################################*/
-/* line 40, ../scss/_custom.scss */
+/* line 41, ../scss/_custom.scss */
 .scrollBtn { text-align: center; background: rgba(0, 0, 0, 0.5); padding: 0.5em 0.5em 0em 0.5em; bottom: 0; right: 0; margin: 0 1em 0.7em 0; position: fixed; font-size: 1.5em; font-weight: 700; color: #f7f7f7; border-radius: 3px; }
 
-/* line 54, ../scss/_custom.scss */
+/* line 55, ../scss/_custom.scss */
 a:hover.scrollBtn, a.scrollBtn { text-decoration: none; }
 
-/* line 58, ../scss/_custom.scss */
+/* line 59, ../scss/_custom.scss */
 a:hover.scrollBtn { color: #D18E30; }
 
 /*#########################################
 CTA
 #########################################*/
-/* line 88, ../scss/_custom.scss */
+/* line 89, ../scss/_custom.scss */
 .logo2 { margin-top: 2em; }
 
-/* line 92, ../scss/_custom.scss */
+/* line 93, ../scss/_custom.scss */
 .logo2 img { max-width: 65px; }
 
-/* line 96, ../scss/_custom.scss */
+/* line 97, ../scss/_custom.scss */
 .cta { margin-top: 1em; text-align: center; color: #000; }
 
-/* line 102, ../scss/_custom.scss */
+/* line 103, ../scss/_custom.scss */
 .cta h1 { font-weight: 700; font-size: 2em; }
 
-/* line 107, ../scss/_custom.scss */
+/* line 108, ../scss/_custom.scss */
 .cta h1 a, .cta h1 a:hover { color: #000; }
 
 /*#########################################
 NAVIGATION
 #########################################*/
-/* line 115, ../scss/_custom.scss */
+/* line 116, ../scss/_custom.scss */
 nav { margin-bottom: 6em; }
 
-/* line 119, ../scss/_custom.scss */
+/* line 120, ../scss/_custom.scss */
 nav ul { padding-top: 0.6em; list-style: none; text-align: center; }
 
-/* line 125, ../scss/_custom.scss */
+/* line 126, ../scss/_custom.scss */
 nav li { display: inline; font-size: 0.9em; padding-right: 1em; }
 
-/* line 131, ../scss/_custom.scss */
+/* line 132, ../scss/_custom.scss */
 nav a, nav a:visited, nav a:active { color: #000; text-decoration: none; }
 
-/* line 136, ../scss/_custom.scss */
+/* line 137, ../scss/_custom.scss */
 nav a:hover { color: #D18E30; }
 
 /*#########################################
 WORK
 #########################################*/
-/* line 144, ../scss/_custom.scss */
+/* line 145, ../scss/_custom.scss */
 .work { margin-top: 4em; margin-bottom: 4em; }
 
-/* line 149, ../scss/_custom.scss */
+/* line 150, ../scss/_custom.scss */
 .work a { color: #000; }
 
-/* line 153, ../scss/_custom.scss */
+/* line 154, ../scss/_custom.scss */
 .work a:hover { color: #D18E30; }
 
-/* line 170, ../scss/_custom.scss */
+/* line 171, ../scss/_custom.scss */
 .project-section { margin: 1em 0; }
 
-/* line 174, ../scss/_custom.scss */
+/* line 175, ../scss/_custom.scss */
 .project-section p { margin: 0; }
 
-/* line 178, ../scss/_custom.scss */
+/* line 179, ../scss/_custom.scss */
 .project-section span { color: #7d7d7d; }
 
-/* line 182, ../scss/_custom.scss */
+/* line 183, ../scss/_custom.scss */
 .project-section h6 { margin-bottom: 0.1em; }
 
 /*#########################################
 ABOUT
 #########################################*/
-/* line 190, ../scss/_custom.scss */
+/* line 191, ../scss/_custom.scss */
 .about { margin-top: 4em; margin-bottom: 4em; }
 
-/* line 195, ../scss/_custom.scss */
+/* line 196, ../scss/_custom.scss */
 .about img { border-radius: 50%; max-width: 110px; }
 
-/* line 200, ../scss/_custom.scss */
+/* line 201, ../scss/_custom.scss */
 .profile-pic { text-align: center; margin-bottom: 2em; }
 
-/* line 205, ../scss/_custom.scss */
+/* line 206, ../scss/_custom.scss */
 .profile-pic img { border-radius: 50%; max-width: 110px; }
 
-/* line 210, ../scss/_custom.scss */
+/* line 211, ../scss/_custom.scss */
 .social-links a { color: #000; }
 
-/* line 214, ../scss/_custom.scss */
+/* line 215, ../scss/_custom.scss */
 .social-links a:hover { color: #D18E30; }
 
-/* line 218, ../scss/_custom.scss */
+/* line 219, ../scss/_custom.scss */
 .social-links p { margin: 0; }
 
 /*#########################################
 BLOG ARTICLE LIST ON HOME
 #########################################*/
-/* line 227, ../scss/_custom.scss */
+/* line 228, ../scss/_custom.scss */
 .blog-list { margin-top: 4em; margin-bottom: 6em; }
 
-/* line 232, ../scss/_custom.scss */
+/* line 233, ../scss/_custom.scss */
 .blog-list p { margin: 0.3em 0 0.3em 0; }
 
-/* line 236, ../scss/_custom.scss */
+/* line 237, ../scss/_custom.scss */
 .blog-list a { color: #000; }
 
-/* line 240, ../scss/_custom.scss */
+/* line 241, ../scss/_custom.scss */
 .blog-list h4 { padding-bottom: 0.7em; }
 
-/* line 244, ../scss/_custom.scss */
+/* line 245, ../scss/_custom.scss */
 .blog-list a:hover { color: #D18E30; }
 
-/* line 248, ../scss/_custom.scss */
+/* line 249, ../scss/_custom.scss */
 .blog-list span { color: #7d7d7d; }
 
 /*#########################################
 BLOG
 #########################################*/
-/* line 257, ../scss/_custom.scss */
+/* line 258, ../scss/_custom.scss */
 .blog { margin-top: 3em; margin-bottom: 3em; }
 
-/* line 262, ../scss/_custom.scss */
+/* line 263, ../scss/_custom.scss */
 .blog a { color: #000; }
 
-/* line 266, ../scss/_custom.scss */
+/* line 267, ../scss/_custom.scss */
 .blog a:hover { color: #D18E30; }
 
-/* line 270, ../scss/_custom.scss */
-.blog-header h1 { font-size: 1.3em; font-weight: 700; margin-bottom: 0; }
+/* line 271, ../scss/_custom.scss */
+.blog-header h1 { font-size: 1.3em; margin-bottom: 0; }
 
 /* line 276, ../scss/_custom.scss */
 .blog-header h1 a { color: #000; }
@@ -3461,76 +3461,79 @@ BLOG
 .posts-list { padding: 1% 0; }
 
 /* line 292, ../scss/_custom.scss */
-.posts-list p { word-wrap: break-word; }
+.posts-list p { word-wrap: break-word; color: #7d7d7d; }
 
-/* line 296, ../scss/_custom.scss */
+/* line 297, ../scss/_custom.scss */
+.posts-list a { color: #7d7d7d; }
+
+/* line 301, ../scss/_custom.scss */
 .paginator { margin-top: 1em; margin-bottom: 1em; text-align: right; }
 
 /*#########################################
 BLOG POSTS
 #########################################*/
-/* line 306, ../scss/_custom.scss */
+/* line 311, ../scss/_custom.scss */
 .blog-post { margin-top: 3em; margin-bottom: 3em; }
 
-/* line 311, ../scss/_custom.scss */
+/* line 316, ../scss/_custom.scss */
 .blog-post a { color: #D18E30; }
 
-/* line 315, ../scss/_custom.scss */
+/* line 320, ../scss/_custom.scss */
 .post-header { text-align: center; margin-bottom: 3em; }
 
-/* line 320, ../scss/_custom.scss */
+/* line 325, ../scss/_custom.scss */
 .post-header h1 { color: #000; font-size: 2rem; font-weight: 700; }
 
-@media only screen and (max-width: 40em) { /* line 327, ../scss/_custom.scss */
+@media only screen and (max-width: 40em) { /* line 332, ../scss/_custom.scss */
   .post-header h1 { font-size: 1.6em; } }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { /* line 333, ../scss/_custom.scss */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { /* line 338, ../scss/_custom.scss */
   .post-header h1 { font-size: 1.8em; } }
-/* line 338, ../scss/_custom.scss */
+/* line 343, ../scss/_custom.scss */
 .blog-post h2 { font-size: 1.8em; font-weight: 700; }
 
-/* line 343, ../scss/_custom.scss */
+/* line 348, ../scss/_custom.scss */
 .blog-post h3 { font-size: 1.3em; font-weight: 700; margin-top: 2em; }
 
-/* line 349, ../scss/_custom.scss */
+/* line 354, ../scss/_custom.scss */
 .highlight { padding: 10px 10px; margin-bottom: 2%; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; overflow: auto; }
 
-/* line 358, ../scss/_custom.scss */
+/* line 363, ../scss/_custom.scss */
 pre { white-space: pre; word-wrap: normal; overflow: auto; }
 
-/* line 364, ../scss/_custom.scss */
+/* line 369, ../scss/_custom.scss */
 code { border: none; background-color: none !important; color: #f7f7f7; }
 
-/* line 370, ../scss/_custom.scss */
+/* line 375, ../scss/_custom.scss */
 .disqus { margin-top: 4em; margin-bottom: 3em; }
 
 /*#########################################
 FOOTER
 #########################################*/
-/* line 380, ../scss/_custom.scss */
+/* line 385, ../scss/_custom.scss */
 footer { margin-top: 3em; margin-bottom: 3em; text-align: center; }
 
-/* line 386, ../scss/_custom.scss */
+/* line 391, ../scss/_custom.scss */
 footer p { margin: 0; font-size: 0.9em; }
 
-/* line 391, ../scss/_custom.scss */
+/* line 396, ../scss/_custom.scss */
 footer a { color: #000; }
 
-/* line 395, ../scss/_custom.scss */
+/* line 400, ../scss/_custom.scss */
 footer a:hover { color: #D18E30; }
 
-/* line 399, ../scss/_custom.scss */
+/* line 404, ../scss/_custom.scss */
 .footer-social-icons { padding-bottom: 1em; text-align: center; }
 
-/* line 404, ../scss/_custom.scss */
+/* line 409, ../scss/_custom.scss */
 .footer-social-icons a { color: #000; }
 
-/* line 408, ../scss/_custom.scss */
+/* line 413, ../scss/_custom.scss */
 .footer-social-icons a:hover { color: #D18E30; }
 
-/* line 412, ../scss/_custom.scss */
+/* line 417, ../scss/_custom.scss */
 .footer-social-icons ul { list-style: none; padding: 0; margin: 0; }
 
-/* line 418, ../scss/_custom.scss */
+/* line 423, ../scss/_custom.scss */
 .footer-social-icons li { padding-left: 0; display: inline-block; padding-right: 0.6em; padding-left: 0.6em; font-size: 1.8em; }
 
 /* railscasts syntax highlighting */

@@ -1,17 +1,13 @@
-// Foundation JavaScript
-// Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
-
 //Mobile button to scroll to top
 
 $(function() {
     'use strict';
-    
+
     var myButton = $('.scrollBtn');
     var myWindow = $(window);
-    
+
     myButton.hide();
-    
+
     myWindow.on('scroll', function() {
             if ($(this).scrollTop() > 800) { //height from top to trigger
                 myButton.show();

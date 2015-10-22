@@ -1,12 +1,18 @@
 ---
-layout: main
-title: Eric Price - Web Developer
+layout: default
 ---
+
+<div class="row intro">
+  <div class="offset-by-two nine columns">
+    <p>Hi, I'm Eric Price, a full stack web developer for Local Eye Site and residing in Durham, North Carolina. I design and build apps and websites using various tools to fit the job. I'm a fan of open source technology, Ruby on Rails, clean responsive designs and typography.</p>
+    <p>You can reach me by <span><a href="mailto:mail@eric-price.net">email</a></span>, <span><a href="https://twitter.com/EricPrice2">Twitter</a></span> or <span><a href="https://www.linkedin.com/in/ericleeprice/">LinkedIn</a></span> and view my projects at <span><a href="http://github.com/eric-price/">Github</a></span>.
+  </div>
+</div>
 
 <div id="work" class="work">
   <div class="row">
-    <div class="large-10 medium-10 small-centered columns">
-      <h4>PROJECTS</h4>
+    <div class="offset-by-two nine columns">
+      <h1>PROJECTS</h1>
       <div class="project-section">
         <h6><a href="/projects/assetwire.html">AssetWire</a></h6>
         <p><span>IT asset and contract tracking system with a business intelligence dashboard for critical data and a ticketing system.</span></p>
@@ -23,26 +29,23 @@ title: Eric Price - Web Developer
   </div>
 
   <div class="row text-center">
-    <p>Visit my <a href="http://github.com/eric-price/"><strong>Github</strong></a> page to see my other projects.</p>
+    <p>Visit my <span><a href="http://github.com/eric-price/">Github</a></span> page to see my other projects.</p>
   </div>
-
-</div>
-
-<div class="row">
-  <hr>
 </div>
 
 <div class="blog-list">
   <div class="row">
-    <div class="large-10 medium-10 small-centered columns">
-      <h4>POSTS</h4>
+    <div class="offset-by-two nine columns">
+      <h1>POSTS</h1>
 
-    {% for post in site.posts limit:6 %}
-    <p><a href="{{ post.url }}">{{ post.title }}
+      {% for post in site.posts limit:10 %}
+
+      <p><a href="{{ post.url }}">{{ post.title }}
+
       <span> - Posted {{ post.date | date: '%m-%d-%y' }}</span>
-    </a>
 
-    {% endfor %}
+    </a> {% endfor %}
+
   </div>
 </div>
 </div>

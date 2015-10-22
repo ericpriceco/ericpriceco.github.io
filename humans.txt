@@ -1,6 +1,0 @@
-Your title: Eric Price                            
-Site: mail@eric-price.net                     
-Twitter: ericprice2                           
-Location: Durham, NC        
-Standards: HTML5, CSS3
-Components: Modernizr, jQuery, Foundation

@@ -1,0 +1,343 @@
+$primary-bg: #fff;
+$secondary-bg: #F7F5ED;
+$link-color: #000;
+$sec-link-color: #D18E30;
+$pri-font-color: #000;
+$light-font-color: #7d7d7d;
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background: $secondary-bg;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*#########################################
+Scroll to Top Button
+#########################################*/
+
+.scrollBtn {
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 0.5em 0.5em 0em 0.5em;
+    bottom: 0;
+    right: 0;
+    margin: 0 1em 0.7em 0;
+    position: fixed;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #f7f7f7;
+    border-radius: 3px;
+}
+
+a:hover.scrollBtn,a.scrollBtn {
+    text-decoration: none;
+}
+
+a:hover.scrollBtn {
+    color: $sec-link-color;
+}
+
+/*#########################################
+Header
+#########################################*/
+
+header {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.header-bar {
+    border-bottom: 5px solid $link-color;
+}
+
+.logo {
+    font-size: 1.4em;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 2em;
+}
+
+.logo a, .logo a:hover, .logo a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+.logo span {
+    padding: 10px 15px;
+    border: solid 4px;
+    font-weight: 700;
+}
+
+.logo img {
+  max-width: 65px;
+  border: solid 5px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+nav {
+  margin-bottom: 4em;
+}
+
+nav ul {
+    padding-top: 0.6em;
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    font-size: 0.9em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+nav a, nav a:visited, nav a:active {
+    color: #000;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: $sec-link-color;
+}
+
+/*#########################################
+Home Intro
+#########################################*/
+
+.intro span a {
+  text-decoration: underline;
+  color: $link-color;
+}
+
+.intro span a:hover {
+  color: $sec-link-color;
+}
+
+/*#########################################
+WORK
+#########################################*/
+
+.work {
+    margin-top: 2em;
+    margin-bottom: 4em;
+}
+
+.work h1 {
+  font-size: 1.3em;
+}
+
+.work a {
+    color: $link-color;
+}
+
+.work span a {
+    text-decoration: underline;
+    color: $link-color;
+}
+
+.work a:hover {
+    color: $sec-link-color;
+}
+
+.project-section {
+  margin: 1em 0;
+}
+
+.project-section p {
+  margin: 0;
+}
+
+.project-section span {
+  color: $light-font-color;
+}
+
+.project-section h6 {
+  margin-bottom: 0.1em;
+}
+
+
+/*#########################################
+BLOG ARTICLE LIST ON HOME
+#########################################*/
+
+.blog-list {
+    margin-top: 2em;
+    margin-bottom: 6em;
+}
+
+.blog-list p {
+    margin: 0.3em 0 0.3em 0;
+}
+
+.blog-list a {
+    color: $link-color;
+}
+
+.blog-list h1 {
+  font-size: 1.3em;
+  padding-bottom: 0.7em;
+}
+
+.blog-list a:hover {
+    color: $sec-link-color;
+}
+
+.blog-list span {
+    color: #7d7d7d;
+}
+
+/*#########################################
+FOOTER
+#########################################*/
+
+footer a {
+    color: $link-color;
+}
+
+footer a:hover {
+    color: $sec-link-color;
+}
+
+/*#########################################
+BLOG
+#########################################*/
+
+.blog {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.blog a {
+    color: $pri-font-color;
+}
+
+.blog a:hover {
+  color: $sec-link-color;
+}
+
+.blog-header h1 {
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+
+.blog-header h1 a {
+    color: $pri-font-color;
+}
+
+.blog-header h1 a:hover {
+    color: $sec-link-color;
+}
+
+.post-date {
+    font-size: 0.9em;
+}
+
+.posts-list {
+    padding: 1% 0;
+}
+
+.posts-list p {
+    word-wrap: break-word;
+    color: $light-font-color;
+}
+
+.posts-list a {
+  color: $light-font-color;
+}
+
+.paginator {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: right;
+}
+
+/*#########################################
+BLOG POSTS
+#########################################*/
+
+.blog-post {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.blog-post a {
+    color: $sec-link-color;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.post-header h1 {
+    color: $pri-font-color;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 40em) {
+    .post-header h1 {
+        font-size: 1.6em;
+    }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+     .post-header h1 {
+        font-size: 1.8em;
+    }
+}
+
+.blog-post h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.blog-post h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-top: 2em;
+}
+
+.highlight {
+    margin-bottom: 2%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    overflow: auto;
+}
+
+pre {
+  white-space: pre;
+  word-wrap: normal;
+  overflow: auto;
+  margin: 0;
+}
+
+code {
+    border: none;
+    background: none !important;
+    color: #f7f7f7;
+}
+
+.disqus {
+    margin-top: 4em;
+    margin-bottom: 3em;
+}

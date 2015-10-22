@@ -1,3 +1,6 @@
+# Build settings
+# markdown: kramdown
+
 name: "Eric Price"
 markdown: redcarpet
 highlighter: pygments
@@ -8,4 +11,8 @@ twitter_username: ericprice2
 github_username:  eric-price
 url: "http://eric-price.net"
 title: "Eric Price"
-exclude: [node_modules, scss]
+# exclude: [node_modules, scss]
+
+sass:
+    sass_dir: _sass
+    style: :compressed

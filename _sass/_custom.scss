@@ -29,6 +29,19 @@ img {
     height: auto;
 }
 
+.scrollBtn { text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 0.5em 0em 0.5em;
+    bottom: 0;
+    right: 0;
+    margin: 0 1em 0.7em 0;
+    position: fixed;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #f7f7f7;
+    border-radius: 3px;
+  }
+
 /*#########################################
 Scroll to Top Button
 #########################################*/

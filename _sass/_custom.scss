@@ -16,12 +16,13 @@ body {
 
 a {
     text-decoration: none;
-    word-wrap: break-word;
+    color: $link-color;
 }
 
 a:hover,
 a:focus {
     text-decoration: none;
+    color: $sec-link-color;
 }
 
 img {
@@ -89,11 +90,6 @@ header {
     padding-top: 2em;
 }
 
-.logo a, .logo a:hover, .logo a:visited {
-    text-decoration: none;
-    color: #000;
-}
-
 .logo span {
     padding: 10px 15px;
     border: solid 4px;
@@ -124,27 +120,11 @@ nav li {
     padding-left: 0.5em;
 }
 
-nav a, nav a:visited, nav a:active {
-    color: #000;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: $sec-link-color;
-}
 
 /*#########################################
 Home Intro
 #########################################*/
 
-.intro span a {
-  text-decoration: underline;
-  color: $link-color;
-}
-
-.intro span a:hover {
-  color: $sec-link-color;
-}
 
 /*#########################################
 WORK
@@ -159,17 +139,8 @@ WORK
   font-size: 1.3em;
 }
 
-.work a {
-    color: $link-color;
-}
-
 .work span a {
     text-decoration: underline;
-    color: $link-color;
-}
-
-.work a:hover {
-    color: $sec-link-color;
 }
 
 .project-section {
@@ -202,17 +173,9 @@ BLOG ARTICLE LIST ON HOME
     margin: 0.3em 0 0.3em 0;
 }
 
-.blog-list a {
-    color: $link-color;
-}
-
 .blog-list h1 {
   font-size: 1.3em;
   padding-bottom: 0.7em;
-}
-
-.blog-list a:hover {
-    color: $sec-link-color;
 }
 
 .blog-list span {
@@ -223,13 +186,6 @@ BLOG ARTICLE LIST ON HOME
 FOOTER
 #########################################*/
 
-footer a {
-    color: $link-color;
-}
-
-footer a:hover {
-    color: $sec-link-color;
-}
 
 /*#########################################
 BLOG
@@ -240,25 +196,9 @@ BLOG
     margin-bottom: 3em;
 }
 
-.blog a {
-    color: $pri-font-color;
-}
-
-.blog a:hover {
-  color: $sec-link-color;
-}
-
 .blog-header h1 {
     font-size: 1.3em;
     margin-bottom: 0;
-}
-
-.blog-header h1 a {
-    color: $pri-font-color;
-}
-
-.blog-header h1 a:hover {
-    color: $sec-link-color;
 }
 
 .post-date {
@@ -294,8 +234,10 @@ BLOG POSTS
 }
 
 .blog-post a {
-    color: $sec-link-color;
+    color: $link-color;
+    text-decoration: underline;
 }
+
 
 .post-header {
     text-align: center;

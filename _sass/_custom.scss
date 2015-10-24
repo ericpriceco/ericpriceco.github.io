@@ -103,6 +103,10 @@ header {
   border-radius: 50%;
 }
 
+.logo a:hover {
+  color: $pri-font-color;
+}
+
 nav {
   margin-bottom: 4em;
 }
@@ -124,6 +128,10 @@ nav li {
 /*#########################################
 Home Intro
 #########################################*/
+
+.intro a {
+  text-decoration: underline;
+}
 
 
 /*#########################################
@@ -201,6 +209,10 @@ BLOG
     margin-bottom: 0;
 }
 
+// .blog-header h1 a {
+//   color: $pri-font-color;
+// }
+
 .post-date {
     font-size: 0.9em;
 }
@@ -210,12 +222,16 @@ BLOG
 }
 
 .posts-list p {
-    word-wrap: break-word;
+    // word-wrap: break-word;
     color: $light-font-color;
 }
 
-.posts-list a {
+.posts-list p a {
   color: $light-font-color;
+}
+
+.posts-list p a:hover {
+  color: $sec-link-color;
 }
 
 .paginator {
@@ -234,7 +250,6 @@ BLOG POSTS
 }
 
 .blog-post a {
-    color: $link-color;
     text-decoration: underline;
 }
 

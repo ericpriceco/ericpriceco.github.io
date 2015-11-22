@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Install Jekyll on OSX
-date: 2015-01-13
+date: 2014-09-25
 tags: jekyll
 categories: jekyll
 published: true

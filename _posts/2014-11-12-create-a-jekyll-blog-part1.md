@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a Jekyll Blog - Part 1
-date: 2015-02-11
+date: 2014-11-12
 tags: jekyll foundation
 categories: jekyll foundation
 published: true
@@ -20,7 +20,7 @@ Open up your terminal, change to the folder you want to store your project and c
 jekyll new myblog
 cd myblog
 ```
-    
+
 ### Jekyll Folder Structure
 
 **\_includes**: This folder is where you store your partials like the header.html and footer.html. You can have as many partials as you need.
@@ -35,21 +35,21 @@ For my projects I use the SASS version of the Foundation framework, but you can 
 
 ### Build
 
-Your Jekyll site is useless until you build it. When you run a build it will create a **\_site** folder with the converted html files. 
+Your Jekyll site is useless until you build it. When you run a build it will create a **\_site** folder with the converted html files.
 
 Open your terminal and run:
 
 ```
 jekyll build
-```	
+```
 
-Each time you run a build, it will re-create the files in the **\_site** folder. Jekyll can simply be used make your development process easier and when finished, you only need to give your client the output files in the **\_site** folder. 
+Each time you run a build, it will re-create the files in the **\_site** folder. Jekyll can simply be used make your development process easier and when finished, you only need to give your client the output files in the **\_site** folder.
 
 Jekyll conveniently has a built-in server to view your page after you built it. Run this command in the root of the project folder:
 
 ```
 jekyll serve
-```	
+```
 
 Open your browser and go to http://localhost:4000
 
@@ -57,7 +57,7 @@ You can tell Jekyll to watch for changes and automatically generate the file wit
 
 ```
 jekyll server --watch
-```	
+```
 
 Very handy!
 
@@ -77,8 +77,8 @@ Example header.html:
 <body>
 < Menu Bar Content >
 ```
- 
-Change your page title name to the following in your head tag: 
+
+Change your page title name to the following in your head tag:
 
 ```
  <title>{% raw %}{{ page.title }}{% endraw %}</title>
@@ -111,7 +111,7 @@ Jekyll layout files are the main structure of your pages and can include any num
 ```
 
 
-Basically this layout is telling Jekyll to grab the header and footer partials and in the middle include the content from the page that is using this layout. 
+Basically this layout is telling Jekyll to grab the header and footer partials and in the middle include the content from the page that is using this layout.
 
 You can create different layouts if needed for specific pages. For example, I have two layouts, a main layout and a blog post layout. On my blog post layout, I added some html after the **{% raw %}{{ content }}{% endraw %}** line for social sharing buttons. Doing this, I don't have to add this code for every blogpost I create; it's there automatically.
 
@@ -135,6 +135,6 @@ Note: You can call partials in your pages, not just in your layout files. For ex
 ```
 {% raw %} { % include side-nav.html % } {% endraw %}
 ```
-	
+
 In part two I will delve deeper into creating a dynamic blog with some helpful code snippets.
 

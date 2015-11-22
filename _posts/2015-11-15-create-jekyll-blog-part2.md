@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create a Jekyll Blog - Part 2
-date: 2015-02-13
+date: 2014-11-15
 tags: jekyll foundation
 categories: jekyll foundation
 published: true
@@ -102,7 +102,7 @@ For the blog page I increased the post limit to 5 with the same post.url and pos
 
 ### Tags
 
-Including tags on your blog page is a tricky one and gets its own section. This is a great way to group your posts into groups if a visitor is looking to read your posts on a specific topic. 
+Including tags on your blog page is a tricky one and gets its own section. This is a great way to group your posts into groups if a visitor is looking to read your posts on a specific topic.
 
 ```html
 {% raw %}
@@ -119,7 +119,7 @@ This little loop goes through each post listed on the blog page and outputs the 
 
 My workaround is creating a page for each tag. Once you have one created, it's easy enough to create additional tags by copy and paste.
 
-Depending where you store the blog page, either in the root or in a subfolder, you may have to edit the tag link in the loop. Create a "tags" folder and a folder under that for each tag. 
+Depending where you store the blog page, either in the root or in a subfolder, you may have to edit the tag link in the loop. Create a "tags" folder and a folder under that for each tag.
 
 Folder structure:
 
@@ -156,7 +156,7 @@ title: Blog - Eric Price - Freelance Web Design and Developer
 {% endraw %}
 ```
 
-When a visitor clicks a tag link on the blog page, they will go to that specific tag page with the loop above. The only line you need to edit for each tag is the one below. In this example I have a tag for "sass". 
+When a visitor clicks a tag link on the blog page, they will go to that specific tag page with the loop above. The only line you need to edit for each tag is the one below. In this example I have a tag for "sass".
 
 ```
 {% raw %}

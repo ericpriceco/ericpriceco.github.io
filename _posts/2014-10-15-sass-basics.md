@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SASS and Compass Basics
-date: 2015-01-15
+date: 2014-10-15
 tags: sass foundation compass
 categories: sass foundation compass
 published: true

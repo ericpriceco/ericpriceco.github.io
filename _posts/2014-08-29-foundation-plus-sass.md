@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with SASS and Foundation
-date: 2015-01-05
+date: 2014-08-29
 tags: sass foundation
 categories: sass foundation
 published: true

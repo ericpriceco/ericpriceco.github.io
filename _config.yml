@@ -1,9 +1,6 @@
-# Build settings
-# markdown: kramdown
-
 name: "Eric Price"
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 permalink: /blog/:title/
 paginate: 10
 paginate_path: "/blog/page:num"

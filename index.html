@@ -5,9 +5,26 @@ title: Eric Price - Web Developer
 
 <div class="row intro">
   <div class="offset-by-one ten columns">
-    <p>Hi, I'm Eric Price, a system administrator and full stack web developer, residing in Durham, North Carolina. I design and build apps and websites using various tools to fit the job. I'm a fan of open source tech, Linux, Ruby on Rails, clean responsive designs and typography.</p>
+    <p>Hi, I'm Eric Price, a DevOps Engineer residing in Cary, North Carolina. I'm a fan of open source tech, automation tools, Linux, Ruby on Rails and Docker.</p>
     <p>You can reach me by <span><a href="mailto:mail@eric-price.net">email</a></span>, <span><a href="https://twitter.com/EricPrice2">Twitter</a></span> or <span><a href="https://www.linkedin.com/in/ericleeprice/">LinkedIn</a></span> and view my projects at <span><a href="http://github.com/eric-price/">Github</a></span>.
   </div>
+</div>
+
+<div class="blog-list">
+  <div class="row">
+    <div class="offset-by-one ten columns">
+      <h1>POSTS</h1>
+
+      {% for post in site.posts limit:15 %}
+
+      <p><a href="{{ post.url }}">{{ post.title }}
+
+      <span> - Posted {{ post.date | date: '%m-%d-%y' }}</span>
+
+    </a> {% endfor %}
+
+  </div>
+</div>
 </div>
 
 <div id="work" class="work">
@@ -32,21 +49,4 @@ title: Eric Price - Web Developer
   <div class="row text-center">
     <p>Visit my <span><a href="http://github.com/eric-price/">Github</a></span> page to see my other projects.</p>
   </div>
-</div>
-
-<div class="blog-list">
-  <div class="row">
-    <div class="offset-by-one ten columns">
-      <h1>POSTS</h1>
-
-      {% for post in site.posts limit:10 %}
-
-      <p><a href="{{ post.url }}">{{ post.title }}
-
-      <span> - Posted {{ post.date | date: '%m-%d-%y' }}</span>
-
-    </a> {% endfor %}
-
-  </div>
-</div>
 </div>

@@ -10,6 +10,7 @@ url: "http://eric-price.net"
 title: "Eric Price"
 # exclude: [node_modules, scss]
 
+gems: [jekyll-paginate]
 sass:
     sass_dir: _sass
     style: :compressed

@@ -7,7 +7,7 @@ categories: jekyll foundation
 published: true
 ---
 
-This is part 2 of my guide on creating a blog using Jekyll. [Click here](http://eric-price.net/blog/create-a-jekyll-blog-part1/) to read part 1. We left off with creating your site pages using defined layouts. Now I'm going to get into the real fun stuff with variables that will make your blog dynamic without the use of database!
+This is part 2 of my guide on creating a blog using Jekyll. [Click here](/blog/create-a-jekyll-blog-part1/) to read part 1. We left off with creating your site pages using defined layouts. Now I'm going to get into the real fun stuff with variables that will make your blog dynamic without the use of database!
 
 By now you should have the basic structure of your site: main layout, footer and header partials, and at least your homepage.
 

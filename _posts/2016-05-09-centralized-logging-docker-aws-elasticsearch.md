@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Centralized Logging in Docker with AWS Elasticsearch
-date: 2016-05-08
+date: 2016-07-26
 tags: docker
 categories: docker
-published: false
+published: true
 ---
 
 In my [last post](/blog/centralized-logging-docker/), I showed how to setup a centralized log stack for Docker containers using Fluentd, Elasticsearch and Kibana containers. Now I'll show how to use Amazon's Elasticsearch service that includes a built-in Kibana interface for your logs.

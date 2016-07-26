@@ -29,7 +29,7 @@ In my case when using this with AWS, I specify the EC2 VPC in the ec2.ini file, 
 tasks:
 
     - name: EC2 Facts
-  	  action: ec2_facts
+      action: ec2_facts
 
     - name: Generate /etc/hosts file which contains the servers in the VPC
       template: src=hosts dest=/etc/hosts owner=root group=root mode=0644

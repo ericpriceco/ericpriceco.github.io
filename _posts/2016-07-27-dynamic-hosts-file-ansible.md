@@ -11,12 +11,14 @@ Below is an Ansible template file I use for generating a hosts file.
 
 ```
 127.0.0.1 localhost.localdomain localhost
+{% raw %}
 {% for item in play_hosts %}
 	{% set hostname = item.replace("_", "-") %}
 	{% if 'ansible_eth0' in hostvars[item] %}
 		{{ hostvars[item]['ansible_eth0']['ipv4']['address'] }} {{ hostname | regex_replace('^sgmc-[a-z]*-', '') }} {{ hostname }} {{ hostname + '.domain.com' }}
 	{% endif %}
 {% endfor %}
+{% endraw %}
 ```
 
 The first part of the host loop grabs the IP address, then the hostname while removing all text before the server name, followed by the full server name.

@@ -1,9 +1,11 @@
 name: 'Hugo website deploy action'
-author: 'Kusnadi'
 description: 'Deploy static files generated from a Hugo website repo to gh-pages branch of the same repo'
-branding:
-  icon: 'box'
-  color: 'blue'
+
+on:
+  push:
+    branches:
+      - main
+
 runs:
   using: "composite"
   steps:

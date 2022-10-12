@@ -1,5 +1,5 @@
 ---
-title: Install minikube on arm based (M1/M2) Mac"
+title: Install minikube on arm based (M1/M2) Mac
 date: 2022-06-15 00:00:00 -0700
 category: notes
 tags:

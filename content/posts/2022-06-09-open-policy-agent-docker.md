@@ -1,6 +1,6 @@
 ---
 title: Analyze and secure Dockerfiles in CI/CD with OPA
-date: 2016-12-08 22:54:49
+date: 2022-06-09 18:00:00 -0700
 category: notes
 tags:
     - docker

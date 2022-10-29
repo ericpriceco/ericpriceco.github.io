@@ -1,6 +1,6 @@
 ---
 title: Shell shortcut function for multiple AWS profiles in Terraform
-date: 2022-10-12 10:00:00 -0700
+date: 2022-10-29 15:00:00 -0700
 tags:
     - aws
     - terraform

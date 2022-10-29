@@ -11,7 +11,9 @@ keywords:
     - aws
 ---
 
-Depending on the EC2 instance type you choose for your EKS nodes, you could be limited on the number of pods for each node. This is due to the set number of network interfaces that can be assigned to that particular instance type. The limits per instance can be found [here](https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt). This can be avoided by assigning IP address prefixes (/28) instead of single addresses (/32). Basically for every IP address that can be assigned to the network interface, a group of IP addresses can be assigned.
+Depending on the EC2 instance type you choose for your EKS nodes, you could be limited on the number of pods for each node. This is due to the set number of network interfaces that can be assigned to that particular instance type. Changing the max pod limit in the boot strap script alone will cause issue when going above the number of IP's allowed on the instance. The limits per instance can be found [here](https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt).
+
+This can be avoided by assigning IP address prefixes (/28) instead of single addresses (/32). Basically for every IP address that can be assigned to the network interface, a group of IP addresses can be assigned.
 
 There are a couple of requirements to be aware of for this to work. The VPC CNI plugin needs to be updated; 1.10.1 or later as of writing this, and there needs to be continuous blocks of address space available to assign these prefixes. It won't pick a group of addresses here and another there in a subnet, so if a subnet is fragmented from other services or instances, there's a chance you will see a limited number of prefixes on a given instance. In my case, I created a dedicated group of subnets for my EKS nodes unaffected by any other service.
 

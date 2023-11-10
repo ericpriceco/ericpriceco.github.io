@@ -73,6 +73,6 @@ weight = 3
   [[params.social]]
     name = "linkedin"
     link = "https://linkedin.com/in/ericprice2"
-  [[params.social]]
-    name = "twitter"
-    link = "https://twitter.com/EricPrice2"
+  # [[params.social]]
+  #   name = "twitter"
+  #   link = "https://twitter.com/EricPrice2"

@@ -1,6 +1,6 @@
 ---
 title: Increase IP density for EKS nodes
-date: 2022-10-12 10:00:00 -0700
+date: 2023-11-10 10:00:00 -0700
 tags:
     - eks
     - ec2
@@ -22,9 +22,23 @@ You can see the hardcoded max pod limit for each node by running a describe on t
 kubectl describe nodes | grep pods
 ```
 
-The first step is to turn on prefix assignments on the VPC CNI plugin:
+Below are two ways to turn on prefix assignments on the VPC CNI plugin: kubectl or Terraform. The plus side to doing this via Terraform is it can be set before creating a node group by setting a dependency for the addon on the node group.
 ```bash
 kubectl set env daemonset aws-node -n kube-system ENABLE_PREFIX_DELEGATION=true
+```
+```terraform
+resource "aws_eks_addon" "vpc" {
+  cluster_name                = aws_eks_cluster.cluster.name
+  addon_name                  = "vpc-cni"
+  addon_version               = var.addon_vpc_version
+  resolve_conflicts_on_update = "OVERWRITE"
+  configuration_values = jsonencode({
+    env = {
+      ENABLE_PREFIX_DELEGATION = "true"
+    }
+  })
+  depends_on = [aws_eks_cluster.cluster]
+}
 ```
 
 Confirm its enabled:

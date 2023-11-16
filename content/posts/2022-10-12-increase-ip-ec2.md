@@ -5,10 +5,12 @@ tags:
     - eks
     - ec2
     - aws
+    - bottlerocket
 keywords:
     - eks
     - ec2
     - aws
+    - bottlerocket
 ---
 
 Depending on the EC2 instance type you choose for your EKS nodes, you could be limited on the number of pods for each node. This is due to the set number of network interfaces that can be assigned to that particular instance type. Changing the max pod limit in the boot strap script alone will cause issue when going above the number of IP's allowed on the instance. The limits per instance can be found [here](https://github.com/awslabs/amazon-eks-ami/blob/master/files/eni-max-pods.txt).

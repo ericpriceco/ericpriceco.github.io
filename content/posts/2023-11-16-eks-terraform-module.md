@@ -1,6 +1,6 @@
 ---
 title: Create EKS cluster using Terraform
-date: 2023-11-10 12:00:00 -0700
+date: 2023-11-16 12:00:00 -0700
 tags:
     - eks
     - aws

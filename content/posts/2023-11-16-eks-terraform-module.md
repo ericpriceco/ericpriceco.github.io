@@ -88,7 +88,7 @@ data "aws_ami" "bottlerocket_image" {
 }
 ```
 
-The VPC addon is a requirement for the node groups set turn on prefix delegation before they're created.
+The VPC addon is a requirement for the node groups to turn on prefix delegation before they're created.
 
 addons.tf
 ```terraform

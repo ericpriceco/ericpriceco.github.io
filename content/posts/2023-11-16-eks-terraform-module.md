@@ -1,5 +1,5 @@
 ---
-title: Increase IP density for EKS nodes
+title: Create EKS cluster using Terraform
 date: 2023-11-10 12:00:00 -0700
 tags:
     - eks
@@ -11,7 +11,7 @@ keywords:
     - terraform
 ---
 
-I'm not a fan of using third-party modules Terraform modules that do the work for you, so I'm going to provide the code nessecary to spin up a EKS cluster with Bottlerocket nodes using just the AWS provider. The VPC resources need to be setup beforehand. For VPC setup, I find having dedicated subnets for EKS clusters beneficial for IP address prefixes since it needs continuos blocks of IP addresses. All the referenced Terrafom code can be obtained [here](https://github.com/eric-price/terraform_modules).
+I'm not a fan of using third-party Terraform modules that do all the work for you, so I'm going to provide the code to spin up a EKS cluster with Bottlerocket nodes using just the AWS provider. The VPC resources need to be setup beforehand. For the VPC setup, I find having dedicated subnets for EKS clusters beneficial for IP address prefixes since it needs continuous blocks of IP addresses. All the referenced Terrafom code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
 cluster.tf
 ```terraform

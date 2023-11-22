@@ -67,13 +67,7 @@ resource "aws_eks_cluster" "cluster" {
     security_group_ids      = [aws_security_group.cluster.id]
   }
 
-  enabled_cluster_log_types = [
-    "api",
-    "audit",
-    "authenticator",
-    "controllerManager",
-    "scheduler"
-  ]
+  enabled_cluster_log_types = var.log_types
 
   encryption_config {
     provider {
@@ -85,6 +79,10 @@ resource "aws_eks_cluster" "cluster" {
   kubernetes_network_config {
     ip_family         = "ipv4"
     service_ipv4_cidr = "172.20.0.0/16"
+  }
+
+  tags = {
+    "karpenter.sh/discovery" = var.cluster_name
   }
 
   depends_on = [
@@ -126,6 +124,10 @@ data "aws_ami" "bottlerocket_image" {
     values = ["bottlerocket-aws-k8s-${var.cluster_version}-x86_64-*"]
   }
 }
+
+data "tls_certificate" "cluster" {
+  url = aws_eks_cluster.cluster.identity[0].oidc[0].issuer
+}
 ```
 
 The VPC addon is a requirement for the node groups to turn on prefix delegation before they're created.
@@ -154,7 +156,7 @@ resource "aws_eks_addon" "ebs" {
   resolve_conflicts_on_update = "OVERWRITE"
   depends_on                  = [
     aws_eks_cluster.cluster,
-    aws_eks_node_group.workers
+    aws_eks_node_group.core
   ]
 }
 
@@ -166,7 +168,7 @@ resource "aws_eks_addon" "coredns" {
   resolve_conflicts_on_update = "OVERWRITE"
   depends_on                  = [
     aws_eks_cluster.cluster,
-    aws_eks_node_group.workers
+    aws_eks_node_group.core
   ]
 }
 
@@ -178,7 +180,7 @@ resource "aws_eks_addon" "kube-proxy" {
   resolve_conflicts_on_update = "OVERWRITE"
   depends_on                  = [
     aws_eks_cluster.cluster,
-    aws_eks_node_group.workers
+    aws_eks_node_group.core
   ]
 }
 ```
@@ -229,6 +231,12 @@ resource "aws_iam_role" "nodes" {
     "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
   ]
 }
+
+resource "aws_iam_openid_connect_provider" "cluster" {
+  client_id_list  = ["sts.amazonaws.com"]
+  thumbprint_list = [data.tls_certificate.cluster.certificates[0].sha1_fingerprint]
+  url             = data.tls_certificate.cluster.url
+}
 ```
 
 kms.tf
@@ -253,22 +261,17 @@ locals {
   device_list = tolist(data.aws_ami.bottlerocket_image.block_device_mappings)
 }
 
-resource "aws_iam_instance_profile" "nodes" {
-  name = "eks-nodes-${var.cluster_name}"
-  role = aws_iam_role.nodes.name
-}
-
-resource "aws_launch_template" "worker" {
-  name                    = "eks-worker-${var.cluster_name}"
+resource "aws_launch_template" "core" {
+  name                    = "eks-core-${var.cluster_name}"
   disable_api_stop        = false
   disable_api_termination = false
   image_id                = data.aws_ami.bottlerocket_image.id
-  instance_type           = var.worker_instance_type
+  instance_type           = var.core_node_type
   user_data = base64encode(templatefile("../../modules/aws/eks/files/node_config.toml.tftpl", {
     cluster_name     = aws_eks_cluster.cluster.name
     cluster_endpoint = aws_eks_cluster.cluster.endpoint
     cluster_ca_data  = aws_eks_cluster.cluster.certificate_authority[0].data
-    nodegroup        = "worker"
+    nodegroup        = "core"
     ami_id           = data.aws_ami.bottlerocket_image.id
     })
   )
@@ -289,7 +292,7 @@ resource "aws_launch_template" "worker" {
 
     ebs {
       delete_on_termination = true
-      volume_size           = var.worker_volume_size
+      volume_size           = var.core_node_volume_size
       volume_type           = "gp3"
       encrypted             = true
     }
@@ -306,10 +309,11 @@ resource "aws_launch_template" "worker" {
     resource_type = "instance"
 
     tags = {
-      Name                 = "eks-worker-${var.cluster_name}"
+      Name                 = "eks-core-${var.cluster_name}"
       terraform            = true
       "eks:cluster-name"   = var.env
-      "eks:nodegroup-name" = "worker"
+      "eks:nodegroup-name" = "core"
+      platform             = "eks"
       env                  = var.env
     }
   }
@@ -318,10 +322,11 @@ resource "aws_launch_template" "worker" {
     resource_type = "volume"
 
     tags = {
-      Name                 = "eks-worker-${var.cluster_name}"
+      Name                 = "eks-core-${var.cluster_name}"
       terraform            = true
       "eks:cluster-name"   = var.env
-      "eks:nodegroup-name" = "worker"
+      "eks:nodegroup-name" = "core"
+      platform             = "eks"
       env                  = var.env
     }
   }
@@ -338,25 +343,25 @@ resource "aws_launch_template" "worker" {
 
 nodes.tf
 ```terraform
-resource "aws_eks_node_group" "workers" {
+resource "aws_eks_node_group" "core" {
   cluster_name    = aws_eks_cluster.cluster.name
-  node_group_name = "worker"
+  node_group_name = "core"
   node_role_arn   = aws_iam_role.nodes.arn
   subnet_ids      = data.aws_subnets.eks_private.ids
   ami_type        = "CUSTOM"
   labels = {
-    role = "worker"
+    role = "core"
   }
 
   launch_template {
-    name    = aws_launch_template.worker.name
-    version = aws_launch_template.worker.latest_version
+    name    = aws_launch_template.core.name
+    version = aws_launch_template.core.latest_version
   }
 
   scaling_config {
-    desired_size = var.worker_instance_count
-    max_size     = var.worker_instance_count
-    min_size     = var.worker_instance_count
+    desired_size = var.core_node_count
+    max_size     = var.core_node_count
+    min_size     = var.core_node_count
   }
 
   update_config {
@@ -370,8 +375,7 @@ resource "aws_eks_node_group" "workers" {
   depends_on = [
     aws_iam_role.nodes,
     aws_eks_cluster.cluster,
-    aws_launch_template.worker,
-    aws_iam_instance_profile.nodes,
+    aws_launch_template.core,
     aws_eks_addon.vpc
   ]
 }
@@ -398,6 +402,38 @@ security_groups.tf
 ```terraform
 resource "aws_security_group" "cluster" {
   name        = "eks-cluster-${var.cluster_name}"
+  description = "EKS cluster security"
+  vpc_id      = data.aws_vpc.main.id
+  egress {
+    description = "full outbound"
+    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = "0"
+    protocol    = "-1"
+    self        = "false"
+    to_port     = "0"
+  }
+  ingress {
+    description = "self reference"
+    from_port   = "0"
+    protocol    = "-1"
+    self        = "true"
+    to_port     = "0"
+  }
+  ingress {
+    security_groups = [aws_security_group.node.id]
+    description     = "eks node group"
+    from_port       = "0"
+    protocol        = "-1"
+    self            = "false"
+    to_port         = "0"
+  }
+  tags = {
+    Name = "eks-cluster-${var.env}"
+  }
+}
+
+resource "aws_security_group" "node" {
+  name        = "eks-node-${var.cluster_name}"
   description = "EKS node security"
   vpc_id      = data.aws_vpc.main.id
   egress {
@@ -416,9 +452,11 @@ resource "aws_security_group" "cluster" {
     to_port     = "0"
   }
   tags = {
-    Name        = "eks-cluster-${var.env}"
+    Name                     = "eks-node-${var.env}"
+    "karpenter.sh/discovery" = var.cluster_name
   }
 }
+```
 
 variables.tf
 ```terraform

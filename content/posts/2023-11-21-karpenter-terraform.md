@@ -224,7 +224,7 @@ data.tf
 data "aws_caller_identity" "current" {}
 ```
 
-The IRSA role used by the Karpenter controller and node role assigned to nodes. An OIDC provider will need to be setup for the service account to assume an IAM role. The scoped out IRSA role that is referenced below can be found here. If you get an error on the Spot service linked role, you may already have it setup for your account.
+The IRSA role used by the Karpenter controller and node role assigned to nodes. An OIDC provider will need to be setup for the service account to assume an IAM role. The scoped out IRSA role that is referenced below can be found [here](https://github.com/eric-price/terraform_modules/karpenter/files/). If you get an error on the Spot service linked role, you may already have it setup for your account.
 
 iam.tf
 ```terraform

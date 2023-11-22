@@ -13,6 +13,46 @@ keywords:
 
 This post will guide you through all the Terraform code needed to spin up a EKS cluster with Bottlerocket nodes using just the AWS provider instead of using a third-party module. The VPC resources need to be setup beforehand. For the VPC setup, I find having dedicated subnets for EKS clusters beneficial for IP address prefixes since it needs continuous blocks of IP addresses. All the referenced Terrafom code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
+Initialize the module where needed.
+```terraform
+locals {
+  env    = "sandbox"
+}
+
+provider "aws" {
+  region = local.region
+  default_tags {
+    tags = {
+      env       = local.env
+      terraform = true
+    }
+  }
+}
+
+module "eks-cluster" {
+  source                   = "../../modules/aws/eks"
+  cluster_name             = local.env
+  env                      = local.env
+  cluster_version          = "1.28"
+  addon_vpc_version        = "v1.14.1-eksbuild.1"
+  addon_ebs_version        = "v1.24.1-eksbuild.1"
+  addon_coredns_version    = "v1.10.1-eksbuild.2"
+  addon_kube_proxy_version = "v1.28.1-eksbuild.1"
+  worker_instance_type     = "t3a.large"
+  worker_instance_count    = 3
+  worker_volume_size       = 100
+  log_types = [
+    "api",
+    "audit",
+    "authenticator",
+    "controllerManager",
+    "scheduler"
+  ]
+}
+```
+
+### Module files
+
 cluster.tf
 ```terraform
 resource "aws_eks_cluster" "cluster" {
@@ -393,32 +433,4 @@ variable "log_types" {}
 variable "worker_instance_count" {}
 variable "worker_instance_type" {}
 variable "worker_volume_size" {}
-```
-
-Here's how we're going to call the module:
-```terraform
-locals {
-  env    = "sandbox"
-}
-
-module "eks-cluster" {
-  source                   = "../../modules/aws/eks"
-  cluster_name             = local.env
-  env                      = local.env
-  cluster_version          = "1.28"
-  addon_vpc_version        = "v1.14.1-eksbuild.1"
-  addon_ebs_version        = "v1.24.1-eksbuild.1"
-  addon_coredns_version    = "v1.10.1-eksbuild.2"
-  addon_kube_proxy_version = "v1.28.1-eksbuild.1"
-  worker_instance_type     = "t3a.large"
-  worker_instance_count    = 3
-  worker_volume_size       = 100
-  log_types = [
-    "api",
-    "audit",
-    "authenticator",
-    "controllerManager",
-    "scheduler"
-  ]
-}
 ```

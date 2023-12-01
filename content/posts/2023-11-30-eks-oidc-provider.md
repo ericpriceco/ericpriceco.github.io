@@ -28,6 +28,11 @@ resource "aws_iam_openid_connect_provider" "cluster" {
 
 Next I'm going to through an example app that uses a role with the OIDC provider. Here the OIDC provider is allowed to assume the role and a basic policy that allows access to an s3 bucket.
 
+data.tf
+```terraform
+data "aws_caller_identity" "current" {}
+```
+
 iam.tf
 ```terraform
 locals {

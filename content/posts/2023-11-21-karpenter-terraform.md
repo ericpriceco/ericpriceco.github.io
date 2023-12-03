@@ -12,7 +12,7 @@ keywords:
 ---
 
 I'm going to go through setting up Karpenter for EKS using Terraform and no third-party modules. The required networking and EKS cluster will need to be setup beforehand. You can see how to setup an EKS cluster [here](https://eric-price.net/posts/2023-11-16-eks-terraform-module/). If you're wondering why use Karpenter over the standard Cluster Autoscaler, there are a few big/quality of life reasons: able to work with as many instance families as you choose without creating multiple node groups, zone and price awareness, and flexible/granular scaling options.
-All the referenced Terrafom code can be obtained [here](https://github.com/eric-price/terraform_modules).
+All the referenced Terraform code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
 These are the providers that we'll be using in the environment.
 
@@ -61,6 +61,27 @@ provider "kubectl" {
 }
 ```
 
+versions.tf
+```terraform
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+    kubectl = {
+      source  = "alekc/kubectl"
+      version = "~> 2.0.3"
+    }
+    helm = {
+      source  = "hashicorp/helm"
+      version = "~> 2.11.0"
+    }
+  }
+  required_version = "~> 1.5.7"
+}
+```
+
 Initialize the module where needed. Here we're pulling some output data from the EKS module.
 
 ```terraform
@@ -78,7 +99,7 @@ module "karpenter" {
 
 ### Module files
 
-Deploying Karpenter via Helm to the EKS cluster provided and updating the "aws-auth" configmap to include the Karpenter node role. Using the kubectl provider, we're setting the NodeClass and NodePool manifests and one important thing to highlight in these is we're targeting subnets and security groups by the "karpenter.sh/discovery" tag, so make sure your tags are set before running. Another thing to note is this example is it's using the Bottlerocket OS for nodes.
+Deploying Karpenter via Helm to the EKS cluster provided and updating the "aws-auth" configmap to include the Karpenter node role. Using the kubectl provider, we're setting the NodeClass and NodePool manifests and one important thing to highlight is we're targeting subnets and security groups by the "karpenter.sh/discovery" tag, so make sure your tags are set before running. Another thing to note is this example is it's using the Bottlerocket OS for nodes and assigning to controller pods to the core node group. We don't want them being possibly assigned to its own created EC2 instance.
 
 Karpenters API docs explain each of the settings in NodeClass and NodePool.
 
@@ -103,6 +124,15 @@ resource "helm_release" "karpenter" {
     serviceAccount:
       annotations:
         eks.amazonaws.com/role-arn: ${aws_iam_role.karpenter_irsa.arn}
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchExpressions:
+            - key: role
+              operator: In
+              values:
+              - core
     EOT
   ]
 }

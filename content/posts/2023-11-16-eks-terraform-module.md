@@ -11,7 +11,7 @@ keywords:
     - terraform
 ---
 
-This post will guide you through all the Terraform code needed to spin up a EKS cluster with Bottlerocket nodes using just the AWS provider instead of using a third-party module. The VPC resources need to be setup beforehand. For the VPC setup, I find having dedicated subnets for EKS clusters beneficial for IP address prefixes since it needs continuous blocks of IP addresses. All the referenced Terrafom code can be obtained [here](https://github.com/eric-price/terraform_modules).
+This post will guide you through all the Terraform code needed to spin up a EKS cluster with Bottlerocket nodes using just the AWS provider instead of using a third-party module. The VPC resources need to be setup beforehand. For the VPC setup, I find having dedicated subnets for EKS clusters beneficial for IP address prefixes since it needs continuous blocks of IP addresses. All the referenced Terraform code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
 Initialize the module where needed.
 ```terraform

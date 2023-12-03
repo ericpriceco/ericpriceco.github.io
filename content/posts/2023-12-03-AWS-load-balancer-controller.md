@@ -9,7 +9,7 @@ keywords:
     - terraform
 ---
 
-This post will guide you though installing and using the AWS load balancer controller on EKS with Terraform and an example ingress manifest. I won't go into details how to setup the VPC and EKS cluster; that can be found in my previous posts.
+This post will guide you through installing and using the AWS load balancer controller on EKS with Terraform and an example ingress manifest. I won't go into details how to setup the VPC and EKS cluster; that can be found in my previous posts.
 All the referenced Terraform code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
 Providers needed to run:
@@ -75,7 +75,7 @@ terraform {
 }
 ```
 
-Initialize the module where needed.
+Initialize the module where needed. The "count" here is where it can be enabled or not through the EKS module and can be removed.
 
 ```terraform
 module "lb-controller" {
@@ -92,6 +92,8 @@ module "lb-controller" {
 ```
 
 ### Module files
+
+Here I'm targeting my "core" node group, so your affinity rule may need to change.
 
 main.tf
 ```terraform

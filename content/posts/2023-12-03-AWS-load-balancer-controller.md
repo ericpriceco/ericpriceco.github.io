@@ -12,7 +12,7 @@ keywords:
 This post will guide you through installing and using the AWS load balancer controller on EKS with Terraform and an example ingress manifest. I won't go into details how to setup the VPC and EKS cluster; that can be found in my previous posts.
 All the referenced Terraform code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
-Providers needed to run:
+### Providers
 ```terraform
 locals {
   env    = "sandbox"
@@ -54,7 +54,7 @@ provider "kubernetes" {
 }
 ```
 
-versions.tf
+#### versions.tf
 ```terraform
 terraform {
   required_providers {
@@ -95,7 +95,7 @@ module "lb-controller" {
 
 Here I'm targeting my "core" node group, so your affinity rule may need to change.
 
-main.tf
+#### main.tf
 ```terraform
 resource "helm_release" "lb_controller" {
   namespace        = "kube-system"
@@ -144,7 +144,7 @@ resource "kubernetes_service_account" "service_account" {
 
 The IAM policy referenced here is a long one and can be obtained [here](https://github.com/eric-price/terraform_modules/tree/master/aws/eks-addons/lb-controller/files).
 
-iam.tf
+#### iam.tf
 ```terraform
 locals {
   irsa_oidc_provider_url = replace(var.irsa_oidc_provider_arn, "/^(.*provider/)/", "")
@@ -183,18 +183,20 @@ resource "aws_iam_role" "lb" {
 }
 ```
 
-data.tf
+#### data.tf
 ```terraform
 data "aws_caller_identity" "current" {}
 ```
 
-variables.tf
+#### variables.tf
 ```terraform
 variable "cluster_name" {}
 variable "env" {}
 variable "irsa_oidc_provider_arn" {}
 variable "controller_version" {}
 ```
+
+#### Ingress
 
 There are several annotations in this example and more in the docs to setup the load balancer to your specifications. A few to highlight is "group.name" that will use a shared load balancer or create one if it doesn't exist, the certificate ARN if using SSL, and the scheme, which in this case is creating a public load balancer. This will create the target group for the app as well and the rules section will create the listeners on the load balancer.
 ```yaml

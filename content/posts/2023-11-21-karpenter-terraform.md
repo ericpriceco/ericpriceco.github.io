@@ -1,5 +1,5 @@
 ---
-title: Setup Karpenter using Terraform
+title: EKS Cluster Autoscaling with Karpenter
 date: 2023-11-21 17:00:00 -0700
 tags:
     - eks

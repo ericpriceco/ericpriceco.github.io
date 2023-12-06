@@ -13,8 +13,9 @@ keywords:
     - external-secrets
 ---
 
-In this post, I'm going to describe how to sync secrets from AWS Secrets Manager in Kubernetes with example Terraform and Kubernetes manifests. I'll be using the [External Secrets Operator](https://external-secrets.io/latest/) to pull and create secrets and R[eloader](https://github.com/stakater/Reloader/tree/master) to restart pods when a secret has changed.
-Another option out there is the [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/) with the [AWS Secrets Store CSI Provider](https://github.com/aws/secrets-store-csi-driver-provider-aws). However, I found limitations with this solution. As of writing this, there is no way to have it automatically update the K8s secret it creates when it's updated in Secrets Manager. It automatically updates the secret volume mounted on the pod, but if you want to set environment variables, you need to rely on the K8s secret it creates and doesn't update. Plus I like the cleaner non-volume method from External Secrets Operator.
+In this post, I'm going to describe how to sync secrets from AWS Secrets Manager to Kubernetes with example Terraform and Kubernetes manifests. I'll be using the [External Secrets Operator](https://external-secrets.io/latest/) to pull and create secrets and [Reloader](https://github.com/stakater/Reloader/tree/master) to restart pods when a secret has changed.
+
+Another option out there is the [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/) with the [AWS Secrets Store CSI Provider](https://github.com/aws/secrets-store-csi-driver-provider-aws); however, I found limitations with this solution. As of writing this, there is no way to have it automatically update the K8s secret it creates when it's updated in Secrets Manager. It automatically updates the secret volume mounted on the pod, but if you want to set environment variables, you need to rely on the K8s secret it creates and doesn't update. Plus I like the cleaner non-volume method from External Secrets Operator.
 
 
 All the referenced Terraform code can be obtained [here](https://github.com/eric-price/terraform_modules).
@@ -180,7 +181,7 @@ resource "aws_iam_policy" "role" {
 
 ## K8s manifests
 
-Here we're creating a SecretStore for this app that uses its own serviceAccount, which is setup for OIDC IAM authentication. Next, we have the ExternalSecret that's pulling two values out of a json based secret from Secrets Manager called "sandbox/image-app" with a refresh interval of 5 minutes.
+Here we're creating a SecretStore for this app that uses its own serviceAccount, which is setup for OIDC IAM authentication. Next, we have the ExternalSecret that's pulling two values out of a json based secret on Secrets Manager called "sandbox/image-app" with a refresh interval of 5 minutes.
 
 
 ### SecretStore
@@ -225,7 +226,7 @@ spec:
       property: db_password
 ```
 
-Here's a stripped down deployment manifest where I'm creating environments variables for the two values in the "image-app" secret. Take a note of the annotations on this deployment. We're telling the Reloader to keep an eye on the "image-app" secret, so when the secret is updated or rotated, the Reloader will perform a restart on this app. Hopefully you have your rolling update strategies and pod disruption budgets set to your liking.
+Here's a stripped down deployment manifest where I'm creating environment variables for the two values in the "image-app" secret. Take a note of the annotations on this deployment. We're telling Reloader to keep an eye on the "image-app" secret, so when the secret is updated or rotated, Reloader will perform a restart on this app. Hopefully you have your rolling update strategies and pod disruption budgets set to your liking.
 
 ### deployment
 ```yaml

@@ -16,7 +16,9 @@ All the referenced Terraform code can be obtained [here](https://github.com/eric
 
 These are the providers that we'll be using in the environment.
 
-providers.tf
+## Providers
+
+### providers.tf
 ```terraform
 locals {
   env    = "sandbox"
@@ -61,7 +63,7 @@ provider "kubectl" {
 }
 ```
 
-versions.tf
+### versions.tf
 ```terraform
 terraform {
   required_providers {
@@ -86,24 +88,29 @@ Initialize the module where needed. Here we're pulling some output data from the
 
 ```terraform
 module "karpenter" {
-  source                 = "../../modules/karpenter"
-  env                    = local.env
-  region                 = local.region
-  cluster_name           = module.eks-cluster.name
-  cluster_endpoint       = module.eks-cluster.endpoint
-  irsa_oidc_provider_arn = module.eks-cluster.oidc_provider_arn
-  eks_node_role_arn      = module.eks-cluster.node_role_arn
-  karpenter_version      = "v0.32.1"
+  source                     = "../../modules/karpenter"
+  env                        = local.env
+  region                     = local.region
+  cluster_name               = module.eks-cluster.name
+  cluster_endpoint           = module.eks-cluster.endpoint
+  irsa_oidc_provider_arn     = module.eks-cluster.oidc_provider_arn
+  eks_node_role_arn          = module.eks-cluster.node_role_arn
+  karpenter_version          = "v0.32.1"
+  worker_node_types          = ["t3.medium", "t3a.medium"]
+  worker_node_capacity_types = ["spot", "on-demand"]
+  worker_node_arch           = ["amd64"]
 }
 ```
 
-### Module files
+## Module files
 
-Deploying Karpenter via Helm to the EKS cluster provided and updating the "aws-auth" configmap to include the Karpenter node role. Using the kubectl provider, we're setting the NodeClass and NodePool manifests and one important thing to highlight is we're targeting subnets and security groups by the "karpenter.sh/discovery" tag, so make sure your tags are set before running. Another thing to note is this example is it's using the Bottlerocket OS for nodes and assigning to controller pods to the core node group. We don't want them being possibly assigned to its own created EC2 instance.
+We'll be using Helm to deploy Karpenter to the EKS cluster and updating the "aws-auth" configmap to include the Karpenter node role. Using the kubectl provider, we're setting the NodeClass and NodePool manifests and one important thing to highlight is we're targeting subnets and security groups by the "karpenter.sh/discovery" tag, so make sure your tags are set before running. You can see an example of this in the VPC module in repo referenced earlier. The reason I'm using this particular kubectl provider is if we use the kubernetes_manifest resource on the Kubernetes provider, it will fail since the CRD doesn't exist yet.
 
-Karpenters API docs explain each of the settings in NodeClass and NodePool.
+Another thing to note is this example is using the Bottlerocket OS for nodes and assigning to controller pods to the core node group. We don't want them possibly being shuffled to its own created EC2 instance.
 
-main.tf
+Karpenters API docs explain each of the settings in NodeClass and NodePool. You can get as general or specific as you want with the NodePool such as minimum/maximum core count, no specific instance types and just sizes.
+
+### main.tf
 ```terraform
 resource "helm_release" "karpenter" {
   namespace        = "karpenter"
@@ -208,40 +215,11 @@ resource "kubectl_manifest" "karpenter_node_class" {
 }
 
 resource "kubectl_manifest" "karpenter_node_pool" {
-  yaml_body = <<-YAML
-    apiVersion: karpenter.sh/v1beta1
-    kind: NodePool
-    metadata:
-      name: default
-    spec:
-      template:
-        spec:
-          requirements:
-            - key: kubernetes.io/arch
-              operator: In
-              values: ["amd64"]
-            - key: kubernetes.io/os
-              operator: In
-              values: ["linux"]
-            - key: karpenter.sh/capacity-type
-              operator: In
-              values: ["spot", "on-demand"]
-            - key: karpenter.k8s.aws/instance-category
-              operator: In
-              values: [ "m", "r", "c"]
-            - key: karpenter.k8s.aws/instance-generation
-              operator: Gt
-              values: ["2"]
-          nodeClassRef:
-            name: default
-          kubelet:
-            maxPods: 110
-      limits:
-        cpu: 1000
-      disruption:
-        consolidationPolicy: WhenUnderutilized
-        expireAfter: 720h # 30 * 24h = 720h
-  YAML
+  yaml_body = templatefile("../../modules/aws/eks-addons/karpenter/files/node_pool.yaml", {
+    INSTANCE_TYPES = jsonencode(var.worker_node_types)
+    CAPACITY_TYPES = jsonencode(var.worker_node_capacity_types)
+    INSTANCE_ARCH  = jsonencode(var.worker_node_arch)
+  })
 
   depends_on = [
     helm_release.karpenter
@@ -249,14 +227,51 @@ resource "kubectl_manifest" "karpenter_node_pool" {
 }
 ```
 
-data.tf
+### node_pool.yaml
+
+```yaml
+apiVersion: karpenter.sh/v1beta1
+kind: NodePool
+metadata:
+  name: default
+spec:
+  template:
+    spec:
+      requirements:
+        - key: kubernetes.io/arch
+          operator: In
+          values: ${INSTANCE_ARCH}
+        - key: kubernetes.io/os
+          operator: In
+          values: ["linux"]
+        - key: karpenter.sh/capacity-type
+          operator: In
+          values: ${CAPACITY_TYPES}
+        - key: node.kubernetes.io/instance-type
+          operator: In
+          values: ${INSTANCE_TYPES}
+        - key: karpenter.k8s.aws/instance-generation
+          operator: Gt
+          values: ["2"]
+      nodeClassRef:
+        name: default
+      kubelet:
+        maxPods: 110
+  limits:
+    cpu: 1000
+  disruption:
+    consolidationPolicy: WhenUnderutilized
+    expireAfter: 720h # 30 * 24h = 720h
+```
+
+### data.tf
 ```terraform
 data "aws_caller_identity" "current" {}
 ```
 
 The IRSA role used by the Karpenter controller and node role assigned to nodes. An OIDC provider will need to be setup for the service account to assume an IAM role. The scoped out IRSA role that is referenced below can be found [here](https://github.com/eric-price/terraform_modules/tree/master/karpenter/files). If you get an error on the Spot service linked role, you may already have it setup for your account.
 
-iam.tf
+### iam.tf
 ```terraform
 locals {
   irsa_oidc_provider_url = replace(var.irsa_oidc_provider_arn, "/^(.*provider/)/", "")
@@ -436,6 +451,9 @@ variable "env" {}
 variable "region" {}
 variable "irsa_oidc_provider_arn" {}
 variable "eks_node_role_arn" {}
+variable "worker_node_types" {}
+variable "worker_node_capacity_types" {}
+variable "worker_node_arch" {}
 ```
 
 An easy way to test this is using the pause container to force autoscaling. Adjust the CPU cores depending on your instance type.

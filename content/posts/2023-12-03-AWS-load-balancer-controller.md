@@ -12,7 +12,7 @@ keywords:
 This post will guide you through installing and using the AWS load balancer controller on EKS with Terraform and an example ingress manifest. I won't go into details how to setup the VPC and EKS cluster; that can be found in my previous posts.
 All the referenced Terraform code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
-## Providers
+## Providers/Versions
 
 ### providers.tf
 ```terraform

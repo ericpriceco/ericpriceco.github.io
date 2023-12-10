@@ -20,7 +20,7 @@ Another option out there is the [Kubernetes Secrets Store CSI Driver](https://se
 
 All the referenced Terraform code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
-## Providers
+## Providers/Versions
 
 I'm using the EKS module for the endpoint in these providers and you can see how that's setup in the modules repo referenced earlier.
 

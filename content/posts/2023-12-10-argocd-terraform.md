@@ -11,7 +11,7 @@ keywords:
     - argocd
 ---
 
-This is a guide to getting started with ArgoCD using Terraform and the AWS LB controller as the ingress. You can see my guide here on how to setup and use the ALB controller [here](https://eric-price.net/posts/2023-12-03-aws-load-balancer-controller/). I'm going to go through the Terraform code and use a demo app to deploy to your K8s cluster through ArgoCD.
+This is a guide to getting started with ArgoCD using Terraform and the AWS LB controller as the ingress. You can see my guide [here](https://eric-price.net/posts/2023-12-03-aws-load-balancer-controller/) on how to setup and use the ALB controller. I'm going to go through the Terraform code and a demo app to deploy to your K8s cluster through ArgoCD.
 All the referenced Terraform code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
 These are the providers that we'll be using in the environment. You may need to adjust how the helm and kubectl providers are getting the cluster name and token for your environment.
@@ -185,12 +185,12 @@ resource "cloudflare_record" "argocd" {
 
 ## Demo App
 
-Once it's installed your K8s cluster, you should be able to reach the login page of ArgoCD. The admin password is generated during the installed and saved to a K8s secret that can be obtained by running the command below. For security, it's recommended to delete the secret once you have it.
+Once it's installed to your K8s cluster, you should be able to reach the login page of ArgoCD. The admin password is generated during the install and saved to a K8s secret that can be obtained by running the command below. For security, it's recommended to delete the secret once you have it.
 ```bash
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath='{.data.password}' | base64 --decode
 ```
 
-This demo app is a Helm chart in a github repo and we're going to use Terraform to apply the Application manifest to ArgoCD to manage.
+This demo app is a Helm chart in a github repo and we're going to use Terraform to apply the Application manifest for ArgoCD to manage.
 
 ### main.tf
 ```terraform

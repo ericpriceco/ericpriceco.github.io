@@ -1,6 +1,6 @@
 ---
 title: External secrets and AWS Secrets Manager with Kubernetes
-date: 2023-12-03 13:00:00 -0700
+date: 2023-12-05 13:00:00 -0700
 tags:
     - kubernetes
     - terraform

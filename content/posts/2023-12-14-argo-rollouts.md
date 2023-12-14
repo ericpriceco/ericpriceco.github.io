@@ -68,7 +68,7 @@ terraform {
 
 ## Module
 
-Initialize the module where needed. Here we're installing Argo Rollouts to your K8s cluster through Helm and providing a values file through the templatefile function so we can have variable subsitution. In this demo, I'm using a public LB; it's important to stick it behind an internal LB with access by VPN.
+Initialize the module where needed. Here we're installing Argo Rollouts to your K8s cluster through Helm and providing a values file through the templatefile function so we can have variable subsitution. In this demo, I'm using a public LB; however, it's important to stick it behind an internal LB with access by VPN.
 
 ```terraform
 module "argo_rollouts" {
@@ -170,12 +170,12 @@ resource "cloudflare_record" "argocd" {
 
 ## Demo App
 
-Once it's installed to your K8s cluster, you should be able to reach the Argo Rollouts dashboard. You won't see anything yet until we deploy an app with the rollout CRD. For this demo, I'm going to use Argo's demo app since he has a nifty UI that shows the canary deployment steps in real time.
+Once it's installed to your K8s cluster, you should be able to reach the Argo Rollouts dashboard. You won't see anything yet until we deploy an app with the rollout CRD. For this demo, I'm going to use Argo's demo app since it has a nifty UI that shows the canary deployment steps in real time.
 
 The rollout CRD is replacing our deployment manifest and most of structure is the same under "template". There are few things I want to point out:
 - We're specifying two services that you will create in the next steps.
 - The rollbackWindow setting will tell it how many revisions that we can instantly rollback to.
-- The steps section can be more or less depending on your needs. This durations are short in this example for demo purposes.
+- The steps section can be more or less depending on your needs. The durations are short here for demo purposes.
 - We're setting ALB as our traffic routing mechanism. This will modify our LB rule with 2 weights for our canary and stable (original) target groups.
 
 ### rollout.yaml
@@ -321,6 +321,6 @@ Once the demo app is up and running, you should see a very cool UI that continuo
 
 The Argo Rollout dashboard should also show the app under the namespace it was deployed to. There you can see the list of steps and once we start the deploy, it will show the progress in realtime.
 
-Now the fun begins with seeing it in action. Change "argoproj/rollouts-demo" image tag in the rollouts manifest from "blue" to "yellow" and save. You will see the demo app start to show traffic being sent to the yellow version as well as the weight rules being changed on the ALB. After all the steps complete, 100% of traffic will be sent to the latest version.
+Now the fun begins with seeing it in action. Change "argoproj/rollouts-demo" image tag in the rollouts manifest from "blue" to "yellow" and save. You will see the demo app start to show traffic being sent to the yellow version. If you look at your ALB ruleset you will see the weight rules being changed at each step. After all the steps complete, 100% of traffic will be sent to the latest version.
 
 In a future post, I will demonstrate how to use the analysis feature that can query prometheus metrics for 500's and rollback automatically if it reaches the threshold. 

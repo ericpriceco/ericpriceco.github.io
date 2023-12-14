@@ -174,7 +174,7 @@ Change this to your DNS provider.
 ```terraform
 resource "cloudflare_record" "argocd" {
   zone_id         = "your_zone_id"
-  name            = "argocd.sandbox"
+  name            = "argocd.${var.env}"
   value           = var.loadbalancer_dns
   type            = "CNAME"
   ttl             = 3600

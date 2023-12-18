@@ -184,6 +184,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: rollouts-demo
+  namespace: demo
 spec:
   strategy:
     canary:
@@ -237,6 +238,7 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: rollouts-demo
+  namespace: demo
 spec:
   maxReplicas: 6
   minReplicas: 2
@@ -255,6 +257,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: rollouts-demo-canary
+  namespace: demo
 spec:
   type: ClusterIP
   ports:
@@ -269,6 +272,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: rollouts-demo-stable
+  namespace: demo
 spec:
   type: ClusterIP
   ports:
@@ -288,6 +292,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: rollouts-demo-ingress
+  namespace: demo
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/backend-protocol: HTTP

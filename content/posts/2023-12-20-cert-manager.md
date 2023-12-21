@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Cert-Manager and Cloudflare
-date: 2023-12-14 14:00:00 -0700
+date: 2023-12-20 19:00:00 -0700
 tags:
     - eks
     - cert-manager

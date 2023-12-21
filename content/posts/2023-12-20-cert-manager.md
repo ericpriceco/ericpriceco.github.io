@@ -68,7 +68,7 @@ terraform {
 
 ## Module
 
-Initialize the module where ndded.
+Initialize the module where needed.
 
 ```terraform
 module "cert_manager" {
@@ -80,7 +80,7 @@ module "cert_manager" {
 
 ## Module files
 
-Here we're installing cert-manager through Helm and setting a nodeaffinity to my core managed group, so they don't slotted into any nodes created by Karpenter. It's recommended to install the CRD's used by cert-manager separately for production workloads to avoid certificate resources being removed if the Helm release is removed. If you look at the data.tf file below, we're pulling the manifest URL and using HTTP data resource to loop through the YAML body.
+Here we're installing cert-manager through Helm and setting a nodeaffinity to my core managed group, so they don't slotted into any nodes created by Karpenter. It's recommended to install the CRD's used by cert-manager separately for production workloads to avoid certificate resources being removed if the Helm release is removed. The manifest can be downloaded [here](https://github.com/cert-manager/cert-manager/releases/download/v1.13.3/cert-manager.crds.yaml) for the latest version as of writing this.
 
 In this example, my DNS provider is CloudFlare and creating a secret with the token stored in SecretsManager. When a certificate is requested, you can show ownership through DNS or HTTP and in this example, its using the CloudFlare provider to prove ownership. The plus side to the DNS method is the ability to get wildcard certifcates.
 
@@ -113,6 +113,10 @@ resource "helm_release" "cert_manager" {
   depends_on = [
     kubectl_manifest.crds
   ]
+}
+
+data "kubectl_file_documents" "crds" {
+  content = file("../../modules/aws/eks-addons/cert_manager/files/crds.yaml")
 }
 
 resource "kubectl_manifest" "crds" {
@@ -190,14 +194,6 @@ resource "kubectl_manifest" "cluster_issuer" {
 
 ### data.tf
 ```terraform
-data "http" "crd_manifest" {
-  url = "https://github.com/cert-manager/cert-manager/releases/download/${var.cert_manager_version}/cert-manager.crds.yaml"
-}
-
-data "kubectl_file_documents" "crds" {
-  content = data.http.crd_manifest.response_body
-}
-
 data "aws_secretsmanager_secret" "cloudflare_api_token" {
   name = "cloudflare-api-token"
 }

@@ -203,6 +203,16 @@ data "aws_secretsmanager_secret_version" "cloudflare_api_token" {
 }
 ```
 
+### variables.tf
+```terraform
+variable "env" {
+  type = string
+}
+variable "cert_manager_version" {
+  type = string
+}
+```
+
 ## Demo
 
 Here we're creating an ingress using the test cluster issuer. By setting the cert-manager annotation, it will discover this and automatically create a certificate resource and store the cert keypair in the secret specified in the TLS section.

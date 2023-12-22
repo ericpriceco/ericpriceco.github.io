@@ -146,12 +146,24 @@ controller:
 
 ### variables.tf
 ```terraform
-variable "argo_rollouts_version" {}
-variable "env" {}
-variable "fqdn" {}
-variable "loadbalancer_dns" {}
-variable "name" {}
-variable "region" {}
+variable "argo_rollouts_version" {
+  type = string
+}
+variable "env" {
+  type = string
+}
+variable "fqdn" {
+  type = string
+}
+variable "loadbalancer_dns" {
+  type = string
+}
+variable "name" {
+  type = string
+}
+variable "region" {
+  type = string
+}
 ```
 
 Change this to your DNS provider.

@@ -229,6 +229,8 @@ resource "kubectl_manifest" "karpenter_node_pool" {
 
 ### node_pool.yaml
 
+The node pool manifest is where we can really fine tune the instance types if we choose to. You can be as general as an instance family type such as the C class or specific instance sizes.
+
 ```yaml
 apiVersion: karpenter.sh/v1beta1
 kind: NodePool
@@ -353,7 +355,7 @@ resource "aws_iam_policy" "karpenter_irsa" {
 
 This SQS queue will notify Karpenter for spot interruptions and instance health events.
 
-sqs.tf
+### sqs.tf
 ```terraform
 resource "aws_sqs_queue" "karpenter" {
   message_retention_seconds = 300
@@ -383,7 +385,7 @@ data "aws_iam_policy_document" "node_termination_queue" {
 
 These are the Cloudwatch health events mentioned above that will send events to the SQS queue.
 
-cloudwatch.tf
+### cloudwatch.tf
 ```terraform
 locals {
   events = {
@@ -443,18 +445,41 @@ resource "aws_cloudwatch_event_target" "this" {
 }
 ```
 
-variables.tf
+### variables.tf
 ```terraform
-variable "cluster_name" {}
-variable "cluster_endpoint" {}
-variable "env" {}
-variable "region" {}
-variable "irsa_oidc_provider_arn" {}
-variable "eks_node_role_arn" {}
-variable "worker_node_types" {}
-variable "worker_node_capacity_types" {}
-variable "worker_node_arch" {}
+variable "cluster_name" {
+  type = string
+}
+variable "cluster_endpoint" {
+  type = string
+}
+variable "env" {
+  type = string
+}
+variable "region" {
+  type = string
+}
+variable "irsa_oidc_provider_arn" {
+  type = string
+}
+variable "eks_node_role_arn" {
+  type = string
+}
+variable "karpenter_version" {
+  type = string
+}
+variable "worker_node_types" {
+  type = list(string)
+}
+variable "worker_node_capacity_types" {
+  type = list(string)
+}
+variable "worker_node_arch" {
+  type = list(string)
+}
 ```
+
+## Demo
 
 An easy way to test this is using the pause container to force autoscaling. Adjust the CPU cores depending on your instance type.
 
@@ -481,12 +506,14 @@ spec:
             requests:
               cpu: 1
 ```
+
 ```bash
 kubectl apply -f ./test.yaml
 kubectl scale deployment inflate --replicas 5
 ```
 
 You should see additional nodes being created fairly quickly to assign these new pods. If you don't see any activity, you can view the logs with this command:
+
 ```bash
 kubectl logs -f -n karpenter -l app.kubernetes.io/name=karpenter -c controller
 ```

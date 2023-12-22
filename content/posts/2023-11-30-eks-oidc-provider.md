@@ -14,6 +14,9 @@ keywords:
 In this post, I'm going to describe how to setup the OIDC provider in AWS and use IAM roles on Kubernetes service accounts. This will allow your services to access AWS resources using roles instead of access keys. No need for user accounts or key rotations! I'm going to go through all the Terraform code, but it can be referenced [here](https://github.com/eric-price/terraform_modules) in the EKS module. This doesn't cover setting up an EKS cluster; however, you can see how to do that [here](https://eric-price.net/posts/2023-11-16-eks-terraform-module/).
 
 After creating your EKS cluster, setting up the OIDC provider is easy and after creating this, you can locate in on the IAM console page. Look for providers.
+
+## Terraform resources
+
 ```terraform
 data "tls_certificate" "cluster" {
   url = aws_eks_cluster.cluster.identity[0].oidc[0].issuer
@@ -28,12 +31,12 @@ resource "aws_iam_openid_connect_provider" "cluster" {
 
 Next I'm going to through an example app that uses a role with the OIDC provider. Here the OIDC provider is allowed to assume the role and a basic policy that allows access to an s3 bucket.
 
-data.tf
+### data.tf
 ```terraform
 data "aws_caller_identity" "current" {}
 ```
 
-iam.tf
+### iam.tf
 ```terraform
 locals {
   irsa_oidc_provider_url = replace(var.irsa_oidc_provider_arn, "/^(.*provider/)/", "")
@@ -93,6 +96,8 @@ resource "aws_iam_policy" "role" {
   })
 }
 ```
+
+## Demo
 
 The next step is to tell our Kubernetes service account to use this specific role when accessing AWS resources by adding an annotation with the ARN of the role we just created.
 

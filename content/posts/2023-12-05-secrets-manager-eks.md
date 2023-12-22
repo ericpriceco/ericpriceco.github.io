@@ -179,7 +179,7 @@ resource "aws_iam_policy" "role" {
 }
 ```
 
-## K8s manifests
+## Demo
 
 Here we're creating a SecretStore for this app that uses its own serviceAccount, which is setup for OIDC IAM authentication. Next, we have the ExternalSecret that's pulling two values out of a json based secret on Secrets Manager called "sandbox/image-app" with a refresh interval of 5 minutes.
 

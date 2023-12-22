@@ -13,7 +13,12 @@ keywords:
 
 This post will guide you through all the Terraform code needed to spin up a EKS cluster with Bottlerocket nodes using just the AWS provider instead of using a third-party module. The VPC resources need to be setup beforehand. For the VPC setup, I find having dedicated subnets for EKS clusters beneficial for IP address prefixes since it needs continuous blocks of IP addresses. All the referenced Terraform code can be obtained [here](https://github.com/eric-price/terraform_modules).
 
-Initialize the module where needed.
+## Module
+
+Initialize the module where needed. For this module, we're supplying addon data and what type of instances we want in the managed core node group. The way I'm setting up the addons gives the ability to add further ones in a single place and we won't have to duplicate anything if there were multiple EKS clusters in the same account.
+
+I've also added Fargate support if needed.
+
 ```terraform
 locals {
   env    = "sandbox"
@@ -33,14 +38,13 @@ module "eks-cluster" {
   source                   = "../../modules/aws/eks"
   cluster_name             = local.env
   env                      = local.env
+  region                   = local.region
   cluster_version          = "1.28"
-  addon_vpc_version        = "v1.14.1-eksbuild.1"
-  addon_ebs_version        = "v1.24.1-eksbuild.1"
-  addon_coredns_version    = "v1.10.1-eksbuild.2"
-  addon_kube_proxy_version = "v1.28.1-eksbuild.1"
-  worker_instance_type     = "t3a.large"
-  worker_instance_count    = 3
-  worker_volume_size       = 100
+  addons                   = var.addons
+  fargate                  = false
+  core_instance_type       = "t3a.large"
+  core_instance_count      = 3
+  core_volume_size         = 100
   log_types = [
     "api",
     "audit",
@@ -49,11 +53,35 @@ module "eks-cluster" {
     "scheduler"
   ]
 }
+
+variable "addons" {
+  type = map(any)
+  default = {
+    vpc = {
+      enable  = true
+      version = "v1.14.1-eksbuild.1"
+    }
+    ebs = {
+      enable  = true
+      version = "v1.24.1-eksbuild.1"
+    }
+    coredns = {
+      enable  = true
+      version = "v1.10.1-eksbuild.2"
+    }
+    kube_proxy = {
+      enable  = true
+      version = "v1.28.1-eksbuild.1"
+    }
+  }
+}
 ```
 
-### Module files
+## Module files
 
-cluster.tf
+The Karpenter discovery tags are needed only for it to discover the cluster, so feel free to remove that if you're not going to use Karpenter.
+
+### cluster.tf
 ```terraform
 resource "aws_eks_cluster" "cluster" {
   name     = var.cluster_name
@@ -95,7 +123,7 @@ resource "aws_eks_cluster" "cluster" {
 
 Adjustments will need to be made here depending on your subnetting. 
 
-data.tf
+### data.tf
 ```terraform
 data "aws_vpc" "main" {
   tags = {
@@ -132,9 +160,10 @@ data "tls_certificate" "cluster" {
 
 The VPC addon is a requirement for the node groups to turn on prefix delegation before they're created.
 
-addons.tf
+### addons.tf
 ```terraform
 resource "aws_eks_addon" "vpc" {
+  count                       = var.addons["vpc"]["enable"] ? 1 : 0
   cluster_name                = aws_eks_cluster.cluster.name
   addon_name                  = "vpc-cni"
   addon_version               = var.addon_vpc_version
@@ -149,6 +178,7 @@ resource "aws_eks_addon" "vpc" {
 }
 
 resource "aws_eks_addon" "ebs" {
+  count                       = var.addons["ebs"]["enable"] ? 1 : 0
   cluster_name                = aws_eks_cluster.cluster.name
   addon_name                  = "aws-ebs-csi-driver"
   addon_version               = var.addon_ebs_version
@@ -161,6 +191,7 @@ resource "aws_eks_addon" "ebs" {
 }
 
 resource "aws_eks_addon" "coredns" {
+  count                       = var.addons["coredns"]["enable"] ? 1 : 0
   cluster_name                = aws_eks_cluster.cluster.name
   addon_name                  = "coredns"
   addon_version               = var.addon_coredns_version
@@ -173,6 +204,7 @@ resource "aws_eks_addon" "coredns" {
 }
 
 resource "aws_eks_addon" "kube-proxy" {
+  count                       = var.addons["kube_proxy"]["enable"] ? 1 : 0
   cluster_name                = aws_eks_cluster.cluster.name
   addon_name                  = "kube-proxy"
   addon_version               = var.addon_kube_proxy_version
@@ -185,7 +217,7 @@ resource "aws_eks_addon" "kube-proxy" {
 }
 ```
 
-iam.tf
+### iam.tf
 ```terraform
 resource "aws_iam_role" "cluster" {
   name = "eks-cluster-${var.cluster_name}"
@@ -239,7 +271,7 @@ resource "aws_iam_openid_connect_provider" "cluster" {
 }
 ```
 
-kms.tf
+### kms.tf
 ```terraform
 resource "aws_kms_key" "eks" {
   description         = "Encrypt EKS secrets"
@@ -255,7 +287,7 @@ resource "aws_kms_alias" "eks" {
 
 Here we're automatically pulling the device mappings required by the Bottlerocket AMI and the latest AMI id. The template file path is dependent on how you structure your modules. This example is only one node group called "worker" and the lifecycle block will ignore a new AMI release until ready to update.
 
-launch_template.tf
+### launch_template.tf
 ```terraform
 locals {
   device_list = tolist(data.aws_ami.bottlerocket_image.block_device_mappings)
@@ -341,7 +373,7 @@ resource "aws_launch_template" "core" {
 }
 ```
 
-nodes.tf
+### nodes.tf
 ```terraform
 resource "aws_eks_node_group" "core" {
   cluster_name    = aws_eks_cluster.cluster.name
@@ -381,8 +413,8 @@ resource "aws_eks_node_group" "core" {
 }
 ```
 
-node_config.toml.tftpl
-```
+### node_config.toml.tftpl
+```toml
 [settings.kubernetes]
 "cluster-name" = "${cluster_name}"
 "api-server" = "${cluster_endpoint}"
@@ -398,7 +430,7 @@ node_config.toml.tftpl
 
 Adjust the security group to allow access within VPC or VPN etc.
 
-security_groups.tf
+### security_groups.tf
 ```terraform
 resource "aws_security_group" "cluster" {
   name        = "eks-cluster-${var.cluster_name}"
@@ -458,17 +490,36 @@ resource "aws_security_group" "node" {
 }
 ```
 
-variables.tf
+### variables.tf
 ```terraform
-variable "addon_coredns_version" {}
-variable "addon_ebs_version" {}
-variable "addon_kube_proxy_version" {}
-variable "addon_vpc_version" {}
-variable "cluster_name" {}
-variable "cluster_version" {}
-variable "env" {}
-variable "log_types" {}
-variable "worker_instance_count" {}
-variable "worker_instance_type" {}
-variable "worker_volume_size" {}
+variable "addons" {
+  type = map(any)
+}
+variable "cluster_name" {
+  type = string
+}
+variable "cluster_version" {
+  type = string
+}
+variable "core_node_count" {
+  type = number
+}
+variable "core_node_type" {
+  type = string
+}
+variable "core_node_volume_size" {
+  type = number
+}
+variable "env" {
+  type = string
+}
+variable "fargate" {
+  type = bool
+}
+variable "log_types" {
+  type = list(string)
+}
+variable "region" {
+  type = string
+}
 ```

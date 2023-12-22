@@ -77,6 +77,8 @@ terraform {
 }
 ```
 
+## Module
+
 Initialize the module where needed. The "count" here is where it can be enabled or not through the EKS module and can be removed.
 
 ```terraform
@@ -192,15 +194,28 @@ data "aws_caller_identity" "current" {}
 
 ### variables.tf
 ```terraform
-variable "cluster_name" {}
-variable "env" {}
-variable "irsa_oidc_provider_arn" {}
-variable "controller_version" {}
+variable "cluster_name" {
+  type = string
+}
+variable "env" {
+  type = string
+}
+variable "irsa_oidc_provider_arn" {
+  type = string
+}
+variable "controller_version" {
+  type = string
+}
+variable "cert" {
+  type = string
+}
 ```
 
-## Ingress
+## Demo
 
 There are several annotations in this example and more in the docs to setup the load balancer to your specifications. A few to highlight is "group.name" that will use a shared load balancer or create one if it doesn't exist, the certificate ARN if using SSL, and the scheme, which in this case is creating a public load balancer. This will create the target group for the app as well and the rules section will create the listeners on the load balancer.
+
+### ingress.yaml
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress

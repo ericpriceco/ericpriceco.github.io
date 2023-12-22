@@ -147,7 +147,9 @@ data "tls_certificate" "gha" {
 
 ### variables.tf
 ```terraform
-variable "env" {}
+variable "env" {
+  type = string
+}
 ```
 
 ## Github Action Workflow

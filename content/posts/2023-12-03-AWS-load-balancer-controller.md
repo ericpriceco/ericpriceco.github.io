@@ -257,3 +257,77 @@ spec:
               port:
                 number: 8000
 ```
+
+When you create your first ingress resource on your K8s cluster, it will spin up a LB if one doesn't exist that matches the group name. I find doing this with your first app causes two issues: you don't have an existing LB to automatically create a DNS record for your app through Terraform since it doesn't exist yet and if you remove the app, the LB is removed as well if nothing else is using it. That might be fine for a throwaway environment, but I like to create my LBs right off the bat and tie them to non-connected app in the kube-system namespace for protection.
+
+I've found creating the LB through the AWS provider first problematic since the controller is finicky on working with an existing LB, so I'm using the controller itself to create an external and internal LB.
+
+```terraform
+resource "kubectl_manifest" "external_app_lb" {
+  yaml_body = templatefile("../../modules/aws/eks-addons/lb_controller/files/app_lb.yaml", {
+    CERT       = var.cert
+    ENV        = var.env
+    LB_NAME    = "${var.env}-app-external"
+    LB_TYPE    = "internet-facing"
+    SSL_POLICY = "ELBSecurityPolicy-FS-1-2-2019-08"
+  })
+}
+
+resource "kubectl_manifest" "internal_app_lb" {
+  yaml_body = templatefile("../../modules/aws/eks-addons/lb_controller/files/app_lb.yaml", {
+    CERT       = var.cert
+    ENV        = var.env
+    LB_NAME    = "${var.env}-app-internal"
+    LB_TYPE    = "internal"
+    SSL_POLICY = "ELBSecurityPolicy-FS-1-2-2019-08"
+  })
+}
+```
+
+### app_lb.yaml
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "${LB_NAME}"
+  namespace: kube-system
+  annotations:
+    alb.ingress.kubernetes.io/actions.default: |
+      {
+        "Type": "fixed-response",
+        "FixedResponseConfig": {
+          "ContentType": "text/plain",
+          "StatusCode": "404",
+          "MessageBody": ""
+        }
+      }
+    alb.ingress.kubernetes.io/certificate-arn: ${CERT}
+    alb.ingress.kubernetes.io/group.name: ${LB_NAME}
+    alb.ingress.kubernetes.io/group.order: "1000"
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/load-balancer-name: ${LB_NAME}
+    alb.ingress.kubernetes.io/scheme: ${LB_TYPE}
+    alb.ingress.kubernetes.io/tags: "env=${ENV}"
+    alb.ingress.kubernetes.io/ssl-policy: ${SSL_POLICY}
+    alb.ingress.kubernetes.io/actions.ssl-redirect: |
+      {
+        "Type": "redirect",
+        "RedirectConfig": {
+          "Protocol": "HTTPS",
+          "Port": "443",
+          "StatusCode": "HTTP_301"
+        }
+      }
+    kubernetes.io/ingress.class: alb
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: default
+                port:
+                  name: use-annotation
+```

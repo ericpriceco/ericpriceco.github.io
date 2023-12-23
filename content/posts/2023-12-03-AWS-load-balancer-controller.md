@@ -258,7 +258,7 @@ spec:
                 number: 8000
 ```
 
-When you create your first ingress resource on your K8s cluster, it will spin up a LB if one doesn't exist that matches the group name. I find doing this with your first app causes two issues: you don't have an existing LB to automatically create a DNS record for your app through Terraform since it doesn't exist yet and if you remove the app, the LB is removed as well if nothing else is using it. That might be fine for a throwaway environment, but I like to create my LBs right off the bat and tie them to non-connected app in the kube-system namespace for protection.
+When you create your first ingress resource on your K8s cluster, it will spin up a LB if one doesn't exist that matches the group name. I find doing this with your first app causes two issues: you don't have an existing LB to automatically create a DNS record for your app through Terraform since it doesn't exist yet and if you remove the app, the LB is removed as well if nothing else is using it. That might be fine for a throwaway environment, but I like to create my LBs right off the bat and tie them to a non-connected app in the kube-system namespace for protection.
 
 I've found creating the LB through the AWS provider first problematic since the controller is finicky on working with an existing LB, so I'm using the controller itself to create an external and internal LB.
 

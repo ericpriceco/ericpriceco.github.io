@@ -55,7 +55,7 @@ weight = 3
   # Home page settings
   description = "Random guides from day to day work."
   mainSection = "posts" # your main section
-  showAllPostsOnHomePage = true # default
+  showAllPostsOnHomePage = false # default
   postsOnHomePage = 50 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = false # show tags overview by default.
   # showProjectsList = true # show projects list by default (if projects data file exists).

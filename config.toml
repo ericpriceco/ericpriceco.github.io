@@ -43,7 +43,7 @@ weight = 3
     lineNos = true
     lineNumbersInTable = false
     noClasses = true
-    style = "dracula"
+    style = "gruvbox-dark"
     tabWidth = 4
 
 [params]
@@ -55,8 +55,8 @@ weight = 3
   # Home page settings
   description = "Random guides from day to day work."
   mainSection = "posts" # your main section
-  showAllPostsOnHomePage = false # default
-  postsOnHomePage = 20 # this option will be ignored if showAllPostsOnHomePage is set to true
+  showAllPostsOnHomePage = true # default
+  postsOnHomePage = 50 # this option will be ignored if showAllPostsOnHomePage is set to true
   tagsOverview = false # show tags overview by default.
   # showProjectsList = true # show projects list by default (if projects data file exists).
   # projectsUrl = "https://github.com/gohugoio" # title link for projects list
@@ -65,7 +65,7 @@ weight = 3
   dateFormat = "2006-01-02" # default
 
   # Post page settings
-  show_updated = true # default
+  show_updated = false # default
   showReadTime = true # default
 
   # the value of name should be an valid font awesome icon name (brands type)
@@ -73,6 +73,3 @@ weight = 3
   [[params.social]]
     name = "linkedin"
     link = "https://linkedin.com/in/ericprice2"
-  # [[params.social]]
-  #   name = "twitter"
-  #   link = "https://twitter.com/EricPrice2"

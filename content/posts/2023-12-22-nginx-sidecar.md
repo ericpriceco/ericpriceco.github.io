@@ -9,11 +9,11 @@ keywords:
     - cert-manager
 ---
 
-If you're not ready for a service mesh like Istio, Cillium or Nginx's own service mesh, an easy way to implement end-to-end encryption from the application LB to your pod or TLS/SSL termination for your pods behind a network LB is a proxy sidecar pod using Nginx. I'm going to describe how to set this up using cert-manager to fetch a letsencrypt certificate and mount that to use the Nginx base image. 
+If you're not ready for a service mesh like Istio, Cillium or Nginx's own service mesh, an easy way to implement end-to-end encryption from the application LB to your pod or TLS/SSL termination for your pods behind a network LB is a proxy sidecar using Nginx. I'm going to describe how to set this up using cert-manager to fetch a letsencrypt certificate and mount that to the Nginx base image. 
 
-Cert-manager will need to be setup before the next steps and that can be followed [here](https://eric-price.net/posts/2023-12-20-cert-manager).
+Cert-manager will need to be setup before the next steps and that can be seen [here](https://eric-price.net/posts/2023-12-20-cert-manager).
 
-Snippet from a deploment manifest for the nginx proxy container that is mounting the config and certificate keypair. Just need to make sure the secret created from the ingress manifest is the same name referenced in the volume.
+Snippet from a deployment manifest for the nginx proxy container that is mounting the config and certificate keypair. Just need to make sure the secret created from the ingress manifest is the same name referenced in the volume.
 
 ### deployment.yaml
 ```yaml

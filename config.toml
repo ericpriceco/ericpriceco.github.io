@@ -43,7 +43,7 @@ weight = 3
     lineNos = true
     lineNumbersInTable = false
     noClasses = true
-    style = "gruvbox-dark"
+    style = "gruvbox"
     tabWidth = 4
 
 [params]

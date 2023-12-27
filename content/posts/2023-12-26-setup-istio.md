@@ -13,7 +13,7 @@ keywords:
     - aws
 ---
 
-In this post, I'm going to go through the steps to setup the Istio service mesh using Terraform. Cert-manager is used to fetch LetsEncrypt SSL certificates and Istio will use the AWS Load Balancer Controller will spin up a network LB. Using a service mesh like Istio is going to give us suprememe flexibility with traffic routing, observability metrics with service-to-service communication going through Istio's gateway and security with its authorization policies.
+In this post, I'm going to go through the steps to setup the Istio service mesh using Terraform. Cert-manager is used to fetch LetsEncrypt SSL certificates and Istio will use the AWS Load Balancer Controller to spin up a network LB. Using a service mesh like Istio is going to give us flexibility with traffic routing, observability metrics with service-to-service communication going through Istio's gateway and security with its authorization policies.
 
 Cert-manager and the AWS Load Balancer controller will need to be installed beforehand to use the demo app or example Istio ingress gateways. You can see how to set those up [here](https://eric-price.net/posts/2023-12-20-cert-manager/) and [here](https://eric-price.net/posts/2023-12-03-aws-load-balancer-controller/). If you're not on AWS, you should be able to swap out the annotations on the gateways.
 
@@ -350,7 +350,7 @@ variable "domains" {
 
 ## Demo
 
-Instead of the typical Ingress manifest, we will instead create a VirtualService that sends traffic to our app and binds to a named gateway created earlier. In the VirtualService, we can get finely tune routing; however, in this example, I just want all traffic to reach my one endpoint and send it to my service "demo-app" listening on port 8000. For any existing apps, they will need to be restarted for the proxy sidecar container to automatically inject itself.
+Instead of the typical Ingress manifest, we will instead create a VirtualService that sends traffic to our app and binds to a named gateway created earlier. In the VirtualService, we can finely tune routing; however, in this example, I just want all traffic to reach my one endpoint and send it to my service "demo-app" listening on port 8000. For any existing apps, they will need to be restarted for the proxy sidecar container to automatically inject itself.
 
 Since the shared gateway was installed to the istio-ingress namespace, I'm specifying the exact location with the namespace.
 

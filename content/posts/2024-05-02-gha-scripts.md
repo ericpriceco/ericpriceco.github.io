@@ -1,7 +1,6 @@
 ---
 title: Batch remove GHA workflow runs and logs 
-date: 2023-05-01 10:00:00 -0700
-category: notes
+date: 2024-05-02 10:00:00 -0700
 tags:
     - gha
 keywords:

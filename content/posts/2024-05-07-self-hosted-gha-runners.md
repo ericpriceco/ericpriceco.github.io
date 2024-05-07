@@ -92,8 +92,8 @@ Here is a general workload runner with two core counts. I found that if I reques
 
 On the values settings:
 - telling Karpenter to do-not-disrupt the node for any case such as bin-packing, so as not to kill a running job.
-- setting "dind" mode for the public actions that use Dockerfiles
-- since the ARC runner image is bare minimum (not the same as a Github hosted runner), I've set a workaround to get "git" installed immediately on startup. You could potentially use a custom runner image; however, I didn't have any luck with that. Installing "git" at a minimum will allow the "actions/checkout" stepto use git to checkout the repo instead of downloading an archive of the repo since git isn't installed.
+- setting "dind" mode for the public actions that use Dockerfiles.
+- since the ARC runner image is bare minimum (not the same as a Github hosted runner), I've set a workaround to get "git" installed immediately on startup. You could potentially use a custom runner image; however, I didn't have any luck with that. Installing "git" at a minimum will allow the "actions/checkout" step to use git to checkout the repo instead of downloading an archive of the repo since git isn't installed.
 - installing the listener pods on the core nodes and not temporary nodes setup by Karpenter
 - telling the runner pod to run on my "general" node type in the Karpenter pool
 - update the githubConfigUrl setting to your organization

@@ -1,6 +1,6 @@
 ---
 title: Self-hosted Github Action runners on Kubernetes using Karpenter and ARC
-date: 2024-05-02 10:00:00 -0700
+date: 2024-05-07 10:00:00 -0700
 tags:
     - gha
     - arc

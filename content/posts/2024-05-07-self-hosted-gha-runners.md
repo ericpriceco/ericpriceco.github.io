@@ -13,9 +13,11 @@ keywords:
     - karpenter
 ---
 
-In this post, I'm going to show how to setup self-hosted Github Action runners on Kubernetes using the [Actions Runner Controller (ARC)](https://github.com/actions/actions-runner-controller) and Karpenter using Terraform. Using Karpenter is not a requirement; however, it will make life easier when using multiple instance types and a mix of spot and on-demand. This post won't get into the details on setting up Karpenter since that is done [here](https://eric-price.net/posts/2023-11-21-karpenter-terraform/).
+In this post, I'm going to show how to setup self-hosted Github Action runners on Kubernetes using the [Actions Runner Controller (ARC)](https://github.com/actions/actions-runner-controller) and Karpenter on Terraform. Using Karpenter is not a requirement; however, it will make life easier when using multiple instance types and a mix of spot and on-demand. This post won't get into the details of setting up Karpenter since that is done [here](https://eric-price.net/posts/2023-11-21-karpenter-terraform/).
 
 This first section is an example Terraform module for GHA ARC on EKS. As of this writing, there is a bug with version '0.9.1' that will kill a new runner node before its fully ready, so avoid that release for now.
+
+One important thing to keep in mind when using ARC is the runner image is not the same as the Github hosted runners. You will find that you will need to install dependencies that you didn't need before (ex: python, maven, git, jq).
 
 ## Module
 
@@ -45,14 +47,8 @@ provider "helm" {
 
 ## Module files
 
-ARC consists of two Helm charts; one for the controller and one for the runner scale sets. First need to install the controller.
+ARC consists of two Helm charts: one for the controller and one for the runner scale sets. First need to install the controller.
 
-### variables.tf
-```terraform
-variable "arc_version" {
-  type = string
-}
-```
 ### main.tf
 
 This is the controller service that is put into the "arc-systems" namespace.
@@ -196,6 +192,13 @@ resource "helm_release" "arc_runners_performance" {
   depends_on = [
     helm_release.arc_systems
   ]
+}
+```
+
+### variables.tf
+```terraform
+variable "arc_version" {
+  type = string
 }
 ```
 

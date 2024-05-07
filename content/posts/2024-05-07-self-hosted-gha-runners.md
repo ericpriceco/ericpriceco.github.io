@@ -97,6 +97,7 @@ On the values settings:
 - installing the listener pods on the core nodes and not temporary nodes setup by Karpenter
 - telling the runner pod to run on my "general" node type in the Karpenter pool
 - NOTE: update the githubConfigUrl setting to your organization
+- NOTE: githubConfigSecret in this case is using a custom Github app to generate the temporary token instead of using a Personal Access Token. Directions to create an app for this purpose is located [here](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners-with-actions-runner-controller/authenticating-to-the-github-api)
 
 ```terraform
 resource "helm_release" "arc_runners" {
@@ -197,10 +198,45 @@ resource "helm_release" "arc_runners_performance" {
 }
 ```
 
+Secret referenced above in the runner scale set in the "githubConfigSecret" value.
+```terraform
+resource "kubernetes_secret" "arc_app" {
+  metadata {
+    name      = "arc-app"
+    namespace = "arc-runners"
+  }
+
+  data = {
+    github_app_id              = data.aws_ssm_parameter.github_app_id.value
+    github_app_installation_id = data.aws_ssm_parameter.github_app_install_id.value
+    github_app_private_key     = data.aws_ssm_parameter.github_app_private_key.value
+  }
+
+  type                           = "Opaque"
+  wait_for_service_account_token = false
+}
+```
+
 ### variables.tf
 ```terraform
 variable "arc_version" {
   type = string
+}
+```
+
+Using Parameter Store to store values for the Github app secret.
+### data.tf
+```terraform
+data "aws_ssm_parameter" "github_app_id" {
+  name = "/eks/gha_arc/app_id"
+}
+
+data "aws_ssm_parameter" "github_app_install_id" {
+  name = "/eks/gha_arc/app_install_id"
+}
+
+data "aws_ssm_parameter" "github_app_private_key" {
+  name = "/eks/gha_arc/app_private_key"
 }
 ```
 

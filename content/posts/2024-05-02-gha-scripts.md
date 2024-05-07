@@ -7,7 +7,12 @@ keywords:
     - gha
 ---
 
-If you remove a GHA workflow from a repo and there is a history of runs, it doesn't actually remove it from the Github UI until you clean up the old runs. This is a script to remove all runs and/or logs for a given workflow. Your Github organization will need to set on the endpoint or removed entirely if not part of an organization.
+If you remove a GHA workflow from a repo and there is a history of runs, it doesn't actually remove it from the Github UI until you clean up the old runs. This is a script to remove all runs and/or logs for a given workflow. Your Github organization will need to be set on the endpoint or removed entirely if not part of an organization. 
+
+Before running, you will need to login through the Github CLI first.
+```bash
+gh auth login
+```
 
 ```bash
 #!/usr/bin/env bash

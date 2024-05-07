@@ -96,7 +96,7 @@ On the values settings:
 - since the ARC runner image is bare minimum (not the same as a Github hosted runner), I've set a workaround to get "git" installed immediately on startup. You could potentially use a custom runner image; however, I didn't have any luck with that. Installing "git" at a minimum will allow the "actions/checkout" step to use git to checkout the repo instead of downloading an archive of the repo since git isn't installed.
 - installing the listener pods on the core nodes and not temporary nodes setup by Karpenter
 - telling the runner pod to run on my "general" node type in the Karpenter pool
-- update the githubConfigUrl setting to your organization
+- NOTE: update the githubConfigUrl setting to your organization
 
 ```terraform
 resource "helm_release" "arc_runners" {
@@ -237,6 +237,7 @@ module "karpenter" {
   node_arch                = ["amd64"]
   node_volume_size         = 50
 }
+```
 
 One important setting to highlight here is the disruption setting. The default is "underUtilized" and this is more for stateless workloads that can be disrupted when Karpenter is trying to bin-pack the nodes. We don't want this for GHA workflow jobs and have them killed while working.
 

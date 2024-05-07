@@ -53,7 +53,7 @@ ARC consists of two Helm charts: one for the controller and one for the runner s
 
 This is the controller service that is put into the "arc-systems" namespace.
 
-The values are optional, but I'll explain the reasoning behind these. I use Grafa and turning on metrics and adding an annotation to scrap the metrics provided. Setting a node affinity to avoid the controller pod being placed in a node provisioned by Karpenter.
+The values are optional, but I'll explain the reasoning behind these. I use Grafa and turned on metrics and adding an annotation to scrap the metrics provided. Setting a node affinity to avoid the controller pod being placed in a node provisioned by Karpenter.
 
 ```terraform
 resource "helm_release" "arc_systems" {
@@ -84,6 +84,7 @@ resource "helm_release" "arc_systems" {
     EOT
   ]
 }
+```
 
 For my GHA workflows, I have jobs that require different core counts, so here there are two different runner scale sets requesting specific core sizes. 
 
@@ -108,7 +109,7 @@ resource "helm_release" "arc_runners" {
 
   values = [
     <<-EOT
-    githubConfigUrl: "https://github.com/FreeWillPBC"
+    githubConfigUrl: "https://github.com/<org>"
     githubConfigSecret: arc-app
     runnerGroup: k8s
     runnerScaleSetName: k8s-runner

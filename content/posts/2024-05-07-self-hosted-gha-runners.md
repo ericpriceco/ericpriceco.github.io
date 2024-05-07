@@ -96,6 +96,7 @@ On the values settings:
 - since the ARC runner image is bare minimum (not the same as a Github hosted runner), I've set a workaround to get "git" installed immediately on startup. You could potentially use a custom runner image; however, I didn't have any luck with that. Installing "git" at a minimum will allow the "actions/checkout" stepto use git to checkout the repo instead of downloading an archive of the repo since git isn't installed.
 - installing the listener pods on the core nodes and not temporary nodes setup by Karpenter
 - telling the runner pod to run on my "general" node type in the Karpenter pool
+- update the githubConfigUrl setting to your organization
 
 ```terraform
 resource "helm_release" "arc_runners" {
@@ -160,7 +161,7 @@ resource "helm_release" "arc_runners_performance" {
 
   values = [
     <<-EOT
-    githubConfigUrl: "https://github.com/FreeWillPBC"
+    githubConfigUrl: "https://github.com/<org>"
     githubConfigSecret: arc-app
     runnerGroup: k8s
     runnerScaleSetName: k8s-runner-8-core

@@ -29,7 +29,8 @@ Creating a sub-account is a little different from the commercial side since you 
 
 On the commercial side, run the following command on your master account. The profile will differ for your setup.
 ```bash
-aws organizations create-gov-cloud-account \                                                                            --email "govmain@example.com" \
+aws organizations create-gov-cloud-account \
+  --email "govmain@example.com" \
   --account-name "Gov Cloud Main" \
   --profile commercial-main
 ```

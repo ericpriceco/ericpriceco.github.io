@@ -118,11 +118,12 @@ OUTPUT_FILE="${SCRIPT_DIR}/${ENV}_values.yaml"
 echo "Syncing SSM values for ${ENV} using AWS profile ${PROFILE}..."
 
 if aws ssm get-parameter \
-     --name "/eks/${ENV}/helmfile_values" \
-     --query "Parameter.Value" \
-     --output text \
-     --profile "${PROFILE}" 2>/dev/null | \
-   jq -r 'to_entries | map("\"\(.key)\": \"\(.value)\"") | .[]' > "${OUTPUT_FILE}"; then
+    --name "/eks/${ENV}/helmfile_values" \
+    --query "Parameter.Value" \
+    --output text \
+    --with-decryption \
+    --profile "${PROFILE}" 2>/dev/null | \
+    jq -r 'to_entries | map("\"\(.key)\": \"\(.value)\"") | .[]' > "${OUTPUT_FILE}"; then
   echo "✓ Synced to ${OUTPUT_FILE}"
 else
   echo "✗ Failed to fetch ${ENV} (parameter may not exist)" >&2

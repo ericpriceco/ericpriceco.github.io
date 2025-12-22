@@ -149,9 +149,6 @@ metadata:
 
 The annotation is no longer needed. The Pod Identity Agent uses the association defined in Terraform to determine which role to assume.
 
-
-4. **External Secrets Operator**: If using External Secrets Operator, update your SecretStore to remove the IRSA-specific configuration. The operator will automatically use Pod Identity when configured.
-
 ## Verification
 
 After applying your changes, verify the association is working:
